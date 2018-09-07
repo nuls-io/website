@@ -23,7 +23,7 @@
 			"documents": "Documents",
 			"blockchainExplorer": "Blockchain Explorer",
 			"token": "Token Swap",
-			"whatIsNuls": "What is NULS",
+			"whatIsNuls": "Community",
 			"team": "Team",
 			"partners": "Partners",
 			"joinUs": "Join Us",
@@ -68,6 +68,7 @@
 			"social": {
 				"title": "Follow us",
 				"telegram": "Telegram",
+				"twitter": "Twitter",
 				"github": "Github",
 				"medium": "Medium",
 				"reddit": "Reddit",

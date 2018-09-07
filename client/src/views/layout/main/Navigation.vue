@@ -8,7 +8,6 @@
 					<ul>
 						<li><router-link :to="{ name: 'home' }"><I18N id="header.navigation.home" /></router-link></li>
 						<!--<li><router-link :to="{ name: 'wallet' }"><I18N id="header.navigation.wallet" /></router-link></li>-->
-
 						<li>
 							<Dropdown
 								:useButton="false"
@@ -22,6 +21,7 @@
 							/>
 						</li>
 						<!--<li><router-link :to="{ name: 'dApps' }"><I18N id="header.navigation.dApps" /></router-link></li>-->
+						<li><a href="https://dev.nuls.io" target="_blank">Developer</a></li>
 						<!--<li><a href="#"><I18N id="header.navigation.documents" /></a></li>-->
 						<li><a href="https://nulscan.io" target="_blank"><I18N id="header.navigation.blockchainExplorer" /></a></li>
 						<li><a href="https://swap.nuls.io/swap.html" target="_blank"><I18N id="header.navigation.token" /></a></li>
@@ -29,7 +29,7 @@
 							<Dropdown
 								:useButton="false"
 								:items="[
-									{ title: 'header.navigation.whatIsNuls', link: 'about' },
+									{ title: 'header.navigation.whatIsNuls', url: 'https://nuls.community/' },
 									{ title: 'header.navigation.team', link: 'team' },
 									{ title: 'header.navigation.partners', link: 'partners' },
 									{ title: 'header.navigation.joinUs', link: 'jobs' },
@@ -61,6 +61,7 @@
 								class="dropdownPadding"
 							/>
 						</li>
+						<li><a href="https://dev.nuls.io" target="_blank">Developer</a></li>
 						<li><a href="https://nulscan.io"><I18N id="header.navigation.blockchainExplorer" /></a></li>
 						<li><a href="https://swap.nuls.io/swap.html" target="_blank"><I18N id="header.navigation.token" /></a></li>
 						<li>
