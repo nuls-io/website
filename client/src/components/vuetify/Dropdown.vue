@@ -36,6 +36,7 @@
 			>
 				<v-list-tile-title v-if="item.click" @click="item.click(item)"><span>{{ $t(item.title) }}</span></v-list-tile-title>
 				<v-list-tile-title v-else-if="item.link"><router-link :to="{ name: item.link }">{{ $t(item.title) }}</router-link></v-list-tile-title>
+				<v-list-tile-title v-else-if="item.url"><a :href="item.url" target="_blank">{{ $t(item.title) }}</a></v-list-tile-title>
 				<v-list-tile-title v-else><span>{{ $t(item.title) }}</span></v-list-tile-title>
 			</v-list-tile>
 		</v-list>

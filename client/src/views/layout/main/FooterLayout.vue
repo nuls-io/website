@@ -28,6 +28,7 @@
 				<a href="https://www.reddit.com/r/nulsservice/" target="_blank"><img src="@/assets/images/icons/reddit.png" alt="Reddit"></a>
 				<a href="https://medium.com/@nuls" target="_blank"><img src="@/assets/images/icons/medium.png" alt="Medium"></a>
 				<a href="https://github.com/nuls-io/" target="_blank"><img src="@/assets/images/icons/github.png" alt="Github"></a>
+				<a href="https://twitter.com/nulsservice" target="_blank"><img src="@/assets/images/icons/twitter.png" alt="Twitter"></a>
 				<a href="https://t.me/Nulsio" target="_blank"><img src="@/assets/images/icons/telegram.png" alt="Telegram"></a>
 			</div>
 		</div>
@@ -99,6 +100,7 @@
 
 									<ul>
 										<li><a href="https://t.me/Nulsio" target="_blank"><I18N id="footer.links.social.telegram" /></a></li>
+										<li><a href="https://twitter.com/nulsservice" target="_blank"><I18N id="footer.links.social.twitter" /></a></li>
 										<li><a href="https://github.com/nuls-io/" target="_blank"><I18N id="footer.links.social.github" /></a></li>
 										<li><a href="https://medium.com/@nuls" target="_blank"><I18N id="footer.links.social.medium" /></a></li>
 										<li><a href="https://www.reddit.com/r/nulsservice/" target="_blank"><I18N id="footer.links.social.reddit" /></a></li>
