@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import dot from 'dot-object';
-import { get } from '@/utils/api';
 
 const state = {
 	locale: 'en',
@@ -31,6 +30,9 @@ const actions = {
 	{
 		locale = locale || state.locale;
 
+		// Check for allowed locales
+		if(!['en', 'zh'].includes(locale)) return;
+
 		if(state.languages[locale])
 		{
 			dispatch('app/appCallLoaded', 'i18n', { root: true });
@@ -39,7 +41,7 @@ const actions = {
 			return;
 		}
 
-		const { data } = await get(`i18n/${locale}/`);
+		const data = await require(`@/assets/data/i18n/${locale}`);
 
 		commit('SET_LANGUAGE', { locale, data });
 		dispatch('updateLocale', locale);
