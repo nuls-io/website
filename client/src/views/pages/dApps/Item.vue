@@ -12,7 +12,7 @@
 		</div>
 		<div v-else>
 			<div class="container">
-				<div v-html="compiledMarkdown" class="markdown" />
+				<div class="markdown" v-html="compiledMarkdown" />
 			</div>
 		</div>
 	</div>
