@@ -1,0 +1,85 @@
+{
+	"welcome": "你好，世界！",
+	"goodbye": "再见",
+	"greeting": "你好 {name}",
+	"i18n": {
+		"en": "英语",
+		"zh": "中文"
+	},
+	"pageNotFound": {
+		"title": "网站不存在",
+		"header": "Oops... 意外发生了!",
+		"subHeader": "404: 请求地址不存在",
+		"content": "It seems we're trying to take down the banks with blockchain technology but we can't even find the right page for you.",
+		"goHome": "返回首页"
+	},
+	"header": {
+		"websiteTitle": "NULS",
+		"navigation": {
+			"home": "首页",
+			"wallet": "钱包",
+			"dApps": "DApps",
+			"documents": "文档",
+			"blockchainExplorer": "区块链浏览器",
+			"token": "Token映射",
+			"whatIsNuls": "NULS 是什么",
+			"team": "团队",
+			"partners": "合作伙伴",
+			"joinUs": "加入我们",
+			"news": "新闻",
+			"about": "关于我们",
+			"forum": "论坛",
+			"more": "更多"
+		}
+	},
+	"footer": {
+		"social": {
+			"title": {
+				"body": "加入 {nuls} 社区",
+				"nuls": "NULS"
+			},
+			"cuttingEdge": "We believe that NULS has the most cutting-edge modular thinking towards reshaping the world.",
+			"globalCommunity": "We encourage fans to join our global community!",
+			"viewTeam": "查看 NULS 团队",
+			"joinUs": "加入我们"
+		},
+		"contact": {
+			"title": "Let's talk about how NULS can help your enterprise",
+			"button": "联系我们"
+		},
+		"links": {
+			"copyright": "Copyright © 2018 NULS",
+			"singapore": "Proudly built in Singapore",
+			"design": "Website design by petravic",
+			"about": {
+				"title": "About",
+				"nuls": "NULS",
+				"team": "Team",
+				"partners": "Partners",
+				"news": "News"
+			},
+			"downloads": {
+				"title": "Downloads",
+				"whitepaper": "Whitepaper",
+				"yellowpaper": "Yellowpaper",
+				"wallet": "Wallet",
+				"dApps": "DApps"
+			},
+			"social": {
+				"title": "Follow us",
+				"me": "Telegram",
+				"github": "Github",
+				"reddit": "Reddit",
+				"discord": "Discord",
+				"steemit": "Steemit",
+				"gitter": "Gitter",
+				"slack": "Slack"
+			},
+			"support": {
+				"title": "Support",
+				"faq": "FAQ's",
+				"joinUs": "Join us"
+			}
+		}
+	}
+}
