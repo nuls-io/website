@@ -50,21 +50,6 @@ const app = new Vue({
 	...App
 });
 
-// Subscribe to store updates
-store.subscribe((mutation, state) =>
-{
-	const store = {
-		version: state.version,
-		app: {
-			drawer: state.app.drawer
-		},
-		i18n: { ...state.i18n }
-	};
-
-	// Store the state object as a JSON string
-	// localStorage.setItem('store', JSON.stringify(store));
-});
-
 /*
  * Dynamically set the language when it's loaded and per user request
  */
