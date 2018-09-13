@@ -127,6 +127,7 @@ const latest = async (req, res) =>
 		LEFT JOIN upload_file_morph AS m ON m.related_type = "blogs" AND m.related_id = d.id
 		LEFT JOIN upload_file AS u ON m.upload_file_id = u.id
 		WHERE d.active = 1
+		ORDER BY d.id DESC
 		LIMIT 24
 		`);
 
@@ -150,6 +151,7 @@ const featured = async (req, res) =>
 		LEFT JOIN upload_file_morph AS m ON m.related_type = "blogs" AND m.related_id = d.id
 		LEFT JOIN upload_file AS u ON m.upload_file_id = u.id
 		WHERE d.active = 1 AND d.featured = 1
+		ORDER BY d.id DESC
 		LIMIT 6
 		`);
 
