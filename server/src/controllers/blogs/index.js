@@ -7,6 +7,7 @@ const load = async (req, res) =>
 	const { db } = req;
 	const { offsetId = 0 } = req.params;
 	const extra = {};
+	await db.init();
 
 	const [rows] = await db.connection.execute(`
 		SELECT
