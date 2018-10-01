@@ -43,17 +43,17 @@
 				<ul v-if="dialog === 'windows'">
 					<!--<li><a href="https://mega.nz/#!3mg3gQ4J!8HJOrA48IFlSNbuKhDgSQ4MEXZV3bCpcJm83CkXlwwU" target="_blank"><I18N id="page.index.download.dialog.source.mega" /></a></li>-->
 					<!--<li><a href="https://pan.baidu.com/s/1CTSTL4oY9Qp_uGeHxyMizw" target="_blank"><I18N id="page.index.download.dialog.source.baidu" /></a></li>-->
-					<li><a href="https://nuls-usa-west.oss-us-west-1.aliyuncs.com/v1.1.0/NULS-Wallet-win64-1.1.0.zip" target="_blank"><I18N id="page.index.download.dialog.source.cdn" /></a></li>
+					<li><a href="https://nuls-usa-west.oss-us-west-1.aliyuncs.com/1.0.2/NULS-Wallet-win64-1.0.2.zip" target="_blank"><I18N id="page.index.download.dialog.source.cdn" /></a></li>
 				</ul>
 				<ul v-if="dialog === 'mac'">
 					<!--<li><a href="https://mega.nz/#!Ln5zTYRK!tZ-dWJJq4fC-Pto9tAoGeXl6Ce_UxCByOdteV5ldcKo" target="_blank"><I18N id="page.index.download.dialog.source.mega" /></a></li>-->
 					<!--<li><a href="https://pan.baidu.com/s/1wx5BJNrF9BVs25zo0WvTHQ" target="_blank"><I18N id="page.index.download.dialog.source.baidu" /></a></li>-->
-					<li><a href="https://nuls-usa-west.oss-us-west-1.aliyuncs.com/v1.1.0/NULS-Wallet-macOS-1.1.0.dmg" target="_blank"><I18N id="page.index.download.dialog.source.cdn" /></a></li>
+					<li><a href="https://nuls-usa-west.oss-us-west-1.aliyuncs.com/1.0.2/NULS-Wallet-macOS-1.0.2.dmg" target="_blank"><I18N id="page.index.download.dialog.source.cdn" /></a></li>
 				</ul>
 				<ul v-if="dialog === 'linux'">
 					<!--<li><a href="https://mega.nz/#!b6oD0YZA!6P8an_P_AWhF-nx3hWa2MAjYlQLQ3HQS3njYNJk45cw" target="_blank"><I18N id="page.index.download.dialog.source.mega" /></a></li>-->
 					<!--<li><a href="https://pan.baidu.com/s/1ljSed14CWZv-SdaOJRAtYw" target="_blank"><I18N id="page.index.download.dialog.source.baidu" /></a></li>-->
-					<li><a href="https://nuls-usa-west.oss-us-west-1.aliyuncs.com/v1.1.0/NULS-Wallet-linux64-1.1.0.tar.gz" target="_blank"><I18N id="page.index.download.dialog.source.cdn" /></a></li>
+					<li><a href="https://nuls-usa-west.oss-us-west-1.aliyuncs.com/1.0.2/NULS-Wallet-linux64-1.0.2.tar.gz" target="_blank"><I18N id="page.index.download.dialog.source.cdn" /></a></li>
 				</ul>
 			</div>
 		</Dialog>
