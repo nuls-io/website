@@ -1,0 +1,43 @@
+.el-button {
+  width: 200px;
+  height: 50px;
+  border-radius: 50px;
+  padding: 10px 0;
+  &:hover, &:focus {
+    color: #59a500;
+  }
+}
+
+.el-button.bg-green-btn {
+  width: 200px;
+  height: 50px;
+  border-radius: 50px;
+  padding: 10px 0;
+  background: #59a500;
+  border-color: #59a500;
+  color: #fff;
+  &:hover, &:focus {
+    background: transparent;
+    border-color: #59a500;
+    color: #fff;
+  }
+}
+
+/**
+ * el-menu--horizontal
+ **/
+.el-menu--horizontal {
+  .el-menu {
+    .el-menu-item{
+      &:first-child{
+         border-top-right-radius: 5px;
+         border-top-left-radius: 5px;
+       }
+      &:last-child{
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+    }
+  }
+
+}

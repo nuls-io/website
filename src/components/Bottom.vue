@@ -1,0 +1,245 @@
+<template>
+  <div class="bottom">
+    <div class="bottom-top">
+      <h3>{{$t('bottom.title')}}</h3>
+      <p>{{$t('bottom.info')}}</p>
+      <ul>
+        <li @click="toTeam">{{$t('bottom.team')}}</li>
+        <li><a href="https://t.me/Nulsio" target="_blank"><img src="../assets/images/telegram.png" height="42" width="42"/></a></li>
+        <li><a href="https://twitter.com/nulsservice" target="_blank"><img src="../assets/images/twitter.png" height="38" width="38"/></a></li>
+        <li><a href="https://github.com/nuls-io/" target="_blank"><img src="../assets/images/github.png" height="37" width="38"/></a></li>
+        <li><a href="https://medium.com/@nuls" target="_blank"><img src="../assets/images/medium.png" height="38" width="38"/></a></li>
+        <li><a href="https://www.reddit.com/r/nulsservice/" target="_blank"><img src="../assets/images/reddit.png" height="34" width="41"/></a></li>
+        <li><a href="https://steemit.com/@nuls" target="_blank"><img src="../assets/images/discord.png" height="28" width="40"/></a></li>
+        <li><a href="https://gitter.im/nul" target="_blank"><img src="../assets/images/steemit.png" height="40" width="38"/></a></li>
+        <li><a href="https://nuls.slack.com/join/shared_invite/enQtMjQ4MTM4ODAyNTI4LWJjNGMwYTE0YjRlYmFlZGUwM2JhOGE4MDIwZmE4MzA2MDg1YzUyMmVkN2RhZjkyNWMzZjY5ZDU5ZmViMjZjNGQ" target="_blank"><img src="../assets/images/gitter.png" height="41" width="30"/></a></li>
+      </ul>
+    </div>
+
+    <div class="bottom-info">
+      <div class="cb flex">
+        <div>Let's talk about</div>
+        <el-button class="bg-green-btn">Contact us</el-button>
+      </div>
+      <div class="flex">
+        <div class="b-left">
+          <img src="../assets/images/nuls-footer-logo.png" height="75" width="44"/>
+          <p>{{$t('bottom.list0')}} © 2018 NULS</p>
+          <p>{{$t('bottom.list1')}}</p>
+          <p>{{$t('bottom.list2')}}</p>
+        </div>
+        <div class="b-right">
+          <ul>
+            <li>{{$t('nav.about')}}</li>
+            <li>Nuls</li>
+            <li>{{$t('nav.about2')}}</li>
+            <li>{{$t('nav.about3')}}</li>
+            <li>{{$t('nav.media')}}</li>
+          </ul>
+          <ul>
+            <li>Downloads</li>
+            <li @click="toWhiteYellow">{{$t('bottom.list3')}}</li>
+            <li @click="toWhiteYellow">{{$t('bottom.list4')}}</li>
+            <li>Wallet</li>
+            <li>DApps</li>
+          </ul>
+          <ul>
+            <li>Follow us</li>
+            <li>Telegram</li>
+            <li>Twitter</li>
+            <li>Github</li>
+            <li>Medium</li>
+            <li>Reddit</li>
+            <li>Discord</li>
+            <li>Steemit</li>
+            <li>Gitter</li>
+            <li>Slack</li>
+          </ul>
+          <ul>
+            <li>Support</li>
+            <li>FAQ's</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="border-infos">
+      <BottomMoble />
+      <div class="b-bottom">
+        <img src="../assets/images/nuls-footer-logo.png" height="75" width="44"/>
+        <p>{{$t('bottom.list0')}} © 2018 NULS</p>
+        <p>{{$t('bottom.list1')}}</p>
+        <p>{{$t('bottom.list2')}}</p>
+      </div>
+    </div>
+  </div>
+
+</template>
+
+<script>
+  import BottomMoble from '@/components/BottomMoble';
+  export default {
+    components: {
+      BottomMoble,
+    },
+    methods:{
+
+      /**
+       * 团队跳转
+       */
+      toTeam(){
+        this.$router.push({
+          name: 'team',
+        })
+      },
+
+      /**
+       * 白、黄皮书跳转
+       */
+      toWhiteYellow(){
+        this.$router.push({
+          name: 'whiteYellow',
+        })
+      }
+    }
+  }
+</script>
+
+<style lang="less" type="text/less">
+  .bottom {
+    min-height: 760px;
+    background: url("../assets/images/footer.png") bottom repeat-x, linear-gradient(-1deg, #04265f, #021131 97%);
+    @media (max-width: 768px) {
+      min-height: 500px;
+    }
+    .bottom-top {
+      margin: auto;
+      max-width: 1280px;
+      height: 300px;
+      background-image: linear-gradient(-133deg, #002e5e, #092243 89%, #0a2140);
+      -webkit-box-shadow: 0 16px 64px 0 rgba(0, 0, 0, .24);
+      box-shadow: 0 16px 64px 0 rgba(0, 0, 0, .24);
+      border-radius: 8px;
+      position: relative;
+      top: -60px;
+      padding: 50px 85px;
+      @media (max-width: 768px) {
+        height: 350px;
+        padding: 10px;
+        width: 98%;
+      }
+      h3 {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 77px;
+        @media (max-width: 768px) {
+          font-size: 24px;
+          line-height: 70px;
+        }
+      }
+      p {
+        font-size: 16px;
+        line-height: 23px;
+        margin-bottom: 16px;
+        @media (max-width: 768px) {
+          font-size: 12px;
+          line-height: 24px;
+        }
+      }
+      ul {
+        li {
+          float: left;
+          margin: 0 30px;
+          cursor: pointer;
+          &:hover {
+            opacity: 0.62;
+          }
+          &:first-child {
+            background-color: #FFFFFF;
+            color: #0a2140;
+            min-width: 205px;
+            height: 45px;
+            border-radius: 45px;
+            text-align: center;
+            line-height: 45px;
+            margin-left: 0;
+            @media (max-width: 768px) {
+              min-width: 180px;
+              margin-left: 22%;
+              margin-bottom: 5px;
+            }
+          }
+          @media (max-width: 768px) {
+            height: 40px;
+            margin: 10px 20px;
+          }
+        }
+      }
+    }
+    .bottom-info {
+      max-width: 1280px;
+      margin: 0 auto;
+      @media (max-width: 768px) {
+        display: none;
+      }
+      .cb{
+        border-top:1px solid #999;
+        border-bottom:1px solid #999;
+        padding:30px 70px;
+        margin-bottom:70px;
+        justify-content: center;
+        align-items: center;
+        .el-button{
+          margin-left:20px;
+        }
+      }
+      .flex{
+        .b-left {
+          width: 20%;
+          /*float: left;*/
+          text-align: center;
+          font-size: 14px;
+          @media (max-width: 768px) {
+            float: right;
+          }
+          p {
+            line-height: 23px;
+            opacity: 0.5;
+            margin-bottom: 16px;
+          }
+        }
+        .b-right {
+          width: 80%;
+          /*float: right;*/
+          ul {
+            width: 25%;
+            float: left;
+            li {
+              text-align: center;
+              font-size: 16px;
+              opacity: 0.5;
+              line-height: 23px;
+              padding: 6px 0;
+              cursor: pointer;
+              &:first-child {
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 32px;
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+    .border-infos{
+      display: none;
+      @media (max-width: 768px){
+        display: block;
+      }
+      .b-top{}
+      .b-bottom{
+        text-align: center;
+      }
+    }
+  }
+</style>
