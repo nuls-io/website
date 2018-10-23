@@ -1,6 +1,6 @@
 import axios from 'axios'
 //Request url
-export const API_ROOT = 'http://192.168.1.130:8080/';
+export const API_ROOT = 'http://116.62.117.200:8080/';
 //Request response time
 export const API_TIME =6000;
 
