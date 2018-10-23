@@ -4,7 +4,6 @@
       <h3>{{$t('bottom.title')}}</h3>
       <p>{{$t('bottom.info')}}</p>
       <ul>
-        <li @click="toTeam">{{$t('bottom.team')}}</li>
         <li><a href="https://t.me/Nulsio" target="_blank"><img src="../assets/images/telegram.png" height="42" width="42"/></a></li>
         <li><a href="https://twitter.com/nulsservice" target="_blank"><img src="../assets/images/twitter.png" height="38" width="38"/></a></li>
         <li><a href="https://github.com/nuls-io/" target="_blank"><img src="../assets/images/github.png" height="37" width="38"/></a></li>
@@ -153,21 +152,6 @@
           &:hover {
             opacity: 0.62;
           }
-          &:first-child {
-            background-color: #FFFFFF;
-            color: #0a2140;
-            min-width: 205px;
-            height: 45px;
-            border-radius: 45px;
-            text-align: center;
-            line-height: 45px;
-            margin-left: 0;
-            @media (max-width: 768px) {
-              min-width: 180px;
-              margin-left: 22%;
-              margin-bottom: 5px;
-            }
-          }
           @media (max-width: 768px) {
             height: 40px;
             margin: 10px 20px;
@@ -182,8 +166,8 @@
         display: none;
       }
       .cb{
-        border-top:1px solid #999;
-        border-bottom:1px solid #999;
+        border-top:1px solid #1d3156;
+        border-bottom:1px solid #1d3156;
         padding:30px 70px;
         margin-bottom:70px;
         justify-content: center;

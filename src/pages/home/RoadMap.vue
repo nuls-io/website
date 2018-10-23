@@ -3,9 +3,9 @@
     <h2 class="h2">{{$t('home.road_title')}}</h2>
 
     <div class="roadMap-info">
-      <el-tabs  v-model="activeName" @tab-click="handleClick">
+      <el-tabs v-model="activeName" @tab-click="handleClick">
         <el-tab-pane :label="$t('home.road_tab_title0')" name="ice">
-         <div class="line"></div>
+          <div class="line"></div>
           <div class="swiper-wrapper flex">
             <div class="swiper-slide">
               <p class="date">{{$t('home.road_tab_ice_1.time')}}</p>
@@ -23,7 +23,7 @@
               <p class="bold">{{$t('home.road_tab_ice_2.p3')}}</p>
               <p class="bold">{{$t('home.road_tab_ice_2.p4')}}</p>
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide swiper-action">
               <p class="date">{{$t('home.road_tab_ice_3.time')}}</p>
               <div class="triangle"></div>
               <p class="bold">{{$t('home.road_tab_ice_3.p0')}}</p>
@@ -109,14 +109,14 @@
 <style lang="less" type="text/less">
   .roadMap {
     background: #FFFFFF;
-    padding:120px 0 120px;
+    padding: 120px 0 120px;
     h2 {
       color: #0a2140;
     }
     .el-tabs {
-      .el-tabs__heade{
-        .el-tabs__nav-scroll{
-          .el-tabs__nav{
+      .el-tabs__heade {
+        .el-tabs__nav-scroll {
+          .el-tabs__nav {
             width: 1280px;
             margin: 0 auto;
           }
@@ -150,27 +150,27 @@
     .roadMap-info {
       margin-top: 30px;
       .el-tabs {
-        .el-tabs__header{
-          .el-tabs__nav-wrap{
-            &:after{
+        .el-tabs__header {
+          .el-tabs__nav-wrap {
+            &:after {
               background-color: transparent;
             }
-            .el-tabs__nav-scroll{
+            .el-tabs__nav-scroll {
               width: 650px;
               margin: 0 auto;
               text-align: center;
               @media (max-width: 768px) {
                 width: 100%;
               }
-              .el-tabs__nav{
-                padding-top:10px;
-                padding-bottom:10px;
-                .el-tabs__item{
+              .el-tabs__nav {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                .el-tabs__item {
                   border-radius: 50px;
                   color: #445569;
                   font-size: 24px;
                   width: 150px;
-                  height:50px;
+                  height: 50px;
                   line-height: 50px;
                   text-align: center;
                   margin: 0 30px;
@@ -180,32 +180,32 @@
                     width: 100px;
                     margin: 0 10px;
                   }
-                  &:hover{
-                    color:#56c400;
+                  &:hover {
+                    color: #56c400;
                     background: #fff;
-                    box-shadow: 0 3px 9px rgba(0,0,0,0.2);
+                    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.2);
                   }
-                  &:first-child{
+                  &:first-child {
                     margin: 0 0 0 200px;
                   }
                 }
-                .is-active{
-                  color:#56c400;
+                .is-active {
+                  color: #56c400;
                   background: #fff;
-                  box-shadow: 0 3px 9px rgba(0,0,0,0.2);
+                  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.2);
                 }
-                .el-tabs__active-bar{
-                 background-color: transparent;
+                .el-tabs__active-bar {
+                  background-color: transparent;
                 }
               }
             }
           }
-          .el-tabs__content{
+          .el-tabs__content {
             margin: 30px 0 0 0;
           }
 
         }
-        .el-tabs__content{
+        .el-tabs__content {
         }
       }
       .line {
@@ -215,7 +215,7 @@
         position: absolute;
         margin-top: 73px;
       }
-      .lines{
+      .lines {
         margin-top: 16px;
       }
       .swiper-wrapper {
@@ -223,19 +223,11 @@
         margin: 50px auto 0;
         justify-content: space-around;
         .swiper-slide {
-          flex:1;
+          flex: 1;
           height: 100%;
           position: relative;
           margin-right: 30px;
-          &:hover{
-            p{
-              color:#56c400;
-            }
-            .triangle{
-              box-shadow: 3px 3px 4px #3e8900;
-            }
-          }
-          .date{
+          .date {
             font-size: 16px;
             color: #445569;
             letter-spacing: -.53px;
@@ -245,8 +237,8 @@
             -webkit-transform: rotate(-315deg);
             -ms-transform: rotate(-315deg);
             transform: rotate(-315deg);
-            background-image: -webkit-gradient(linear,left top,left bottom,from(#8fe400),to(#56c400));
-            background-image: linear-gradient(-180deg,#8fe400,#56c400);
+            background-image: -webkit-gradient(linear, left top, left bottom, from(#8fe400), to(#56c400));
+            background-image: linear-gradient(-180deg, #8fe400, #56c400);
             height: 32px;
             width: 32px;
             margin: 0 0 35px 6px;
@@ -257,6 +249,17 @@
             font-size: 18px;
             letter-spacing: -.41px;
             line-height: 22px;
+          }
+        }
+        .swiper-action {
+          .date {
+            color: #56c400;
+          }
+          p{
+            color: #56c400;
+          }
+          .triangle {
+            box-shadow: 3px 3px 4px #3e8900;
           }
         }
 

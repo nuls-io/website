@@ -158,8 +158,6 @@
        * @param pageNum
        */
       getNewList(siteId, pageSize, pageNum) {
-        console.log(this.language);
-        console.log(siteId);
         let that = this;
         getNewList(siteId,pageSize,pageNum)
           .then(function (response) {
