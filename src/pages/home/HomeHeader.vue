@@ -4,7 +4,6 @@
     <h1 class="cb h1">
       {{$t('home.top_title')}}
     </h1>
-
     <el-row :gutter="0" class="centers">
       <el-col :xs="0" :sm="8">
         <div class="cube">
@@ -24,12 +23,26 @@
         </div>
       </el-col>
     </el-row>
+
+    <el-dialog title="" :visible.sync="videoDialog" width="1024" center>
+      <div class="pc">
+        <iframe width="1024" height="576" src="https://www.youtube.com/embed/2rgcxxaJrWs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <div class="iphone">
+        <iframe width="100%" height="320" src="https://www.youtube.com/embed/2rgcxxaJrWs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </el-dialog>
   </div>
 </template>
 
 <script>
   import HeaderList from '@/components/HeaderList';
   export default {
+    data() {
+      return {
+        videoDialog: false
+      };
+    },
     components: {
       HeaderList,
     },
@@ -39,7 +52,7 @@
        *  视频跳转
        */
       toVedio(){
-        console.log("toVedio")
+        this.videoDialog = true;
       }
     }
   }
@@ -52,6 +65,9 @@
     min-height: 500px;
     .h1{
       line-height: 8rem;
+      @media (max-width: 768px){
+        line-height: 3.5rem;
+      }
     }
     .vedio {
       .vedio-info {
@@ -86,7 +102,7 @@
           padding: 5px 0 0 0;
           z-index: 2;
           display: block;
-          margin: 12px 0 0 -15px;
+          margin: 12px 0 0 -5px;
           position: relative;
           float: left;
         }
@@ -102,6 +118,39 @@
       width: 300px;
       @media (max-width: 768px) {
         display: none;
+      }
+    }
+
+    .el-dialog__wrapper{
+      .el-dialog{
+        width: 1024px;
+        height: 500px;
+        background: transparent;
+        @media (max-width: 768px){
+          width: 100%;
+          height: 200px;
+        }
+        .el-dialog__header{
+          .el-dialog__headerbtn{
+            background-color: #34ce57;
+            margin: 10px -40px 0 0;
+            border-radius: 10px;
+            width: 20px;
+            height: 20px;
+            @media (max-width: 768px){
+              margin: 10px -15px 0 0;
+            }
+            .el-dialog__close{
+              color: #ffffff;
+              line-height: 20px;
+            }
+          }
+        }
+        .el-dialog__body{
+          @media (max-width: 768px){
+           padding: 0;
+          }
+        }
       }
     }
   }

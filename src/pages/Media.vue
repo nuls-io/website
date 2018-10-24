@@ -79,6 +79,7 @@
     watch:{
       language(curVal,oldVal){
         if(curVal.toString() !== oldVal.toString()){
+          this.getBannerList(this.language);
           if(this.activeMedia ==='news'){
             this.getNewList(this.language, 10, 1);
           }else if(this.activeMedia ==='guide'){
@@ -267,10 +268,10 @@
             text-align: center;
             .el-tabs__nav {
               .el-tabs__item {
-                border-radius: 10px;
+                border-radius: 30px;
                 color: #000000;
                 font-size: 18px;
-                width: 150px;
+                width: 110px;
                 text-align: center;
                 margin: 0 30px;
                 padding: 0;
@@ -329,7 +330,7 @@
                 }
               }
               span {
-                color: #0a2140;
+                color: #a6a9ad;
                 padding: 20px 0 0 0;
                 display: block;
               }

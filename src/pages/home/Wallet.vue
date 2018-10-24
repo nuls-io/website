@@ -142,16 +142,18 @@
           }
         }
         .w-bt {
-          width: 500px;
+          max-width: 550px;
           margin: 10px auto;
           @media (max-width: 768px) {
             max-width: 360px;
           }
           .w-select {
-            width: 200px;
+            max-width: 200px;
             margin: 50px auto;
+            float: left;
             @media (max-width: 768px) {
-              margin: 20px auto;
+              max-width: 150px;
+              margin: 20px 0 0 20px;
             }
             .el-select {
               .el-input--suffix {
@@ -178,11 +180,17 @@
           }
 
           .btn-box {
-            width: 200px;
-            margin: 0 auto;
+            max-width: 200px;
+            margin: 50px 0 0 50px;
+            float: left;
             @media (max-width: 768px) {
+              max-width: 150px;
+              margin: 20px 0 0 20px;
             }
             .el-button {
+              @media (max-width: 768px) {
+                max-width: 150px;
+              }
               .el-icon-arrow-right {
                 padding-left: 20px;
                 @media (max-width: 768px) {

@@ -4,7 +4,7 @@
         <Header></Header>
       </div>
       <div class="team-info">
-        <h1>{{$t('team.title')}}</h1>
+        <h1 class="h1">{{$t('team.title')}}</h1>
         <p>{{$t('team.info')}}</p>
         <ul>
           <template v-for="site in teamList">
@@ -52,10 +52,10 @@
         getTeamList(siteId,pageSize,pageNum)
           .then(function (response) {
             //console.log(response)
-            for (let list of response.data.data) {
+            for (let list of response.data) {
               list.headUrl = API_ROOT + list.headUrl;
             }
-            that.teamList = response.data.data;
+            that.teamList = response.data;
             console.log(that.teamList)
           })
           .catch(function (error) {
@@ -80,10 +80,7 @@
       margin:-400px auto 0;
       height: 800px;
       h1{
-        font-size: 77px;
         line-height: 88px;
-        text-align: center;
-        color: #FFFFFF;
         padding: 30px 0;
       }
       p{

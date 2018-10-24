@@ -2,30 +2,30 @@
   <div class="downloads">
     <div class="header-bg">
       <Header></Header>
-      <h1 class="h1 cb">Downloads</h1>
+      <h1 class="h1 cb">{{$t('nav.about1')}}</h1>
     </div>
 
     <div class="downloads-info">
       <ul>
         <li>
-          <h3>Wallet</h3>
+          <h3>{{$t('nav.wallet')}}</h3>
           <p>
-            <span>NULS wallet is developed by NULS core technical team Supported on various platforms</span>
-            <el-button type="success">Downloads</el-button>
+            <span>{{$t('downloads.span1')}}</span>
+            <el-button type="success">{{$t('nav.about1')}}</el-button>
           </p>
         </li>
         <li>
-          <h3>Data.zip</h3>
+          <h3>{{$t('downloads.h32')}}.zip</h3>
           <p>
-            <span>This is a zip package containing the operation manual on the wallet related to the smart contract, Developer's documentation for smart contract, smart contract plugin and operation manual on the IDEA development tool</span>
-            <el-button type="success">Downloads</el-button>
+            <span>{{$t('downloads.span2')}}</span>
+            <el-button type="success">{{$t('nav.about1')}}</el-button>
           </p>
         </li>
         <li>
-          <h3>Whitepaper and Yellowpaper</h3>
+          <h3>{{$t('downloads.h33')}}</h3>
           <p>
-            <span>This is a zip package containing the operation manual on the wallet related to the smart contract, Developer's documentation for smart contract, smart contract plugin and operation manual on the IDEA development tool</span>
-            <el-button type="success">Downloads</el-button>
+            <span>{{$t('downloads.span3')}}</span>
+            <el-button type="success">{{$t('nav.about1')}}</el-button>
           </p>
         </li>
       </ul>

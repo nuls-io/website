@@ -8,9 +8,8 @@
     <div class="joinNuls-info cb">
       <div class="section clipPath">
         <div class="container">
-          <h2 class="h2">Join NULS Community</h2>
-          <p>We are now recruiting committed and passionate individuals to contribute to NULS open-source community.
-            Join us now! Together we can learn, grow and share, building something amazing in the process.</p>
+          <h1 class="h1">{{$t('joinNuls.title')}}</h1>
+          <p>{{$t('joinNuls.info')}}</p>
         </div>
       </div>
       <el-collapse v-model="activeNames" @change="handleChange">
@@ -128,6 +127,9 @@
           padding-top: 40px;
           margin: auto;
           max-width: 1280px;
+          .h1{
+            color: #445569;
+          }
           p{
             font-size: 16px;
             color: #445569;

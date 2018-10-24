@@ -45,9 +45,15 @@
 .h6{}
 .font-30{
   font-size:30px;
+  @media (max-width: 768px){
+    font-size: 18px;
+  }
 }
 .font-24{
   font-size:24px;
+  @media (max-width: 768px){
+    font-size: 18px;
+  }
 }
 .font-18{
   font-size:18px;
@@ -78,5 +84,17 @@
 .centers{
   max-width: 1280px;
   margin: 0 auto;
+}
+
+.pc{
+  @media (max-width: 768px){
+    display: none;
+  }
+}
+.iphone{
+  display: none;
+  @media (max-width: 768px){
+    display: block;
+  }
 }
 

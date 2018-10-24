@@ -129,8 +129,38 @@ module.exports = {
   },
 
   team:{
-    title:'NULS Team',
-    info:'The core team members are high-experienced professionals who are well versed in blockchain technology and community building. The catalyst which brought this team together was a shared vision of blockchain, and a desire to create an open, innovative and technologically advanced platform.',
+    title:'NULS 团队',
+    info:'核心团队成员是经验丰富的专业人士，精通BoStand技术和社区建设。带来了这个团队的催化剂是一个共同的愿景链链，并希望创造一个开放的，创新的和技术先进的平台。',
+  },
+
+  whiteYellow:{
+    h51:'NULS是高度可定制的模块化链链基础设施。',
+    p1:'It consists of a microkernel and functional modules. NULS provides smart contract, multi-chain mechanism and cross-chain consensus. It aims to break the technical barriers of blockchain, to reduce the cost of development, and to promote the usage of blockchain technology in the commercial field.',
+    h52:'NULS is a global blockchain open-source project',
+    p2:'NULS provides basic function modules and standard interfaces and promotes the concept of modularization and customization. Developers can develop various modules and customize their own subchains as needed. NULS is now acting as a blockchain technology platform for discovery, use and communication among developers.',
+    h53:'White Paper and Yellow Paper',
+    p3:'The NULS whitepaper is a authoritative report that addresses what NULS goal is and how it plans to achieve it.',
+    p4:'The NULS yellowpaper technical detailed version to that of the whitepaper which drills down into the underlying aspects of NULS.',
+    download:'Download',
+  },
+
+  downloads:{
+    h31:'',
+    span1:'NULS wallet is developed by NULS core technical team Supported on various platforms',
+    h32:'Data',
+    span2:'This is a zip package containing the operation manual on the wallet related to the smart contract, Developer\'s documentation for smart contract, smart contract plugin and operation manual on the IDEA development tool',
+    h33:'Whitepaper and Yellowpaper',
+    span3:'This is a zip package containing the operation manual on the wallet related to the smart contract, Developer\'s documentation for smart contract, smart contract plugin and operation manual on the IDEA development tool',
+  },
+
+  partners:{
+    title:'我们的伙伴',
+    info:'NULS合作伙伴网络是NULS与合作伙伴之间的协作框架，以满足不同类型的合作需求，包括技术支持、通信、社区援助、市场拓展和市场营销，以确保合作伙伴和NULS实现其目标',
+  },
+
+  joinNuls:{
+    title:'加入Nuls',
+    info:'我们正在招募致力于和热情的个人为Nuls开源社区做出贡献。加入我们吧！我们可以一起学习、成长和分享，在这个过程中创造出惊人的东西。',
   },
 
   bottom:{

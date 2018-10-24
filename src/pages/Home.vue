@@ -55,7 +55,7 @@
   .home {
     background-color: #FFFFFF;
     .cubes {
-      width: 1280px;
+      max-width: 1280px;
       margin: 0 auto;
       height: 1px;
       z-index: 2;

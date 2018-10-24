@@ -4,11 +4,11 @@
         <Header></Header>
       </div>
       <div class="partners-info">
-        <h1>Our Partnerships</h1>
-        <p>NULS Partner Network is a collaborative framework between NULS and partners to meet different types of cooperation needs, including technical support, communication, community assistance, market expansion and marketing, to ensure that partners and NULS to achieve their goals.</p>
+        <h1>{{$t('partners.title')}}</h1>
+        <p>{{$t('partners.info')}}</p>
       </div>
       <div class="partners-list">
-        <h2 class="h2">Partners</h2>
+        <h2 class="h2">{{$t('nav.about3')}}</h2>
         <ul>
           <li>
             <a href="https://www.bitmain.com/" target="_blank"><img src="./../assets/images/1.png"  /></a>

@@ -1,55 +1,55 @@
 ﻿Media的News页面	xxxx/media/news	{count:"",rows:[{id:"",title:"",date:"",imgUrl:""}]}
-http://192.168.1.130:8080/nulsnews.html?siteId=1&pageSize=10&pageNum=1
+http://116.62.117.200:8080/nulsnews.html?siteId=1&pageSize=10&pageNum=1
 
 Media的News的详情页面	xxxx/media/news/detail	{id:"",title:"",date:"",content:""}
-http://192.168.1.130:8080/nulsnews-c-69.html
+http://116.62.117.200:8080/nulsnews-c-69.html
 
 Media的Guides页面	xxxx/media/Guide	{count:"",rows:[{id:"",title:"",date:"",imgUrl:"",guideLink:""}]}
-http://192.168.1.130:8080/guides.html?siteId=1&pageSize=10&pageNum=1
+http://116.62.117.200:8080/guides.html?siteId=1&pageSize=10&pageNum=1
 
 Media的Find US页面	xxxx/media/findUs	{count:"",rows:[{id:"",title:"",chatLink:"",imgUrl:""}]}
-http://192.168.1.130:8080/findus.html?siteId=1&pageSize=10&pageNum=1
+http://116.62.117.200:8080/findus.html?siteId=1&pageSize=10&pageNum=1
 
 Media的Banner轮播图页面	xxxx/media/banners	[{id:"",articlelink:"",imgUrl:""}]
 banner图片
-http://192.168.1.130:8080/banner.html?siteId=1
+http://116.62.117.200:8080/banner.html?siteId=1
 
 About的team页面	xxxx/team	{count:"",rows:[{id:"",title:"",name:"",linkedIn:"",imgUrl:"",category:""}]}
 核心成员
-http://192.168.1.130:8080/hexin.html?siteId=1&pageSize=10&pageNum=1
+http://116.62.117.200:8080/hexin.html?siteId=1&pageSize=10&pageNum=1
 社区成员
-http://192.168.1.130:8080/shequ.html?siteId=1&pageSize=10&pageNum=1
+http://116.62.117.200:8080/shequ.html?siteId=1&pageSize=10&pageNum=1
 顾问
-http://192.168.1.130:8080/guwen.html?siteId=1&pageSize=10&pageNum=1
+http://116.62.117.200:8080/guwen.html?siteId=1&pageSize=10&pageNum=1
 
 About的partners页面	xxxx/partners	{count:"",rows:[{id:"",websitLink:"",imgUrl:"",category:""}]}
 合作项目：
-http://192.168.1.130:8080/project.html?siteId=1&pageSize=10&pageNum=1
+http://116.62.117.200:8080/project.html?siteId=1&pageSize=10&pageNum=1
 合作媒介：
-http://192.168.1.130:8080/meijie.html?siteId=1&pageSize=10&pageNum=1
+http://116.62.117.200:8080/meijie.html?siteId=1&pageSize=10&pageNum=1
 交易平台：
-http://192.168.1.130:8080/jiaoyi.html?siteId=1&pageSize=10&pageNum=1
+http://116.62.117.200:8080/jiaoyi.html?siteId=1&pageSize=10&pageNum=1
 
 About的Join US页面	xxxx/jobs	[{id:"",title:"",contactEmailAddress:"",content:"",date:""}]
 招聘
-http://192.168.1.130:8080/jobs.html?siteId=1&pageSize=10&pageNum=1
+http://116.62.117.200:8080/jobs.html?siteId=1&pageSize=10&pageNum=1
 
 About的Downloads页面	xxxx/downloads	[{id:"",contentDescription:"",downloadLink:"",date:"",category:""}]
 文件下载
-http://192.168.1.130:8080/downloads.html?siteId=1&pageSize=10&pageNum=1
+http://116.62.117.200:8080/downloads.html?siteId=1&pageSize=10&pageNum=1
 
 About的FAQ页面	xxxx/faqs	[{id:"",content:"",title:""}]
-http://192.168.1.130:8080/nulsfaq.html?siteId=1&pageSize=10&pageNum=1
+http://116.62.117.200:8080/nulsfaq.html?siteId=1&pageSize=10&pageNum=1
 
 语言列表
-http://192.168.1.130:8080/languagelist.html
+http://116.62.117.200:8080/languagelist.html
 
 钱包下载地址
 直接获取第一条，第一条就是最新的一条
-http://192.168.1.130:8080/walletdownload.html?siteId=1&pageSize=1&pageNum=1
+http://116.62.117.200:8080/walletdownload.html?siteId=1&pageSize=1&pageNum=1
 
 后台信息：
-http://192.168.1.130:8080/admin/
+http://116.62.117.200:8080/admin/
 账户：admin
 密码：123456
 

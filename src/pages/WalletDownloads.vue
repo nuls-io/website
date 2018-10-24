@@ -6,8 +6,6 @@
       </div>
     </div>
     <Wallet></Wallet>
-
-
     <Bottombar></Bottombar>
   </div>
 </template>

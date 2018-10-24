@@ -97,8 +97,7 @@
 <style lang="less" type="text/less">
   .architecture {
     width: 100%;
-    /*min-height: 800px;*/
-    background-color: #Def3f7;
+    background-color: #f8fcff;
     @media (max-width: 768px) {
       min-height: 680px;
     }
@@ -108,6 +107,7 @@
       h2 {
         padding: 120px 0 80px;
         @media (max-width: 768px) {
+          padding: 20px 0;
         }
       }
       .architecture-info {
@@ -116,7 +116,7 @@
           display: none;
         }
         ul {
-          width: 50%;
+          width: 420px;
           @media (max-width: 768px) {
             float: none;
             width: 100%;
@@ -158,14 +158,14 @@
         }
         .img {
           position: relative;
-          width: 50%;
-          background: url(./../../assets/images/architecture-background.png) 50% 0;
-          /*float: right;*/
+          width: 850px;
+          background-color: #d5e8f3;
           @media (max-width: 768px) {
             display: none;
           }
           img{
-            width: 98%;
+            width: 825px;
+            height: 437px;
             opacity: 0;
             position: absolute;
             left: 0;
@@ -184,19 +184,23 @@
         display: none;
         @media (max-width: 768px) {
           display: block;
+          border: 0;
         }
         .el-collapse-item{
           .el-collapse-item__header{
-            height: 105px;
+            height: auto;
             border-left: 3px solid #BAE797;
             margin:0 10px 20px 15px;
-            padding-left: 15px;
+            padding:0 0 15px 10px;
             h4,p{
               color: #0a2140;
             }
             h4{
               font-size: 34px;
               font-weight: 300;
+              @media (max-width: 768px){
+                font-size: 24px;
+              }
             }
             p{
               line-height: 25px;

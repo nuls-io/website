@@ -16,9 +16,15 @@
     </div>
 
     <div class="bottom-info">
-      <div class="cb flex">
-        <div>Let's talk about</div>
-        <el-button class="bg-green-btn">Contact us</el-button>
+      <div class="bottom-from">
+        <el-form :inline="true" :model="emailForm" :rules="emailRules" ref="emailForm" >
+          <el-form-item label="" prop="emailAddress">
+            <el-input v-model="emailForm.emailAddress" placeholder="leave your email and will send you the latest information"></el-input>
+          </el-form-item>
+          <el-form-item class="form-bt">
+            <el-button type="primary" class="bg-green-btn" @click="submitForm('emailForm')">Contact us</el-button>
+          </el-form-item>
+        </el-form>
       </div>
       <div class="flex">
         <div class="b-left">
@@ -77,10 +83,34 @@
 <script>
   import BottomMoble from '@/components/BottomMoble';
   export default {
+    data() {
+      return {
+        emailForm: {
+          emailAddress: '',
+        },
+        emailRules: {
+          emailAddress: [
+            { required: true, message: '请输入邮箱地址', trigger: 'blur' },
+            { type: 'email', message: '请输入正确的邮箱地址', trigger: ['blur', 'change'] }
+          ]
+        }
+      };
+    },
     components: {
       BottomMoble,
     },
     methods:{
+
+      submitForm(formName) {
+        this.$refs[formName].validate((valid) => {
+          if (valid) {
+            alert('submit!');
+          } else {
+            console.log('error submit!!');
+            return false;
+          }
+        });
+      },
 
       /**
        * 团队跳转
@@ -165,15 +195,37 @@
       @media (max-width: 768px) {
         display: none;
       }
-      .cb{
+      .bottom-from{
+        width: 100%;
         border-top:1px solid #1d3156;
         border-bottom:1px solid #1d3156;
-        padding:30px 70px;
-        margin-bottom:70px;
-        justify-content: center;
-        align-items: center;
-        .el-button{
-          margin-left:20px;
+        .el-form{
+          width: 800px;
+          margin: 20px auto 0;
+          .el-form-item{
+            width: 500px;
+            .el-form-item__content{
+              width: 100%;
+              .el-input{
+                width: 100%;
+                .el-input__inner{
+                  background-color: #ffffff;
+                  height: 52px;
+                  line-height: 52px;
+                  border-radius: 50px;
+                }
+              }
+              .el-form-item__error{
+                margin-left: 20px;
+              }
+              .bg-green-btn{
+                width: 150px;
+              }
+            }
+          }
+          .form-bt{
+            width: 200px;
+          }
         }
       }
       .flex{

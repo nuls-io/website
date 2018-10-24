@@ -31,14 +31,17 @@
   .ecosystem{
     background:url("./../../assets/images/wallet-section-bg.jpg");
     width: 100%;
-    /*min-height: 600px;*/
     padding:120px 0;
     @media (max-width: 768px) {
       min-height: 550px;
+      padding:20px 0;
     }
     h2{
       color: #FFFFFF;
       margin-bottom:80px;
+      @media (max-width: 768px) {
+        margin-bottom:20px;
+      }
     }
     .ecosystem-bg{
       background:url("./../../assets/images/ecosystem.png") no-repeat;

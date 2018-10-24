@@ -2,7 +2,7 @@
   <div class="introduction">
     <Header></Header>
     <div class="introduction-info">
-      <h1>Whitepaper add Yellowpaper</h1>
+      <h1 class="h1">Whitepaper add Yellowpaper</h1>
       <ul>
         <li>
           <p>The NULS whitepaper is a authoritative report that addresses what NULS goal is and how it plans to achieve
