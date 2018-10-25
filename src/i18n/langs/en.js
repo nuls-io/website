@@ -28,7 +28,7 @@ module.exports = {
     nuls_do_info4: 'Resolving the lack of trust in a centralised database',
     nuls_do_info5_more:'Learn more about our mission ',
 
-    architecture_title: 'HOW IT WORKS',
+    architecture_title: 'How it works',
     architecture_info_h4_1: 'Module Repository',
     architecture_info_p_1: 'It covers majority of technologies in the blockchain field and provides standard components for blockchain, multi-chain and cross-chain mechanism.',
     architecture_info_p_11: '',

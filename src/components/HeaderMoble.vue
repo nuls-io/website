@@ -1,12 +1,12 @@
 <template>
   <div class="m-header">
-    <div class="logo"></div>
+    <div class="logo" @click="handleSelect(1,['1'])"></div>
     <div class="nav">
       <div class="nav-icon" @click="showNav = !showNav">三</div>
       <el-collapse-transition>
         <div class="nav-list" v-show="showNav">
           <div class="nav-list-top">
-            <div class="logo"></div>
+            <div class="logo" @click="handleSelect(1,['1'])"></div>
             <i class="el-icon-close" @click="showNav = !showNav"></i>
           </div>
           <el-menu :default-active="activeMenu" :mode="!showNav ? 'horizontal':'vertical'" @select="handleSelect">

@@ -1,7 +1,7 @@
 <template>
   <div class="downloads">
     <div class="header-bg">
-      <Header></Header>
+      <HeaderList></HeaderList>
       <h1 class="h1 cb">{{$t('nav.about1')}}</h1>
     </div>
 
@@ -35,12 +35,12 @@
 </template>
 
 <script>
-  import Header from '@/components/Header';
+  import HeaderList from '@/components/HeaderList';
   import Bottom from '@/components/Bottom';
 
   export default {
     components: {
-      Header,
+      HeaderList,
       Bottom,
     }
   }
@@ -53,9 +53,15 @@
     .header-bg {
       background: url("./../assets/images/map-bg.png") no-repeat;
       background-size: 100% 100%;
-      height: 300px;
+      max-height: 300px;
+      @media (max-width: 768px) {
+        max-height: 150px;
+      }
       h1 {
         line-height: 9rem;
+        @media (max-width: 768px) {
+          line-height: 4rem;
+        }
       }
     }
     .downloads-info {
@@ -87,7 +93,7 @@
             width: 100%;
             min-height: 8rem;
             @media (max-width: 768px) {
-              min-height: auto;
+              min-height: 15rem;
               width: auto;
             }
             span{
@@ -96,12 +102,20 @@
               display: block;
               width: 85%;
               float: left;
+              @media (max-width: 768px) {
+                width: 100%;
+                clear: left;
+              }
             }
             button{
               display: block;
               margin: 1rem auto;
               width: 15%;
               float: left;
+              @media (max-width: 768px) {
+                width: 100%;
+                clear: left;
+              }
               @media (max-width: 768px) {
                 text-align: center;
               }

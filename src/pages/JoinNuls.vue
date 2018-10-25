@@ -2,7 +2,7 @@
   <div class="joinNuls">
     <div class="joinNuls-top-bg">
       <div class="joinNulss-top">
-        <Headerbar></Headerbar>
+        <HeaderList></HeaderList>
       </div>
     </div>
     <div class="joinNuls-info cb">
@@ -53,7 +53,7 @@
 
 <script>
   import axios from 'axios'
-  import Headerbar from '@/components/Header';
+  import HeaderList from '@/components/HeaderList';
   import Bottombar from '@/components/Bottom';
 
   export default {
@@ -63,7 +63,7 @@
       }
     },
     components: {
-      Headerbar,
+      HeaderList,
       Bottombar,
     },
     mounted() {
@@ -100,7 +100,7 @@
   .joinNuls {
     background-color: #FFFFFF;
     width: 100%;
-    height: 300rem;
+    max-height: 300rem;
     .joinNuls-top-bg {
       width: auto;
       min-height: 120px;
@@ -120,6 +120,9 @@
     .joinNuls-info {
       min-height: 200px;
       margin: 50px auto 100px;
+      @media (max-width: 768px) {
+        margin: 0 auto 100px;
+      }
       .section {
         background-image: linear-gradient(-134deg, #f1f4f8, #eff4f8 14%, #eff4f8 18%, #eff4f8 20%, #ecf4f9 46%, #ebf4f9 49%, #ebf4f9 54%, #ebf4f9 57%, #eaf4f9 65%, #e7f4fa 86%, #e7f4fa 90%, #e7f4fa 0, #e6f4fa 92%, #e6f4fa);
         padding-bottom: 70px;
@@ -152,6 +155,9 @@
             font-size: 28px;
             color: #0a2140;
             box-shadow: 0 8px 24px 0 rgba(186,194,198,.5), 0 3px 6px 0 rgba(186,194,198,.2);
+            @media (max-width: 768px) {
+              font-size: 16px;
+            }
             i{
               line-height: 80px;
             }

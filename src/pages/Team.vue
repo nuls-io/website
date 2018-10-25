@@ -1,7 +1,7 @@
 <template>
     <div class="team">
       <div class="team-header">
-        <Header></Header>
+        <HeaderList></HeaderList>
       </div>
       <div class="team-info">
         <h1 class="h1">{{$t('team.title')}}</h1>
@@ -23,7 +23,7 @@
 <script>
   import {getTeamList} from '@/api/httpData';
   import {API_ROOT} from '@/api/https';
-  import Header from '@/components/Header';
+  import HeaderList from '@/components/HeaderList';
   import Bottom from '@/components/Bottom';
 
   export default {
@@ -33,7 +33,7 @@
       }
     },
     components: {
-      Header,
+      HeaderList,
       Bottom,
     },
     mounted() {
@@ -73,24 +73,41 @@
     .team-header{
       background: url("./../assets/images/map-bg.png") no-repeat;
       background-size: 100% 100%;
-      height: 500px;
+      min-height: 500px;
+      width: 100%;
+      @media (max-width: 768px) {
+        min-height: 300px;
+      }
     }
     .team-info{
       max-width: 1280px;
       margin:-400px auto 0;
-      height: 800px;
+      min-height: 800px;
+      @media (max-width: 768px) {
+       min-height: 870px;
+      }
       h1{
         line-height: 88px;
         padding: 30px 0;
+        @media (max-width: 768px) {
+          line-height: 20px;
+          height: 60px;
+          padding: 10px 0;
+          margin: 190px 0 0 0;
+        }
       }
       p{
-        width:810px;
+        max-width:810px;
         margin:0 auto;
         padding: 15px 0;
         font-size: 20px;
         text-align: center;
         line-height: 29px;
         color: #FFFFFF;
+        @media (max-width: 768px) {
+          font-size: 16px;
+          padding: 10px;
+        }
       }
       ul{
         li{

@@ -1,10 +1,10 @@
 <template>
   <div class="medias">
     <div class="medias-top">
-      <Headerbar></Headerbar>
+      <HeaderList></HeaderList>
     </div>
 
-    <div class="carousel">
+    <div class="carousel cb">
       <el-carousel :interval="5000" arrow="always">
         <el-carousel-item v-for="item in bannerList" :key="item.name">
           <a href="item.link" target="_blank"><img :src="item.url" /></a>
@@ -62,7 +62,7 @@
 <script>
   import {getBannerList,getNewList,getGuideList,getFindUsList} from '@/api/httpData'
   import {API_ROOT} from '@/api/https'
-  import Headerbar from '@/components/Header';
+  import HeaderList from '@/components/HeaderList';
   import Bottombar from '@/components/Bottom';
 
   export default {
@@ -93,7 +93,7 @@
       },
     },
     components: {
-      Headerbar,
+      HeaderList,
       Bottombar,
     },
     mounted() {
@@ -162,7 +162,7 @@
         let that = this;
         getNewList(siteId,pageSize,pageNum)
           .then(function (response) {
-            //console.log(response);
+            console.log(response);
             for (let list of response.data.contentList) {
               list.thumbnail = API_ROOT + list.thumbnail;
             }
@@ -241,28 +241,51 @@
     background-color: #FFFFFF;
     width: 100%;
     .medias-top {
-      width: 1280px;
+      max-width: 1280px;
       margin: 0 auto;
+      @media (max-width: 768px) {
+        background: url("./../assets/images/map-bg.png") no-repeat;
+        background-size: 100% 100%;
+        min-height: 68px;
+      }
       .header {
         z-index: 9;
         position: absolute;
-        width: 1280px;
+        max-width: 1280px;
       }
     }
     .carousel {
       z-index: 8;
+      .el-carousel{
+        .el-carousel__container{
+          @media (max-width: 768px) {
+            max-height: 180px;
+          }
+          .el-carousel__item{
+            a{
+              img{
+                width: 100%;
+                height: 100%;
+              }
+            }
+          }
+        }
+      }
     }
     .el-tabs {
       min-height: 30rem;
-      width: 1280px;
+      max-width: 1280px;
       margin: 50px auto 0;
+      @media (max-width: 768px) {
+        margin: 20px auto 0;
+      }
       .el-tabs__header {
         .el-tabs__nav-wrap {
           &:after {
             background-color: transparent;
           }
           .el-tabs__nav-scroll {
-            width: 660px;
+            max-width: 660px;
             height: 50px;
             margin: 0 auto;
             text-align: center;
@@ -275,6 +298,9 @@
                 text-align: center;
                 margin: 0 30px;
                 padding: 0;
+                @media (max-width: 768px) {
+                  margin: 0 2px;
+                }
                 &:hover {
                   color: #56c400;
                   background: #fff;
@@ -314,17 +340,27 @@
             border-top-color:#C1C599;
             border-radius: 8px;
             margin: 50px 0 0 0;
+            @media (max-width: 768px) {
+              margin: 10px 0 0 0;
+            }
             &:hover{
               cursor: pointer;
             }
             p {
-              padding: 10px;
+              padding: 20px 10px 10px 25px;
               width: 70%;
+              @media (max-width: 768px) {
+                width: 100%;
+              }
               label {
                 color: #0a2140;
                 font-size: 30px;
                 line-height: 40px;
                 display: block;
+                @media (max-width: 768px) {
+                  font-size: 18px;
+                  line-height: 20px;
+                }
                 &:hover{
                   cursor: pointer;
                 }
@@ -342,6 +378,9 @@
               margin-top: 5px;
               width: 280px;
               height: 150px;
+              @media (max-width: 768px) {
+               display: none;
+              }
             }
           }
         }

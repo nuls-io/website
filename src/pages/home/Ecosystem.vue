@@ -56,8 +56,7 @@
         height: 376px;
         margin: 1px 0 0 1px;
         &:hover{
-          background-color: #0a2140;
-          opacity: 0.7;
+          background-color: rgba(10,33,64,0.75);
           p{
             color: #FFFFFF;
             line-height: 25px;
@@ -76,8 +75,7 @@
         height: 112px;
         margin: 133px 0 0 54px;
         &:hover{
-          background-color: #0a2140;
-          opacity: 0.7;
+          background-color: rgba(10,33,64,0.75);
           p{
             color: #FFFFFF;
             line-height: 25px;
@@ -96,8 +94,7 @@
         margin: 3px 0 0 49px;
         height: 373px;
         &:hover{
-          background-color: #0a2140;
-          opacity: 0.7;
+          background-color: rgba(10,33,64,0.75);
           p{
             color: #FFFFFF;
             line-height: 25px;
@@ -121,7 +118,7 @@
       p{
         padding: 0 10px;
         font-size: 20px;
-        margin: 10px 0 0 0 ;
+        margin: 10px 0 0 0;
       }
       img{
         width: 90%;

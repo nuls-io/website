@@ -2,7 +2,7 @@
   <div class="mediasDetails">
     <div class="medias-top-bg">
       <div class="medias-top">
-        <Headerbar></Headerbar>
+        <HeaderList></HeaderList>
       </div>
     </div>
     <Wallet></Wallet>
@@ -12,7 +12,7 @@
 
 <script>
   import axios from 'axios'
-  import Headerbar from '@/components/Header';
+  import HeaderList from '@/components/HeaderList';
   import Wallet from '@/pages/home/Wallet';
   import Bottombar from '@/components/Bottom';
 
@@ -24,7 +24,7 @@
       }
     },
     components: {
-      Headerbar,
+      HeaderList,
       Wallet,
       Bottombar,
     },
@@ -59,11 +59,17 @@
     background-color: #FFFFFF;
     width: 100%;
     min-height: 50rem;
+    @media (max-width: 768px) {
+      min-height: auto;
+    }
     .medias-top-bg {
       width: auto;
       min-height: 120px;
       margin: 0 auto;
       background: url("./../assets/images/top_bg.png") no-repeat 100%,100%;
+      @media (max-width: 768px) {
+        min-height: 75px;
+      }
       .medias-top{
         width: 1280px;
         margin: 0 auto;

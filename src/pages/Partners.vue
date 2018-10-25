@@ -1,10 +1,10 @@
 <template>
     <div class="partners">
       <div class="partners-header">
-        <Header></Header>
+        <HeaderList></HeaderList>
       </div>
       <div class="partners-info">
-        <h1>{{$t('partners.title')}}</h1>
+        <h1 class="h1">{{$t('partners.title')}}</h1>
         <p>{{$t('partners.info')}}</p>
       </div>
       <div class="partners-list">
@@ -55,7 +55,7 @@
 
 <script>
   import axios from 'axios'
-  import Header from '@/components/Header';
+  import HeaderList from '@/components/HeaderList';
   import Bottom from '@/components/Bottom';
 
   export default {
@@ -65,7 +65,7 @@
       }
     },
     components: {
-      Header,
+      HeaderList,
       Bottom,
     },
     mounted() {
@@ -82,7 +82,7 @@
         let that = this;
         axios.get('http://192.168.1.130:8080/hexin.html?siteId=' + siteId + '&pageSize=' + pageSize + '&pageNum=' + pageNum)
           .then(function (response) {
-            console.log(response)
+            console.log(response);
             for (let list of response.data.data) {
               list.headUrl = 'http://192.168.1.130:8080' + list.headUrl;
             }
@@ -101,35 +101,42 @@
 <style lang="less">
   .partners{
     background-color: #FFFFFF;
-
     .partners-header{
       background: url("./../assets/images/map-bg.png") no-repeat;
       background-size: 100% 100%;
       height: 500px;
+      @media (max-width: 768px) {
+        height: 300px;
+      }
     }
     .partners-info{
       max-width: 1280px;
-      margin:-400px auto 0;
+      margin:-240px auto 0;
       height: 400px;
+      @media (max-width: 768px) {
+        height: 260px;
+      }
       h1{
-        font-size: 77px;
-        line-height: 88px;
-        text-align: center;
-        color: #FFFFFF;
         padding: 30px 0;
+        @media (max-width: 768px) {
+          padding: 10px 0;
+        }
       }
       p{
-        width:810px;
+        max-width:810px;
         margin:0 auto;
         padding: 15px 0;
         font-size: 20px;
         text-align: center;
         line-height: 29px;
         color: #FFFFFF;
+        @media (max-width: 768px) {
+          padding: 10px;
+        }
       }
     }
     .partners-list,.media-list,.platforms-list{
-      width: 1280px;
+      max-width: 1280px;
       margin: 20px auto;
       h2{
         padding: 50px 0 20px;
@@ -139,6 +146,12 @@
           width: 20%;
           float: left;
           margin: 10px 2%;
+          @media (max-width: 768px) {
+            width: 120px;
+          }
+          img{
+            width: 100%;
+          }
         }
       }
     }

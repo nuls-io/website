@@ -103,7 +103,7 @@
     width: 100%;
     min-height: 600px;
     @media (max-width: 768px) {
-      min-height: 320px;
+      min-height: 390px;
     }
     .wallet-bg {
       width: 100%;
@@ -114,7 +114,7 @@
       position: absolute;
       @media (max-width: 768px) {
         min-width: 360px;
-        min-height: 320px;
+        min-height: 390px;
       }
     }
     .w-info {

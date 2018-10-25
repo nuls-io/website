@@ -1,7 +1,7 @@
 <template>
   <div class="developer">
     <div class="header-bg">
-      <Header></Header>
+      <HeaderList></HeaderList>
       <h1 class="h1 cb">{{$t('developer.title')}}</h1>
     </div>
     <div class="developer-info">
@@ -40,12 +40,12 @@
 </template>
 
 <script>
-  import Header from '@/components/Header';
+  import HeaderList from '@/components/HeaderList';
   import Bottom from '@/components/Bottom';
 
   export default {
     components: {
-      Header,
+      HeaderList,
       Bottom,
     },
     methods: {
@@ -68,9 +68,15 @@
     .header-bg {
       background: url("./../assets/images/map-bg.png") no-repeat;
       background-size: 100% 100%;
-      height: 300px;
+      max-height: 300px;
+      @media (max-width: 768px) {
+        max-height: 150px;
+      }
       h1 {
         line-height: 9rem;
+        @media (max-width: 768px) {
+          line-height: 4rem;
+        }
       }
     }
 
@@ -85,7 +91,7 @@
         margin: 0 auto;
         height: 330px;
         @media (max-width: 768px) {
-          height: 650px;
+          height: auto;
         }
         .d-list {
           background: #FFFFFF;
@@ -99,12 +105,15 @@
           color: #0b1422;
           &:first-child {
             margin-left: 15%;
+            @media (max-width: 768px) {
+              margin: 2rem 6rem;
+            }
           }
           @media (max-width: 768px) {
             width: 180px;
-            height: 180px;
+            height: auto;
             margin: 2rem 6rem;
-            padding: 30px 0 0;
+            padding: 30px 0 10px;
             float: none;
           }
           p {

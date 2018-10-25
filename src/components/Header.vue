@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <div class="logo fl"></div>
+    <div @click="handleSelect(1,['1'])" class="logo fl cursor-p"></div>
     <el-menu class="fl" :default-active="activeMenu" mode="horizontal" @select="handleSelect">
       <el-menu-item index="1">{{$t('nav.home')}}</el-menu-item>
       <el-submenu index="2">
