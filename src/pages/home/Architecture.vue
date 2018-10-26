@@ -104,10 +104,13 @@
     .architecture-content{
       max-width: 1280px;
       margin: 0 auto;
+      @media (max-width: 768px) {
+      	margin: 0 auto 5rem;
+      }
       h2 {
         padding: 120px 0 80px;
         @media (max-width: 768px) {
-          padding: 20px 0;
+         padding: 5rem 0 0 0;
         }
       }
       .architecture-info {
@@ -192,6 +195,10 @@
             border-left: 3px solid #BAE797;
             margin:0 10px 20px 15px;
             padding:0 0 15px 10px;
+            @media (max-width: 768px) {
+            	margin:0 0.5rem 1rem 1.25rem;
+              padding:0 0 0.75rem 0.8rem;
+            }
             h4,p{
               color: #0a2140;
             }
@@ -199,11 +206,15 @@
               font-size: 34px;
               font-weight: 300;
               @media (max-width: 768px){
-                font-size: 24px;
+              	color: #445569;
+                font-size: 1.8rem;
               }
             }
             p{
               line-height: 25px;
+              @media (max-width: 768px){
+                font-size: 1.2rem;
+              }
             }
             i{
               font-size: 0;
@@ -216,6 +227,9 @@
             background-color: transparent;
             .el-collapse-item__content{
               background-color: transparent;
+              @media (max-width: 768px) {
+              	padding: 0 1.25rem;
+              }
               img{
                 width: 100%;
               }

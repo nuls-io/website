@@ -28,7 +28,7 @@
           <img src="./../../assets/images/cube.svg">
         </div>
         <div class="pc">
-          <div class="iphone"></div>
+          <div class="iphones"></div>
         </div>
         <div class="cube2">
           <img src="./../../assets/images/cube.svg">
@@ -103,7 +103,7 @@
     width: 100%;
     min-height: 600px;
     @media (max-width: 768px) {
-      min-height: 390px;
+      min-height: auto;
     }
     .wallet-bg {
       width: 100%;
@@ -114,7 +114,7 @@
       position: absolute;
       @media (max-width: 768px) {
         min-width: 360px;
-        min-height: 390px;
+        min-height: 435px;
       }
     }
     .w-info {
@@ -126,7 +126,7 @@
           color: #0a2140;
           margin: 60px 0;
           @media (max-width: 768px) {
-            margin: 20px 0;
+            margin:0 auto 3rem;
           }
         }
         p {
@@ -146,14 +146,16 @@
           margin: 10px auto;
           @media (max-width: 768px) {
             max-width: 360px;
+            margin: 4rem 0 0 0;
           }
           .w-select {
-            max-width: 200px;
+            width: 200px;
             margin: 50px auto;
             float: left;
             @media (max-width: 768px) {
-              max-width: 150px;
-              margin: 20px 0 0 20px;
+              width: 12rem;
+              margin: 0 auto 2rem;
+              float: none;
             }
             .el-select {
               .el-input--suffix {
@@ -180,16 +182,17 @@
           }
 
           .btn-box {
-            max-width: 200px;
+            width: 200px;
             margin: 50px 0 0 50px;
             float: left;
             @media (max-width: 768px) {
-              max-width: 150px;
-              margin: 20px 0 0 20px;
+             float: none;
+              width: 12rem;
+              margin: 0 auto 0;
             }
             .el-button {
               @media (max-width: 768px) {
-                max-width: 150px;
+                max-width: 12rem;
               }
               .el-icon-arrow-right {
                 padding-left: 20px;
@@ -200,11 +203,10 @@
             }
           }
         }
-
       }
       .w-right {
         .cube1,.cube2,.cube3{
-          width: 1280px;
+          max-width: 1280px;
           margin: 0 auto;
           height: 1px;
           z-index: 2;
@@ -242,7 +244,7 @@
           z-index: 3;
           position: relative;
         }
-        .iphone {
+        .iphones {
           height: 570px;
           background: url("./../../assets/images/iphone.png") no-repeat 30%;
           background-size: 43%;

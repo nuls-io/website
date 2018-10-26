@@ -13,9 +13,9 @@
         </div>
       </div>
       <div class="m-ecosystem">
-        <p>{{$t('home.ecosystem_info0')}}</p>
-        <p>{{$t('home.ecosystem_info1')}}</p>
-        <p>{{$t('home.ecosystem_info2')}}</p>
+        <p><span>Step1:</span>{{$t('home.ecosystem_info0')}}</p>
+        <p><span>Step2:</span>{{$t('home.ecosystem_info1')}}</p>
+        <p><span>Step3:</span>{{$t('home.ecosystem_info2')}}</p>
         <img src="./../../assets/images/ecosystem.png" />
       </div>
     </div>
@@ -31,16 +31,18 @@
   .ecosystem{
     background:url("./../../assets/images/wallet-section-bg.jpg");
     width: 100%;
-    padding:120px 0;
+    padding:1px 0 60px 0;
     @media (max-width: 768px) {
       min-height: 550px;
-      padding:20px 0;
+      padding:0;
     }
-    h2{
+    .h2{
       color: #FFFFFF;
       margin-bottom:80px;
       @media (max-width: 768px) {
-        margin-bottom:20px;
+        margin-bottom:0;
+        text-align: left;
+        padding: 5rem 0 3rem 1rem;
       }
     }
     .ecosystem-bg{
@@ -59,7 +61,7 @@
           background-color: rgba(10,33,64,0.75);
           p{
             color: #FFFFFF;
-            line-height: 25px;
+            line-height: 1.25rem;
             opacity: 1;
           }
         }
@@ -119,10 +121,21 @@
         padding: 0 10px;
         font-size: 20px;
         margin: 10px 0 0 0;
+        @media (max-width: 768px) {
+         padding: 0 0 0 1rem;
+         font-size: 1.8rem;
+        }
+        span{
+          color: #c2ccdf;
+          font-size: 1.8rem;
+        }
       }
       img{
         width: 90%;
        margin: 20px 5% ;
+        @media (max-width: 768px) {
+          margin: 4rem 5% 2rem;
+        }
       }
     }
   }

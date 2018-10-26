@@ -35,11 +35,14 @@
       padding: 20px 0;
       position: relative;
       @media (max-width: 768px){
-
+        padding: 0;
       }
       .spaceship-content {
         max-width: 1280px;
         margin: 0 auto;
+         @media (max-width: 768px){
+         	background: url(./../../assets/images/rocket.png) center no-repeat;
+         }
         .h2, .mission-text, .mission-href {
           text-align: left;
         }
@@ -47,22 +50,24 @@
           margin-bottom: 60px;
           @media (max-width: 768px){
             text-align: center;
-            margin-bottom: 20px;
           }
         }
         .mission-text {
           color: #445569;
           margin-bottom: 5px;
           @media (max-width: 768px){
-            margin-bottom: 8px;
             text-align: center;
+            padding: 0.5rem;
+            font-size: 1.2rem;
           }
-
         }
         .mission-href {
           margin-top: 60px;
+          color: #59a500;
           @media (max-width: 768px){
-            margin-top: 40px;
+            margin: 1.2rem 0 0.8rem;
+            font-size: 1.2rem;
+            text-align: center;
           }
         }
       }
@@ -77,7 +82,6 @@
       @media (max-width: 768px) {
         width: auto;
         min-height: auto;
-        padding-top: 20px;
       }
 
     }

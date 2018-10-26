@@ -37,7 +37,7 @@
       Architecture,
       Ecosystem,
       Wallet,
-      Map,
+      /*Map,*/
       RoadMap,
       GoTop,
     },
@@ -56,10 +56,13 @@
     background-color: #FFFFFF;
     .cubes {
       max-width: 1280px;
-      margin: 0 auto;
+      margin: 0 0 0 60%;
       height: 1px;
       z-index: 2;
       position: absolute;
+      @media (max-width: 768px){
+        margin: 0 0 0 10%;
+      }
       img {
         width: 200px;
         right: 10%;

@@ -16,6 +16,10 @@
             <p class="font-18 font-bold">{{$t('home.vedio_title')}}</p><img src="./../../assets/images/vedio.png"/>
           </div>
         </div>
+
+        <div class="top-slabs">
+          <img src="./../../assets/images/slabs.svg">
+        </div>
       </el-col>
       <el-col :xs="0" :sm="8">
         <div class="slabs">
@@ -26,10 +30,12 @@
 
     <el-dialog title="" :visible.sync="videoDialog" width="1024" center>
       <div class="pc">
-        <iframe width="1024" height="576" src="https://www.youtube.com/embed/2rgcxxaJrWs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe width="1024" height="576" src="https://www.youtube.com/embed/2rgcxxaJrWs" frameborder="0"
+                allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </div>
       <div class="iphone">
-        <iframe width="100%" height="320" src="https://www.youtube.com/embed/2rgcxxaJrWs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe width="100%" height="320" src="https://www.youtube.com/embed/2rgcxxaJrWs" frameborder="0"
+                allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </div>
     </el-dialog>
   </div>
@@ -37,6 +43,7 @@
 
 <script>
   import HeaderList from '@/components/HeaderList';
+
   export default {
     data() {
       return {
@@ -51,7 +58,7 @@
       /**
        *  视频跳转
        */
-      toVedio(){
+      toVedio() {
         this.videoDialog = true;
       }
     }
@@ -59,14 +66,14 @@
 </script>
 
 <style lang="less">
-  .homeHeader{
+  .homeHeader {
     background: url("./../../assets/images/wallet-section-bg.jpg") 100% 100%;
     width: 100%;
     min-height: 500px;
-    .h1{
-      line-height: 8rem;
-      @media (max-width: 768px){
-        line-height: 3.5rem;
+    .h1 {
+      padding: 60px 0 0 0 ;
+      @media (max-width: 768px) {
+        padding: 0;
       }
     }
     .vedio {
@@ -79,17 +86,17 @@
         line-height: 50px;
         margin: 100px auto 0;
         @media (max-width: 768px) {
-          margin: 20px auto 0;
+          margin: 1rem auto 0;
         }
         &:hover {
           cursor: pointer;
           border: 1px solid #8fe400;
-          background:#8fe400;
+          background: #8fe400;
         }
         &:focus {
           cursor: pointer;
           border: 1px solid #56c400;
-          background:#56c400;
+          background: #56c400;
         }
         p {
           width: 160px;
@@ -109,7 +116,14 @@
       }
 
     }
-
+    .top-slabs {
+      display: none;
+      @media (max-width: 768px) {
+        display: block;
+        width: 70%;
+        margin: 1rem auto 0;
+      }
+    }
     .cube {
       width: 300px;
     }
@@ -121,34 +135,34 @@
       }
     }
 
-    .el-dialog__wrapper{
-      .el-dialog{
+    .el-dialog__wrapper {
+      .el-dialog {
         width: 1024px;
         height: 500px;
         background: transparent;
-        @media (max-width: 768px){
+        @media (max-width: 768px) {
           width: 100%;
           height: 200px;
         }
-        .el-dialog__header{
-          .el-dialog__headerbtn{
+        .el-dialog__header {
+          .el-dialog__headerbtn {
             background-color: #34ce57;
             margin: 10px -40px 0 0;
             border-radius: 10px;
             width: 20px;
             height: 20px;
-            @media (max-width: 768px){
+            @media (max-width: 768px) {
               margin: 10px -15px 0 0;
             }
-            .el-dialog__close{
+            .el-dialog__close {
               color: #ffffff;
               line-height: 20px;
             }
           }
         }
-        .el-dialog__body{
-          @media (max-width: 768px){
-           padding: 0;
+        .el-dialog__body {
+          @media (max-width: 768px) {
+            padding: 0;
           }
         }
       }

@@ -43,9 +43,9 @@ module.exports = {
     architecture_info_p_41: '',
 
     ecosystem_title: 'Technical Architecture of NULS Ecosystem',
-    ecosystem_info0: 'Step1: connection via cross-chain consensus modules',
-    ecosystem_info1: 'Step2: connection via cross-chain consensus modules',
-    ecosystem_info2: 'Step3: connection via cross-chain consensus modules',
+    ecosystem_info0: 'connection via cross-chain consensus modules',
+    ecosystem_info1: 'connection via cross-chain consensus modules',
+    ecosystem_info2: 'connection via cross-chain consensus modules',
 
     wallet_title: 'NULS Wallet',
     wallet_info: 'NULS wallet is developed by NULS core technical team Supported on various platforms',
