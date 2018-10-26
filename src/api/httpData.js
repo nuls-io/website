@@ -55,7 +55,16 @@ export const getFindUsList = (siteId=1,pageSize=10,pageNum=1) => fetch('findus.h
  * @param pageNum
  * @returns {Promise}
  */
-export const getTeamList = (siteId=1,pageSize=10,pageNum=1) => fetch('hexin.html?siteId=' + siteId + '&pageSize=' + pageSize + '&pageNum=' + pageNum);
+export const getTeamList = (siteId=1,pageSize=10,pageNum=1) => fetch('teamlist.html?siteId=' + siteId + '&pageSize=' + pageSize + '&pageNum=' + pageNum);
+
+/**
+ *  获取合作伙伴列表 Get partner list
+ * @param siteId
+ * @param pageSize
+ * @param pageNum
+ * @returns {Promise}
+ */
+export const getPartnerList = (siteId=1,pageSize=10,pageNum=1) => fetch('partner.html?siteId=' + siteId + '&pageSize=' + pageSize + '&pageNum=' + pageNum);
 
 /**
  * post 方法

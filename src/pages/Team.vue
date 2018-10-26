@@ -76,24 +76,20 @@
       min-height: 500px;
       width: 100%;
       @media (max-width: 768px) {
-        min-height: 300px;
+        min-height: 400px;
       }
     }
     .team-info{
       max-width: 1280px;
       margin:-400px auto 0;
-      min-height: 800px;
+      min-height: 1500px;
       @media (max-width: 768px) {
-       min-height: 870px;
+       min-height: auto;
+        margin:-20rem auto 5rem;
       }
       h1{
-        line-height: 88px;
-        padding: 30px 0;
         @media (max-width: 768px) {
-          line-height: 20px;
-          height: 60px;
-          padding: 10px 0;
-          margin: 190px 0 0 0;
+          margin: 0 0 0 0;
         }
       }
       p{
@@ -113,7 +109,13 @@
         li{
           width: 20%;
           float: left;
+          height: 290px;
           margin: 2.5rem 2.5%;
+          @media (max-width: 768px) {
+            float:none;
+            width: 80%;
+            margin: 1rem 10%;
+          }
           h2{
             width: 220px;
             height: 200px;

@@ -32,7 +32,7 @@
     clear: none;
     .spaceship {
       min-height: 517px;
-      padding: 20px 0;
+      padding:0;
       position: relative;
       @media (max-width: 768px){
         padding: 0;
@@ -65,7 +65,7 @@
           margin-top: 60px;
           color: #59a500;
           @media (max-width: 768px){
-            margin: 1.2rem 0 0.8rem;
+            margin: 1.2rem 0 6rem;
             font-size: 1.2rem;
             text-align: center;
           }

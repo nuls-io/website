@@ -7,7 +7,7 @@
     <el-row :gutter="0" class="centers">
       <el-col :xs="0" :sm="8">
         <div class="cube">
-          <img src="./../../assets/images/cube.svg">
+          <img src="./../../assets/images/cubes-sync.svg">
         </div>
       </el-col>
       <el-col :xs="24" :sm="8">
@@ -71,7 +71,9 @@
     width: 100%;
     min-height: 500px;
     .h1 {
-      padding: 60px 0 0 0 ;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 130px 0 60px;
       @media (max-width: 768px) {
         padding: 0;
       }

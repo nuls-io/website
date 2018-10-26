@@ -10,42 +10,24 @@
       <div class="partners-list">
         <h2 class="h2">{{$t('nav.about3')}}</h2>
         <ul>
-          <li>
-            <a href="https://www.bitmain.com/" target="_blank"><img src="./../assets/images/1.png"  /></a>
-          </li>
-          <li>
-            <a href="https://www.bitmain.com/" target="_blank"><img src="./../assets/images/2.png"  /></a>
-          </li>
-          <li>
-            <a href="https://www.bitmain.com/" target="_blank"><img src="./../assets/images/3.png"  /></a>
+          <li v-for="site in partnerList">
+            <a :href="site.link" target="_blank"><img :src="site.url"  /></a>
           </li>
         </ul>
       </div>
       <div class="media-list cb">
         <h2 class="h2">Media Partners</h2>
         <ul>
-          <li>
-            <a href="https://www.bitmain.com/" target="_blank"><img src="./../assets/images/1.png"  /></a>
-          </li>
-          <li>
-            <a href="https://www.bitmain.com/" target="_blank"><img src="./../assets/images/2.png"  /></a>
-          </li>
-          <li>
-            <a href="https://www.bitmain.com/" target="_blank"><img src="./../assets/images/3.png"  /></a>
+          <li v-for="site in mediaList">
+            <a :href="site.link" target="_blank"><img :src="site.url"  /></a>
           </li>
         </ul>
       </div>
       <div class="platforms-list cb">
         <h2 class="h2">Platforms</h2>
         <ul>
-          <li>
-            <a href="https://www.bitmain.com/" target="_blank"><img src="./../assets/images/1.png"  /></a>
-          </li>
-          <li>
-            <a href="https://www.bitmain.com/" target="_blank"><img src="./../assets/images/2.png"  /></a>
-          </li>
-          <li>
-            <a href="https://www.bitmain.com/" target="_blank"><img src="./../assets/images/3.png"  /></a>
+          <li v-for="site in platformsList">
+            <a :href="site.link" target="_blank"><img :src="site.url"  /></a>
           </li>
         </ul>
       </div>
@@ -54,14 +36,17 @@
 </template>
 
 <script>
-  import axios from 'axios'
+  import {getPartnerList} from '@/api/httpData';
+  import {API_ROOT} from '@/api/https';
   import HeaderList from '@/components/HeaderList';
   import Bottom from '@/components/Bottom';
 
   export default {
     data() {
       return {
-        teamList:[],
+        partnerList:[],
+        mediaList:[],
+        platformsList:[],
       }
     },
     components: {
@@ -69,7 +54,7 @@
       Bottom,
     },
     mounted() {
-      this.getTeamList(1, 10, 1)
+      this.getPartnerList(1, 10, 1)
     },
     methods: {
       /**
@@ -78,16 +63,21 @@
        * @param pageSize
        * @param pageNum
        */
-      getTeamList(siteId, pageSize, pageNum) {
+      getPartnerList(siteId, pageSize, pageNum) {
         let that = this;
-        axios.get('http://192.168.1.130:8080/hexin.html?siteId=' + siteId + '&pageSize=' + pageSize + '&pageNum=' + pageNum)
+        getPartnerList(siteId,pageSize,pageNum)
           .then(function (response) {
-            console.log(response);
-            for (let list of response.data.data) {
-              list.headUrl = 'http://192.168.1.130:8080' + list.headUrl;
+            //console.log(response);
+            for (let list of response.data.contentList) {
+              list.url = API_ROOT + list.url;
+              if(list.types === '1'){
+                that.partnerList.push(list)
+              }else if(list.types === '2'){
+                that.mediaList.push(list)
+              }else {
+                that.platformsList.push(list)
+              }
             }
-            that.teamList = response.data.data;
-            console.log(that.teamList)
           })
           .catch(function (error) {
             console.log(error);
@@ -106,20 +96,21 @@
       background-size: 100% 100%;
       height: 500px;
       @media (max-width: 768px) {
-        height: 300px;
+        height: 25rem;
       }
     }
     .partners-info{
       max-width: 1280px;
-      margin:-240px auto 0;
+      margin:-400px auto 0;
       height: 400px;
       @media (max-width: 768px) {
-        height: 260px;
+        height: 20rem;
       }
       h1{
         padding: 30px 0;
         @media (max-width: 768px) {
-          padding: 10px 0;
+          padding: 0;
+          margin-top: 4.5rem;
         }
       }
       p{
@@ -137,17 +128,20 @@
     }
     .partners-list,.media-list,.platforms-list{
       max-width: 1280px;
-      margin: 20px auto;
+      margin: 0 auto;
       h2{
-        padding: 50px 0 20px;
+
       }
       ul{
         li{
           width: 20%;
+          height: 75px;
           float: left;
           margin: 10px 2%;
           @media (max-width: 768px) {
             width: 120px;
+            height: 40px;
+            margin: 0.5rem 1rem;
           }
           img{
             width: 100%;
