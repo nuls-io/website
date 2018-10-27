@@ -72,14 +72,16 @@
         height: auto;
       }
       ul{
+        margin: 100px 0 0 0;
         li{
-          margin-top: 40px;
+          margin: 0 0 80px 0;
           h3{
-            font-size: 28px;
+            font-size: 36px;
             color: #0b1422;
             opacity: 0.86;
+            height: 40px;
             border-left: 3px solid #56c400;
-            padding: 0 0 0 10px;
+            padding: 0 0 0 30px;
             @media (max-width: 768px) {
               font-size: 24px;
               padding: 0 0 0 0.5rem;
@@ -87,11 +89,14 @@
             }
           };
           p{
-            box-shadow: 10px 10px 20px 10px #C1C5C9;
-            padding: 20px;
-            margin: 20px 10px;
+            box-shadow: 3px 3px 5px 5px #C1C5C9;
+            padding: 36px 40px;
+            margin: 40px 0 0 0 ;
             width: 100%;
-            min-height: 8rem;
+            font-size: 24px;
+            line-height: 36px;
+            color: #445569;
+            height: 160px;
             @media (max-width: 768px) {
               min-height: 15rem;
               width: auto;

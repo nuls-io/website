@@ -270,23 +270,33 @@
             }
           }
         }
+        .el-carousel__indicators{
+          .el-carousel__indicator{
+            padding: 12px 4px 40px 4px;
+            .el-carousel__button{
+              width: 8px;
+              height: 8px;
+            }
+          }
+        }
       }
     }
     .el-tabs {
       min-height: 30rem;
       max-width: 1280px;
-      margin: 50px auto 0;
+      margin: 100px auto 0;
       @media (max-width: 768px) {
         margin: 20px auto 0;
       }
       .el-tabs__header {
+        margin: 0 0 60px;
         .el-tabs__nav-wrap {
           &:after {
             background-color: transparent;
           }
           .el-tabs__nav-scroll {
             max-width: 660px;
-            height: 50px;
+            height: 60px;
             margin: 0 auto;
             text-align: center;
             .el-tabs__nav {
@@ -294,7 +304,9 @@
                 border-radius: 30px;
                 color: #000000;
                 font-size: 18px;
-                width: 110px;
+                width: 160px;
+                height: 50px;
+                line-height: 50px;
                 text-align: center;
                 margin: 0 30px;
                 padding: 0;
@@ -334,12 +346,11 @@
         }
         .news-list {
           li {
-            height: 10rem;
+            height: 200px;
             box-shadow: 5px 8px 9px -5px #C1C5C9;
             border:1px solid #C1C5C9;
-            border-top-color:#C1C599;
             border-radius: 8px;
-            margin: 50px 0 0 0;
+            margin: 20px 0 0 0;
             @media (max-width: 768px) {
               margin: 10px 0 0 0;
             }
@@ -347,7 +358,9 @@
               cursor: pointer;
             }
             p {
-              padding: 20px 10px 10px 25px;
+              padding: 32px 10px 0px 40px;
+              color: #445569;
+              font-size: 24px;
               width: 70%;
               @media (max-width: 768px) {
                 width: 100%;
@@ -367,7 +380,8 @@
               }
               span {
                 color: #a6a9ad;
-                padding: 20px 0 0 0;
+                padding: 56px 0 40px 0;
+                font-size: 18px;
                 display: block;
               }
               &:hover{
@@ -375,9 +389,9 @@
               }
             }
             img {
-              margin-top: 5px;
+              margin:10px 10px 10px 10px;
               width: 280px;
-              height: 150px;
+              height: 180px;
               @media (max-width: 768px) {
                display: none;
               }

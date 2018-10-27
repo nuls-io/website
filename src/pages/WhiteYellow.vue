@@ -60,49 +60,57 @@
       min-height: 500px;
       margin: 50px auto 100px;
       h5{
-        width: 60%;
-        margin: 30px auto 0;
-        padding: 20px 0 0 0;
-
+        width: 70%;
+        margin: 0 auto;
+        padding: 120px 0 60px 0;
+        font-size: 48px;
+        line-height: 60px;
+        color: #0a2140;
       }
       p{
         width: 70%;
         margin: 10px auto;
-        font-size: 18px;
-        color: #0b1422;
-        line-height: 30px;
-        padding: 0 0 50px 0 ;
+        font-size: 30px;
+        color: #445569;
+        line-height: 48px;
+        padding: 0 0 100px 0 ;
       }
       .w-one{
-
+        min-height: 100px;
       }
       .w-two{
         background-color: #e9f4f9;
       }
       .w-three{
-        min-height: 330px;
-        width: 750px;
+        min-height: 680px;
+        width: 1280px;
         margin: 0 auto;
         h5{
           width: 100%;
         }
         .w-three-left,.w-three-right{
-          width: 350px;
+          width: 590px;
           float: left;
-          height: 220px;
+          height: 360px;
           text-align: center;
-          margin: 20px 11.5px 0  ;
+          margin: 20px 0 0 0  ;
           box-shadow:2px 2px 5px #333333;
           p{
             width: 90%;
             margin: 0 auto;
             height: 120px;
-            padding: 20px 0 0 0;
+            padding: 78px 0 80px 0;
+            color: #445569;
+            font-size: 24px;
+            line-height: 36px;
             right: 0;
           }
           .el-button{
-            margin: 20px 0;
+            margin: 80px 0 0 0;
           }
+        }
+        .w-three-right{
+          float: right;
         }
 
       }
