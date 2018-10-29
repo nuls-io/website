@@ -112,6 +112,9 @@
       .el-dialog{
         background-color: #0a2140;
         text-align: left;
+        @media (max-width: 768px){
+          width: 90%;
+        }
         .el-dialog__header{
           .el-dialog__headerbtn{
 

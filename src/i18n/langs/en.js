@@ -3,8 +3,8 @@ module.exports = {
     //nav
     home: 'Home',
     wallet: 'Wallet',
-    wallet1: 'wallet',
-    wallet2: 'web',
+    wallet1: 'Client',
+    wallet2: 'Web',
     developer: 'Developer',
     explorer: 'Explorer',
     media: 'Media',
@@ -22,14 +22,14 @@ module.exports = {
     top_title: ' Adaptable blockchain for enterprise solutions',
     vedio_title: 'Watch overview',
 
-    nuls_do_title: 'Our mission',
+    nuls_do_title: 'Our Mission',
     nuls_do_info1: 'Accommodate multitude of blockchain application usage',
     nuls_do_info2: 'Break through technology bottleneck',
     nuls_do_info3: 'Reduce technical threshold and cost',
     nuls_do_info4: 'Resolving the lack of trust in a centralised database',
     nuls_do_info5_more:'Learn more from white paper',
 
-    architecture_title: 'How it works',
+    architecture_title: 'How It Works',
     architecture_info_h4_1: 'Module Repository',
     architecture_info_p_1: 'It covers majority of technologies in the blockchain field and provides standard components for blockchain, multi-chain and cross-chain mechanism.',
     architecture_info_p_11: '',
@@ -44,9 +44,9 @@ module.exports = {
     architecture_info_p_41: '',
 
     ecosystem_title: 'Technical Architecture of NULS Ecosystem',
-    ecosystem_info0: 'connection via cross-chain consensus modules',
-    ecosystem_info1: 'connection via cross-chain consensus modules',
-    ecosystem_info2: 'connection via cross-chain consensus modules',
+    ecosystem_info0: 'Users choosing modules from repository and building new chains with Chain Factory ',
+    ecosystem_info1: 'New chain joining the NULS Ecosystem via Cross-Chain Module',
+    ecosystem_info2: 'Assets Circulating within all the Chains of NULS Ecosystem',
 
     wallet_title: 'NULS Wallet',
     wallet_info: 'NULS wallet is developed by NULS core technical team Supported on various platforms',
@@ -123,7 +123,7 @@ module.exports = {
   developer: {
     title: 'Developer',
     title2: 'Using Testnet',
-    info: 'If you need testnet NULS,please download the testnet wallet and offer your address to apply testnet nuls',
+    info: 'If you need testnet NULS,please download the testnet wallet and offer your address to apply testnet NULS',
     bt1: 'Download Testnet wallet',
     bt2: 'Apply For Testnet NULS',
   },

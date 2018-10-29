@@ -75,7 +75,7 @@
       margin: 0 auto;
       padding: 130px 0 60px;
       @media (max-width: 768px) {
-        padding: 0;
+        padding: 1.5rem 0.5rem 1.5rem;
       }
     }
     .vedio {
@@ -86,7 +86,7 @@
         border-radius: 50px;
         text-align: center;
         line-height: 50px;
-        margin: 100px auto 0;
+        margin: 20px auto 0;
         @media (max-width: 768px) {
           margin: 1rem auto 0;
         }

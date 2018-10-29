@@ -73,8 +73,15 @@
       }
       ul{
         margin: 100px 0 0 0;
+        @media (max-width: 768px) {
+          margin: 2rem 0 0 0;
+        }
         li{
           margin: 0 0 80px 0;
+          min-height: 150px;
+          @media (max-width: 768px) {
+            margin: 0 0 3rem 0;
+          }
           h3{
             font-size: 36px;
             color: #0b1422;
@@ -86,6 +93,7 @@
               font-size: 24px;
               padding: 0 0 0 0.5rem;
               margin:  0 0 0 1rem;
+              line-height: 2.6rem;
             }
           };
           p{
@@ -96,10 +104,12 @@
             font-size: 24px;
             line-height: 36px;
             color: #445569;
-            height: 160px;
+            min-height: 150px;
             @media (max-width: 768px) {
-              min-height: 15rem;
+              min-height: auto;
               width: auto;
+              float: none;
+              padding: 1rem 1rem 2rem 1rem;
             }
             span{
               color: #0b1422;
@@ -109,7 +119,7 @@
               float: left;
               @media (max-width: 768px) {
                 width: 100%;
-                clear: left;
+                float: none;
               }
             }
             button{
@@ -119,9 +129,7 @@
               float: left;
               @media (max-width: 768px) {
                 width: 100%;
-                clear: left;
-              }
-              @media (max-width: 768px) {
+                float: none;
                 text-align: center;
               }
             }

@@ -100,8 +100,9 @@
 
 <style lang="less" type="text/less">
   .wallet {
-    width: 100%;
+    max-width: 100%;
     min-height: 600px;
+    margin: 0 auto;
     @media (max-width: 768px) {
       min-height: auto;
     }
@@ -118,6 +119,8 @@
       }
     }
     .w-info {
+      max-width: 1280px;
+      margin: 0 auto;
       background: transparent;
       z-index: 2;
       position: relative;
@@ -125,6 +128,7 @@
         h2 {
           color: #0a2140;
           margin: 60px 0;
+          text-align: left;
           @media (max-width: 768px) {
             margin:0 auto 3rem;
           }
@@ -134,7 +138,6 @@
           font-size: 16px;
           line-height: 24px;
           width: 500px;
-          margin: 10px auto;
           text-align: left;
           @media (max-width: 768px) {
             width: 90%;
@@ -143,14 +146,13 @@
         }
         .w-bt {
           max-width: 550px;
-          margin: 10px auto;
           @media (max-width: 768px) {
             max-width: 360px;
             margin: 4rem 0 0 0;
           }
           .w-select {
             width: 200px;
-            margin: 50px 0 0 20px;
+            margin: 50px 0 0 0px;
             float: left;
             @media (max-width: 768px) {
               width: 12rem;

@@ -85,7 +85,7 @@
           }else if(this.activeMedia ==='guide'){
             this.getGuideList(this.language, 10, 1);
           }else if(this.activeMedia ==='social') {
-            this.getFindUsList(this.language, 10, 1);
+            this.getFindUsList(1, 10, 1);
           }else {
             console.log("")
           }
@@ -108,7 +108,7 @@
       }else if(this.activeMedia ==='guide'){
         this.getGuideList(this.language, 10, 1);
       }else if(this.activeMedia ==='social') {
-        this.getFindUsList(this.language, 10, 1);
+        this.getFindUsList(1, 10, 1);
       }else {
         console.log("")
       }
@@ -146,7 +146,7 @@
         }else if(tab.name ==='guide'){
           this.getGuideList(this.language, 10, 1);
         }else if(tab.name ==='social') {
-          this.getFindUsList(this.language, 10, 1);
+          this.getFindUsList(1, 10, 1);
         }else {
           console.log("")
         }
@@ -162,7 +162,7 @@
         let that = this;
         getNewList(siteId,pageSize,pageNum)
           .then(function (response) {
-            console.log(response);
+            //console.log(response);
             for (let list of response.data.contentList) {
               list.thumbnail = API_ROOT + list.thumbnail;
             }
@@ -188,7 +188,8 @@
        * link 跳转
        **/
       toLink(url){
-          console.log(url)
+        //console.log(url)
+        window.open(url);
       },
 
       /**
@@ -221,7 +222,7 @@
         let that = this;
         getFindUsList(siteId,pageSize,pageNum)
           .then(function (response) {
-            //console.log(response);
+            console.log(response);
             for (let list of response.data.contentList) {
               list.imgUrl = API_ROOT + list.imgUrl;
             }
@@ -258,8 +259,9 @@
       z-index: 8;
       .el-carousel{
         .el-carousel__container{
+          height: 560px;
           @media (max-width: 768px) {
-            max-height: 180px;
+            height: 180px;
           }
           .el-carousel__item{
             a{
@@ -289,7 +291,7 @@
         margin: 20px auto 0;
       }
       .el-tabs__header {
-        margin: 0 0 60px;
+        margin: 0 0 50px;
         .el-tabs__nav-wrap {
           &:after {
             background-color: transparent;
@@ -341,8 +343,8 @@
 
       }
       .el-tabs__content {
+        margin-bottom: 120px;
         .el-tab-pane{
-          margin-bottom: 100px;
         }
         .news-list {
           li {
@@ -358,7 +360,7 @@
               cursor: pointer;
             }
             p {
-              padding: 32px 10px 0px 40px;
+              padding: 24px 10px 0 36px;
               color: #445569;
               font-size: 24px;
               width: 70%;
@@ -380,9 +382,10 @@
               }
               span {
                 color: #a6a9ad;
-                padding: 56px 0 40px 0;
                 font-size: 18px;
                 display: block;
+                position: relative;
+                top: 80px;
               }
               &:hover{
                 cursor: pointer;
@@ -401,30 +404,35 @@
         h3 {
           border-left: 3px solid #34ce57;
           color: #0a2140;
-          width: 600px;
+          width: 100%;
           margin: 50px auto 0;
           font-size: 30px;
           padding: 0 0 0 20px;
         }
         .social-list {
-          width: 600px;
+          max-width: 1280px;
+          height: auto;
           margin: 50px auto 0;
           li {
             box-shadow: 2px 1px 2px 3px #C1C5C9;
-            width: 180px;
-            height: 160px;
-            margin: 0 10px;
+            max-width: 400px;
+            height: 80px;
+            margin: 30px 15px 0 0;
             float: left;
             text-align: center;
             cursor: pointer;
             img {
               margin: 0;
-              width: 180px;
-              height: 160px;
+              width: 80px;
+              height: 80px;
+              float: left;
             }
             p {
+              min-width: 300px;
               color: #0a2140;
-              line-height: 35px;
+              line-height: 80px;
+              font-size: 24px;
+              float: left;
             }
           }
         }

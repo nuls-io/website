@@ -123,7 +123,7 @@
         margin: 10px 0 0 0;
         @media (max-width: 768px) {
          padding: 0 0 0 1rem;
-         font-size: 1.8rem;
+         font-size: 1.5rem;
         }
         span{
           color: #c2ccdf;

@@ -22,7 +22,7 @@
         <el-menu-item index="6-4">{{$t('nav.about4')}}</el-menu-item>
       </el-submenu>
     </el-menu>
-    <div class="language fr">
+    <div class="language fr" v-show="false">
       <el-select v-model="languageValue" @change="changeLanguage">
         <el-option
           v-for="item in languageOptions"

@@ -128,6 +128,7 @@
             opacity: 0.6;
             padding-left: 26px;
             margin: 0 0 1.5rem 0;
+            border-left: 6px solid #56c400;
             &.active{
               opacity: 1;
               border-left: 6px solid #56c400;
@@ -142,6 +143,7 @@
               padding-bottom: 18px;
               color: #445569;
               font-weight: bold;
+              text-align: left;
             }
             p {
               font-size: 16px;
