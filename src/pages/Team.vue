@@ -7,7 +7,7 @@
       <h1 class="h1">{{$t('team.title')}}</h1>
       <p>{{$t('team.info')}}</p>
       <ul>
-        <li v-for="site in teamListSort">
+        <li v-for="site in teamList">
           <h2><img :src=site.headUrl height="600" width="660"/></h2>
           <h3>{{site.ename}}</h3>
           <h4>{{site.desc}}</h4>
@@ -15,15 +15,15 @@
       </ul>
       <h2 class="h2 cb">Angel Investor</h2>
       <ul>
-          <li v-for="site in angelListSort">
-            <h2><img :src=site.headUrl height="600" width="660"/></h2>
-            <h3>{{site.ename}}</h3>
-            <h4>{{site.desc}}</h4>
-          </li>
+        <li v-for="site in angelList">
+          <h2><img :src=site.headUrl height="600" width="660"/></h2>
+          <h3>{{site.ename}}</h3>
+          <h4>{{site.desc}}</h4>
+        </li>
       </ul>
       <h2 class="h2 cb">Advisor</h2>
       <ul>
-        <li v-for="site in advisorListSort">
+        <li v-for="site in advisorList">
           <h2><img :src=site.headUrl height="600" width="660"/></h2>
           <h3>{{site.ename}}</h3>
           <h4>{{site.desc}}</h4>
@@ -31,7 +31,7 @@
       </ul>
       <h2 class="h2 cb">Community Member</h2>
       <ul>
-        <li v-for="site in communityListSort">
+        <li v-for="site in communityList">
           <h2><img :src=site.headUrl height="600" width="660"/></h2>
           <h3>{{site.ename}}</h3>
           <h4>{{site.desc}}</h4>
@@ -45,6 +45,7 @@
 <script>
   import {getTeamList} from '@/api/httpData';
   import {API_ROOT} from '@/api/https';
+  import {arrItemSort} from '@/util/util';
   import HeaderList from '@/components/HeaderList';
   import Bottom from '@/components/Bottom';
 
@@ -62,21 +63,7 @@
       Bottom,
     },
     mounted() {
-      this.getTeamList(1, 50, 1)
-    },
-    computed: {
-      teamListSort: function () {
-        return this.sortKey(this.teamList, 'id')
-      },
-      angelListSort: function () {
-        return this.sortKey(this.angelList, 'id')
-      },
-      advisorListSort: function () {
-        return this.sortKey(this.advisorList, 'id')
-      },
-      communityListSort: function () {
-        return this.sortKey(this.communityList, 'id')
-      }
+      this.getTeamList(1, 100, 1)
     },
     methods: {
 
@@ -90,38 +77,35 @@
         let that = this;
         getTeamList(siteId, pageSize, pageNum)
           .then(function (response) {
-            console.log(response);
+            //console.log(response);
             for (let list of response.data) {
               list.headUrl = API_ROOT + list.headUrl;
-              if(list.types === '1'){
+              if (list.types === '1') {
                 that.teamList.push(list)
-              }else if(list.types === '2'){
+              } else if (list.types === '2') {
                 that.angelList.push(list)
-              }else if(list.types === '3'){
+              } else if (list.types === '3') {
                 that.advisorList.push(list)
-              }else {
+              } else {
                 that.communityList.push(list)
               }
             }
+            setTimeout(() => {
+              let teamListSort = arrItemSort(that.teamList,"id",0);
+              let angelListSort = arrItemSort(that.angelList,"id",0);
+              let advisorListSort = arrItemSort(that.advisorList,"id",0);
+              let communityListSort = arrItemSort(that.communityList,"id",0);
+              that.teamList  = teamListSort;
+              that.angelList  = angelListSort;
+              that.advisorList  = advisorListSort;
+              that.communityList  = communityListSort;
+            }, 100);
+
           })
           .catch(function (error) {
             console.log(error);
           });
       },
-
-      /**
-       * 根据id 排序
-       * @param array
-       * @param key
-       * @returns {*|void}
-       */
-      sortKey(array,key){
-        return array.sort(function(a,b){
-          let x = a[key];
-          let y = b[key];
-          return ((x<y)?-1:(x>y)?1:0)
-        })
-      }
     }
   }
 </script>

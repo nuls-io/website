@@ -35,6 +35,8 @@
 </template>
 
 <script>
+  import {getownloadsList} from '@/api/httpData'
+  import {API_ROOT} from '@/api/https'
   import HeaderList from '@/components/HeaderList';
   import Bottom from '@/components/Bottom';
 

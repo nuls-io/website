@@ -67,6 +67,15 @@ export const getTeamList = (siteId=1,pageSize=10,pageNum=1) => fetch('teamlist.h
 export const getPartnerList = (siteId=1,pageSize=10,pageNum=1) => fetch('partner.html?siteId=' + siteId + '&pageSize=' + pageSize + '&pageNum=' + pageNum);
 
 /**
+ *  获取下载列表 Get downloads list
+ * @param siteId
+ * @param pageSize
+ * @param pageNum
+ * @returns {Promise}
+ */
+export const getownloadsList = (siteId=1,pageSize=10,pageNum=1) => fetch('downloads.html?siteId=' + siteId + '&pageSize=' + pageSize + '&pageNum=' + pageNum);
+
+/**
  * post 方法
  * @param params
  * @returns {Promise}

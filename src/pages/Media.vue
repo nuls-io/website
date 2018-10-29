@@ -7,7 +7,7 @@
     <div class="carousel cb">
       <el-carousel :interval="5000" arrow="always">
         <el-carousel-item v-for="item in bannerList" :key="item.name">
-          <a href="item.link" target="_blank"><img :src="item.url" /></a>
+          <a :href="item.link" target="_blank"><img :src="item.url" /></a>
         </el-carousel-item>
       </el-carousel>
     </div>
@@ -123,7 +123,7 @@
         let that = this;
         getBannerList(siteId)
           .then(function (response) {
-            //console.log(response)
+            console.log(response);
             for (let list of response.data.contentList) {
               list.url = API_ROOT + list.url;
             }
@@ -385,7 +385,7 @@
                 font-size: 18px;
                 display: block;
                 position: relative;
-                top: 80px;
+                top: 60px;
               }
               &:hover{
                 cursor: pointer;

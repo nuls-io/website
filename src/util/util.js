@@ -126,4 +126,42 @@ export function htmlDecodeByRegExp(str) {
   return s;
 }
 
+/**
+ * js数组排序 支持数字和字符串
+ * @param params
+ * @param arrObj   obj     必填  数组对象
+ * @param keyName  string  必填  要排序的属性名称
+ * @param type     int     选填  默认type:0 正顺  type:1反顺
+ */
+export function arrItemSort(arrObj, keyName, type) {
+  let tempArrObj = arrObj.slice(0);
+  let compare = function (keyName, type) {
+    return function (obj1, obj2) {
+      let val1 = obj1[keyName];
+      let val2 = obj2[keyName];
+      if (!isNaN(Number(val1)) && !isNaN(Number(val2))) {
+        val1 = Number(val1);
+        val2 = Number(val2);
+      }
+      //如果值为空的，放在最后
+      if (val1 == null && val2 == null) {
+        return 0;
+      } else if (val1 == null && val2 != null) {
+        return (type === 1 ? -1 : 1);
+      } else if (val2 == null && val1 != null) {
+        return (type === 1 ? 1 : -1);
+      }
+      //排序
+      if (val1 < val2) {
+        return (type === 1 ? 1 : -1);
+      } else if (val1 > val2) {
+        return (type === 1 ? -1 : 1);
+      } else {
+        return 0;
+      }
+    }
+  };
+  return tempArrObj.sort(compare(keyName, type));
+}
+
 
