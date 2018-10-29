@@ -15,6 +15,7 @@ module.exports = {
     about3:'合作伙伴',
     about4:'加入我们',
     about5: '什么是NULS',
+    about6: 'Token Swap',
   },
 
   home:{

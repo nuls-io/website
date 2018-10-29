@@ -15,6 +15,7 @@ module.exports = {
     about3: 'Partners',
     about4: 'Join Us',
     about5: 'What is NULS',
+    about6: 'Token Swap',
   },
 
   home: {
@@ -26,7 +27,7 @@ module.exports = {
     nuls_do_info2: 'Break through technology bottleneck',
     nuls_do_info3: 'Reduce technical threshold and cost',
     nuls_do_info4: 'Resolving the lack of trust in a centralised database',
-    nuls_do_info5_more:'Learn more about our mission ',
+    nuls_do_info5_more:'Learn more from white paper',
 
     architecture_title: 'How it works',
     architecture_info_h4_1: 'Module Repository',

@@ -10,16 +10,38 @@
       </div>
       <div class="img-right"><img src="./../../assets/images/mission-img.png"></div>
     </div>
+
+    <el-dialog title="" :visible.sync="dialogFormVisible">
+      <p>Download the whitepaper in your preferred language choice</p>
+      <ul>
+        <li><a href="#">English</a></li>
+        <li><a href="#">中文</a></li>
+        <li><a href="#">Россия</a></li>
+        <li><a href="#">한국</a></li>
+        <li><a href="#">日本語</a></li>
+        <li><a href="#">Deutsch</a></li>
+        <li><a href="#">Français</a></li>
+        <li><a href="#">Español</a></li>
+        <li><a href="#">Nederlands</a></li>
+        <li><a href="#">Portuguese</a></li>
+      </ul>
+    </el-dialog>
   </div>
 </template>
 
 <script>
   export default {
+    data() {
+      return {
+        dialogFormVisible: false,
+      }
+    },
    methods:{
      toAbout(){
-       this.$router.push({
+       /*this.$router.push({
          name: 'whiteYellow',
-       });
+       });*/
+       this.dialogFormVisible = true;
      },
    },
   }
@@ -84,6 +106,36 @@
         min-height: auto;
       }
 
+    }
+
+    .el-dialog__wrapper{
+      .el-dialog{
+        background-color: #0a2140;
+        text-align: left;
+        .el-dialog__header{
+          .el-dialog__headerbtn{
+
+          }
+        }
+        .el-dialog__body{
+          p{
+            font-size: 26px;
+            line-height: 30px;
+          }
+          ul{
+            margin: 0 0 0 20px;
+            li{
+              line-height: 26px;
+              list-style-type: initial;
+              padding: 10px 0 0 0;
+              a{
+                color: #ffffff;
+              }
+
+            }
+          }
+        }
+      }
     }
   }
 </style>

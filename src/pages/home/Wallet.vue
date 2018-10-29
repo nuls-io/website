@@ -150,7 +150,7 @@
           }
           .w-select {
             width: 200px;
-            margin: 50px auto;
+            margin: 50px 0 0 20px;
             float: left;
             @media (max-width: 768px) {
               width: 12rem;
