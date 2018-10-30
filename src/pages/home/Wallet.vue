@@ -7,14 +7,15 @@
         <p>{{$t('home.wallet_info')}}</p>
         <div class="w-bt">
           <div class="w-select">
-            <el-select v-model="valueDownload" @change="toDownload(valueDownload)">
+            <el-select v-model="valueDownload" @change="toDownload(valueDownload)" class="test">
               <el-option
                 v-for="item in optionsDownload"
                 :key="item.value"
                 :label="item.label"
                 :value="item.value"
-                :disabled="item.disabled">
-              </el-option>
+                :disabled="item.disabled"
+                class="dropdownItem"
+              />
             </el-select>
           </div>
           <div class="btn-box">
@@ -113,6 +114,16 @@
 </script>
 
 <style lang="less" type="text/less">
+	.dropdownItem {
+		line-height: 45px;
+		height: 45px;
+		margin: auto 0;
+		border-bottom: 1px solid #e4e7ed;
+	}
+	.el-select-dropdown__list li:last-child {
+		height: 38px;
+		border: none;
+	}
   .wallet {
     max-width: 100%;
     min-height: 600px;
