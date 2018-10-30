@@ -8,33 +8,33 @@
       <p>{{$t('team.info')}}</p>
       <ul>
         <li v-for="site in teamList">
-          <h2><img :src=site.headUrl height="600" width="660"/></h2>
+          <h2 class="cursor-p" @click="tolink(site.linkedin)"><img :src=site.headUrl height="600" width="660"/></h2>
           <h3>{{site.ename}}</h3>
-          <h4>{{site.desc}}</h4>
+          <h4>{{site.position}}</h4>
         </li>
       </ul>
       <h2 class="h2 cb">Angel Investor</h2>
       <ul>
         <li v-for="site in angelList">
-          <h2><img :src=site.headUrl height="600" width="660"/></h2>
+          <h2 class="cursor-p" @click="tolink(site.linkedin)"><img :src=site.headUrl height="600" width="660"/></h2>
           <h3>{{site.ename}}</h3>
-          <h4>{{site.desc}}</h4>
+          <h4>{{site.position}}</h4>
         </li>
       </ul>
-      <h2 class="h2 cb">Advisor</h2>
+      <h2 class="h2 cb" v-show="advisorList.length > 0">Advisor</h2>
       <ul>
         <li v-for="site in advisorList">
-          <h2><img :src=site.headUrl height="600" width="660"/></h2>
+          <h2 class="cursor-p" @click="tolink(site.linkedin)"><img :src=site.headUrl height="600" width="660"/></h2>
           <h3>{{site.ename}}</h3>
-          <h4>{{site.desc}}</h4>
+          <h4>{{site.position}}</h4>
         </li>
       </ul>
-      <h2 class="h2 cb">Community Member</h2>
+      <h2 class="h2 cb" v-show="communityList.length > 0">Community Member</h2>
       <ul>
         <li v-for="site in communityList">
-          <h2><img :src=site.headUrl height="600" width="660"/></h2>
+          <h2 class="cursor-p" @click="tolink(site.linkedin)"><img :src=site.headUrl height="600" width="660"/></h2>
           <h3>{{site.ename}}</h3>
-          <h4>{{site.desc}}</h4>
+          <h4>{{site.position}}</h4>
         </li>
       </ul>
     </div>
@@ -106,6 +106,16 @@
             console.log(error);
           });
       },
+
+      /**
+       * 打开url
+       * @param url
+       */
+      tolink(url){
+        if(url !==''){
+          window.open(url);
+        }
+      }
     }
   }
 </script>
@@ -125,7 +135,7 @@
     .team-info {
       max-width: 1280px;
       margin: -400px auto 0;
-      min-height: 180rem;
+      min-height: 270rem;
       @media (max-width: 768px) {
         min-height: auto;
         margin: -20rem auto 5rem;

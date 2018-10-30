@@ -73,14 +73,23 @@ export const getPartnerList = (siteId=1,pageSize=10,pageNum=1) => fetch('partner
  * @param pageNum
  * @returns {Promise}
  */
-export const getownloadsList = (siteId=1,pageSize=10,pageNum=1) => fetch('downloads.html?siteId=' + siteId + '&pageSize=' + pageSize + '&pageNum=' + pageNum);
+export const getDownloadsList = (siteId=1,pageSize=10,pageNum=1) => fetch('downloads.html?siteId=' + siteId + '&pageSize=' + pageSize + '&pageNum=' + pageNum);
 
 /**
- * post 方法
- * @param params
+ *  获取首页下载列表 Get getWalletDownloadList list
+ * @param siteId
+ * @param pageSize
+ * @param pageNum
  * @returns {Promise}
  */
-export const postMethod = (params) => post('/**/**/'+version);
+export const getWalletDownloadList= (siteId=1,pageSize=10,pageNum=1) => fetch('walletdownload.html?siteId=' + siteId + '&pageSize=' + pageSize + '&pageNum=' + pageNum);
+
+/**
+ * 提交邮箱
+ * @param postMailAddress
+ * @returns {Promise}
+ */
+export const postMailAddress = (mailAddress) => post('api/v1/bbs/save?title=mail&content='+mailAddress);
 
 /**
  * put 方法

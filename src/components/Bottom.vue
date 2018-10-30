@@ -19,7 +19,7 @@
       <div class="bottom-from">
         <el-form :inline="true" :model="emailForm" :rules="emailRules" ref="emailForm" >
           <el-form-item label="" prop="emailAddress">
-            <el-input v-model="emailForm.emailAddress" placeholder="leave your email and will send you the latest information"></el-input>
+            <el-input v-model="emailForm.emailAddress" placeholder="Leave your email and we will send you the latest information"></el-input>
           </el-form-item>
           <el-form-item class="form-bt">
             <el-button type="primary" class="bg-green-btn" @click="submitForm('emailForm')">Contact us</el-button>
@@ -68,7 +68,6 @@
       </div>
     </div>
     <div class="border-infos">
-      <BottomMoble />
       <div class="b-bottom">
         <img src="../assets/images/nuls-footer-logo.png" height="75" width="44"/>
         <p>{{$t('bottom.list0')}} © 2018 NULS</p>
@@ -81,7 +80,7 @@
 </template>
 
 <script>
-  import BottomMoble from '@/components/BottomMoble';
+  import {postMailAddress} from '@/api/httpData';
   export default {
     data() {
       return {
@@ -90,21 +89,21 @@
         },
         emailRules: {
           emailAddress: [
-            { required: true, message: '请输入邮箱地址', trigger: 'blur' },
-            { type: 'email', message: '请输入正确的邮箱地址', trigger: ['blur', 'change'] }
+            { required: true, message: 'Please input your email address.', trigger: 'blur' },
+            { type: 'email', message: 'Please input the correct email address.', trigger: ['blur', 'change'] }
           ]
         }
       };
     },
     components: {
-      BottomMoble,
+
     },
     methods:{
 
       submitForm(formName) {
         this.$refs[formName].validate((valid) => {
           if (valid) {
-            alert('submit!');
+            this.emailAddress(this.emailForm.emailAddress);
           } else {
             console.log('error submit!!');
             return false;
@@ -128,7 +127,36 @@
         this.$router.push({
           name: 'whiteYellow',
         })
-      }
+      },
+
+      /**
+       * 获取团队列表
+       * @param siteId
+       * @param pageSize
+       * @param pageNum
+       */
+      emailAddress(email) {
+        let that = this;
+        $.post("http://50.62.6.187:10031/api/v1/bbs/save?title=mail&content="+email,function(data){
+          //console.log(data);
+          if(data.success){
+            that.$message({
+              message: 'We have received your mailbox, HR will contact you immediately.',
+              type: 'success'
+            });
+          }else {
+            that.$message.error('Failure to submit, please try again.');
+          }
+        })
+        /*postMailAddress(email)
+          .then(function (response) {
+            console.log(response);
+          })
+          .catch(function (error) {
+            console.log(error);
+          });*/
+      },
+
     }
   }
 </script>
@@ -193,7 +221,7 @@
       max-width: 1280px;
       margin: 0 auto;
       @media (max-width: 768px) {
-        display: none;
+
       }
       .bottom-from{
         width: 100%;
@@ -202,17 +230,26 @@
         .el-form{
           width: 800px;
           margin: 20px auto 0;
+          @media (max-width: 768px) {
+            width: 100%;
+            margin: 1rem 0 1rem 0.5rem;
+          }
           .el-form-item{
             width: 500px;
+            @media (max-width: 768px) {
+              width: 65%;
+            }
             .el-form-item__content{
-              width: 100%;
+              width:100%;
               .el-input{
-                width: 100%;
                 .el-input__inner{
                   background-color: #ffffff;
                   height: 52px;
                   line-height: 52px;
                   border-radius: 50px;
+                  @media (max-width: 768px) {
+                    width: 100%;
+                  }
                 }
               }
               .el-form-item__error{
@@ -220,22 +257,31 @@
               }
               .bg-green-btn{
                 width: 150px;
+                @media (max-width: 768px) {
+                  width: 100px;
+                }
               }
             }
           }
           .form-bt{
             width: 200px;
+            @media (max-width: 768px) {
+              width: 100px;
+            }
           }
         }
       }
       .flex{
+        @media (max-width: 768px) {
+          display: none;
+        }
         .b-left {
           width: 20%;
           /*float: left;*/
           text-align: center;
           font-size: 14px;
           @media (max-width: 768px) {
-            float: right;
+            display: none;
           }
           p {
             line-height: 23px;

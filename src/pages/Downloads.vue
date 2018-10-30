@@ -7,25 +7,11 @@
 
     <div class="downloads-info">
       <ul>
-        <li>
-          <h3>{{$t('nav.wallet')}}</h3>
+        <li v-for="item in downloadsList">
+          <h3>{{item.title}}</h3>
           <p>
-            <span>{{$t('downloads.span1')}}</span>
-            <el-button type="success">{{$t('nav.about1')}}</el-button>
-          </p>
-        </li>
-        <li>
-          <h3>{{$t('downloads.h32')}}.zip</h3>
-          <p>
-            <span>{{$t('downloads.span2')}}</span>
-            <el-button type="success">{{$t('nav.about1')}}</el-button>
-          </p>
-        </li>
-        <li>
-          <h3>{{$t('downloads.h33')}}</h3>
-          <p>
-            <span>{{$t('downloads.span3')}}</span>
-            <el-button type="success">{{$t('nav.about1')}}</el-button>
+            <span>{{item.contentDescription}}</span>
+            <el-button type="success" @click="toDownload(item.filelink,item.link)">{{$t('nav.about1')}}</el-button>
           </p>
         </li>
       </ul>
@@ -35,15 +21,62 @@
 </template>
 
 <script>
-  import {getownloadsList} from '@/api/httpData'
+  import {getDownloadsList} from '@/api/httpData'
   import {API_ROOT} from '@/api/https'
   import HeaderList from '@/components/HeaderList';
   import Bottom from '@/components/Bottom';
 
   export default {
+    data() {
+      return {
+        downloadsList:[],
+      }
+    },
     components: {
       HeaderList,
       Bottom,
+    },
+    mounted() {
+      this.getDownloadsList(1, 10, 1)
+    },
+    methods: {
+      /**
+       * 获取下载列表
+       * @param siteId
+       * @param pageSize
+       * @param pageNum
+       */
+      getDownloadsList(siteId, pageSize, pageNum) {
+        let that = this;
+        getDownloadsList(siteId,pageSize,pageNum)
+          .then(function (response) {
+            //console.log(response);
+            that.downloadsList = response.data.contentList
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+
+      },
+
+      /**
+       * 下载文件地址
+       * @param url
+       */
+      toDownload(filelink,link){
+        if(filelink !==''){
+          try {
+            let elemIF = document.createElement("iframe");
+            elemIF.src = API_ROOT+filelink;
+            elemIF.style.display = "none";
+            document.body.appendChild(elemIF);
+          } catch (e) {
+
+          }
+        }else {
+          window.open(link);
+        }
+      }
     }
   }
 </script>
@@ -129,6 +162,9 @@
               margin: 1rem auto;
               width: 15%;
               float: left;
+              span{
+                width: 100%;
+              }
               @media (max-width: 768px) {
                 width: 100%;
                 float: none;

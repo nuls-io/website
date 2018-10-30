@@ -1,8 +1,8 @@
 import axios from 'axios'
 //Request url
-export const API_ROOT = 'http://116.62.117.200:8080/';
+export const API_ROOT = 'http://50.62.6.187:10031/';
 //Request response time
-export const API_TIME =6000;
+export const API_TIME =15000;
 
 axios.defaults.timeout = API_TIME;
 axios.defaults.baseURL = API_ROOT;

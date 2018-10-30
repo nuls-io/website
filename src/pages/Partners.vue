@@ -38,6 +38,7 @@
 <script>
   import {getPartnerList} from '@/api/httpData';
   import {API_ROOT} from '@/api/https';
+  import {arrItemSort} from '@/util/util';
   import HeaderList from '@/components/HeaderList';
   import Bottom from '@/components/Bottom';
 
@@ -54,7 +55,7 @@
       Bottom,
     },
     mounted() {
-      this.getPartnerList(1, 10, 1)
+      this.getPartnerList(2, 100, 1)
     },
     methods: {
       /**
@@ -78,6 +79,15 @@
                 that.platformsList.push(list)
               }
             }
+
+            setTimeout(() => {
+              let partnerListSort = arrItemSort(that.partnerList,"id",0);
+              let mediaListSort = arrItemSort(that.mediaList,"id",0);
+              let platformsListSort = arrItemSort(that.platformsList,"id",0);
+              that.partnerList  = partnerListSort;
+              that.mediaList  = mediaListSort;
+              that.platformsList  = platformsListSort;
+            }, 100);
           })
           .catch(function (error) {
             console.log(error);
@@ -130,7 +140,15 @@
       max-width: 1280px;
       margin: 0 auto;
       h2{
-
+        height: 200px;
+        line-height: 200px;
+        margin: 0 auto;
+        @media (max-width: 768px) {
+          height: auto;
+          line-height: 1rem;
+          margin: 0 auto 2rem;
+          padding: 3rem 0 0 0;
+        }
       }
       ul{
         li{
@@ -150,7 +168,10 @@
       }
     }
     .platforms-list{
-      min-height: 300px;
+      min-height: 600px;
+      @media (max-width: 768px) {
+        min-height: 30rem;
+      }
     }
   }
 

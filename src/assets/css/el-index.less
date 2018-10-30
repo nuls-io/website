@@ -28,14 +28,21 @@
  **/
 .el-menu--horizontal {
   .el-menu {
+    width: 180px;
     .el-menu-item{
+      height: 52px;
+      color: #445569;
+      font-size: 16px;
+      line-height: 52px;
+      border-bottom: 1px solid #445569;
+      margin: 0 10px 10px;
+      z-index: 99999;
       &:first-child{
          border-top-right-radius: 5px;
          border-top-left-radius: 5px;
        }
       &:last-child{
-        border-bottom-right-radius: 5px;
-        border-bottom-left-radius: 5px;
+        border-bottom: 0px solid #445569;
       }
     }
   }
@@ -53,4 +60,26 @@
       }
     }
   }
+}
+
+/**
+ *el-pagination
+ **/
+.el-pagination{
+   text-align: center;
+  margin: 20px auto;
+  .el-pager{
+    .active{
+      background-color: #3e8900;
+    }
+  }
+}
+
+.el-pagination.is-background .el-pager li:not(.disabled).active {
+  background-color: #3e8900;
+  color: #fff;
+}
+
+.el-menu--horizontal>.el-submenu.is-active .el-submenu__title{
+  border-bottom: 2px solid #9cbe82;
 }

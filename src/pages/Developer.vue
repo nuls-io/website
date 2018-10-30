@@ -8,19 +8,19 @@
       <div class="d-top">
         <div class="d-list">
           <p><img src="./../assets/images/Github-1.png"></p>
-          <el-button type="success">Github</el-button>
+          <el-button type="success" @click="toUrl('https://github.com/nuls-io')">Github</el-button>
         </div>
         <div class="d-list">
           <p><img src="./../assets/images/Docs.png"></p>
-          <el-button type="success">Docs</el-button>
+          <el-button type="success" @click="toUrl('http://dev.nuls.io')">Docs</el-button>
         </div>
         <div class="d-list">
           <p><img src="./../assets/images/Tools.png"></p>
           <div class="d-bt">
-            <el-button type="success">IDEA Plugin</el-button>
+            <el-button type="success" @click="toUrl('http://dev.nuls.io/contract/IdeaPlugin.html')">IDEA Plugin</el-button>
           </div>
           <div class="d-bts">
-            <el-button>SDK</el-button>
+            <el-button @click="toUrl('http://dev.nuls.io/docs/sdk.html')">SDK</el-button>
           </div>
         </div>
       </div>

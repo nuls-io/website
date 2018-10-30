@@ -24,6 +24,15 @@
             </li>
           </template>
         </ul>
+
+        <el-pagination
+          background
+          v-show="this.newlistTotal > 10"
+          class="cb"
+          @current-change="newlistSize"
+          layout="prev, pager, next"
+          :total=this.newlistTotal>
+        </el-pagination>
       </el-tab-pane>
 
       <el-tab-pane label="Guide" name="guide">
@@ -48,7 +57,7 @@
           <template v-for="site in findUsList">
           <li @click="toLink(site.link)">
             <img :src=site.imgUrl>
-            <p>{{site.title}}</p>
+            <p class="overflow">{{site.title}}</p>
           </li>
           </template>
         </ul>
@@ -62,6 +71,7 @@
 <script>
   import {getBannerList,getNewList,getGuideList,getFindUsList} from '@/api/httpData'
   import {API_ROOT} from '@/api/https'
+  import {arrItemSort} from '@/util/util';
   import HeaderList from '@/components/HeaderList';
   import Bottombar from '@/components/Bottom';
 
@@ -72,6 +82,7 @@
         bannerList:[],
         activeMedia: 'news',
         newList: [],
+        newlistTotal:0,
         guideList:[],
         findUsList:[],
       }
@@ -163,14 +174,25 @@
         getNewList(siteId,pageSize,pageNum)
           .then(function (response) {
             //console.log(response);
+            that.newlistTotal = response.data.totalRow;
             for (let list of response.data.contentList) {
               list.thumbnail = API_ROOT + list.thumbnail;
             }
-            that.newList = response.data.contentList;
+            setTimeout(() => {
+              let newListSort = arrItemSort(response.data.contentList,"id",0);
+              that.newList  = newListSort;
+            }, 100);
           })
           .catch(function (error) {
             console.log(error);
           });
+      },
+
+      /**
+       * 新闻列表分页
+       **/
+      newlistSize(e){
+        this.getNewList(this.language, 10, e);
       },
 
       /**
@@ -372,9 +394,11 @@
                 font-size: 30px;
                 line-height: 40px;
                 display: block;
+                height: 100px;
                 @media (max-width: 768px) {
                   font-size: 18px;
                   line-height: 20px;
+                  height: 6.5rem;
                 }
                 &:hover{
                   cursor: pointer;
@@ -385,7 +409,7 @@
                 font-size: 18px;
                 display: block;
                 position: relative;
-                top: 60px;
+                top: 20px;
               }
               &:hover{
                 cursor: pointer;
@@ -415,24 +439,35 @@
           margin: 50px auto 0;
           li {
             box-shadow: 2px 1px 2px 3px #C1C5C9;
-            max-width: 400px;
-            height: 80px;
-            margin: 30px 15px 0 0;
+            max-width: 410px;
+            height: 125px;
+            margin: 20px 10px 10px 10px;
             float: left;
             text-align: center;
             cursor: pointer;
+            @media (max-width: 768px) {
+              width: 94%;
+            }
             img {
-              margin: 0;
+              margin: 20px 0 0 5px;
               width: 80px;
               height: 80px;
+              border-radius: 80px;
               float: left;
+              @media (max-width: 768px) {
+
+              }
             }
             p {
-              min-width: 300px;
+              margin: 20px 0 0 0;
+              width: 320px;
               color: #0a2140;
               line-height: 80px;
               font-size: 24px;
               float: left;
+              @media (max-width: 768px) {
+                width: 230px;
+              }
             }
           }
         }

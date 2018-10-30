@@ -4,7 +4,7 @@ import {BigNumber} from 'bignumber.js'
  * 接口地址 Interface address
  * @type {string}
  */
-export const http = 'http://116.62.117.200:8080';
+export const http = 'http://50.62.6.187:10031';
 
 /**
  *  用户选择的语言 User selected language

@@ -18,7 +18,7 @@
             </el-select>
           </div>
           <div class="btn-box">
-            <el-button><span>{{$t('home.wallet_online')}}</span><i class="el-icon-arrow-right"></i></el-button>
+            <el-button @click="tolink('https://wallet.nuls.io')"><span>{{$t('home.wallet_online')}}</span><i class="el-icon-arrow-right"></i></el-button>
           </div>
         </div>
 
@@ -43,13 +43,18 @@
 </template>
 
 <script>
-  import {getDownloadList} from '@/api/httpData'
+  import {getWalletDownloadList} from '@/api/httpData'
+  import {API_ROOT} from '@/api/https';
 
   export default {
     data() {
       return {
-        optionsDownload: [],
-        valueDownload: this.$t('home.wallet_list_title')
+        optionsDownload: [
+          {value:'1',label:'Windows Download'},
+          {value:'2',label:'Mac Download'},
+          {value:'3',label:'Linux Download'},
+        ],
+        valueDownload: 'Download'
       }
     },
     mounted() {
@@ -65,14 +70,13 @@
        */
       getDownloadList(siteId, pageSize, pageNum) {
         let that = this;
-        getDownloadList(siteId, pageSize, pageNum)
+        getWalletDownloadList(siteId, pageSize, pageNum)
           .then(function (response) {
-            //console.log(response)
-            for (let list of response.data.contentList) {
-              list.label = list.title + ' Download';
-              list.value = 'http://192.168.1.130:8080' + list.filelink;
-            }
-            that.optionsDownload = response.data.contentList;
+            //console.log(response);
+            that.valueDownload = 'Download ' + response.data.contentList[0].title;
+            that.optionsDownload[0].value =  response.data.contentList[0].windowslink;
+            that.optionsDownload[1].value = response.data.contentList[0].maclink;
+            that.optionsDownload[2].value = response.data.contentList[0].linuxlink;
           })
           .catch(function (error) {
             console.log(error);
@@ -93,6 +97,16 @@
 
         }
       },
+
+      /**
+       * 打开url
+       * @param url
+       */
+      tolink(url){
+        if(url !==''){
+          window.open(url);
+        }
+      }
 
     }
   }

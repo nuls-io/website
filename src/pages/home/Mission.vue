@@ -38,9 +38,6 @@
     },
    methods:{
      toAbout(){
-       /*this.$router.push({
-         name: 'whiteYellow',
-       });*/
        this.dialogFormVisible = true;
      },
    },

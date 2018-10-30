@@ -189,7 +189,7 @@
           position: fixed;
           background-color: #0a2140;
           height: 100%;
-          z-index: 9;
+          z-index: 999;
         }
         .nav-list-top{
           display: none;
