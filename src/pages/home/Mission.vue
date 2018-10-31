@@ -50,7 +50,7 @@
     text-align: center;
     clear: none;
     .spaceship {
-      min-height: 517px;
+      min-height: 459px;
       padding:0;
       position: relative;
       @media (max-width: 768px){
@@ -66,9 +66,10 @@
           text-align: left;
         }
         .h2 {
-          margin-bottom: 60px;
+         margin: 120px auto 60px;
           @media (max-width: 768px){
             text-align: center;
+            margin: 0 auto 3rem;
           }
         }
         .mission-text {
@@ -92,10 +93,12 @@
       }
       .img-right {
         position: absolute;
-        top: 80px;
+        top: -50px;
         right: 0;
         @media (max-width: 768px) {
           display: none;
+        }
+        img{
         }
       }
       @media (max-width: 768px) {

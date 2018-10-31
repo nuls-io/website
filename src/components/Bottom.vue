@@ -31,34 +31,33 @@
           <img src="../assets/images/nuls-footer-logo.png" height="75" width="44"/>
           <p>{{$t('bottom.list0')}} © 2018 NULS</p>
           <p>{{$t('bottom.list1')}}</p>
-          <p>{{$t('bottom.list2')}}</p>
         </div>
         <div class="b-right">
           <ul>
             <li>{{$t('nav.about')}}</li>
-            <li>Nuls</li>
-            <li>{{$t('nav.about2')}}</li>
-            <li>{{$t('nav.about3')}}</li>
-            <li>{{$t('nav.media')}}</li>
+            <li><a href="/whiteYellow">GitHub</a></li>
+            <li><a href="/team">{{$t('nav.about2')}}</a></li>
+            <li><a href="/partners">{{$t('nav.about3')}}</a></li>
+            <li><a href="/media">{{$t('nav.media')}}</a></li>
           </ul>
           <ul>
             <li>Downloads</li>
             <li @click="toWhiteYellow">{{$t('bottom.list3')}}</li>
             <li @click="toWhiteYellow">{{$t('bottom.list4')}}</li>
-            <li>Wallet</li>
-            <li>DApps</li>
+            <li><a href="/walletDownloads">Wallet</a></li>
+            <!--<li>DApps</li>-->
           </ul>
           <ul>
             <li>Follow us</li>
-            <li>Telegram</li>
-            <li>Twitter</li>
-            <li>Github</li>
-            <li>Medium</li>
-            <li>Reddit</li>
-            <li>Discord</li>
-            <li>Steemit</li>
-            <li>Gitter</li>
-            <li>Slack</li>
+            <li><a href="https://t.me/Nulsio" target="_blank">Telegram</a></li>
+            <li><a href="https://twitter.com/nulsservice" target="_blank">Twitter</a></li>
+            <li><a href="https://github.com/nuls-io/" target="_blank">GitHub</a></li>
+            <li><a href="https://medium.com/@nuls" target="_blank">Medium</a></li>
+            <li><a href="https://www.reddit.com/r/nulsservice/" target="_blank">Reddit</a></li>
+            <li><a href="https://discordapp.com/invite/cUeafst" target="_blank">Discord</a></li>
+            <li><a href="https://steemit.com/@nuls" target="_blank">Steemit</a></li>
+            <li><a href="https://gitter.im/nuls_io" target="_blank">Gitter</a></li>
+            <li><a href="https://nuls.slack.com/join/shared_invite/enQtMjQ4MTM4ODAyNTI4LWJjNGMwYTE0YjRlYmFlZGUwM2JhOGE4MDIwZmE4MzA2MDg1YzUyMmVkN2RhZjkyNWMzZjY5ZDU5ZmViMjZjNGQ" target="_blank">Slack</a></li>
           </ul>
           <ul>
             <li>Support</li>
@@ -72,7 +71,6 @@
         <img src="../assets/images/nuls-footer-logo.png" height="75" width="44"/>
         <p>{{$t('bottom.list0')}} © 2018 NULS</p>
         <p>{{$t('bottom.list1')}}</p>
-        <p>{{$t('bottom.list2')}}</p>
       </div>
     </div>
   </div>
@@ -221,6 +219,9 @@
             height: 40px;
             margin: 10px 20px;
           }
+          &:first-child{
+            margin: 0 30px 0 0;
+          }
         }
       }
     }
@@ -234,6 +235,7 @@
         width: 100%;
         border-top:1px solid #1d3156;
         border-bottom:1px solid #1d3156;
+        margin-bottom: 60px;
         .el-form{
           width: 800px;
           margin: 20px auto 0;
@@ -305,7 +307,6 @@
             li {
               text-align: center;
               font-size: 16px;
-              opacity: 0.5;
               line-height: 23px;
               padding: 6px 0;
               cursor: pointer;
@@ -314,6 +315,11 @@
                 font-weight: 700;
                 line-height: 32px;
                 opacity: 1;
+              }
+              a{
+                color: #ffffff;
+                opacity: 0.9;
+                text-decoration : none
               }
             }
           }

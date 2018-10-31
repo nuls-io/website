@@ -97,7 +97,7 @@
 <style lang="less" type="text/less">
   .architecture {
     width: 100%;
-    background-color: #f8fcff;
+    background-color: #ebf4f9;
     @media (max-width: 768px) {
       min-height: 680px;
     }
@@ -105,10 +105,11 @@
       max-width: 1280px;
       margin: 0 auto;
       @media (max-width: 768px) {
-      	margin: 0 auto 5rem;
+      	margin: 0 auto;
       }
       h2 {
         padding: 120px 0 80px;
+        margin: 0 auto;
         @media (max-width: 768px) {
          padding: 5rem 0 0 0;
         }
@@ -126,8 +127,8 @@
           }
           li {
             opacity: 0.6;
-            padding-left: 26px;
-            margin: 0 0 1.5rem 0;
+            padding-left: 14px;
+            margin: 0 0 20px 0;
             border-left: 6px solid #56c400;
             &.active{
               opacity: 1;
@@ -140,7 +141,7 @@
               font-size: 30px;
               letter-spacing: 1px;
               line-height: 34px;
-              padding-bottom: 18px;
+              padding-bottom: 6px;
               color: #445569;
               font-weight: bold;
               text-align: left;
@@ -164,13 +165,12 @@
         .img {
           position: relative;
           width: 850px;
-          background-color: #d5e8f3;
+          background-color: #f8fdff;
           @media (max-width: 768px) {
             display: none;
           }
           img{
-            width: 825px;
-            height: 437px;
+           width: 90%;
             opacity: 0;
             position: absolute;
             left: 0;

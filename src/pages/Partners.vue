@@ -7,15 +7,31 @@
         <h1 class="h1">{{$t('partners.title')}}</h1>
         <p>{{$t('partners.info')}}</p>
       </div>
-      <div class="partners-list">
-        <h2 class="h2">{{$t('nav.about3')}}</h2>
+      <div class="investment-list">
+        <h2 class="h2">Strategic Investment</h2>
         <ul>
-          <li v-for="site in partnerList">
+          <li v-for="site in investmentList">
             <a :href="site.link" target="_blank"><img :src="site.url"  /></a>
           </li>
         </ul>
       </div>
-      <div class="media-list cb">
+      <div class="ecological-list cb">
+        <h2 class="h2">Ecological Partners</h2>
+        <ul>
+          <li v-for="site in ecologicalList">
+            <a :href="site.link" target="_blank"><img :src="site.url"  /></a>
+          </li>
+        </ul>
+      </div>
+      <div class="strategic-list cb">
+        <h2 class="h2">Strategic Partners</h2>
+        <ul>
+          <li v-for="site in strategicList">
+            <a :href="site.link" target="_blank"><img :src="site.url"  /></a>
+          </li>
+        </ul>
+      </div>
+      <div class="media-list cb"  v-show="mediaList.length > 0">
         <h2 class="h2">Media Partners</h2>
         <ul>
           <li v-for="site in mediaList">
@@ -23,7 +39,7 @@
           </li>
         </ul>
       </div>
-      <div class="platforms-list cb">
+      <div class="platforms-list cb" v-show="platformsList.length > 0">
         <h2 class="h2">Platforms</h2>
         <ul>
           <li v-for="site in platformsList">
@@ -45,7 +61,9 @@
   export default {
     data() {
       return {
-        partnerList:[],
+        investmentList:[],
+        ecologicalList:[],
+        strategicList:[],
         mediaList:[],
         platformsList:[],
       }
@@ -72,8 +90,12 @@
             for (let list of response.data.contentList) {
               list.url = API_ROOT + list.url;
               if(list.types === '1'){
-                that.partnerList.push(list)
+                that.investmentList.push(list)
               }else if(list.types === '2'){
+                that.ecologicalList.push(list)
+              }else if(list.types === '3'){
+                that.strategicList.push(list)
+              }else if(list.types === '4'){
                 that.mediaList.push(list)
               }else {
                 that.platformsList.push(list)
@@ -81,10 +103,14 @@
             }
 
             setTimeout(() => {
-              let partnerListSort = arrItemSort(that.partnerList,"id",0);
+              let investmentListSort = arrItemSort(that.investmentList,"id",0);
+              let ecologicalListSort = arrItemSort(that.ecologicalList,"id",0);
+              let strategicListSort = arrItemSort(that.strategicList,"id",0);
               let mediaListSort = arrItemSort(that.mediaList,"id",0);
               let platformsListSort = arrItemSort(that.platformsList,"id",0);
-              that.partnerList  = partnerListSort;
+              that.investmentList  = investmentListSort;
+              that.ecologicalList  = ecologicalListSort;
+              that.strategicList  = strategicListSort;
               that.mediaList  = mediaListSort;
               that.platformsList  = platformsListSort;
             }, 100);
@@ -111,8 +137,8 @@
     }
     .partners-info{
       max-width: 1280px;
-      margin:-400px auto 0;
-      height: 400px;
+      margin:-340px auto 0;
+      height: auto;
       @media (max-width: 768px) {
         height: 20rem;
       }
@@ -136,9 +162,10 @@
         }
       }
     }
-    .partners-list,.media-list,.platforms-list{
+    .investment-list,.ecological-list,.strategic-list,.media-list,.platforms-list{
       max-width: 1280px;
       margin: 0 auto;
+      position: relative;
       h2{
         height: 200px;
         line-height: 200px;
@@ -167,11 +194,11 @@
         }
       }
     }
+    .investment-list{
+      margin: 80px auto 0;
+    }
     .platforms-list{
-      min-height: 600px;
-      @media (max-width: 768px) {
-        min-height: 30rem;
-      }
+      min-height: 550px;
     }
   }
 

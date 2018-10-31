@@ -29,7 +29,7 @@
           <h4>{{site.position}}</h4>
         </li>
       </ul>
-      <h2 class="h2 cb" v-show="communityList.length > 0">Community Member</h2>
+      <h2 class="h2 cb" v-show="communityList.length > 0">NULS Code Craft Council</h2>
       <ul>
         <li v-for="site in communityList">
           <h2 class="cursor-p" @click="tolink(site.linkedin)"><img :src=site.headUrl height="600" width="660"/></h2>
@@ -45,7 +45,7 @@
 <script>
   import {getTeamList} from '@/api/httpData';
   import {API_ROOT} from '@/api/https';
-  import {arrItemSort} from '@/util/util';
+  import {arrItemSort,tolink} from '@/util/util';
   import HeaderList from '@/components/HeaderList';
   import Bottom from '@/components/Bottom';
 
@@ -112,9 +112,7 @@
        * @param url
        */
       tolink(url){
-        if(url !==''){
-          window.open(url);
-        }
+        tolink(url)
       }
     }
   }
@@ -135,7 +133,7 @@
     .team-info {
       max-width: 1280px;
       margin: -400px auto 0;
-      min-height: 270rem;
+      min-height: 340rem;
       @media (max-width: 768px) {
         min-height: auto;
         margin: -20rem auto 5rem;
@@ -188,6 +186,7 @@
             font-size: 28px;
             color: #0a2140;
             line-height: 34px;
+            margin: 10px 0 0 0;
             text-align: center;
           }
           h4 {

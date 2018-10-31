@@ -193,8 +193,8 @@
 
 <style lang="less" type="text/less">
   .roadMap {
-    background: #FFFFFF;
-    padding: 20px 0 120px;
+    background: #ebf4f9;
+    padding: 1px 0 120px;
     @media (max-width: 768px) {
       padding: 0;
       margin: 0 0 5rem 0;
@@ -210,6 +210,9 @@
             margin: 0 auto;
           }
         }
+      }
+      .el-tabs__content{
+        height: 430px;
       }
       .nav-tabs {
         border-bottom: 0;

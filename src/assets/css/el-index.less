@@ -13,11 +13,11 @@
   height: 50px;
   border-radius: 50px;
   padding: 10px 0;
-  background: #59a500;
+  background: linear-gradient(-180deg, #8fe400, #56c400);
   border-color: #59a500;
   color: #fff;
   &:hover, &:focus {
-    background: transparent;
+    background: linear-gradient(-180deg, #8fe400, #56c400);
     border-color: #59a500;
     color: #fff;
   }
@@ -35,14 +35,14 @@
       font-size: 16px;
       line-height: 52px;
       border-bottom: 1px solid #445569;
-      margin: 0 10px 10px;
+      margin: 0 10px 0;
       z-index: 99999;
       &:first-child{
          border-top-right-radius: 5px;
          border-top-left-radius: 5px;
        }
       &:last-child{
-        border-bottom: 0px solid #445569;
+        border-bottom: 0 solid #445569;
       }
     }
   }
@@ -82,4 +82,13 @@
 
 .el-menu--horizontal>.el-submenu.is-active .el-submenu__title{
   border-bottom: 2px solid #9cbe82;
+}
+
+.el-dropdown-menu {
+  .el-dropdown-menu__item{
+    line-height: 52px;
+    width: 180px;
+    border-bottom: 1px solid #c1c5c9;
+    margin: 0 10px;
+  }
 }

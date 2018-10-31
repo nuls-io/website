@@ -49,9 +49,9 @@
         </ul>
       </el-tab-pane>
 
-      <el-tab-pane label="Find Us" name="social">
+      <el-tab-pane label="Join Community" name="social">
         <h3>
-          Join Group
+          Join Community
         </h3>
         <ul class="social-list">
           <template v-for="site in findUsList">
@@ -303,7 +303,7 @@
         }
         .el-carousel__indicators{
           .el-carousel__indicator{
-            padding: 12px 4px 40px 4px;
+            padding: 12px 15px 40px 15px;
             .el-carousel__button{
               width: 8px;
               height: 8px;

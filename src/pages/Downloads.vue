@@ -23,6 +23,7 @@
 <script>
   import {getDownloadsList} from '@/api/httpData'
   import {API_ROOT} from '@/api/https'
+  import {arrItemSort,tolink} from '@/util/util';
   import HeaderList from '@/components/HeaderList';
   import Bottom from '@/components/Bottom';
 
@@ -50,8 +51,12 @@
         let that = this;
         getDownloadsList(siteId,pageSize,pageNum)
           .then(function (response) {
-            //console.log(response);
-            that.downloadsList = response.data.contentList
+            console.log(response);
+            setTimeout(() => {
+              let downloadsListSort = arrItemSort(response.data.contentList,"id",0);
+              that.downloadsList  = downloadsListSort;
+              console.log(that.downloadsList)
+            }, 100);
           })
           .catch(function (error) {
             console.log(error);
@@ -61,20 +66,21 @@
 
       /**
        * 下载文件地址
-       * @param url
+       * @param filelink
+       * @param link
        */
       toDownload(filelink,link){
         if(filelink !==''){
           try {
             let elemIF = document.createElement("iframe");
-            elemIF.src = API_ROOT+filelink;
+            elemIF.src = API_ROOT+filelink.slice(1);
             elemIF.style.display = "none";
             document.body.appendChild(elemIF);
           } catch (e) {
 
           }
         }else {
-          window.open(link);
+          tolink(link);
         }
       }
     }
