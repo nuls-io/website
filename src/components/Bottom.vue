@@ -35,20 +35,32 @@
         <div class="b-right">
           <ul>
             <li>{{$t('nav.about')}}</li>
+<<<<<<< HEAD
             <li><a href="/whiteYellow">GitHub</a></li>
             <li><a href="/team">{{$t('nav.about2')}}</a></li>
             <li><a href="/partners">{{$t('nav.about3')}}</a></li>
             <li><a href="/media">{{$t('nav.media')}}</a></li>
+=======
+	        <li><router-link :to="{ name: 'home' }">Nuls</router-link></li>
+            <li><router-link :to="{ name: 'team' }">{{$t('nav.about2')}}</router-link></li>
+            <li><router-link :to="{ name: 'partners' }">{{$t('nav.about3')}}</router-link></li>
+            <li><router-link :to="{ name: 'media' }">{{$t('nav.media')}}</router-link></li>
+>>>>>>> 7f1c44eafa3fd502423d92c10279eff69f6b3bb7
           </ul>
           <ul>
             <li>Downloads</li>
             <li @click="toWhiteYellow">{{$t('bottom.list3')}}</li>
             <li @click="toWhiteYellow">{{$t('bottom.list4')}}</li>
+<<<<<<< HEAD
             <li><a href="/walletDownloads">Wallet</a></li>
+=======
+	        <li><router-link :to="{ name: 'wallet' }">Wallet</router-link></li>
+>>>>>>> 7f1c44eafa3fd502423d92c10279eff69f6b3bb7
             <!--<li>DApps</li>-->
           </ul>
           <ul>
             <li>Follow us</li>
+<<<<<<< HEAD
             <li><a href="https://t.me/Nulsio" target="_blank">Telegram</a></li>
             <li><a href="https://twitter.com/nulsservice" target="_blank">Twitter</a></li>
             <li><a href="https://github.com/nuls-io/" target="_blank">GitHub</a></li>
@@ -173,6 +185,7 @@
     @media (max-width: 768px) {
       min-height: 500px;
     }
+	  a { color: inherit; }
     .bottom-top {
       margin: auto;
       max-width: 1280px;
