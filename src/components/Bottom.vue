@@ -62,7 +62,7 @@
           </ul>
           <ul>
             <li>Support</li>
-            <li>FAQ's</li>
+            <li @click="toQaqs">FAQ</li>
           </ul>
         </div>
       </div>
@@ -130,10 +130,8 @@
       },
 
       /**
-       * 获取团队列表
-       * @param siteId
-       * @param pageSize
-       * @param pageNum
+       * 提交邮箱
+       * @param email
        */
       emailAddress(email) {
         let that = this;
@@ -155,6 +153,15 @@
           .catch(function (error) {
             console.log(error);
           });*/
+      },
+
+      /**
+       * faqs跳转
+       */
+      toQaqs(){
+        this.$router.push({
+          name: 'faqs',
+        })
       },
 
     }

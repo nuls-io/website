@@ -227,7 +227,10 @@
             for (let list of response.data.contentList) {
               list.thumbnail = API_ROOT + list.thumbnail;
             }
-            that.guideList = response.data.contentList;
+            setTimeout(() => {
+              let guideListSort = arrItemSort(response.data.contentList,"id",0);
+              that.guideList  = guideListSort;
+            }, 100);
           })
           .catch(function (error) {
             console.log(error);
@@ -244,11 +247,15 @@
         let that = this;
         getFindUsList(siteId,pageSize,pageNum)
           .then(function (response) {
-            console.log(response);
+            //console.log(response);
             for (let list of response.data.contentList) {
               list.imgUrl = API_ROOT + list.imgUrl;
             }
-            that.findUsList = response.data.contentList;
+            setTimeout(() => {
+              let findUsListSort = arrItemSort(response.data.contentList,"id",0);
+              that.findUsList  = findUsListSort;
+            }, 100);
+
           })
           .catch(function (error) {
             console.log(error);
@@ -281,7 +288,7 @@
       z-index: 8;
       .el-carousel{
         .el-carousel__container{
-          height: 560px;
+          height: 360px;
           @media (max-width: 768px) {
             height: 180px;
           }

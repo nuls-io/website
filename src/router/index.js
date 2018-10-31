@@ -60,5 +60,10 @@ export default new Router({
       name: 'joinNuls',
       component: resolve => require(['@/pages/JoinNuls'], resolve),
     },
+    {
+      path: '/faqs',
+      name: 'faqs',
+      component: resolve => require(['@/pages/Qaqs'], resolve),
+    },
   ]
 })
