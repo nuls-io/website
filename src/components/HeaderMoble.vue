@@ -18,13 +18,13 @@
               </el-menu-item>
             </el-submenu>
             <el-menu-item index="3">{{$t('nav.developer')}}</el-menu-item>
-            <el-menu-item index="4"><a href="https://nulscan.io/" target="_blank">{{$t('nav.explorer')}}</a></el-menu-item>
+            <el-menu-item index="4">{{$t('nav.about1')}}</el-menu-item>
             <el-menu-item index="5">{{$t('nav.media')}}</el-menu-item>
             <el-submenu index="6">
               <template slot="title">{{$t('nav.about')}}</template>
               <el-menu-item index="6-5">{{$t('nav.about5')}}</el-menu-item>
               <el-menu-item index="6-6"><a href="https://swap.nuls.io/swap.html" target="_blank">{{$t('nav.about6')}}</a></el-menu-item>
-              <el-menu-item index="6-1">{{$t('nav.about1')}}</el-menu-item>
+              <el-menu-item index="6-1"><a href="https://nulscan.io/" target="_blank">{{$t('nav.explorer')}}</a></el-menu-item>
               <el-menu-item index="6-2">{{$t('nav.about2')}}</el-menu-item>
               <el-menu-item index="6-3">{{$t('nav.about3')}}</el-menu-item>
               <el-menu-item index="6-4">{{$t('nav.about4')}}</el-menu-item>
@@ -99,16 +99,18 @@
             name: 'developer',
           })
         } else if (key === '4') {
-
+          this.$router.push({
+            name: 'downloads',
+          })
         } else if (key === '5') {
           this.$router.push({
             name: 'media',
           })
-        } else if (key === '6-1') {
+        } /*else if (key === '6-1') {
           this.$router.push({
             name: 'downloads',
           })
-        } else if (key === '6-2') {
+        }*/ else if (key === '6-2') {
           this.$router.push({
             name: 'team',
           })
@@ -207,6 +209,7 @@
           border: 0;
           padding-top: 40px;
           float: left;
+          z-index: 888;
           @media (max-width: 768px) {
             width: 100%;
             position: relative;
@@ -226,6 +229,9 @@
             &:hover {
               background-color: transparent !important;
               color: #9cbe82;
+            }
+            a{
+              color: #ffffff;
             }
           }
           .el-submenu {

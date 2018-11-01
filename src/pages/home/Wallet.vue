@@ -1,44 +1,47 @@
 <template>
   <div class="wallet">
-    <div class="wallet-bg"></div>
+    <div class="wallet-bg">
+      <div class="pc-bg">
+        <div class="iphone-bg">
+          <div class="w-right">
+            <div class="cube1">
+              <img src="./../../assets/images/cube.svg">
+            </div>
+            <div class="cube2">
+              <img src="./../../assets/images/cube.svg">
+            </div>
+            <div class="cube3">
+              <img src="./../../assets/images/cube.svg">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <el-row :gutter="0" class="w-info">
       <el-col :xs="24" :sm="12" class="w-left">
         <h2 class="h2">{{$t('home.wallet_title')}}</h2>
         <p>{{$t('home.wallet_info')}}</p>
         <div class="w-bt">
-          <div class="w-select">
-            <el-select v-model="valueDownload" @change="toDownload(valueDownload)" class="test">
-              <el-option
-                v-for="item in optionsDownload"
-                :key="item.value"
-                :label="item.label"
-                :value="item.value"
-                :disabled="item.disabled"
-                class="dropdownItem"
-              />
-            </el-select>
-          </div>
+          <el-dropdown class="w-select">
+            <el-button type="success">
+              {{valueDownload}}<i class="el-icon-arrow-down el-icon--right"></i>
+            </el-button>
+            <el-dropdown-menu slot="dropdown">
+              <template v-for="item in optionsDownload">
+                <el-dropdown-item @click.native="toDownload(item.value)">{{item.label}}
+                </el-dropdown-item>
+              </template>
+            </el-dropdown-menu>
+          </el-dropdown>
           <div class="btn-box">
-            <el-button @click="tolink('https://wallet.nuls.io')"><span>{{$t('home.wallet_online')}}</span><i class="el-icon-arrow-right"></i></el-button>
+            <el-button @click="tolink('https://wallet.nuls.io')"><span>{{$t('home.wallet_online')}}</span><i
+              class="el-icon-arrow-right"></i></el-button>
           </div>
         </div>
 
       </el-col>
-      <el-col :xs="0" :sm="12" hidden-xs-and-up class="w-right">
-        <div class="cube1">
-          <img src="./../../assets/images/cube.svg">
-        </div>
-        <div class="pc">
-          <div class="iphones"></div>
-        </div>
-        <div class="cube2">
-          <img src="./../../assets/images/cube.svg">
-        </div>
-        <div class="cube3">
-          <img src="./../../assets/images/cube.svg">
-        </div>
-      </el-col>
     </el-row>
+
   </div>
 
 </template>
@@ -51,9 +54,9 @@
     data() {
       return {
         optionsDownload: [
-          {value:'1',label:'Windows Download'},
-          {value:'2',label:'Mac Download'},
-          {value:'3',label:'Linux Download'},
+          {value: '1', label: 'Windows Download'},
+          {value: '2', label: 'Mac Download'},
+          {value: '3', label: 'Linux Download'},
         ],
         valueDownload: 'Download'
       }
@@ -75,7 +78,7 @@
           .then(function (response) {
             //console.log(response);
             that.valueDownload = 'Download ' + response.data.contentList[0].title;
-            that.optionsDownload[0].value =  response.data.contentList[0].windowslink;
+            that.optionsDownload[0].value = response.data.contentList[0].windowslink;
             that.optionsDownload[1].value = response.data.contentList[0].maclink;
             that.optionsDownload[2].value = response.data.contentList[0].linuxlink;
           })
@@ -89,6 +92,7 @@
        * @param e
        */
       toDownload(e) {
+        console.log(e);
         try {
           let elemIF = document.createElement("iframe");
           elemIF.src = e;
@@ -99,12 +103,16 @@
         }
       },
 
+      handleClick(e) {
+        console.log(e)
+      },
+
       /**
        * 打开url
        * @param url
        */
-      tolink(url){
-        if(url !==''){
+      tolink(url) {
+        if (url !== '') {
           window.open(url);
         }
       }
@@ -114,19 +122,23 @@
 </script>
 
 <style lang="less" type="text/less">
-	.dropdownItem {
-		line-height: 45px;
-		height: 45px;
-		margin: auto 0;
-		border-bottom: 1px solid #e4e7ed;
-	}
-	.el-select-dropdown__list li:last-child {
-		height: 38px;
-		border: none;
-	}
+  .el-dropdown-menu {
+    margin: 0 0;
+    padding: 0;
+    .el-dropdown-menu__item {
+      line-height: 52px;
+      height: 52px;
+      padding: 0 10px;
+      border-bottom: 1px solid #e4e7ed;
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+  }
+
   .wallet {
     max-width: 100%;
-    min-height: 600px;
+    min-height: 800px;
     margin: 0 auto;
     @media (max-width: 768px) {
       min-height: auto;
@@ -134,13 +146,63 @@
     .wallet-bg {
       width: 100%;
       min-height: 600px;
-      background-color: #eff4f8;
-      clip-path: polygon(0 0, 80% 0, 40% 100%, 0 100%);
+      background-color: #ffffff;
       z-index: 1;
       position: absolute;
       @media (max-width: 768px) {
+        display: none;
         min-width: 360px;
         min-height: 435px;
+      }
+      .pc-bg {
+        max-width: 100%;
+        height: 800px;
+        background: url("./../../assets/images/pc.png") no-repeat 160% 40%;
+        background-size: 70% 70%;
+        z-index: 2;
+        .iphone-bg {
+          max-width: 100%;
+          height: 800px;
+          background-size: 70% 70%;
+          background: url("./../../assets/images/iphone.png") no-repeat 100% 65%;
+          .w-right {
+            width: 50%;
+            right: 0;
+            top: 50%;
+            position: absolute;
+            .cube1, .cube2, .cube3 {
+              height: 1px;
+              z-index: 77;
+              margin: -40% 0 0 35%;
+              position: absolute;
+              img {
+                width: 200px;
+                right: 0;
+                margin: -10px 0 0 0;
+              }
+            }
+            .cube2 {
+              z-index: 8;
+              height: 50px;
+              width: 200px;
+              margin: -8% -5% 0 0;
+              right: 50px;
+              position: absolute;
+              img {
+              }
+            }
+            .cube3 {
+              z-index: 8;
+              height: 50px;
+              width: 200px;
+              margin: 20% 55% 0;
+              right: 50px;
+              position: absolute;
+              img {
+              }
+            }
+          }
+        }
       }
     }
     .w-info {
@@ -149,13 +211,17 @@
       background: transparent;
       z-index: 2;
       position: relative;
+      @media (max-width: 768px) {
+        margin: 0 auto 5rem;
+      }
       .w-left {
         h2 {
           color: #0a2140;
-          margin: 60px 0;
+          margin: 120px 0 60px;
           text-align: left;
           @media (max-width: 768px) {
-            margin:0 auto 3rem;
+            margin: 0 auto 3rem;
+            text-align: center;
           }
         }
         p {
@@ -177,11 +243,11 @@
           }
           .w-select {
             width: 200px;
-            margin: 50px 0 0 0px;
+            margin: 60px 0 0 0;
             float: left;
             @media (max-width: 768px) {
               width: 12rem;
-              margin: 0 auto 2rem;
+              margin: 0 0 2rem 22%;
               float: none;
             }
             .el-select {
@@ -210,19 +276,22 @@
 
           .btn-box {
             width: 200px;
-            margin: 50px 0 0 50px;
+            margin: 60px 0 0 50px;
             float: left;
             @media (max-width: 768px) {
-             float: none;
+              float: none;
               width: 12rem;
-              margin: 0 auto 0;
+              margin: 0 auto 2rem;
             }
             .el-button {
+              border-color: #59a500;
+              background-color: transparent;
+              color: #59a500;
               @media (max-width: 768px) {
                 max-width: 12rem;
               }
               .el-icon-arrow-right {
-                padding-left: 20px;
+                padding-left: 10px;
                 @media (max-width: 768px) {
                   padding-left: 0;
                 }
@@ -231,56 +300,7 @@
           }
         }
       }
-      .w-right {
-        .cube1,.cube2,.cube3{
-          max-width: 1280px;
-          margin: 0 auto;
-          height: 1px;
-          z-index: 2;
-          position: absolute;
-          img {
-            width: 200px;
-            right: 0;
-            margin: -10px 0 0 0;
-          }
-        }
-        .cube2{
-          z-index: 8;
-          height: 50px;
-          width: 200px;
-          margin:-370px 270px 0 0;
-          right: 50px;
-          position: absolute;
-          img {
-          }
-        }
-        .cube3{
-          z-index: 8;
-          height: 50px;
-          width: 200px;
-          margin:-180px 600px 0 0;
-          right: 50px;
-          position: absolute;
-          img {
-          }
-        }
-        .pc {
-          height: 596px;
-          background: url("./../../assets/images/pc.png") no-repeat right;
-          background-size: 120%;
-          z-index: 3;
-          position: relative;
-        }
-        .iphones {
-          height: 570px;
-          background: url("./../../assets/images/iphone.png") no-repeat 30%;
-          background-size: 43%;
-          z-index: 5;
-          position: relative;
-        }
-      }
     }
-
   }
 
 </style>

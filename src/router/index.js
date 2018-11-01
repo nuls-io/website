@@ -4,9 +4,11 @@ import Router from 'vue-router'
 Vue.use(Router);
 
 export default new Router({
+  mode: 'history',
   routes: [
+    { path: '*',component: resolve => require(['@/pages/Home'], resolve)},
     {
-      path: '*',
+      path: '/home',
       name: 'home',
       component: resolve => require(['@/pages/Home'], resolve)
     },
@@ -59,6 +61,11 @@ export default new Router({
       path: '/joinNuls',
       name: 'joinNuls',
       component: resolve => require(['@/pages/JoinNuls'], resolve),
+    },
+    {
+      path: '/faqs',
+      name: 'faqs',
+      component: resolve => require(['@/pages/Qaqs'], resolve),
     },
   ]
 })

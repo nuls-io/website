@@ -14,16 +14,16 @@
     <el-dialog title="" :visible.sync="dialogFormVisible">
       <p>Download the whitepaper in your preferred language choice</p>
       <ul>
-        <li><a href="#">English</a></li>
-        <li><a href="#">中文</a></li>
-        <li><a href="#">Россия</a></li>
-        <li><a href="#">한국</a></li>
-        <li><a href="#">日本語</a></li>
-        <li><a href="#">Deutsch</a></li>
-        <li><a href="#">Français</a></li>
-        <li><a href="#">Español</a></li>
-        <li><a href="#">Nederlands</a></li>
-        <li><a href="#">Portuguese</a></li>
+        <li><a href="https://nuls.io/api/v1/download/files/papers/white/NulsWhitepaper1.1.pdf" target="_blank">English</a></li>
+        <li><a href="https://nuls.io/api/v1/download/files/papers/white/NULS_whitepaper_zh_V1.0.pdf" target="_blank">中文</a></li>
+        <li><a href="https://nuls.io/api/v1/download/files/papers/white/NulsWhitepaper1.1_Russia.pdf" target="_blank">Россия</a></li>
+        <li><a href="https://nuls.io/api/v1/download/files/papers/white/NulsWhitepaper1.1_Korean.pdf" target="_blank">한국</a></li>
+        <li><a href="https://nuls.io/api/v1/download/files/papers/white/NulsWhitepaper1.1_JP.pdf" target="_blank">日本語</a></li>
+        <li><a href="https://nuls.io/api/v1/download/files/papers/white/NulsWhitepaper1.1_Germany.pdf" target="_blank">Deutsch</a></li>
+        <li><a href="https://nuls.io/api/v1/download/files/papers/white/NulsWhitepaper1.1_French.pdf" target="_blank">Français</a></li>
+        <li><a href="https://nuls.io/api/v1/download/files/papers/white/NulsWhitepaper1.1_Spanish.pdf" target="_blank">Español</a></li>
+        <li><a href="https://nuls.io/api/v1/download/files/papers/white/NulsWhitepaper1.1_NL.pdf" target="_blank">Nederlands</a></li>
+        <li><a href="https://nuls.io/api/v1/download/files/papers/white/NulsWhitepaper1.1_portuguese.pdf" target="_blank">Portuguese</a></li>
       </ul>
     </el-dialog>
   </div>
@@ -50,7 +50,7 @@
     text-align: center;
     clear: none;
     .spaceship {
-      min-height: 517px;
+      min-height: 459px;
       padding:0;
       position: relative;
       @media (max-width: 768px){
@@ -66,9 +66,10 @@
           text-align: left;
         }
         .h2 {
-          margin-bottom: 60px;
+         margin: 120px auto 60px;
           @media (max-width: 768px){
             text-align: center;
+            margin: 0 auto 3rem;
           }
         }
         .mission-text {
@@ -92,10 +93,12 @@
       }
       .img-right {
         position: absolute;
-        top: 80px;
+        top: -50px;
         right: 0;
         @media (max-width: 768px) {
           display: none;
+        }
+        img{
         }
       }
       @media (max-width: 768px) {

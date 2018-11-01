@@ -26,17 +26,20 @@
       </div>
     </div>
     <Bottom></Bottom>
+    <GoTop></GoTop>
   </div>
 </template>
 
 <script>
   import HeaderList from '@/components/HeaderList';
   import Bottom from '@/components/Bottom';
+  import GoTop from '@/components/GoTop';
 
   export default {
     components: {
       HeaderList,
       Bottom,
+      GoTop,
     }
   }
 </script>
@@ -47,7 +50,7 @@
   .whiteYellow {
     background-color: #FFFFFF;
     .header-bg {
-      background: url("./../assets/images/top_bg.png") no-repeat 100% 100%;
+      background: url("./../assets/images/top_bg.jpg") no-repeat 100% 100%;
       height: 300px;
       @media (max-width: 768px) {
         height: auto;

@@ -86,7 +86,7 @@
         border-radius: 50px;
         text-align: center;
         line-height: 50px;
-        margin: 20px auto 0;
+        margin: 60px auto 0;
         @media (max-width: 768px) {
           margin: 1rem auto 0;
         }
@@ -148,17 +148,18 @@
         }
         .el-dialog__header {
           .el-dialog__headerbtn {
-            background-color: #34ce57;
-            margin: 10px -40px 0 0;
-            border-radius: 10px;
-            width: 20px;
-            height: 20px;
+            background-color: #ffffff;
+            margin: 18px -65px 0 0;
+            border-radius: 40px;
+            width: 40px;
+            height: 40px;
             @media (max-width: 768px) {
               margin: 10px -15px 0 0;
             }
             .el-dialog__close {
-              color: #ffffff;
-              line-height: 20px;
+              color: #c1c1c1;
+              line-height: 26px;
+              font-size: 26px;
             }
           }
         }

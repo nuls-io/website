@@ -43,7 +43,7 @@
           <div class="iphone">
             <el-carousel trigger="click" height="300px" :interval="300000">
               <el-carousel-item>
-                <div class="line"></div>
+                <div class="line lines"></div>
                 <div class="swiper-wrapper flex">
                   <div class="swiper-slide">
                     <p class="date">{{$t('home.road_tab_ice_1.time')}}</p>
@@ -135,6 +135,28 @@
                   </div>
                 </div>
               </el-carousel-item>
+              <el-carousel-item class="water">
+                <div class="line"></div>
+                <div class="swiper-wrapper flex">
+                  <div class="swiper-slide">
+                    <div class="triangle"></div>
+                    <p>{{$t('home.road_tab_water_2.p0')}}</p>
+                    <p>{{$t('home.road_tab_water_2.p1')}}</p>
+                    <p>{{$t('home.road_tab_water_2.p2')}}</p>
+                    <p>{{$t('home.road_tab_water_2.p3')}}</p>
+                  </div>
+                </div>
+              </el-carousel-item>
+              <el-carousel-item class="water">
+                <div class="line"></div>
+                <div class="swiper-wrapper flex">
+                  <div class="swiper-slide">
+                    <div class="triangle"></div>
+                    <p class="bold">{{$t('home.road_tab_water_3.p0')}}</p>
+                    <p>{{$t('home.road_tab_water_3.p1')}}</p>
+                  </div>
+                </div>
+              </el-carousel-item>
             </el-carousel>
           </div>
         </el-tab-pane>
@@ -164,8 +186,37 @@
           </div>
           <div class="iphone">
             <el-carousel trigger="click" height="300px" :interval="300000">
-              <el-carousel-item>
-                8888888
+              <el-carousel-item class="water">
+                <div class="line"></div>
+                <div class="swiper-wrapper flex">
+                  <div class="swiper-slide">
+                    <div class="triangle"></div>
+                    <p>{{$t('home.road_tab_steam_1.p0')}}</p>
+                    <p>{{$t('home.road_tab_steam_1.p1')}}</p>
+                  </div>
+                </div>
+              </el-carousel-item>
+              <el-carousel-item class="water">
+                <div class="line"></div>
+                <div class="swiper-wrapper flex">
+                  <div class="swiper-slide">
+                    <div class="triangle"></div>
+                    <p class="bold">Main-net test</p>
+                    <p>{{$t('home.road_tab_steam_2.p0')}}</p>
+                    <p>{{$t('home.road_tab_steam_2.p1')}}</p>
+                    <p>{{$t('home.road_tab_steam_2.p2')}}</p>
+                  </div>
+                </div>
+              </el-carousel-item>
+              <el-carousel-item class="water">
+                <div class="line"></div>
+                <div class="swiper-wrapper flex">
+                  <div class="swiper-slide">
+                    <div class="triangle"></div>
+                    <p>{{$t('home.road_tab_steam_3.p0')}}</p>
+                    <p>{{$t('home.road_tab_steam_3.p1')}}</p>
+                  </div>
+                </div>
               </el-carousel-item>
             </el-carousel>
           </div>
@@ -193,8 +244,8 @@
 
 <style lang="less" type="text/less">
   .roadMap {
-    background: #FFFFFF;
-    padding: 20px 0 120px;
+    background: #ebf4f9;
+    padding: 1px 0 120px;
     @media (max-width: 768px) {
       padding: 0;
       margin: 0 0 5rem 0;
@@ -210,6 +261,9 @@
             margin: 0 auto;
           }
         }
+      }
+      .el-tabs__content{
+        height: 430px;
       }
       .nav-tabs {
         border-bottom: 0;
@@ -319,6 +373,9 @@
               .water{
                 .line{
                   margin-top: 15px;
+                  @media (max-width: 768px) {
+                    margin-top: 25px;
+                  }
                 }
               }
             }
@@ -332,7 +389,7 @@
         position: absolute;
         margin-top: 77px;
         @media (max-width: 768px) {
-          margin-top: 50px;
+          margin-top: 62px;
         }
       }
       .lines {
@@ -351,7 +408,7 @@
           position: relative;
           margin-right: 30px;
           @media (max-width: 768px) {
-            margin: 50px 0 0 0;
+            margin: 60px 0 0 0;
           }
           .date {
             font-size: 16px;
@@ -382,7 +439,7 @@
             letter-spacing: -.41px;
             line-height: 22px;
             @media (max-width: 768px) {
-              line-height: 18px;
+              line-height: 22px;
               padding: 0 20px;
             }
           }

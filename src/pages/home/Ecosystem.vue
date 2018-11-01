@@ -31,16 +31,16 @@
   .ecosystem{
     background:url("./../../assets/images/wallet-section-bg.jpg");
     width: 100%;
-    padding:1px 0 60px 0;
+    padding:1px 0 112px 0;
     @media (max-width: 768px) {
       min-height: 550px;
       padding:0;
     }
     .h2{
       color: #FFFFFF;
-      margin-bottom:80px;
+      margin: 120px auto 80px;
       @media (max-width: 768px) {
-        margin-bottom:0;
+        margin: 0 auto;
         text-align: left;
         padding: 5rem 0 3rem 1rem;
       }

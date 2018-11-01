@@ -84,7 +84,7 @@
 
 <style lang="less">
 .map{
-  background: url("./../../assets/images/map-bg.png") no-repeat;
+  background: url("./../../assets/images/map-bg.jpg") no-repeat;
   -moz-background-size: 100% 100%;
   background-size: 100% 100%;
   height: 500px;

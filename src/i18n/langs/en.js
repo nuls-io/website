@@ -26,15 +26,15 @@ module.exports = {
     nuls_do_info1: 'Accommodate multitude of blockchain application usage',
     nuls_do_info2: 'Break through technology bottleneck',
     nuls_do_info3: 'Reduce technical threshold and cost',
-    nuls_do_info4: 'Resolving the lack of trust in a centralised database',
-    nuls_do_info5_more:'Learn more from white paper',
+    nuls_do_info4: 'Resolve the lack of trust in a centralized database',
+    nuls_do_info5_more:'Learn more from whitepaper',
 
     architecture_title: 'How It Works',
     architecture_info_h4_1: 'Module Repository',
     architecture_info_p_1: 'It covers majority of technologies in the blockchain field and provides standard components for blockchain, multi-chain and cross-chain mechanism.',
     architecture_info_p_11: '',
     architecture_info_h4_2: 'Chain Factory',
-    architecture_info_p_2: 'Users can build blockchains with only 4 steps.',
+    architecture_info_p_2: 'Users can build blockchains in only 4 steps.',
     architecture_info_p_21: '',
     architecture_info_h4_3: 'Cross-Chain Mechanism',
     architecture_info_p_3: 'Using the "Satellite Chain" to achieve cross-chain value circulation, we will build a NULS ecology.',
@@ -54,9 +54,9 @@ module.exports = {
     wallet_list_0: 'Windowc Download',
     wallet_list_1: 'MacOS Download',
     wallet_list_2: 'Linux Download',
-    wallet_online:'Online wallet',
+    wallet_online:'Online Wallet',
 
-    road_title: 'Road Map',
+    road_title: 'Roadmap',
     road_tab_title0: 'ICE',
     road_tab_title1: 'WATER',
     road_tab_title2: 'STEAM',
@@ -85,7 +85,7 @@ module.exports = {
     road_tab_ice_4: {
       time: '2018.12',
       p0: 'Chain Factory launch',
-      p1: 'NULS innovative design system, which allows for the creation of a customizable chain using our modular repository, in addition to connecting to other chains in the NULS ecosystem.',
+      p1: 'NULS innovative design system, which allows for the creation of a customizable chain using our module repository, in addition to connecting to other chains in the NULS ecosystem.',
     },
     road_tab_water_1: {
       p0: 'Technology',
@@ -125,22 +125,22 @@ module.exports = {
     title2: 'Using Testnet',
     info: 'If you need testnet NULS,please download the testnet wallet and offer your address to apply testnet NULS',
     bt1: 'Download Testnet wallet',
-    bt2: 'Apply For Testnet NULS',
+    bt2: 'Applying for NULS Test Tokens',
   },
 
   team:{
     title:'NULS Team',
-    info:'The core team members are high-experienced professionals who are well versed in blockchain technology and community building. The catalyst which brought this team together was a shared vision of blockchain, and a desire to create an open, innovative and technologically advanced platform.',
+    info:'The core team members are highly experienced professionals who are well versed in blockchain technology and community building. The catalyst which brought this team together is the shared vision of blockchain, and a desire to create an open, innovative and technologically advanced platform.',
   },
 
   whiteYellow:{
-    h51:'NULS is a highly customizable modular blockchain infrastructure',
-    p1:'It consists of a microkernel and functional modules. NULS provides smart contract, multi-chain mechanism and cross-chain consensus. It aims to break the technical barriers of blockchain, to reduce the cost of development, and to promote the usage of blockchain technology in the commercial field.',
+    h51:'NULS is a blockchain infrastructure for customizable services, driven by our global open-source community.',
+    p1:'Following the principles of pluggability, modularization and parallel expansion, NULS provides smart contracts, multi-chain mechanism and cross-chain consensus to reduce cost of development and usage, and to promote the application of blockchain in the commercial field and the interaction among chains.',
     h52:'NULS is a global blockchain open-source project',
-    p2:'NULS provides basic function modules and standard interfaces and promotes the concept of modularization and customization. Developers can develop various modules and customize their own subchains as needed. NULS is now acting as a blockchain technology platform for discovery, use and communication among developers.',
-    h53:'White Paper and Yellow Paper',
-    p3:'The NULS whitepaper is a authoritative report that addresses what NULS goal is and how it plans to achieve it.',
-    p4:'The NULS yellowpaper technical detailed version to that of the whitepaper which drills down into the underlying aspects of NULS.',
+    p2:'Upholding the "chain" as the core in the NULS development philosophy, NULS is striving for building its core product: "Chain Factory". In the meantime, NULS will realize the value circulation among chains through cross-chain module and build the ecosystem of blockchains.',
+    h53:'Whitepaper and Yellowpaper',
+    p3:'The NULS whitepaper is an authoritative report that addresses what NULS’ goal is and how we plan to achieve it.',
+    p4:'The NULS yellowpaper is the technical detailed version of the whitepaper, which drills down into the underlying aspects of NULS.',
     download:'Download',
   },
 
@@ -155,7 +155,7 @@ module.exports = {
 
   partners:{
     title:'Our Partnerships',
-    info:'NULS Partner Network is a collaborative framework between NULS and partners to meet different types of cooperation needs, including technical support, communication, community assistance, market expansion and marketing, to ensure that partners and NULS to achieve their goals.',
+    info:'NULS Partner Network is a collaborative framework between NULS and partners to meet different types of cooperation needs, including technical support, communication, community assistance, market expansion and marketing, to ensure that partners and NULS are able to achieve their goals.',
   },
 
   joinNuls:{
@@ -164,8 +164,8 @@ module.exports = {
   },
 
   bottom: {
-    title: 'Join The NULS community',
-    info: 'NULS wants to re-shape the world, starting with blockchain. If you would like to be part of our growing community and share this journey, please connect on one of our social media pages.',
+    title: 'Join The NULS Community',
+    info: 'NULS wants to reshape the world with blockchain. If you would like to be a part of our growing community and participate in this journey, join our social media channels today',
     team: 'View NULS Team',
 
     list0: 'Copyright',

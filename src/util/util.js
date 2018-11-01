@@ -164,4 +164,14 @@ export function arrItemSort(arrObj, keyName, type) {
   return tempArrObj.sort(compare(keyName, type));
 }
 
+/**
+ * 打开url
+ * @param url
+ */
+export function tolink(url){
+  if(url !==''){
+    window.open(url);
+  }
+}
+
 

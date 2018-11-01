@@ -2,10 +2,10 @@
   <div class="team">
     <div class="team-header">
       <HeaderList></HeaderList>
-    </div>
-    <div class="team-info">
-      <h1 class="h1">{{$t('team.title')}}</h1>
+      <h1 class="h1 cb">{{$t('team.title')}}</h1>
       <p>{{$t('team.info')}}</p>
+    </div>
+    <div class="team-info"  v-loading="teamLoading">
       <ul>
         <li v-for="site in teamList">
           <h2 class="cursor-p" @click="tolink(site.linkedin)"><img :src=site.headUrl height="600" width="660"/></h2>
@@ -13,7 +13,7 @@
           <h4>{{site.position}}</h4>
         </li>
       </ul>
-      <h2 class="h2 cb">Angel Investor</h2>
+      <h2 class="h2 cb" v-show="angelList.length > 0">Angel Investor</h2>
       <ul>
         <li v-for="site in angelList">
           <h2 class="cursor-p" @click="tolink(site.linkedin)"><img :src=site.headUrl height="600" width="660"/></h2>
@@ -29,7 +29,7 @@
           <h4>{{site.position}}</h4>
         </li>
       </ul>
-      <h2 class="h2 cb" v-show="communityList.length > 0">Community Member</h2>
+      <h2 class="h2 cb" v-show="communityList.length > 0">NULS Code Craft Council</h2>
       <ul>
         <li v-for="site in communityList">
           <h2 class="cursor-p" @click="tolink(site.linkedin)"><img :src=site.headUrl height="600" width="660"/></h2>
@@ -39,19 +39,22 @@
       </ul>
     </div>
     <Bottom></Bottom>
+    <GoTop></GoTop>
   </div>
 </template>
 
 <script>
   import {getTeamList} from '@/api/httpData';
   import {API_ROOT} from '@/api/https';
-  import {arrItemSort} from '@/util/util';
+  import {arrItemSort,tolink} from '@/util/util';
   import HeaderList from '@/components/HeaderList';
   import Bottom from '@/components/Bottom';
+  import GoTop from '@/components/GoTop';
 
   export default {
     data() {
       return {
+        teamLoading:true,
         teamList: [],
         angelList: [],
         advisorList: [],
@@ -61,6 +64,7 @@
     components: {
       HeaderList,
       Bottom,
+      GoTop,
     },
     mounted() {
       this.getTeamList(1, 100, 1)
@@ -99,6 +103,7 @@
               that.angelList  = angelListSort;
               that.advisorList  = advisorListSort;
               that.communityList  = communityListSort;
+              that.teamLoading = false;
             }, 100);
 
           })
@@ -112,9 +117,7 @@
        * @param url
        */
       tolink(url){
-        if(url !==''){
-          window.open(url);
-        }
+        tolink(url)
       }
     }
   }
@@ -124,21 +127,39 @@
   .team {
     background-color: #FFFFFF;
     .team-header {
-      background: url("./../assets/images/map-bg.png") no-repeat;
+      background: url("./../assets/images/map-bg.jpg") no-repeat;
       background-size: 100% 100%;
       min-height: 500px;
       width: 100%;
       @media (max-width: 768px) {
         min-height: 400px;
       }
+      h1 {
+        width: 100%;
+        height: 150px;
+        line-height: 150px;
+      }
+      p {
+        max-width: 810px;
+        margin: 0 auto;
+        padding: 15px 0;
+        font-size: 20px;
+        text-align: center;
+        line-height: 29px;
+        color: #FFFFFF;
+        @media (max-width: 768px) {
+          font-size: 16px;
+          padding: 10px;
+        }
+      }
     }
     .team-info {
       max-width: 1280px;
-      margin: -400px auto 0;
-      min-height: 270rem;
+      margin: -5% auto 900px;
+      height: auto;
       @media (max-width: 768px) {
         min-height: auto;
-        margin: -20rem auto 5rem;
+        margin: -5rem auto 5rem;
       }
       h1 {
         @media (max-width: 768px) {
@@ -188,6 +209,7 @@
             font-size: 28px;
             color: #0a2140;
             line-height: 34px;
+            margin: 10px 0 0 0;
             text-align: center;
           }
           h4 {
@@ -197,6 +219,10 @@
             text-align: center;
           }
         }
+      }
+      .el-loading-mask{
+        margin-top: 25%;
+        background-color: transparent;
       }
     }
   }

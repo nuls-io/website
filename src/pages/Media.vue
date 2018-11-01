@@ -1,6 +1,6 @@
 <template>
   <div class="medias">
-    <div class="medias-top">
+    <div class="medias-top"  v-loading="mediasLoading">
       <HeaderList></HeaderList>
     </div>
 
@@ -13,16 +13,14 @@
     </div>
     <el-tabs v-model="activeMedia" @tab-click="handleClick">
       <el-tab-pane label="News" name="news">
-        <ul class="news-list">
-          <template v-for="site in newList">
-            <li @click="toMediaDetails(site.url)">
+        <ul class="news-list" v-loading="newsListLoading">
+            <li @click="toMediaDetails(site.url)"  v-for="site in newList">
               <p class="fl">
                 <label>{{ site.title }}</label>
                 <span>{{ site.create_time }}</span>
               </p>
               <img class="fr" :src=site.thumbnail />
             </li>
-          </template>
         </ul>
 
         <el-pagination
@@ -49,11 +47,11 @@
         </ul>
       </el-tab-pane>
 
-      <el-tab-pane label="Find Us" name="social">
+      <el-tab-pane label="Join Community" name="social">
         <h3>
-          Join Group
+          Join Community
         </h3>
-        <ul class="social-list">
+        <ul class="social-list" v-loading="findUsListLoading">
           <template v-for="site in findUsList">
           <li @click="toLink(site.link)">
             <img :src=site.imgUrl>
@@ -65,6 +63,7 @@
       </el-tab-pane>
     </el-tabs>
     <Bottombar></Bottombar>
+    <GoTop></GoTop>
   </div>
 </template>
 
@@ -74,16 +73,20 @@
   import {arrItemSort} from '@/util/util';
   import HeaderList from '@/components/HeaderList';
   import Bottombar from '@/components/Bottom';
+  import GoTop from '@/components/GoTop';
 
   export default {
     data() {
       return {
-        language:sessionStorage.hasOwnProperty('langs') ? sessionStorage.getItem('langs') ==='zh' ? '1' : '2' : '2',
+        language:'2',
+        mediasLoading:true,
         bannerList:[],
         activeMedia: 'news',
+        newsListLoading:true,
         newList: [],
         newlistTotal:0,
         guideList:[],
+        findUsListLoading:true,
         findUsList:[],
       }
     },
@@ -106,23 +109,28 @@
     components: {
       HeaderList,
       Bottombar,
+      GoTop,
     },
     mounted() {
 
-      setInterval(() => {
+     /* setInterval(() => {
         this.language=sessionStorage.hasOwnProperty('langs') ? sessionStorage.getItem('langs') ==='zh' ? '1' : '2' : '2'
-      }, 100);
+      }, 100);*/
 
       this.getBannerList(this.language);
-      if(this.activeMedia ==='news'){
-        this.getNewList(this.language, 10, 1);
-      }else if(this.activeMedia ==='guide'){
-        this.getGuideList(this.language, 10, 1);
-      }else if(this.activeMedia ==='social') {
-        this.getFindUsList(1, 10, 1);
-      }else {
-        console.log("")
-      }
+
+      setTimeout(() => {
+        if(this.activeMedia ==='news'){
+          this.getNewList(this.language, 10, 1);
+        }else if(this.activeMedia ==='guide'){
+          this.getGuideList(this.language, 10, 1);
+        }else if(this.activeMedia ==='social') {
+          this.getFindUsList(1, 10, 1);
+        }else {
+          console.log("")
+        }
+      },100);
+
     },
     methods: {
 
@@ -139,6 +147,7 @@
               list.url = API_ROOT + list.url;
             }
             that.bannerList = response.data.contentList;
+            that.mediasLoading = false;
           })
           .catch(function (error) {
             console.log(error);
@@ -181,6 +190,7 @@
             setTimeout(() => {
               let newListSort = arrItemSort(response.data.contentList,"id",0);
               that.newList  = newListSort;
+              that.newsListLoading = false;
             }, 100);
           })
           .catch(function (error) {
@@ -224,10 +234,14 @@
         let that = this;
         getGuideList(siteId,pageSize,pageNum)
           .then(function (response) {
+            //console.log(response);
             for (let list of response.data.contentList) {
               list.thumbnail = API_ROOT + list.thumbnail;
             }
-            that.guideList = response.data.contentList;
+            setTimeout(() => {
+              let guideListSort = arrItemSort(response.data.contentList,"id",0);
+              that.guideList  = guideListSort;
+            }, 100);
           })
           .catch(function (error) {
             console.log(error);
@@ -244,11 +258,16 @@
         let that = this;
         getFindUsList(siteId,pageSize,pageNum)
           .then(function (response) {
-            console.log(response);
+            //console.log(response);
             for (let list of response.data.contentList) {
               list.imgUrl = API_ROOT + list.imgUrl;
             }
-            that.findUsList = response.data.contentList;
+            setTimeout(() => {
+              let findUsListSort = arrItemSort(response.data.contentList,"id",0);
+              that.findUsList  = findUsListSort;
+              that.findUsListLoading = false;
+            }, 100);
+
           })
           .catch(function (error) {
             console.log(error);
@@ -267,7 +286,7 @@
       max-width: 1280px;
       margin: 0 auto;
       @media (max-width: 768px) {
-        background: url("./../assets/images/map-bg.png") no-repeat;
+        background: url("./../assets/images/map-bg.jpg") no-repeat;
         background-size: 100% 100%;
         min-height: 68px;
       }
@@ -276,27 +295,33 @@
         position: absolute;
         max-width: 1280px;
       }
+
+      .el-loading-mask{
+        margin: 10% 0 0 0 ;
+      }
     }
     .carousel {
       z-index: 8;
       .el-carousel{
         .el-carousel__container{
-          height: 560px;
+          height: 360px;
           @media (max-width: 768px) {
             height: 180px;
           }
           .el-carousel__item{
+            text-align: center;
+            background-color: #111a39;
             a{
               img{
-                width: 100%;
-                height: 100%;
+                /*width: 100%;
+                height: 100%;*/
               }
             }
           }
         }
         .el-carousel__indicators{
           .el-carousel__indicator{
-            padding: 12px 4px 40px 4px;
+            padding: 12px 15px 40px 15px;
             .el-carousel__button{
               width: 8px;
               height: 8px;
@@ -417,7 +442,7 @@
             }
             img {
               margin:10px 10px 10px 10px;
-              width: 280px;
+              width: 340px;
               height: 180px;
               @media (max-width: 768px) {
                display: none;
@@ -482,14 +507,16 @@
     opacity: 0.75;
     line-height: 300px;
     margin: 0;
+    text-align: center;
+    background-color: #141c33;
   }
 
   .el-carousel__item:nth-child(2n) {
-    background-color: #99a9bf;
+    //background-color: #99a9bf;
   }
 
   .el-carousel__item:nth-child(2n+1) {
-    background: url("./../assets/images/BG.png") no-repeat 100%, 100%;
+    //background: url("./../assets/images/BG.png") no-repeat 100%, 100%;
   }
 
 </style>
