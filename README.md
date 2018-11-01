@@ -1,66 +1,30 @@
-# NULS
+# nuls-website
 
-## Introduction
-We use [VueJS](https://github.com/vuejs/vue) as the frontend framework, with [ExpressJS](https://github.com/expressjs/express)
-running the backend server. [Strapi](https://github.com/strapi/strapi) is used for handling the Admin Panel, creating and 
-updating entries in a [MySQL database](https://www.mysql.com/) but it does not serve the content, we handle this manually ourselves
-in our backend server as we can create custom routes for faster requests.
+> A Vue.js project
 
-## Contributing
-### Code Style
-We use [ESLint](https://github.com/eslint/eslint) to force code styling throughout the project. We import rules from third parties
-as well as having custom ones, please review `.eslint` files for each top directory folder. The main imported rules are:
-- [ESLint](https://eslint.org/docs/rules/)
-- [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
-- [Vue](https://github.com/vuejs/eslint-plugin-vue)
+## Build Setup
 
-### Testing
-[Jest](https://github.com/facebook/jest) is used for testing both frontend and backend.
+``` bash
+# install dependencies
+npm install
 
-_TODO - Write tests_
+# serve with hot reload at localhost:8080
+npm run dev
 
+# build for production with minification
+npm run build
 
-## Getting Started
-#### Requirements
-- NPM v6.1.0
-- Node v9.5.0
-- MySQL Server
+# build for production and view the bundle analyzer report
+npm run build --report
 
-#### Environment Configurations
-To run each script you will first need to set up the environment variables for each script project. For the backend and frontend areas
-there are files named `.env.example` to demonstrate what your `.env` file should contain.
+# run unit tests
+npm run unit
 
-#### MySQL
-When running Strapi for the first time it will create all the required tables within your configured database.
+# run e2e tests
+npm run e2e
 
-##### Backend
-- `/server/.env`
-
-##### Frontend
-- The database user must have `data` access to your database
-- `/client/.env`
-
-##### Admin Panel
-- The database user must have `data` and `structure` access to your database (although could be dropped to just `data` after initial set up)
-- `/strapi/.env`
-
-#### Running
-**Backend Server**
-```$xslt
-$ cd server
-$ npm i
-$ npm run dev
-```
-**Frontend Framework**
-```$xslt
-$ cd client
-$ npm i
-$ npm run dev
-```
-**Admin Panel**
-```$xslt
-$ cd strapi
-$ npm i
-$ npm run start
+# run all tests
+npm test
 ```
 
+For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
