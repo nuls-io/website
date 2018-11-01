@@ -188,10 +188,12 @@
       h3 {
         font-size: 48px;
         font-weight: 700;
-        line-height: 77px;
+	      margin-bottom: 77px;
+        /*line-height: 77px;*/
         @media (max-width: 768px) {
           font-size: 24px;
-          line-height: 70px;
+	        margin-bottom: 40px;
+          /*line-height: 70px;*/
         }
       }
       p {
@@ -199,7 +201,7 @@
         line-height: 23px;
         margin-bottom: 16px;
         @media (max-width: 768px) {
-          font-size: 12px;
+          font-size: 13px;
           line-height: 24px;
         }
       }
