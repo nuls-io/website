@@ -172,7 +172,7 @@
     .bottom-top {
       margin: auto;
       max-width: 1280px;
-      height: 300px;
+      /*height: 300px;*/
       background-image: linear-gradient(-133deg, #002e5e, #092243 89%, #0a2140);
       -webkit-box-shadow: 0 16px 64px 0 rgba(0, 0, 0, .24);
       box-shadow: 0 16px 64px 0 rgba(0, 0, 0, .24);
@@ -181,7 +181,7 @@
       top: -60px;
       padding: 50px 85px;
       @media (max-width: 768px) {
-        height: 350px;
+        /*height: 350px;*/
         padding: 10px;
         width: 98%;
       }
@@ -204,6 +204,7 @@
         }
       }
       ul {
+	      display: inline-block;
         li {
           float: left;
           margin: 0 30px;
@@ -233,16 +234,21 @@
           margin: 20px auto 0;
           @media (max-width: 768px) {
             width: 100%;
-            margin: 1rem 0 1rem 0.5rem;
+            /*margin: 1rem 0 1rem 0.5rem;*/
+	          padding: 1rem 0.5rem;
           }
           .el-form-item{
             width: 500px;
             @media (max-width: 768px) {
-              width: 65%;
+	            display: block;
+	            width: 100%;
             }
             .el-form-item__content{
               width:100%;
               .el-input{
+	              .el-input__inner::placeholder{
+		              color: #919191;
+	              }
                 .el-input__inner{
                   background-color: #ffffff;
                   height: 52px;
