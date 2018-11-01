@@ -5,7 +5,7 @@
       <h1 class="h1 cb">{{$t('nav.about1')}}</h1>
     </div>
 
-    <div class="downloads-info">
+    <div class="downloads-info" v-loading="downloadsListLoading">
       <ul>
         <li v-for="item in downloadsList">
           <h3>{{item.title}}</h3>
@@ -17,6 +17,7 @@
       </ul>
     </div>
     <Bottom></Bottom>
+    <GoTop></GoTop>
   </div>
 </template>
 
@@ -26,16 +27,19 @@
   import {arrItemSort,tolink} from '@/util/util';
   import HeaderList from '@/components/HeaderList';
   import Bottom from '@/components/Bottom';
+  import GoTop from '@/components/GoTop';
 
   export default {
     data() {
       return {
+        downloadsListLoading:true,
         downloadsList:[],
       }
     },
     components: {
       HeaderList,
       Bottom,
+      GoTop
     },
     mounted() {
       this.getDownloadsList(1, 10, 1)
@@ -51,11 +55,11 @@
         let that = this;
         getDownloadsList(siteId,pageSize,pageNum)
           .then(function (response) {
-            console.log(response);
+            //console.log(response);
             setTimeout(() => {
               let downloadsListSort = arrItemSort(response.data.contentList,"id",0);
               that.downloadsList  = downloadsListSort;
-              console.log(that.downloadsList)
+              that.downloadsListLoading = false;
             }, 100);
           })
           .catch(function (error) {
@@ -92,7 +96,7 @@
   .downloads {
     background-color: #FFFFFF;
     .header-bg {
-      background: url("./../assets/images/map-bg.png") no-repeat;
+      background: url("./../assets/images/map-bg.jpg") no-repeat;
       background-size: 100% 100%;
       max-height: 300px;
       @media (max-width: 768px) {
@@ -121,7 +125,8 @@
           margin: 0 0 80px 0;
           min-height: 150px;
           @media (max-width: 768px) {
-            margin: 0 0 3rem 0;
+            margin: 0 auto 3rem ;
+            width: 90%;
           }
           h3{
             font-size: 36px;
@@ -170,11 +175,15 @@
               float: left;
               span{
                 width: 100%;
+                @media (max-width: 768px) {
+                  font-size: 1.5rem;
+                }
               }
               @media (max-width: 768px) {
                 width: 100%;
                 float: none;
                 text-align: center;
+
               }
             }
           }

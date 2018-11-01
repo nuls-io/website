@@ -105,7 +105,7 @@
       width: auto;
       min-height: 120px;
       margin: 0 auto;
-      background: url("./../assets/images/top_bg.png") no-repeat 100%, 100%;
+      background: url("./../assets/images/top_bg.jpg") no-repeat 100%, 100%;
       .joinNuls-top {
         width: 1280px;
         margin: 0 auto;

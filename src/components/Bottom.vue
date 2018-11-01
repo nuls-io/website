@@ -4,22 +4,32 @@
       <h3>{{$t('bottom.title')}}</h3>
       <p>{{$t('bottom.info')}}</p>
       <ul>
-        <li><a href="https://t.me/Nulsio" target="_blank"><img src="../assets/images/telegram.png" height="42" width="42"/></a></li>
-        <li><a href="https://twitter.com/nulsservice" target="_blank"><img src="../assets/images/twitter.png" height="38" width="38"/></a></li>
-        <li><a href="https://github.com/nuls-io/" target="_blank"><img src="../assets/images/github.png" height="37" width="38"/></a></li>
-        <li><a href="https://medium.com/@nuls" target="_blank"><img src="../assets/images/medium.png" height="38" width="38"/></a></li>
-        <li><a href="https://www.reddit.com/r/nulsservice/" target="_blank"><img src="../assets/images/reddit.png" height="34" width="41"/></a></li>
-        <li><a href="https://steemit.com/@nuls" target="_blank"><img src="../assets/images/discord.png" height="28" width="40"/></a></li>
-        <li><a href="https://gitter.im/nul" target="_blank"><img src="../assets/images/steemit.png" height="40" width="38"/></a></li>
-        <li><a href="https://nuls.slack.com/join/shared_invite/enQtMjQ4MTM4ODAyNTI4LWJjNGMwYTE0YjRlYmFlZGUwM2JhOGE4MDIwZmE4MzA2MDg1YzUyMmVkN2RhZjkyNWMzZjY5ZDU5ZmViMjZjNGQ" target="_blank"><img src="../assets/images/gitter.png" height="41" width="30"/></a></li>
+        <li><a href="https://t.me/Nulsio" target="_blank"><img src="../assets/images/telegram.png" height="42"
+                                                               width="42"/></a></li>
+        <li><a href="https://twitter.com/nulsservice" target="_blank"><img src="../assets/images/twitter.png"
+                                                                           height="38" width="38"/></a></li>
+        <li><a href="https://github.com/nuls-io/" target="_blank"><img src="../assets/images/github.png" height="37"
+                                                                       width="38"/></a></li>
+        <li><a href="https://medium.com/@nuls" target="_blank"><img src="../assets/images/medium.png" height="38"
+                                                                    width="38"/></a></li>
+        <li><a href="https://www.reddit.com/r/nulsservice/" target="_blank"><img src="../assets/images/reddit.png"
+                                                                                 height="34" width="41"/></a></li>
+        <li><a href="https://steemit.com/@nuls" target="_blank"><img src="../assets/images/discord.png" height="28"
+                                                                     width="40"/></a></li>
+        <li><a href="https://gitter.im/nul" target="_blank"><img src="../assets/images/steemit.png" height="40"
+                                                                 width="38"/></a></li>
+        <li><a
+          href="https://nuls.slack.com/join/shared_invite/enQtMjQ4MTM4ODAyNTI4LWJjNGMwYTE0YjRlYmFlZGUwM2JhOGE4MDIwZmE4MzA2MDg1YzUyMmVkN2RhZjkyNWMzZjY5ZDU5ZmViMjZjNGQ"
+          target="_blank"><img src="../assets/images/gitter.png" height="41" width="30"/></a></li>
       </ul>
     </div>
 
     <div class="bottom-info">
       <div class="bottom-from">
-        <el-form :inline="true" :model="emailForm" :rules="emailRules" ref="emailForm" >
+        <el-form :inline="true" :model="emailForm" :rules="emailRules" ref="emailForm">
           <el-form-item label="" prop="emailAddress">
-            <el-input v-model="emailForm.emailAddress" placeholder="Leave your email and we will send you the latest information"></el-input>
+            <el-input v-model="emailForm.emailAddress"
+                      placeholder="Leave your email and we will send you the latest information"></el-input>
           </el-form-item>
           <el-form-item class="form-bt">
             <el-button type="primary" class="bg-green-btn" @click="submitForm('emailForm')">Contact us</el-button>
@@ -35,32 +45,30 @@
         <div class="b-right">
           <ul>
             <li>{{$t('nav.about')}}</li>
-<<<<<<< HEAD
-            <li><a href="/whiteYellow">GitHub</a></li>
-            <li><a href="/team">{{$t('nav.about2')}}</a></li>
-            <li><a href="/partners">{{$t('nav.about3')}}</a></li>
-            <li><a href="/media">{{$t('nav.media')}}</a></li>
-=======
-	        <li><router-link :to="{ name: 'home' }">Nuls</router-link></li>
-            <li><router-link :to="{ name: 'team' }">{{$t('nav.about2')}}</router-link></li>
-            <li><router-link :to="{ name: 'partners' }">{{$t('nav.about3')}}</router-link></li>
-            <li><router-link :to="{ name: 'media' }">{{$t('nav.media')}}</router-link></li>
->>>>>>> 7f1c44eafa3fd502423d92c10279eff69f6b3bb7
+            <li>
+              <router-link :to="{ name: 'home' }">Nuls</router-link>
+            </li>
+            <li>
+              <router-link :to="{ name: 'team' }">{{$t('nav.about2')}}</router-link>
+            </li>
+            <li>
+              <router-link :to="{ name: 'partners' }">{{$t('nav.about3')}}</router-link>
+            </li>
+            <li>
+              <router-link :to="{ name: 'media' }">{{$t('nav.media')}}</router-link>
+            </li>
           </ul>
           <ul>
             <li>Downloads</li>
             <li @click="toWhiteYellow">{{$t('bottom.list3')}}</li>
             <li @click="toWhiteYellow">{{$t('bottom.list4')}}</li>
-<<<<<<< HEAD
-            <li><a href="/walletDownloads">Wallet</a></li>
-=======
-	        <li><router-link :to="{ name: 'wallet' }">Wallet</router-link></li>
->>>>>>> 7f1c44eafa3fd502423d92c10279eff69f6b3bb7
+            <li>
+              <router-link :to="{ name: 'wallet' }">Wallet</router-link>
+            </li>
             <!--<li>DApps</li>-->
           </ul>
-          <ul>
+          <ul v-show="false">
             <li>Follow us</li>
-<<<<<<< HEAD
             <li><a href="https://t.me/Nulsio" target="_blank">Telegram</a></li>
             <li><a href="https://twitter.com/nulsservice" target="_blank">Twitter</a></li>
             <li><a href="https://github.com/nuls-io/" target="_blank">GitHub</a></li>
@@ -69,7 +77,9 @@
             <li><a href="https://discordapp.com/invite/cUeafst" target="_blank">Discord</a></li>
             <li><a href="https://steemit.com/@nuls" target="_blank">Steemit</a></li>
             <li><a href="https://gitter.im/nuls_io" target="_blank">Gitter</a></li>
-            <li><a href="https://nuls.slack.com/join/shared_invite/enQtMjQ4MTM4ODAyNTI4LWJjNGMwYTE0YjRlYmFlZGUwM2JhOGE4MDIwZmE4MzA2MDg1YzUyMmVkN2RhZjkyNWMzZjY5ZDU5ZmViMjZjNGQ" target="_blank">Slack</a></li>
+            <li><a
+              href="https://nuls.slack.com/join/shared_invite/enQtMjQ4MTM4ODAyNTI4LWJjNGMwYTE0YjRlYmFlZGUwM2JhOGE4MDIwZmE4MzA2MDg1YzUyMmVkN2RhZjkyNWMzZjY5ZDU5ZmViMjZjNGQ"
+              target="_blank">Slack</a></li>
           </ul>
           <ul>
             <li>Support</li>
@@ -91,6 +101,7 @@
 
 <script>
   import {postMailAddress} from '@/api/httpData';
+
   export default {
     data() {
       return {
@@ -99,16 +110,14 @@
         },
         emailRules: {
           emailAddress: [
-            { required: true, message: 'Please input your email address.', trigger: 'blur' },
-            { type: 'email', message: 'Please input the correct email address.', trigger: ['blur', 'change'] }
+            {required: true, message: 'Please input your email address.', trigger: 'blur'},
+            {type: 'email', message: 'Please input the correct email address.', trigger: ['blur', 'change']}
           ]
         }
       };
     },
-    components: {
-
-    },
-    methods:{
+    components: {},
+    methods: {
 
       submitForm(formName) {
         this.$refs[formName].validate((valid) => {
@@ -124,7 +133,7 @@
       /**
        * 团队跳转
        */
-      toTeam(){
+      toTeam() {
         this.$router.push({
           name: 'team',
         })
@@ -133,7 +142,7 @@
       /**
        * 白、黄皮书跳转
        */
-      toWhiteYellow(){
+      toWhiteYellow() {
         this.$router.push({
           name: 'whiteYellow',
         })
@@ -145,14 +154,14 @@
        */
       emailAddress(email) {
         let that = this;
-        $.post("http://50.62.6.187:10031/api/v1/bbs/save?title=mail&content="+email,function(data){
+        $.post("http://50.62.6.187:10031/api/v1/bbs/save?title=mail&content=" + email, function (data) {
           //console.log(data);
-          if(data.success){
+          if (data.success) {
             that.$message({
               message: 'We have received your mailbox, HR will contact you immediately.',
               type: 'success'
             });
-          }else {
+          } else {
             that.$message.error('Failure to submit, please try again.');
           }
         })
@@ -168,7 +177,7 @@
       /**
        * faqs跳转
        */
-      toQaqs(){
+      toQaqs() {
         this.$router.push({
           name: 'faqs',
         })
@@ -181,11 +190,14 @@
 <style lang="less" type="text/less">
   .bottom {
     min-height: 760px;
-    background: url("../assets/images/footer.png") bottom repeat-x, linear-gradient(-1deg, #04265f, #021131 97%);
+    //background: url("./../assets/images/footer.png") bottom repeat-x, linear-gradient(-1deg, #04265f, #021131 97%);
+    background: url("./../assets/images/footer.png") bottom repeat-x,linear-gradient(-1deg, #04265f, #021131 97%);
     @media (max-width: 768px) {
       min-height: 500px;
     }
-	  a { color: inherit; }
+    a {
+      color: inherit;
+    }
     .bottom-top {
       margin: auto;
       max-width: 1280px;
@@ -230,10 +242,13 @@
           }
           @media (max-width: 768px) {
             height: 40px;
-            margin: 10px 20px;
+            margin: 0.5rem 1rem;
           }
-          &:first-child{
+          &:first-child {
             margin: 0 30px 0 0;
+            @media (max-width: 768px) {
+              margin: 0.5rem 1rem 0.5rem 1rem;
+            }
           }
         }
       }
@@ -244,27 +259,27 @@
       @media (max-width: 768px) {
 
       }
-      .bottom-from{
+      .bottom-from {
         width: 100%;
-        border-top:1px solid #1d3156;
-        border-bottom:1px solid #1d3156;
+        border-top: 1px solid #1d3156;
+        border-bottom: 1px solid #1d3156;
         margin-bottom: 60px;
-        .el-form{
+        .el-form {
           width: 800px;
           margin: 20px auto 0;
           @media (max-width: 768px) {
-            width: 100%;
-            margin: 1rem 0 1rem 0.5rem;
+            width: 98%;
+            margin: 1rem auto 1rem;
           }
-          .el-form-item{
+          .el-form-item {
             width: 500px;
             @media (max-width: 768px) {
-              width: 65%;
+              width: 63%;
             }
-            .el-form-item__content{
-              width:100%;
-              .el-input{
-                .el-input__inner{
+            .el-form-item__content {
+              width: 100%;
+              .el-input {
+                .el-input__inner {
                   background-color: #ffffff;
                   height: 52px;
                   line-height: 52px;
@@ -274,10 +289,10 @@
                   }
                 }
               }
-              .el-form-item__error{
+              .el-form-item__error {
                 margin-left: 20px;
               }
-              .bg-green-btn{
+              .bg-green-btn {
                 width: 150px;
                 @media (max-width: 768px) {
                   width: 100px;
@@ -285,7 +300,7 @@
               }
             }
           }
-          .form-bt{
+          .form-bt {
             width: 200px;
             @media (max-width: 768px) {
               width: 100px;
@@ -293,7 +308,7 @@
           }
         }
       }
-      .flex{
+      .flex {
         @media (max-width: 768px) {
           display: none;
         }
@@ -329,23 +344,24 @@
                 line-height: 32px;
                 opacity: 1;
               }
-              a{
+              a {
                 color: #ffffff;
                 opacity: 0.9;
-                text-decoration : none
+                text-decoration: none
               }
             }
           }
         }
       }
     }
-    .border-infos{
+    .border-infos {
       display: none;
-      @media (max-width: 768px){
+      @media (max-width: 768px) {
         display: block;
       }
-      .b-top{}
-      .b-bottom{
+      .b-top {
+      }
+      .b-bottom {
         text-align: center;
       }
     }

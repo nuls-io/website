@@ -3,51 +3,54 @@
       <div class="partners-header">
         <HeaderList></HeaderList>
       </div>
-      <div class="partners-info">
-        <h1 class="h1">{{$t('partners.title')}}</h1>
-        <p>{{$t('partners.info')}}</p>
-      </div>
-      <div class="investment-list">
-        <h2 class="h2">Strategic Investment</h2>
-        <ul>
-          <li v-for="site in investmentList">
-            <a :href="site.link" target="_blank"><img :src="site.url"  /></a>
-          </li>
-        </ul>
-      </div>
-      <div class="ecological-list cb">
-        <h2 class="h2">Ecological Partners</h2>
-        <ul>
-          <li v-for="site in ecologicalList">
-            <a :href="site.link" target="_blank"><img :src="site.url"  /></a>
-          </li>
-        </ul>
-      </div>
-      <div class="strategic-list cb">
-        <h2 class="h2">Strategic Partners</h2>
-        <ul>
-          <li v-for="site in strategicList">
-            <a :href="site.link" target="_blank"><img :src="site.url"  /></a>
-          </li>
-        </ul>
-      </div>
-      <div class="media-list cb"  v-show="mediaList.length > 0">
-        <h2 class="h2">Media Partners</h2>
-        <ul>
-          <li v-for="site in mediaList">
-            <a :href="site.link" target="_blank"><img :src="site.url"  /></a>
-          </li>
-        </ul>
-      </div>
-      <div class="platforms-list cb" v-show="platformsList.length > 0">
-        <h2 class="h2">Platforms</h2>
-        <ul>
-          <li v-for="site in platformsList">
-            <a :href="site.link" target="_blank"><img :src="site.url"  /></a>
-          </li>
-        </ul>
+      <div v-loading="partnersLoading">
+        <div class="partners-info">
+          <h1 class="h1">{{$t('partners.title')}}</h1>
+          <p>{{$t('partners.info')}}</p>
+        </div>
+        <div class="investment-list">
+          <h2 class="h2">Strategic Investment</h2>
+          <ul>
+            <li v-for="site in investmentList">
+              <a :href="site.link" target="_blank"><img :src="site.url"  /></a>
+            </li>
+          </ul>
+        </div>
+        <div class="ecological-list cb">
+          <h2 class="h2">Ecological Partners</h2>
+          <ul>
+            <li v-for="site in ecologicalList">
+              <a :href="site.link" target="_blank"><img :src="site.url"  /></a>
+            </li>
+          </ul>
+        </div>
+        <div class="strategic-list cb">
+          <h2 class="h2">Strategic Partners</h2>
+          <ul>
+            <li v-for="site in strategicList">
+              <a :href="site.link" target="_blank"><img :src="site.url"  /></a>
+            </li>
+          </ul>
+        </div>
+        <div class="media-list cb"  v-show="mediaList.length > 0">
+          <h2 class="h2">Media Partners</h2>
+          <ul>
+            <li v-for="site in mediaList">
+              <a :href="site.link" target="_blank"><img :src="site.url"  /></a>
+            </li>
+          </ul>
+        </div>
+        <div class="platforms-list cb" v-show="platformsList.length > 0">
+          <h2 class="h2">Platforms</h2>
+          <ul>
+            <li v-for="site in platformsList">
+              <a :href="site.link" target="_blank"><img :src="site.url"  /></a>
+            </li>
+          </ul>
+        </div>
       </div>
       <Bottom></Bottom>
+      <GoTop></GoTop>
     </div>
 </template>
 
@@ -57,10 +60,12 @@
   import {arrItemSort} from '@/util/util';
   import HeaderList from '@/components/HeaderList';
   import Bottom from '@/components/Bottom';
+  import GoTop from '@/components/GoTop';
 
   export default {
     data() {
       return {
+        partnersLoading:true,
         investmentList:[],
         ecologicalList:[],
         strategicList:[],
@@ -71,6 +76,7 @@
     components: {
       HeaderList,
       Bottom,
+      GoTop,
     },
     mounted() {
       this.getPartnerList(2, 100, 1)
@@ -101,7 +107,6 @@
                 that.platformsList.push(list)
               }
             }
-
             setTimeout(() => {
               let investmentListSort = arrItemSort(that.investmentList,"id",0);
               let ecologicalListSort = arrItemSort(that.ecologicalList,"id",0);
@@ -113,6 +118,7 @@
               that.strategicList  = strategicListSort;
               that.mediaList  = mediaListSort;
               that.platformsList  = platformsListSort;
+              that.partnersLoading = false;
             }, 100);
           })
           .catch(function (error) {
@@ -128,7 +134,7 @@
   .partners{
     background-color: #FFFFFF;
     .partners-header{
-      background: url("./../assets/images/map-bg.png") no-repeat;
+      background: url("./../assets/images/map-bg.jpg") no-repeat;
       background-size: 100% 100%;
       height: 500px;
       @media (max-width: 768px) {

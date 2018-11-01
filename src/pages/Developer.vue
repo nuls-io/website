@@ -71,7 +71,7 @@
   .developer {
     background-color: #FFFFFF;
     .header-bg {
-      background: url("./../assets/images/map-bg.png") no-repeat;
+      background: url("./../assets/images/map-bg.jpg") no-repeat;
       background-size: 100% 100%;
       max-height: 300px;
       @media (max-width: 768px) {
@@ -110,7 +110,7 @@
           float: left;
           color: #0b1422;
           &:first-child {
-            margin-left: 0;
+            margin-left: 100px;
             @media (max-width: 768px) {
               margin: 2rem 5%;
             }

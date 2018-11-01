@@ -26,8 +26,11 @@
             <el-button type="success">
               {{valueDownload}}<i class="el-icon-arrow-down el-icon--right"></i>
             </el-button>
-            <el-dropdown-menu slot="dropdown" >
-              <el-dropdown-item  v-for="item in optionsDownload" @click.native="toDownload(item.value)">{{item.label}}</el-dropdown-item>
+            <el-dropdown-menu slot="dropdown">
+              <template v-for="item in optionsDownload">
+                <el-dropdown-item @click.native="toDownload(item.value)">{{item.label}}
+                </el-dropdown-item>
+              </template>
             </el-dropdown-menu>
           </el-dropdown>
           <div class="btn-box">
@@ -100,7 +103,7 @@
         }
       },
 
-      handleClick(e){
+      handleClick(e) {
         console.log(e)
       },
 
@@ -119,16 +122,20 @@
 </script>
 
 <style lang="less" type="text/less">
-	.dropdownItem {
-		line-height: 45px;
-		height: 45px;
-		margin: auto 0;
-		border-bottom: 1px solid #e4e7ed;
-	}
-	.el-select-dropdown__list li:last-child {
-		height: 38px;
-		border: none;
-	}
+  .el-dropdown-menu {
+    margin: 0 0;
+    padding: 0;
+    .el-dropdown-menu__item {
+      line-height: 52px;
+      height: 52px;
+      padding: 0 10px;
+      border-bottom: 1px solid #e4e7ed;
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+  }
+
   .wallet {
     max-width: 100%;
     min-height: 800px;
@@ -204,6 +211,9 @@
       background: transparent;
       z-index: 2;
       position: relative;
+      @media (max-width: 768px) {
+        margin: 0 auto 5rem;
+      }
       .w-left {
         h2 {
           color: #0a2140;
