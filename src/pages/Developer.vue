@@ -101,7 +101,7 @@
         }
         .d-list {
           background: #FFFFFF;
-          box-shadow: 10px 10px 20px 10px #C1C5C9;
+          box-shadow: 2px 2px 5px 5px #C1C5C9;
           width: 230px;
           height: 310px;
           margin: 100px 0 120px 192px;

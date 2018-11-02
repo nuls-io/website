@@ -146,13 +146,13 @@
       margin:-340px auto 0;
       height: auto;
       @media (max-width: 768px) {
-        height: 20rem;
+        height: 18rem;
       }
       h1{
         padding: 30px 0;
         @media (max-width: 768px) {
           padding: 0;
-          margin-top: 4.5rem;
+          margin: 2rem auto 1rem;
         }
       }
       p{

@@ -33,7 +33,7 @@
               </template>
             </el-dropdown-menu>
           </el-dropdown>
-          <div class="btn-box">
+          <div class="btn-box" v-show="false">
             <el-button @click="tolink('https://wallet.nuls.io')"><span>{{$t('home.wallet_online')}}</span><i
               class="el-icon-arrow-right"></i></el-button>
           </div>

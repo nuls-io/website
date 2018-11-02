@@ -21,17 +21,17 @@
           <h4>{{site.position}}</h4>
         </li>
       </ul>
-      <h2 class="h2 cb" v-show="advisorList.length > 0">Advisor</h2>
+      <h2 class="h2 cb" v-show="communityList.length > 0">NULS Code Craft Council</h2>
       <ul>
-        <li v-for="site in advisorList">
+        <li v-for="site in communityList">
           <h2 class="cursor-p" @click="tolink(site.linkedin)"><img :src=site.headUrl height="600" width="660"/></h2>
           <h3>{{site.ename}}</h3>
           <h4>{{site.position}}</h4>
         </li>
       </ul>
-      <h2 class="h2 cb" v-show="communityList.length > 0">NULS Code Craft Council</h2>
+      <h2 class="h2 cb" v-show="advisorList.length > 0">Advisors</h2>
       <ul>
-        <li v-for="site in communityList">
+        <li v-for="site in advisorList">
           <h2 class="cursor-p" @click="tolink(site.linkedin)"><img :src=site.headUrl height="600" width="660"/></h2>
           <h3>{{site.ename}}</h3>
           <h4>{{site.position}}</h4>
@@ -132,7 +132,7 @@
       min-height: 500px;
       width: 100%;
       @media (max-width: 768px) {
-        min-height: 400px;
+        min-height: 32rem;
       }
       h1 {
         width: 100%;

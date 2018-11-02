@@ -114,7 +114,7 @@
           height: 360px;
           text-align: center;
           margin: 20px 0 0 0  ;
-          box-shadow:2px 2px 5px #333333;
+          box-shadow: 2px 2px 5px 5px #C1C5C9;
           @media (max-width: 768px) {
             width: 90%;
             margin: 1rem 5%;

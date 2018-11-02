@@ -46,7 +46,7 @@
           <ul>
             <li>{{$t('nav.about')}}</li>
             <li>
-              <router-link :to="{ name: 'home' }">Nuls</router-link>
+              <router-link :to="{ name: 'whiteYellow' }">Nuls</router-link>
             </li>
             <li>
               <router-link :to="{ name: 'team' }">{{$t('nav.about2')}}</router-link>
@@ -58,7 +58,7 @@
               <router-link :to="{ name: 'media' }">{{$t('nav.media')}}</router-link>
             </li>
           </ul>
-          <ul>
+          <ul v-show="false">
             <li>Downloads</li>
             <li @click="toWhiteYellow">{{$t('bottom.list3')}}</li>
             <li @click="toWhiteYellow">{{$t('bottom.list4')}}</li>

@@ -41,7 +41,7 @@
                 <label>{{ site.title }}</label>
                 <span>{{ site.create_time }}</span>
               </p>
-              <img class="fr" :src=site.thumbnail />
+              <img class="fr" :src=site.imgUrl />
             </li>
           </template>
         </ul>
@@ -142,7 +142,7 @@
         let that = this;
         getBannerList(siteId)
           .then(function (response) {
-            console.log(response);
+            //console.log(response);
             for (let list of response.data.contentList) {
               list.url = API_ROOT + list.url;
             }
@@ -236,7 +236,7 @@
           .then(function (response) {
             //console.log(response);
             for (let list of response.data.contentList) {
-              list.thumbnail = API_ROOT + list.thumbnail;
+              list.imgUrl = API_ROOT + list.imgUrl;
             }
             setTimeout(() => {
               let guideListSort = arrItemSort(response.data.contentList,"id",0);
@@ -306,7 +306,7 @@
         .el-carousel__container{
           height: 360px;
           @media (max-width: 768px) {
-            height: 180px;
+            height: 105px;
           }
           .el-carousel__item{
             text-align: center;
@@ -315,6 +315,9 @@
               img{
                 /*width: 100%;
                 height: 100%;*/
+                @media (max-width: 768px) {
+                  width: 100%;
+                }
               }
             }
           }
@@ -322,6 +325,9 @@
         .el-carousel__indicators{
           .el-carousel__indicator{
             padding: 12px 15px 40px 15px;
+            @media (max-width: 768px) {
+              padding: 12px 5px 5px 5px;
+            }
             .el-carousel__button{
               width: 8px;
               height: 8px;
