@@ -8,7 +8,7 @@
         </template>
         <div class="font-24 color-green mission-href pointer" @click="toAbout">{{$t('home.nuls_do_info5_more')}}></div>
       </div>
-      <div class="img-right"><img src="./../../assets/images/mission-img.png"></div>
+      <!--<div class="img-right"><img src="./../../assets/images/mission-img.png"></div>-->
     </div>
 
     <el-dialog title="" :visible.sync="dialogFormVisible">
@@ -57,6 +57,8 @@
         padding: 0;
       }
       .spaceship-content {
+	      background: url(./../../assets/images/mission-img.png) no-repeat right;
+	      width: 100%;
         max-width: 1280px;
         margin: 0 auto;
          @media (max-width: 768px){
