@@ -1,463 +1,277 @@
 <template>
-  <div class="roadMap">
-    <h2 class="h2">{{$t('home.road_title')}}</h2>
-
-    <div class="roadMap-info">
-      <el-tabs v-model="activeName" @tab-click="handleClick">
-        <el-tab-pane :label="$t('home.road_tab_title0')" name="ice">
-          <div class="pc">
-            <div class="line"></div>
-            <div class="swiper-wrapper flex">
-              <div class="swiper-slide">
-                <p class="date">{{$t('home.road_tab_ice_1.time')}}</p>
-                <div class="triangle"></div>
-                <p class="bold">{{$t('home.road_tab_ice_1.p0')}}</p>
-                <p>{{$t('home.road_tab_ice_1.p1')}}</p>
-                <p class="bold">{{$t('home.road_tab_ice_1.p2')}}</p>
-              </div>
-              <div class="swiper-slide">
-                <p class="date">{{$t('home.road_tab_ice_2.time')}}</p>
-                <div class="triangle"></div>
-                <p class="bold">{{$t('home.road_tab_ice_2.p0')}}</p>
-                <p>{{$t('home.road_tab_ice_2.p1')}}</p>
-                <p class="bold">{{$t('home.road_tab_ice_2.p2')}}</p>
-                <p class="bold">{{$t('home.road_tab_ice_2.p3')}}</p>
-                <p class="bold">{{$t('home.road_tab_ice_2.p4')}}</p>
-              </div>
-              <div class="swiper-slide swiper-action">
-                <p class="date">{{$t('home.road_tab_ice_3.time')}}</p>
-                <div class="triangle"></div>
-                <p class="bold">{{$t('home.road_tab_ice_3.p0')}}</p>
-                <p class="bold">{{$t('home.road_tab_ice_3.p1')}}</p>
-                <p class="bold">{{$t('home.road_tab_ice_3.p2')}}</p>
-                <p>{{$t('home.road_tab_ice_3.p3')}}</p>
-              </div>
-              <div class="swiper-slide">
-                <p class="date">{{$t('home.road_tab_ice_4.time')}}</p>
-                <div class="triangle"></div>
-                <p class="bold">{{$t('home.road_tab_ice_4.p0')}}</p>
-                <p>{{$t('home.road_tab_ice_4.p1')}}</p>
-              </div>
-            </div>
-          </div>
-          <div class="iphone">
-            <el-carousel trigger="click" height="300px" :interval="300000">
-              <el-carousel-item>
-                <div class="line lines"></div>
-                <div class="swiper-wrapper flex">
-                  <div class="swiper-slide">
-                    <p class="date">{{$t('home.road_tab_ice_1.time')}}</p>
-                    <div class="triangle"></div>
-                    <p class="bold">{{$t('home.road_tab_ice_1.p0')}}</p>
-                    <p>{{$t('home.road_tab_ice_1.p1')}}</p>
-                    <p class="bold">{{$t('home.road_tab_ice_1.p2')}}</p>
-                  </div>
-                </div>
-              </el-carousel-item>
-              <el-carousel-item>
-                <div class="line"></div>
-                <div class="swiper-wrapper flex">
-                  <div class="swiper-slide">
-                    <p class="date">{{$t('home.road_tab_ice_2.time')}}</p>
-                    <div class="triangle"></div>
-                    <p class="bold">{{$t('home.road_tab_ice_2.p0')}}</p>
-                    <p>{{$t('home.road_tab_ice_2.p1')}}</p>
-                    <p class="bold">{{$t('home.road_tab_ice_2.p2')}}</p>
-                    <p>{{$t('home.road_tab_ice_2.p3')}}</p>
-                  </div>
-                </div>
-              </el-carousel-item>
-              <el-carousel-item>
-                <div class="line"></div>
-                <div class="swiper-wrapper flex">
-                  <div class="swiper-slide">
-                    <p class="date">{{$t('home.road_tab_ice_3.time')}}</p>
-                    <div class="triangle"></div>
-                    <p class="bold">{{$t('home.road_tab_ice_3.p0')}}</p>
-                    <p>{{$t('home.road_tab_ice_3.p1')}}</p>
-                    <p class="bold">{{$t('home.road_tab_ice_3.p2')}}</p>
-                    <p>{{$t('home.road_tab_ice_3.p3')}}</p>
-                  </div>
-                </div>
-              </el-carousel-item>
-              <el-carousel-item>
-                <div class="line"></div>
-                <div class="swiper-wrapper flex">
-                  <div class="swiper-slide">
-                    <p class="date">{{$t('home.road_tab_ice_4.time')}}</p>
-                    <div class="triangle"></div>
-                    <p class="bold">{{$t('home.road_tab_ice_4.p0')}}</p>
-                    <p>{{$t('home.road_tab_ice_4.p1')}}</p>
-                  </div>
-                </div>
-              </el-carousel-item>
-            </el-carousel>
-          </div>
-        </el-tab-pane>
-
-        <el-tab-pane :label="$t('home.road_tab_title1')" name="water">
-          <div class="pc">
-            <div class="line lines"></div>
-            <div class="swiper-wrapper flex">
-              <div class="swiper-slide">
-                <div class="triangle"></div>
-                <p class="bold">{{$t('home.road_tab_water_1.p0')}}</p>
-                <p>{{$t('home.road_tab_water_1.p1')}}</p>
-                <p>{{$t('home.road_tab_water_1.p2')}}</p>
-                <p>{{$t('home.road_tab_water_1.p3')}}</p>
-                <p>{{$t('home.road_tab_water_1.p4')}}</p>
-              </div>
-              <div class="swiper-slide">
-                <div class="triangle"></div>
-                <p>{{$t('home.road_tab_water_2.p0')}}</p>
-                <p>{{$t('home.road_tab_water_2.p1')}}</p>
-                <p>{{$t('home.road_tab_water_2.p2')}}</p>
-                <p>{{$t('home.road_tab_water_2.p3')}}</p>
-              </div>
-              <div class="swiper-slide">
-                <div class="triangle"></div>
-                <p class="bold">{{$t('home.road_tab_water_3.p0')}}</p>
-                <p>{{$t('home.road_tab_water_3.p1')}}</p>
-              </div>
-            </div>
-          </div>
-          <div class="iphone">
-            <el-carousel trigger="click" height="300px" :interval="300000">
-              <el-carousel-item class="water">
-                <div class="line"></div>
-                <div class="swiper-wrapper flex">
-                  <div class="swiper-slide">
-                    <div class="triangle"></div>
-                    <p class="bold">{{$t('home.road_tab_water_1.p0')}}</p>
-                    <p>{{$t('home.road_tab_water_1.p1')}}</p>
-                    <p>{{$t('home.road_tab_water_1.p2')}}</p>
-                    <p>{{$t('home.road_tab_water_1.p3')}}</p>
-                  </div>
-                </div>
-              </el-carousel-item>
-              <el-carousel-item class="water">
-                <div class="line"></div>
-                <div class="swiper-wrapper flex">
-                  <div class="swiper-slide">
-                    <div class="triangle"></div>
-                    <p>{{$t('home.road_tab_water_2.p0')}}</p>
-                    <p>{{$t('home.road_tab_water_2.p1')}}</p>
-                    <p>{{$t('home.road_tab_water_2.p2')}}</p>
-                    <p>{{$t('home.road_tab_water_2.p3')}}</p>
-                  </div>
-                </div>
-              </el-carousel-item>
-              <el-carousel-item class="water">
-                <div class="line"></div>
-                <div class="swiper-wrapper flex">
-                  <div class="swiper-slide">
-                    <div class="triangle"></div>
-                    <p class="bold">{{$t('home.road_tab_water_3.p0')}}</p>
-                    <p>{{$t('home.road_tab_water_3.p1')}}</p>
-                  </div>
-                </div>
-              </el-carousel-item>
-            </el-carousel>
-          </div>
-        </el-tab-pane>
-
-        <el-tab-pane :label="$t('home.road_tab_title2')" name="steam">
-          <div class="pc">
-            <div class="line lines"></div>
-            <div class="swiper-wrapper flex">
-              <div class="swiper-slide">
-                <div class="triangle"></div>
-                <p>{{$t('home.road_tab_steam_1.p0')}}</p>
-                <p>{{$t('home.road_tab_steam_1.p1')}}</p>
-              </div>
-              <div class="swiper-slide">
-                <div class="triangle"></div>
-                <p class="bold">Main-net test</p>
-                <p>{{$t('home.road_tab_steam_2.p0')}}</p>
-                <p>{{$t('home.road_tab_steam_2.p1')}}</p>
-                <p>{{$t('home.road_tab_steam_2.p2')}}</p>
-              </div>
-              <div class="swiper-slide">
-                <div class="triangle"></div>
-                <p>{{$t('home.road_tab_steam_3.p0')}}</p>
-                <p>{{$t('home.road_tab_steam_3.p1')}}</p>
-              </div>
-            </div>
-          </div>
-          <div class="iphone">
-            <el-carousel trigger="click" height="300px" :interval="300000">
-              <el-carousel-item class="water">
-                <div class="line"></div>
-                <div class="swiper-wrapper flex">
-                  <div class="swiper-slide">
-                    <div class="triangle"></div>
-                    <p>{{$t('home.road_tab_steam_1.p0')}}</p>
-                    <p>{{$t('home.road_tab_steam_1.p1')}}</p>
-                  </div>
-                </div>
-              </el-carousel-item>
-              <el-carousel-item class="water">
-                <div class="line"></div>
-                <div class="swiper-wrapper flex">
-                  <div class="swiper-slide">
-                    <div class="triangle"></div>
-                    <p class="bold">Main-net test</p>
-                    <p>{{$t('home.road_tab_steam_2.p0')}}</p>
-                    <p>{{$t('home.road_tab_steam_2.p1')}}</p>
-                    <p>{{$t('home.road_tab_steam_2.p2')}}</p>
-                  </div>
-                </div>
-              </el-carousel-item>
-              <el-carousel-item class="water">
-                <div class="line"></div>
-                <div class="swiper-wrapper flex">
-                  <div class="swiper-slide">
-                    <div class="triangle"></div>
-                    <p>{{$t('home.road_tab_steam_3.p0')}}</p>
-                    <p>{{$t('home.road_tab_steam_3.p1')}}</p>
-                  </div>
-                </div>
-              </el-carousel-item>
-            </el-carousel>
-          </div>
-
-        </el-tab-pane>
-      </el-tabs>
-    </div>
-  </div>
+	<div>
+		<div class="container">
+			<h2 class="h2">{{$t('home.road_title')}}</h2>
+			<div class="buttons">
+				<div class="buttonParent" @click="setActive('ice')">
+					<div class="button" :class="{ isActive: isActive('ice') }">
+						{{$t('home.road_tab_title0')}}
+					</div>
+				</div>
+				<div class="buttonParent" @click="setActive('water')">
+					<div class="button" :class="{ isActive: isActive('water') }">
+						{{$t('home.road_tab_title1')}}
+					</div>
+				</div>
+				<div class="buttonParent" @click="setActive('steam')">
+					<div class="button" :class="{ isActive: isActive('steem') }">
+						{{$t('home.road_tab_title2')}}
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="roadmap">
+			<div :class="active" class="line" />
+			<div class="container">
+				<swiper v-if="isActive('ice')" :options="swiperOptions">
+					<swiper-slide>
+						<p class="date">{{$t('home.road_tab_ice_1.time')}}</p>
+						<div class="triangle"></div>
+						<p class="bold">{{$t('home.road_tab_ice_1.p0')}}</p>
+						<p>{{$t('home.road_tab_ice_1.p1')}}</p>
+						<p class="bold">{{$t('home.road_tab_ice_1.p2')}}</p>
+					</swiper-slide>
+					<swiper-slide>
+						<p class="date">{{$t('home.road_tab_ice_2.time')}}</p>
+						<div class="triangle"></div>
+						<p class="bold">{{$t('home.road_tab_ice_2.p0')}}</p>
+						<p>{{$t('home.road_tab_ice_2.p1')}}</p>
+						<p class="bold">{{$t('home.road_tab_ice_2.p2')}}</p>
+						<p class="bold">{{$t('home.road_tab_ice_2.p3')}}</p>
+						<p class="bold">{{$t('home.road_tab_ice_2.p4')}}</p>
+					</swiper-slide>
+					<swiper-slide>
+						<p class="date">{{$t('home.road_tab_ice_3.time')}}</p>
+						<div class="triangle active"></div>
+						<p class="bold">{{$t('home.road_tab_ice_3.p0')}}</p>
+						<p class="bold">{{$t('home.road_tab_ice_3.p1')}}</p>
+						<p class="bold">{{$t('home.road_tab_ice_3.p2')}}</p>
+						<p>{{$t('home.road_tab_ice_3.p3')}}</p>
+					</swiper-slide>
+					<swiper-slide>
+						<p class="date">{{$t('home.road_tab_ice_4.time')}}</p>
+						<div class="triangle"></div>
+						<p class="bold">{{$t('home.road_tab_ice_4.p0')}}</p>
+						<p>{{$t('home.road_tab_ice_4.p1')}}</p>
+					</swiper-slide>
+					<div slot="pagination" class="swiper-pagination" />
+				</swiper>
+				<div v-if="isActive('water')">
+					<div class="items">
+						<div class="item">
+							<div class="triangle" />
+							<p class="bold">{{$t('home.road_tab_water_1.p0')}}</p>
+							<p>{{$t('home.road_tab_water_1.p1')}}</p>
+							<p>{{$t('home.road_tab_water_1.p2')}}</p>
+							<p>{{$t('home.road_tab_water_1.p3')}}</p>
+						</div>
+						<div class="item">
+							<div class="triangle" />
+							<p class="bold">Main-net test</p>
+							<p>{{$t('home.road_tab_water_2.p0')}}</p>
+							<p>{{$t('home.road_tab_water_2.p1')}}</p>
+							<p>{{$t('home.road_tab_water_2.p2')}}</p>
+							<p>{{$t('home.road_tab_water_2.p3')}}</p>
+						</div>
+						<div class="item">
+							<div class="triangle" />
+							<p class="bold">{{$t('home.road_tab_water_3.p0')}}</p>
+							<p>{{$t('home.road_tab_water_3.p1')}}</p>
+						</div>
+					</div>
+				</div>
+				<div v-if="isActive('steam')">
+					<div class="items">
+						<div class="item">
+							<div class="triangle" />
+							<p>{{$t('home.road_tab_steam_1.p0')}}</p>
+							<p>{{$t('home.road_tab_steam_1.p1')}}</p>
+						</div>
+						<div class="item">
+							<div class="triangle" />
+							<p class="bold">Main-net test</p>
+							<p>{{$t('home.road_tab_steam_2.p0')}}</p>
+							<p>{{$t('home.road_tab_steam_2.p1')}}</p>
+							<p>{{$t('home.road_tab_steam_2.p2')}}</p>
+						</div>
+						<div class="item">
+							<div class="triangle" />
+							<p>{{$t('home.road_tab_steam_3.p0')}}</p>
+							<p>{{$t('home.road_tab_steam_3.p1')}}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </template>
 
 <script>
+	import 'swiper/dist/css/swiper.css';
+	import { swiper, swiperSlide } from 'vue-awesome-swiper';
+
   export default {
+	  components: {
+		  swiper,
+		  swiperSlide
+	  },
     data() {
       return {
-        activeName: 'ice'
+	      active: 'ice'
       };
     },
-    methods: {
-      handleClick(tab, event) {
-        console.log(tab, event);
-      }
-    }
+	  computed: {
+    	swiperOptions()
+	    {
+		    let slidesPerView = 4;
+
+		    if(window.innerWidth < 550)
+		    {
+			    slidesPerView = 1;
+		    }
+		    else if(window.innerWidth < 750)
+		    {
+			    slidesPerView = 2;
+		    }
+		    else if(window.innerWidth < 1000)
+		    {
+			    slidesPerView = 3;
+		    }
+		    console.log(slidesPerView);
+
+		    return {
+			    slidesPerView,
+			    initialSlide: 2,
+			    spaceBetween: 30,
+			    grabCursor: true,
+			    pagination: {
+				    el: '.swiper-pagination'
+			    }
+		    };
+	    }
+	  },
+	  methods: {
+		  setActive(key)
+		  {
+			  this.active = key;
+		  },
+		  isActive(key)
+		  {
+			  return this.active === key;
+		  }
+	  }
   }
 </script>
 
-<style lang="less" type="text/less">
-  .roadMap {
-    background: #ebf4f9;
-    padding: 1px 0 120px;
-    @media (max-width: 768px) {
-      padding: 0;
-      margin: 0 0 5rem 0;
-    }
-    h2 {
-      color: #0a2140;
-    }
-    .el-tabs {
-      .el-tabs__heade {
-        .el-tabs__nav-scroll {
-          .el-tabs__nav {
-            width: 1280px;
-            margin: 0 auto;
-          }
-        }
-      }
-      .el-tabs__content{
-        height: 430px;
-      }
-      .nav-tabs {
-        border-bottom: 0;
-        width: 50%;
-        height: auto;
-        margin: 0 auto;
-        text-align: center;
-        .nav-item {
-          width: 150px;
-          height: 30px;
-          line-height: 30px;
-          margin: 0 30px;
-          .nav-link {
-            border-radius: 50px;
-            color: #70d300;
-            background-color: #fff;
-          }
-          .active {
-            -moz-box-shadow: 2px 2px 5px #dee2e6;
-            -webkit-box-shadow: 2px 2px 5px #dee2e6;
-            box-shadow: 2px 2px 5px #dee2e6;
-          }
-        }
+<style scoped>
+	.buttonParent {
+		display: inline-block;
+	}
+	.button.roadmapButton .btn__content {
+		font-size: 24px;
+		letter-spacing: 1px;
+		line-height: 76px;
+		padding: 0 43px;
+	}
+	.roadmap {
+		margin-top: 124px;
+		margin-bottom: 60px;
+	}
+	.roadmap .line {
+		background: #87e300;
+		height: 2px;
+		width: 100%;
+	}
+	.roadmap .container {
+		margin-top: -124px;
+	}
+	.roadmap .items {
+		display: flex;
+	}
+	.roadmap .item {
+		width: 33%;
+		padding: 0 30px;
+	}
+	.line.water,
+	.line.steam {
+		position: relative;
+		top: -107px;
+	}
+	.line.ice {
+		position: relative;
+		top: -57px;
+	}
+	p {
+		padding: 7px 0;
+		color: #445569;
+	}
+	p.bold {
+		font-family: SofiaProRegular, sans-serif;
+		font-size: 18px;
+		letter-spacing: -0.41px;
+		color: #0a2140;
+		line-height: 22px;
+	}
+	p.date {
+		font-family: SofiaProRegular, sans-serif;
+		font-size: 16px;
+		color: #445569;
+		letter-spacing: -0.53px;
+		padding-bottom: 25px;
+	}
+	.triangle {
+		transform: rotate(-315deg);
+		background-image: linear-gradient(-180deg, #8fe400 0%, #56c400 100%);
+		height: 32px;
+		width: 32px;
+		margin: 0 0 15px 6px;
+	}
+	.triangle.active {
+		box-shadow: 4px 4px;
+		color: #3e8900;
+	}
+	.button {
+		border-radius: 50px;
+		color: #445569;
+		font-size: 24px;
+		width: 150px;
+		height: 50px;
+		line-height: 50px;
+		text-align: center;
+		padding: 0;
+		font-weight: bold;
 
-      }
-    }
-    .roadMap-info {
-      margin-top: 30px;
-      @media (max-width: 768px) {
-        margin-top: 10px;
-      }
-      .el-tabs {
-        .el-tabs__header {
-          .el-tabs__nav-wrap {
-            &:after {
-              background-color: transparent;
-            }
-            .el-tabs__nav-scroll {
-              width: 650px;
-              margin: 0 auto;
-              text-align: center;
-              @media (max-width: 768px) {
-                width: 100%;
-              }
-              .el-tabs__nav {
-                padding-top: 10px;
-                padding-bottom: 10px;
-                .el-tabs__item {
-                  border-radius: 50px;
-                  color: #445569;
-                  font-size: 24px;
-                  width: 150px;
-                  height: 50px;
-                  line-height: 50px;
-                  text-align: center;
-                  margin: 0 30px;
-                  padding: 0;
-                  font-weight: bold;
-                  @media (max-width: 768px) {
-                    width: 100px;
-                    margin: 0 10px;
-                  }
-                  &:hover {
-                    color: #56c400;
-                    background: #fff;
-                    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.2);
-                  }
-                  &:first-child {
-                    margin: 0 0 0 200px;
-                  }
-                }
-                .is-active {
-                  color: #56c400;
-                  background: #fff;
-                  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.2);
-                }
-                .el-tabs__active-bar {
-                  background-color: transparent;
-                }
-              }
-            }
-          }
-          .el-tabs__content {
-            margin: 30px 0 0 0;
-          }
+	}
+	.button.isActive,
+	.button:hover {
+		cursor: pointer;
+		color: #56c400;
+		background: #fff;
+		box-shadow: 0 3px 9px rgba(0, 0, 0, 0.2);
+	 }
+	.buttons {
+		width: fit-content;
+		margin: 0 auto;
+	}
 
-        }
-        .el-tabs__content {
-          .el-tab-pane{
-            .iphone{
-              @media (max-width: 768px) {
-                margin-bottom: 70px;
-              }
-              .el-carousel{
-                .el-carousel__indicators{
-                  .el-carousel__indicator{
-                    .el-carousel__button{
-                      width: 10px;
-                      height: 10px;
-                      border-radius: 10px;
-                      background-color: #34ce57;
-                    }
-                  }
-                }
-              }
+	.container {
+		max-width: 1280px;
+		margin: 0 auto;
+	}
+	@media (max-width: 768px) {
+		.button {
+			width: 100px;
+			margin: 0 10px;
+		}
+	}
+</style>
 
-              .water{
-                .line{
-                  margin-top: 15px;
-                  @media (max-width: 768px) {
-                    margin-top: 25px;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-      .line {
-        background: #87e300;
-        height: 2px;
-        width: 100%;
-        position: absolute;
-        margin-top: 77px;
-        @media (max-width: 768px) {
-          margin-top: 62px;
-        }
-      }
-      .lines {
-        margin-top: 16px;
-      }
-      .swiper-wrapper {
-        max-width: 1280px;
-        margin: 50px auto 0;
-        justify-content: space-around;
-        @media (max-width: 768px) {
-          margin: -50px auto 0;
-        }
-        .swiper-slide {
-          flex: 1;
-          height: 100%;
-          position: relative;
-          margin-right: 30px;
-          @media (max-width: 768px) {
-            margin: 60px 0 0 0;
-          }
-          .date {
-            font-size: 16px;
-            color: #445569;
-            letter-spacing: -.53px;
-            padding-bottom: 25px;
-            @media (max-width: 768px) {
-              padding-bottom: 0;
-            }
-          }
-          .triangle {
-            -webkit-transform: rotate(-315deg);
-            -ms-transform: rotate(-315deg);
-            transform: rotate(-315deg);
-            background-image: -webkit-gradient(linear, left top, left bottom, from(#8fe400), to(#56c400));
-            background-image: linear-gradient(-180deg, #8fe400, #56c400);
-            height: 32px;
-            width: 32px;
-            margin: 0 0 35px 6px;
-            @media (max-width: 768px) {
-              margin: 0 0 35px 20px;
-            }
-          }
-          p {
-            color: #445569;
-            margin-bottom: 16px;
-            font-size: 18px;
-            letter-spacing: -.41px;
-            line-height: 22px;
-            @media (max-width: 768px) {
-              line-height: 22px;
-              padding: 0 20px;
-            }
-          }
-        }
-        .swiper-action {
-          .date {
-            color: #56c400;
-          }
-          p{
-            color: #56c400;
-          }
-          .triangle {
-            box-shadow: 3px 3px 4px #3e8900;
-          }
-        }
-
-      }
-    }
-  }
-
+<style>
+	.swiper-pagination {
+		bottom: -4px !important;
+		padding-bottom: 15px;
+	}
+	.swiper-slide {
+		padding-bottom: 35px;
+	}
 </style>
