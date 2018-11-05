@@ -23,7 +23,7 @@
 		<div class="roadmap">
 			<div :class="active" class="line" />
 			<div class="container">
-				<swiper v-if="isActive('ice')" :options="swiperOptions">
+				<swiper v-if="isActive('ice')" :options="swiperOptions" :key="slidesPerView">
 					<swiper-slide>
 						<p class="date">{{$t('home.road_tab_ice_1.time')}}</p>
 						<div class="triangle"></div>
@@ -117,27 +117,40 @@
 	  },
     data() {
       return {
-	      active: 'ice'
+	      active: 'ice',
+	      slidesPerView: null,
+	      windowWidth: window.innerWidth
       };
     },
+	  mounted()
+	  {
+		  window.addEventListener('resize', () =>
+		  {
+			  this.windowWidth = window.innerWidth;
+		  })
+	  },
 	  computed: {
     	swiperOptions()
 	    {
 		    let slidesPerView = 4;
 
-		    if(window.innerWidth < 550)
+		    if(this.windowWidth < 550)
 		    {
 			    slidesPerView = 1;
 		    }
-		    else if(window.innerWidth < 750)
+		    else if(this.windowWidth < 750)
 		    {
 			    slidesPerView = 2;
 		    }
-		    else if(window.innerWidth < 1000)
+		    else if(this.windowWidth < 1000)
 		    {
 			    slidesPerView = 3;
 		    }
-		    console.log(slidesPerView);
+
+		    if(slidesPerView !== this.slidesPerView || this.slidesPerView === null)
+		    {
+			    this.slidesPerView = slidesPerView;
+		    }
 
 		    return {
 			    slidesPerView,
