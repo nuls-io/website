@@ -23,7 +23,7 @@
 		<div class="roadmap">
 			<div :class="active" class="line" />
 			<div class="container">
-				<swiper v-if="isActive('ice')" :options="swiperOptions" :key="slidesPerView">
+				<swiper v-if="isActive('ice')" :options="swiperOptions" :key="`${slidesPerView}-${active}`">
 					<swiper-slide>
 						<p class="date">{{$t('home.road_tab_ice_1.time')}}</p>
 						<div class="triangle"></div>
@@ -56,52 +56,48 @@
 					</swiper-slide>
 					<div slot="pagination" class="swiper-pagination" />
 				</swiper>
-				<div v-if="isActive('water')">
-					<div class="items">
-						<div class="item">
-							<div class="triangle" />
-							<p class="bold">{{$t('home.road_tab_water_1.p0')}}</p>
-							<p>{{$t('home.road_tab_water_1.p1')}}</p>
-							<p>{{$t('home.road_tab_water_1.p2')}}</p>
-							<p>{{$t('home.road_tab_water_1.p3')}}</p>
-						</div>
-						<div class="item">
-							<div class="triangle" />
-							<p class="bold">Main-net test</p>
-							<p>{{$t('home.road_tab_water_2.p0')}}</p>
-							<p>{{$t('home.road_tab_water_2.p1')}}</p>
-							<p>{{$t('home.road_tab_water_2.p2')}}</p>
-							<p>{{$t('home.road_tab_water_2.p3')}}</p>
-						</div>
-						<div class="item">
-							<div class="triangle" />
-							<p class="bold">{{$t('home.road_tab_water_3.p0')}}</p>
-							<p>{{$t('home.road_tab_water_3.p1')}}</p>
-						</div>
-					</div>
-				</div>
-				<div v-if="isActive('steam')">
-					<div class="items">
-						<div class="item">
-							<div class="triangle" />
-							<p>{{$t('home.road_tab_steam_1.p0')}}</p>
-							<p>{{$t('home.road_tab_steam_1.p1')}}</p>
-						</div>
-						<div class="item">
-							<div class="triangle" />
-							<p class="bold">Main-net test</p>
-							<p>{{$t('home.road_tab_steam_2.p0')}}</p>
-							<p>{{$t('home.road_tab_steam_2.p1')}}</p>
-							<p>{{$t('home.road_tab_steam_2.p2')}}</p>
-						</div>
-						<div class="item">
-							<div class="triangle" />
-							<p>{{$t('home.road_tab_steam_3.p0')}}</p>
-							<p>{{$t('home.road_tab_steam_3.p1')}}</p>
-						</div>
-					</div>
-				</div>
-			</div>
+				<swiper v-if="isActive('water')" :options="swiperOptions" :key="`${slidesPerView}-${active}`">
+					<swiper-slide>
+						<div class="triangle" />
+						<p class="bold">{{$t('home.road_tab_water_1.p0')}}1</p>
+						<p>{{$t('home.road_tab_water_1.p1')}}</p>
+						<p>{{$t('home.road_tab_water_1.p2')}}</p>
+						<p>{{$t('home.road_tab_water_1.p3')}}</p>
+					</swiper-slide>
+					<swiper-slide>
+						<div class="triangle" />
+						<p class="bold">Main-net test2</p>
+						<p>{{$t('home.road_tab_water_2.p0')}}</p>
+						<p>{{$t('home.road_tab_water_2.p1')}}</p>
+						<p>{{$t('home.road_tab_water_2.p2')}}</p>
+						<p>{{$t('home.road_tab_water_2.p3')}}</p>
+					</swiper-slide>
+					<swiper-slide>
+						<div class="triangle" />
+						<p class="bold">{{$t('home.road_tab_water_3.p0')}}3</p>
+						<p>{{$t('home.road_tab_water_3.p1')}}</p>
+					</swiper-slide>
+				</swiper>
+				<swiper v-if="isActive('steam')" :options="swiperOptions" :key="`${slidesPerView}-${active}`">
+					<swiper-slide>
+						<div class="triangle" />
+						<p>{{$t('home.road_tab_steam_1.p0')}}</p>
+						<p>{{$t('home.road_tab_steam_1.p1')}}</p>
+					</swiper-slide>
+					<swiper-slide>
+						<div class="triangle" />
+						<p class="bold">Main-net test</p>
+						<p>{{$t('home.road_tab_steam_2.p0')}}</p>
+						<p>{{$t('home.road_tab_steam_2.p1')}}</p>
+						<p>{{$t('home.road_tab_steam_2.p2')}}</p>
+					</swiper-slide>
+					<swiper-slide>
+						<div class="triangle" />
+						<p>{{$t('home.road_tab_steam_3.p0')}}</p>
+						<p>{{$t('home.road_tab_steam_3.p1')}}</p>
+					</swiper-slide>
+				</swiper>
+			</div>.
 		</div>
 	</div>
 </template>
@@ -154,7 +150,7 @@
 
 		    return {
 			    slidesPerView,
-			    initialSlide: 2,
+			    initialSlide: this.active === 'ice'? 2 : 0,
 			    spaceBetween: 30,
 			    grabCursor: true,
 			    pagination: {
