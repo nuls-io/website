@@ -164,7 +164,8 @@
         line-height: 29px;
         color: #FFFFFF;
         @media (max-width: 768px) {
-          padding: 10px;
+          padding: 0.5rem;
+          font-size: 1rem;
         }
       }
     }
@@ -190,7 +191,7 @@
           float: left;
           margin: 10px 2%;
           @media (max-width: 768px) {
-            width: 120px;
+            width: 145px;
             height: 40px;
             margin: 0.5rem 1rem;
           }
@@ -202,6 +203,9 @@
     }
     .investment-list{
       margin: 80px auto 0;
+      @media (max-width: 768px) {
+        margin: 2rem auto 0;
+      }
     }
     .platforms-list{
       min-height: 550px;

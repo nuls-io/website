@@ -41,12 +41,12 @@
 						<p class="bold">{{$t('home.road_tab_ice_2.p4')}}</p>
 					</swiper-slide>
 					<swiper-slide>
-						<p class="date">{{$t('home.road_tab_ice_3.time')}}</p>
+						<p class="date cbuld">{{$t('home.road_tab_ice_3.time')}}</p>
 						<div class="triangle active"></div>
-						<p class="bold">{{$t('home.road_tab_ice_3.p0')}}</p>
-						<p class="bold">{{$t('home.road_tab_ice_3.p1')}}</p>
-						<p class="bold">{{$t('home.road_tab_ice_3.p2')}}</p>
-						<p>{{$t('home.road_tab_ice_3.p3')}}</p>
+						<p class="bold cbuld">{{$t('home.road_tab_ice_3.p0')}}</p>
+						<p class="bold cbuld">{{$t('home.road_tab_ice_3.p1')}}</p>
+						<p class="bold cbuld">{{$t('home.road_tab_ice_3.p2')}}</p>
+						<p class="cbuld">{{$t('home.road_tab_ice_3.p3')}}</p>
 					</swiper-slide>
 					<swiper-slide>
 						<p class="date">{{$t('home.road_tab_ice_4.time')}}</p>
@@ -174,8 +174,8 @@
 		padding: 0 43px;
 	}
 	.roadmap {
-		margin-top: 124px;
-		margin-bottom: 60px;
+		margin-top: 174px;
+		margin-bottom: 100px;
 	}
 	.roadmap .line {
 		background: #87e300;
@@ -226,10 +226,13 @@
 		width: 32px;
 		margin: 0 0 15px 6px;
 	}
-	.triangle.active {
+	.triangle .active {
 		box-shadow: 4px 4px;
 		color: #3e8900;
 	}
+  .cbuld.date,.cbuld.bold,.cbuld{
+    color: #56c400;
+  }
 	.button {
 		border-radius: 50px;
 		color: #445569;
@@ -262,7 +265,14 @@
 		.button {
 			width: 100px;
 			margin: 0 10px;
+      font-size: 20px;
 		}
+    .button:first-child{
+      margin: 0 10px 0 0;
+    }
+    .button:last-child{
+      margin: 0 10px 0 0;
+    }
 	}
 </style>
 

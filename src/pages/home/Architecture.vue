@@ -209,13 +209,13 @@
               font-weight: 300;
               @media (max-width: 768px){
               	color: #445569;
-                font-size: 1.8rem;
+                font-size: 1.4rem;
               }
             }
             p{
               line-height: 25px;
               @media (max-width: 768px){
-                font-size: 1.2rem;
+                font-size: 1rem;
               }
             }
             i{

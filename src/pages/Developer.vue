@@ -129,11 +129,17 @@
           .el-button--success {
             width: 160px;
             margin-top: 10px;
+            @media (max-width: 768px) {
+              margin: 0.5rem 0 1rem 0;
+            }
           }
           .d-bts {
             padding-top: 1rem;
             .el-button--default {
               width: 160px;
+              @media (max-width: 768px) {
+                margin: 0 0 1rem 0;
+              }
             }
           }
 

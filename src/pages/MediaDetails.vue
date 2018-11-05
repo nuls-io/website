@@ -7,7 +7,7 @@
     </div>
     <div class="mediasDetails-info cb">
       <h4 class="h4">{{mediasDetailsInfo.title}}</h4>
-      <span>{{mediasDetailsInfo.create_time}}</span>
+      <label class="label">{{mediasDetailsInfo.create_time}}</label>
       <div class="content" v-html = 'mediasDetailsInfo.content'>
       </div>
     </div>
@@ -33,7 +33,6 @@
       Bottombar,
     },
     mounted() {
-      console.log(this.$route.query.url);
       this.getMediasDetails(this.$route.query.url)
     },
     methods: {
@@ -62,22 +61,22 @@
   .mediasDetails {
     background-color: #FFFFFF;
     width: 100%;
-    max-height: 300rem;
+    min-height: 30rem;
     .medias-top-bg {
-      width: auto;
+      width: 100%;
       min-height: 120px;
       margin: 0 auto;
       background: url("./../assets/images/top_bg.jpg") no-repeat 100%,100%;
       @media (max-width: 768px) {
-        min-height: 70px;
+        min-height: 60px;
       }
       .medias-top{
         max-width: 1280px;
         margin: 0 auto;
         .header {
+          max-width: 1280px;
           z-index: 9;
           position: absolute;
-          max-width: 1280px;
         }
       }
 
@@ -86,9 +85,7 @@
       max-width: 1280px;
       min-height: 200px;
       margin: 50px auto 100px;
-      h4{
-      }
-      span{
+      .label{
         display: block;
         color: #0a2140;
         opacity: 0.8;
@@ -104,6 +101,11 @@
         width: auto;
         height: auto;
         margin: 20px 0;
+        img{
+          @media (max-width: 768px) {
+            width: 100%;
+          }
+        }
         p{
           font-size: 18px;
           color: #8E9496;
@@ -113,8 +115,20 @@
           margin: 0 auto 20px;
           @media (max-width: 768px) {
             margin: 0 auto;
-            font-size: 14px;
-            padding: 10px;
+            font-size: 0.7rem;
+            padding:0.5rem;
+          }
+        }
+
+        ul{
+          li{
+            color: #8E9496;
+            line-height: 25px;
+            @media (max-width: 768px) {
+              font-size: 0.7rem;
+              padding:0.5rem;
+              line-height: 1rem;
+            }
           }
         }
       }

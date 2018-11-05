@@ -23,6 +23,7 @@
             <el-submenu index="6">
               <template slot="title">{{$t('nav.about')}}</template>
               <el-menu-item index="6-5">{{$t('nav.about5')}}</el-menu-item>
+              <el-menu-item index="6-7"><a href="https://nuls.community" target="_blank">Community</a></el-menu-item>
               <el-menu-item index="6-6"><a href="https://swap.nuls.io/swap.html" target="_blank">{{$t('nav.about6')}}</a></el-menu-item>
               <el-menu-item index="6-1"><a href="https://nulscan.io/" target="_blank">{{$t('nav.explorer')}}</a></el-menu-item>
               <el-menu-item index="6-2">{{$t('nav.about2')}}</el-menu-item>
@@ -161,9 +162,9 @@
       float: left;
       background: url("./../assets/images/nuls-logo-white.png") no-repeat;
       @media (max-width: 768px) {
-        background-size: 70%;
+        background-size: 50%;
         background-position: 30%;
-        margin: 0.5rem 0 0 0;
+        margin: 0 0 0 0;
       }
     }
     .nav {
@@ -182,7 +183,7 @@
           display: block;
           position: absolute;
           right: 20px;
-          font-size: 26px;
+          font-size: 1.2rem;
         }
       }
       .nav-list{
