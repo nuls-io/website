@@ -123,11 +123,11 @@
         margin: 10px 0 0 0;
         @media (max-width: 768px) {
          padding: 0 0 1rem 1rem;
-         font-size: 1.5rem;
+         font-size: 1rem;
         }
         span{
           color: #c2ccdf;
-          font-size: 1.8rem;
+          font-size: 1rem;
         }
       }
       img{

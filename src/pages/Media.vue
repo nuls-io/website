@@ -47,7 +47,7 @@
         </ul>
       </el-tab-pane>
 
-      <el-tab-pane label="Join Community" name="social">
+      <el-tab-pane label="Find Us" name="social">
         <h3>
           Join Community
         </h3>
@@ -203,6 +203,8 @@
        **/
       newlistSize(e){
         this.getNewList(this.language, 10, e);
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
       },
 
       /**
@@ -288,7 +290,6 @@
       @media (max-width: 768px) {
         background: url("./../assets/images/map-bg.jpg") no-repeat;
         background-size: 100% 100%;
-        min-height: 68px;
       }
       .header {
         z-index: 9;
@@ -306,7 +307,7 @@
         .el-carousel__container{
           height: 360px;
           @media (max-width: 768px) {
-            height: 105px;
+            height: 8rem;
           }
           .el-carousel__item{
             text-align: center;
@@ -317,6 +318,7 @@
                 height: 100%;*/
                 @media (max-width: 768px) {
                   width: 100%;
+                  height: 8rem;
                 }
               }
             }
@@ -345,6 +347,9 @@
       }
       .el-tabs__header {
         margin: 0 0 50px;
+        @media (max-width: 768px) {
+          margin:0 0 0 0.5rem;
+        }
         .el-tabs__nav-wrap {
           &:after {
             background-color: transparent;
@@ -366,7 +371,11 @@
                 margin: 0 30px;
                 padding: 0;
                 @media (max-width: 768px) {
-                  margin: 0 2px;
+                  margin: 0 0.5rem;
+                  width: 6.5rem;
+                  height: 2rem;
+                  line-height: 2rem;
+                  font-size: 1rem;
                 }
                 &:hover {
                   color: #56c400;
@@ -407,7 +416,8 @@
             border-radius: 8px;
             margin: 20px 0 0 0;
             @media (max-width: 768px) {
-              margin: 10px 0 0 0;
+              height: 8rem;
+              margin: 0.5rem;
             }
             &:hover{
               cursor: pointer;
@@ -419,6 +429,9 @@
               width: 70%;
               @media (max-width: 768px) {
                 width: 100%;
+                padding: 0.8rem;
+                z-index: 8;
+                //position: absolute;
               }
               label {
                 color: #0a2140;
@@ -427,9 +440,9 @@
                 display: block;
                 height: 100px;
                 @media (max-width: 768px) {
-                  font-size: 18px;
-                  line-height: 20px;
-                  height: 6.5rem;
+                  font-size: 1rem;
+                  line-height: 1.4rem;
+                  height: 3.5rem;
                 }
                 &:hover{
                   cursor: pointer;
@@ -441,6 +454,9 @@
                 display: block;
                 position: relative;
                 top: 20px;
+                @media (max-width: 768px) {
+                  font-size: 0.8rem;
+                }
               }
               &:hover{
                 cursor: pointer;
@@ -452,6 +468,10 @@
               height: 180px;
               @media (max-width: 768px) {
                display: none;
+                width: 102px;
+                height:48px;
+                z-index: 5;
+                position: absolute;
               }
             }
           }
@@ -463,11 +483,19 @@
           margin: 50px auto 0;
           font-size: 30px;
           padding: 0 0 0 20px;
+          @media (max-width: 768px) {
+            font-size: 1.2rem;
+            margin: 1.5rem 0 0 1rem;
+            padding: 0 0 0 1rem;
+          }
         }
         .social-list {
           max-width: 1280px;
           height: auto;
           margin: 50px auto 0;
+          @media (max-width: 768px) {
+            margin: 1.5rem auto 0;
+          }
           li {
             box-shadow: 2px 1px 2px 3px #C1C5C9;
             max-width: 410px;
@@ -478,6 +506,7 @@
             cursor: pointer;
             @media (max-width: 768px) {
               width: 94%;
+              height: 7rem;
             }
             img {
               margin: 20px 0 0 5px;
@@ -498,6 +527,8 @@
               float: left;
               @media (max-width: 768px) {
                 width: 230px;
+                font-size: 1.2rem;
+                line-height:4.5rem;
               }
             }
           }

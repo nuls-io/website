@@ -46,7 +46,7 @@
           <ul>
             <li>{{$t('nav.about')}}</li>
             <li>
-              <router-link :to="{ name: 'whiteYellow' }">Nuls</router-link>
+              <router-link :to="{ name: 'whiteYellow' }">What is NULS</router-link>
             </li>
             <li>
               <router-link :to="{ name: 'team' }">{{$t('nav.about2')}}</router-link>
@@ -158,7 +158,7 @@
           //console.log(data);
           if (data.success) {
             that.$message({
-              message: 'We have received your mailbox, HR will contact you immediately.',
+              message: 'We will send our latest information to your email address',
               type: 'success'
             });
           } else {
@@ -221,7 +221,7 @@
         /*line-height: 77px;*/
         @media (max-width: 768px) {
           font-size: 24px;
-	        margin-bottom: 40px;
+	        margin: 1rem 0 1.5rem 0;
           /*line-height: 70px;*/
         }
       }
@@ -267,23 +267,33 @@
         border-top: 1px solid #1d3156;
         border-bottom: 1px solid #1d3156;
         margin-bottom: 60px;
+        @media (max-width: 768px) {
+          margin-bottom: 1rem;
+        }
         .el-form {
           width: 800px;
           margin: 20px auto 0;
           @media (max-width: 768px) {
             width: 98%;
-            /*margin: 1rem auto 1rem;*/
+            height: 6rem;
+            margin: 0;
 	          padding: 1rem 0.5rem;
           }
           .el-form-item {
             width: 500px;
             @media (max-width: 768px) {
-	            display: block;
-	            width: 100%;
+              width: 65%;
+              float: left;
             }
             .el-form-item__content{
               width:100%;
+              @media (max-width: 768px) {
+
+              }
               .el-input{
+                @media (max-width: 768px) {
+
+                }
 	              .el-input__inner::placeholder{
 		              color: #919191;
 	              }
@@ -312,6 +322,7 @@
             width: 200px;
             @media (max-width: 768px) {
               width: 100px;
+              float: right;
             }
           }
         }
@@ -371,6 +382,9 @@
       }
       .b-bottom {
         text-align: center;
+        @media (max-width: 768px) {
+          padding: 0 0 1.5rem 0;
+        }
       }
     }
   }

@@ -10,7 +10,6 @@
         <p>{{$t('whiteYellow.p1')}}</p>
       </div>
       <div class="w-two">
-        <h5 class="h5">{{$t('whiteYellow.h52')}}</h5>
         <p>{{$t('whiteYellow.p2')}}</p>
       </div>
       <div class="w-three">
@@ -97,6 +96,9 @@
       }
       .w-two{
         background-color: #e9f4f9;
+        p{
+          padding: 100px 0 100px 0;
+        }
       }
       .w-three{
         min-height: 680px;

@@ -125,7 +125,7 @@
           margin: 0 0 80px 0;
           min-height: 150px;
           @media (max-width: 768px) {
-            margin: 0 auto 3rem ;
+            margin: 0 auto 1rem ;
             width: 90%;
           }
           h3{
@@ -136,9 +136,9 @@
             border-left: 3px solid #56c400;
             padding: 0 0 0 30px;
             @media (max-width: 768px) {
-              font-size: 24px;
-              padding: 0 0 0 0.5rem;
-              margin:  0 0 0 1rem;
+              font-size:1.2rem;
+              padding: 0 0 0 1rem;
+              margin:  0 0 0 0;
               line-height: 2.6rem;
             }
           };
@@ -156,6 +156,8 @@
               width: auto;
               float: none;
               padding: 1rem 1rem 2rem 1rem;
+              font-size: 1rem;
+              margin: 1rem 0 0 0 ;
             }
             span{
               color: #0b1422;
@@ -176,7 +178,7 @@
               span{
                 width: 100%;
                 @media (max-width: 768px) {
-                  font-size: 1.5rem;
+                  font-size: 1.2rem;
                 }
               }
               @media (max-width: 768px) {
