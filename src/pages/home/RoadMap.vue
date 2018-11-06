@@ -208,8 +208,9 @@
 	}
 	.line.ice {
 		position: relative;
-		top: -57px;
+		top: -55px;
 	}
+
 	p {
 		padding: 7px 0;
 		color: #445569;
@@ -283,14 +284,13 @@
       margin: 0 10px 0 0;
     }
 	}
-</style>
 
-<style>
 	.swiper-pagination {
 		bottom: -4px !important;
 		padding-bottom: 15px;
 	}
 	.swiper-slide {
-		padding-bottom: 35px;
+		padding:0 1rem 1.5rem;
+
 	}
 </style>
