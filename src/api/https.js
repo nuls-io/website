@@ -1,6 +1,6 @@
 import axios from 'axios'
 //Request url
-export const API_ROOT = 'http://50.62.6.187:10031/';
+export const API_ROOT = 'https://nuls.io/nulscms/';
 //Request response time
 export const API_TIME =9000;
 

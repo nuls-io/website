@@ -16,11 +16,11 @@
         <h5 class="h5">{{$t('whiteYellow.h53')}}</h5>
         <div class="w-three-left">
           <p>{{$t('whiteYellow.p3')}}</p>
-          <el-button type="success">{{$t('whiteYellow.download')}}</el-button>
+          <el-button type="success" @click="toDownload('white')">{{$t('whiteYellow.download')}}</el-button>
         </div>
         <div class="w-three-right">
           <p>{{$t('whiteYellow.p4')}}</p>
-          <el-button type="success">{{$t('whiteYellow.download')}}</el-button>
+          <el-button type="success" @click="toDownload('Yellow')">{{$t('whiteYellow.download')}}</el-button>
         </div>
       </div>
     </div>
@@ -33,12 +33,28 @@
   import HeaderList from '@/components/HeaderList';
   import Bottom from '@/components/Bottom';
   import GoTop from '@/components/GoTop';
+  import {tolink} from '@/util/util';
 
   export default {
     components: {
       HeaderList,
       Bottom,
       GoTop,
+    },
+    methods: {
+
+      /**
+       * 下载文件地址
+       * @param filelink
+       * @param link
+       */
+      toDownload(link) {
+        if(link === 'white'){
+          tolink('https://nuls.io/api/v1/download/files/papers/white/NulsWhitepaper1.1.pdf');
+        }else {
+          tolink('https://nuls.io/api/v1/download/files/papers/yellow/NulsYellowpaper1.1.pdf');
+        }
+      },
     }
   }
 </script>

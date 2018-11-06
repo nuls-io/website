@@ -59,11 +59,11 @@
             </li>
           </ul>
           <ul v-show="false">
-            <li>Downloads</li>
+            <li>{{$t('nav.about1')}}</li>
             <li @click="toWhiteYellow">{{$t('bottom.list3')}}</li>
             <li @click="toWhiteYellow">{{$t('bottom.list4')}}</li>
             <li>
-              <router-link :to="{ name: 'wallet' }">Wallet</router-link>
+              <router-link :to="{ name: 'wallet' }">{{$t('nav.wallet')}}</router-link>
             </li>
             <!--<li>DApps</li>-->
           </ul>

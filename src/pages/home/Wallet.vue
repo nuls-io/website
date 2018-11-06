@@ -130,15 +130,15 @@
       height: 52px;
       padding: 0 10px;
       border-bottom: 1px solid #e4e7ed;
-      &:last-child {
-        border-bottom: 0;
+      &:last-child{
+        border-bottom: 0 solid #445569;
       }
     }
   }
 
   .wallet {
     max-width: 100%;
-    min-height: 800px;
+    min-height: 860px;
     margin: 0 auto;
     @media (max-width: 768px) {
       min-height: auto;

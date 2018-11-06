@@ -4,7 +4,7 @@ import {BigNumber} from 'bignumber.js'
  * 接口地址 Interface address
  * @type {string}
  */
-export const http = 'http://50.62.6.187:10031';
+export const http = 'https://nuls.io/nulscms/';
 
 /**
  *  用户选择的语言 User selected language

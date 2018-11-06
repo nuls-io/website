@@ -16,6 +16,7 @@ module.exports = {
     about4: 'Join Us',
     about5: 'What is NULS',
     about6: 'Token Swap',
+    about7: 'Community',
   },
 
   home: {

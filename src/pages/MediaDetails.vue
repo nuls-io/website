@@ -106,6 +106,9 @@
             width: 100%;
           }
         }
+        span{
+          text-align: left;
+        }
         p{
           font-size: 18px;
           color: #8E9496;

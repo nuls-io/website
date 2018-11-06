@@ -30,7 +30,20 @@ const i18n = new VueI18n({
     'en': require('./i18n/langs/en')
   }
 });
-
+router.afterEach( ( to, from, next ) => {
+  setTimeout(()=>{
+    let _hmt = _hmt || [];
+    (function() {
+      //每次执行前，先移除上次插入的代码
+      document.getElementById('baidu_tj') && document.getElementById('baidu_tj').remove();
+      let hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?1e33087b689a1d1c20ae5edb22dc8432";
+      hm.id = "baidu_tj";
+      let s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  },0);
+} );
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

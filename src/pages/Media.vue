@@ -142,7 +142,7 @@
         let that = this;
         getBannerList(siteId)
           .then(function (response) {
-            //console.log(response);
+            console.log(response);
             for (let list of response.data.contentList) {
               list.url = API_ROOT + list.url;
             }

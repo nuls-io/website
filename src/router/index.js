@@ -44,7 +44,7 @@ export default new Router({
       component: resolve => require(['@/pages/Team'], resolve),
     },
     {
-      path: '/walletDownloads',
+      path: '/wallet',
       name: 'walletDownloads',
       component: resolve => require(['@/pages/WalletDownloads'], resolve),
     },
