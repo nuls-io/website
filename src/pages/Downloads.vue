@@ -177,6 +177,7 @@
               float: left;
               span{
                 width: 100%;
+                color: #ffffff;
                 @media (max-width: 768px) {
                   font-size: 1.2rem;
                 }

@@ -24,14 +24,14 @@
 			<div :class="active" class="line" />
 			<div class="container">
 				<swiper v-if="isActive('ice')" :options="swiperOptions" :key="`${slidesPerView}-${active}`">
-					<swiper-slide>
+					<swiper-slide class="swiper-slide-ice">
 						<p class="date">{{$t('home.road_tab_ice_1.time')}}</p>
 						<div class="triangle"></div>
 						<p class="bold">{{$t('home.road_tab_ice_1.p0')}}</p>
 						<p>{{$t('home.road_tab_ice_1.p1')}}</p>
 						<p class="bold">{{$t('home.road_tab_ice_1.p2')}}</p>
 					</swiper-slide>
-					<swiper-slide>
+					<swiper-slide class="swiper-slide-ice">
 						<p class="date">{{$t('home.road_tab_ice_2.time')}}</p>
 						<div class="triangle"></div>
 						<p class="bold">{{$t('home.road_tab_ice_2.p0')}}</p>
@@ -40,7 +40,7 @@
 						<p class="bold">{{$t('home.road_tab_ice_2.p3')}}</p>
 						<p class="bold">{{$t('home.road_tab_ice_2.p4')}}</p>
 					</swiper-slide>
-					<swiper-slide>
+					<swiper-slide class="swiper-slide-ice">
 						<p class="date cbuld">{{$t('home.road_tab_ice_3.time')}}</p>
 						<div class="triangle active"></div>
 						<p class="bold cbuld">{{$t('home.road_tab_ice_3.p0')}}</p>
@@ -48,7 +48,7 @@
 						<p class="bold cbuld">{{$t('home.road_tab_ice_3.p2')}}</p>
 						<p class="cbuld">{{$t('home.road_tab_ice_3.p3')}}</p>
 					</swiper-slide>
-					<swiper-slide>
+					<swiper-slide class="swiper-slide-ice">
 						<p class="date">{{$t('home.road_tab_ice_4.time')}}</p>
 						<div class="triangle"></div>
 						<p class="bold">{{$t('home.road_tab_ice_4.p0')}}</p>
@@ -201,15 +201,16 @@
 		width: 33%;
 		padding: 0 30px;
 	}
+  .line.ice {
+    position: relative;
+    top: -55px;
+  }
 	.line.water,
 	.line.steam {
 		position: relative;
-		top: -107px;
+		top: -97px;
 	}
-	.line.ice {
-		position: relative;
-		top: -55px;
-	}
+
 
 	p {
 		padding: 7px 0;
@@ -253,7 +254,7 @@
 		text-align: center;
 		padding: 0;
 		font-weight: bold;
-
+    margin: 0 20px;
 	}
 	.button.isActive,
 	.button:hover {
@@ -274,14 +275,14 @@
 	@media (max-width: 768px) {
 		.button {
 			width: 100px;
-			margin: 0 10px;
+			margin: 0 0.5rem;
       font-size: 20px;
 		}
     .button:first-child{
       margin: 0 10px 0 0;
     }
     .button:last-child{
-      margin: 0 10px 0 0;
+      margin: 0 0.2rem 0 0;
     }
 	}
 
@@ -290,7 +291,9 @@
 		padding-bottom: 15px;
 	}
 	.swiper-slide {
-		padding:0 1rem 1.5rem;
-
+		padding:10px 1rem 1.5rem;
 	}
+  .swiper-slide-ice{
+    padding:0 1rem 1.5rem;
+  }
 </style>

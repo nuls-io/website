@@ -210,6 +210,7 @@
               @media (max-width: 768px){
               	color: #445569;
                 font-size: 1.4rem;
+                text-align: left;
               }
             }
             p{

@@ -217,6 +217,10 @@
             color: #56c400;
             line-height: 25.89px;
             text-align: center;
+            @media (max-width: 768px) {
+              font-size: 0.8rem;
+              line-height: 1rem;
+            }
           }
         }
       }

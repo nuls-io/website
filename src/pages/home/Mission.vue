@@ -4,7 +4,7 @@
       <div class="spaceship-content">
         <h2 class="h2">{{$t('home.nuls_do_title')}}</h2>
         <template v-for="site in 4">
-          <div class="font-30 font-bold mission-text">{{$t('home.nuls_do_info'+site)}}</div>
+          <div class="font-24 font-bold mission-text">{{$t('home.nuls_do_info'+site)}}</div>
         </template>
         <div class="font-24 color-green mission-href pointer" @click="toAbout">{{$t('home.nuls_do_info5_more')}}></div>
       </div>
@@ -76,11 +76,12 @@
         }
         .mission-text {
           color: #445569;
-          margin-bottom: 5px;
+          margin-bottom: 30px;
           @media (max-width: 768px){
             text-align: center;
-            padding: 0.5rem;
+            padding:0 0.5rem;
             font-size: 1.2rem;
+            margin-bottom: 1rem;
           }
         }
         .mission-href {

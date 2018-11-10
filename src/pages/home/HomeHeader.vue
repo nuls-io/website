@@ -28,10 +28,10 @@
       </el-col>
     </el-row>
 
-    <el-dialog title="" :visible.sync="videoDialog" width="1024" center>
+    <el-dialog title="" :visible.sync="videoDialog" v-if="videoDialog"  width="1024" center @close="closeVideoDialog">
       <div class="pc">
         <iframe width="1024" height="576" src="https://www.youtube.com/embed/2rgcxxaJrWs" frameborder="0"
-                allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                 allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </div>
       <div class="iphone">
         <iframe width="100%" height="320" src="https://www.youtube.com/embed/2rgcxxaJrWs" frameborder="0"
@@ -47,20 +47,38 @@
   export default {
     data() {
       return {
-        videoDialog: false
+        videoDialog: true,
       };
     },
     components: {
       HeaderList,
     },
-    methods: {
+    created(){
+      setTimeout(() => {
+        this.videoDialog = false;
+      }, 1);
+    },
+    mounted() {
+      let tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/iframe_api";
+      let firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
+    },
+    methods: {
       /**
        *  视频跳转
        */
       toVedio() {
         this.videoDialog = true;
-      }
+      },
+
+      /**
+       * 关闭diolog事件
+       */
+      closeVideoDialog() {
+
+      },
     }
   }
 </script>

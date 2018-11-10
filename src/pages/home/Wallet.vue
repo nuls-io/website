@@ -131,7 +131,7 @@
       padding: 0 10px;
       border-bottom: 1px solid #e4e7ed;
       &:last-child{
-        border-bottom: 0 solid #445569;
+        border: 0 solid #445569;
       }
     }
   }
@@ -226,8 +226,8 @@
         }
         p {
           color: #445569;
-          font-size: 16px;
-          line-height: 24px;
+          font-size: 24px;
+          line-height: 30px;
           width: 500px;
           text-align: left;
           @media (max-width: 768px) {

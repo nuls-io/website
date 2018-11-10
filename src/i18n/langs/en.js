@@ -20,14 +20,14 @@ module.exports = {
   },
 
   home: {
-    top_title: ' Adaptable blockchain for enterprise solutions',
+    top_title: 'Adaptable Blockchain For Enterprise Solutions',
     vedio_title: 'Watch overview',
 
     nuls_do_title: 'Our Mission',
-    nuls_do_info1: 'Accommodate multitude of blockchain application usage',
-    nuls_do_info2: 'Break through technology bottleneck',
-    nuls_do_info3: 'Reduce technical threshold and cost',
-    nuls_do_info4: 'Resolve the lack of trust in a centralized database',
+    nuls_do_info1: 'Provide flexible blockchain technology that supports a wide variety of enterprise applications.',
+    nuls_do_info2: 'Efficient, high performance technology to solve bottlenecks.',
+    nuls_do_info3: 'Promote usage of blockchain technology by reducing the barrier of entry development cost.',
+    nuls_do_info4: 'Provide the most powerful system of trust through a decentralized network.',
     nuls_do_info5_more:'Learn more from whitepaper',
 
     architecture_title: 'How It Works',

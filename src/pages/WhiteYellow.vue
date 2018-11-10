@@ -96,9 +96,9 @@
       p{
         width: 70%;
         margin: 10px auto;
-        font-size: 30px;
+        font-size: 24px;
         color: #445569;
-        line-height: 48px;
+        line-height: 34px;
         padding: 0 0 100px 0 ;
         @media (max-width: 768px) {
           width: 90%;
@@ -146,12 +146,12 @@
             padding: 78px 0 80px 0;
             color: #445569;
             font-size: 24px;
-            line-height: 36px;
+            line-height: 34px;
             right: 0;
             @media (max-width: 768px) {
               padding: 1.2rem 0 1.2rem 0;
-              font-size: 1.4rem;
-              line-height: 1.8rem;
+              font-size: 1.2rem;
+              line-height: 1.4rem;
               text-align: left;
             }
           }

@@ -284,6 +284,7 @@
             @media (max-width: 768px) {
               width: 65%;
               float: left;
+              margin-right: 0.12rem;
             }
             .el-form-item__content{
               width:100%;
