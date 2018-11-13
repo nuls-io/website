@@ -6,26 +6,41 @@
     </div>
     <div class="developer-info">
       <div class="d-top">
-        <div class="d-list">
-          <p><img src="./../assets/images/Github-1.png"></p>
-          <el-button type="success" @click="toUrl('https://github.com/nuls-io')">Github</el-button>
-        </div>
-        <div class="d-list">
-          <p><img src="./../assets/images/Docs.png"></p>
-          <el-button type="success" @click="toUrl('http://dev.nuls.io')">Docs</el-button>
-        </div>
-        <div class="d-list">
-          <p><img src="./../assets/images/Tools.png"></p>
-          <div class="d-bt">
-            <el-button type="success" @click="toUrl('http://dev.nuls.io/contract/IdeaPlugin.html')">IDEA Plugin</el-button>
+        <div class="w_1280">
+          <div class="w_left fl">
+            <img class="img" src="./../assets/images/d-top-bg.png">
           </div>
-          <div class="d-bts">
-            <el-button @click="toUrl('http://dev.nuls.io/docs/sdk.html')">SDK</el-button>
+          <div class="w_right fr">
+            <h6 class="h6 font-30">Become one of CCC,make NULS better</h6>
+            <p class="font-18 c_green cursor-p" @click="toUrl('')">Click for detaile ></p>
+            <p class="font-18 c_green cursor-p" @click="toUrl('')">CCC Handbook Guide (test version) ></p>
+            <p class="font-18 c_green cursor-p" @click="toUrl('')">Weekly update ></p>
           </div>
         </div>
       </div>
+      <div class="d-center cb">
+        <div class="w_1280">
+          <h2 class="h2">TITLE</h2>
+          <ul class="t_ul">
+            <li class="t_li fl">
+              <img class="img" src="./../assets/images/Github-1.png">
+              <p class="c_green cursor-p" @click="toUrl('https://github.com/nuls-io')">Github ></p>
+            </li>
+            <li class="t_li fl">
+              <img class="img" src="./../assets/images/Docs.png">
+              <p class="c_green cursor-p" @click="toUrl('http://dev.nuls.io')">Docs ></p>
+            </li>
+            <li class="t_li fl">
+              <img class="img" src="./../assets/images/Tools.png">
+              <p class="c_green cursor-p" @click="toUrl('http://dev.nuls.io/contract/IdeaPlugin.html')">IDEA Plugin
+                ></p>
+              <p class="c_green cursor-p" @click="toUrl('http://dev.nuls.io/docs/sdk.html')">SDK ></p>
+            </li>
+          </ul>
+        </div>
+      </div>
       <div class="d-bottom cb">
-        <div class="w1280">
+        <div class="w_1280">
           <h3 class="h3">{{$t('developer.title2')}}</h3>
           <p>{{$t('developer.info')}}</p>
           <div class="d-bts">
@@ -80,88 +95,101 @@
       h1 {
         line-height: 9rem;
         @media (max-width: 768px) {
-          line-height: 4rem;
+          line-height: 0;
         }
       }
     }
 
     .developer-info {
-      max-height: 1050px;
+      max-height: 1200px;
       @media (max-width: 768px) {
         max-height: 100%;
       }
       .d-top {
-        color: #0b1422;
-        width: 1280px;
-        margin: 0 auto;
-        height: 330px;
-        @media (max-width: 768px) {
-          width: 100%;
-          height: auto;
-        }
-        .d-list {
-          background: #FFFFFF;
-          box-shadow: 2px 2px 5px 5px #C1C5C9;
-          width: 230px;
-          height: 310px;
-          margin: 100px 0 120px 192px;
-          text-align: center;
-          padding: 30px 0 0;
-          float: left;
-          color: #0b1422;
-          &:first-child {
-            margin-left: 100px;
-            @media (max-width: 768px) {
-              margin: 2rem 5%;
-            }
-          }
-          @media (max-width: 768px) {
-            width: 90%;
-            height: auto;
-            margin: 2rem 5%;
-            padding: 1.5rem 0 0.5rem;
-            float: none;
-          }
-          p {
-            color: #0b1422;
-            margin-bottom: 1.5rem;
-          }
-          .el-button--success {
-            width: 160px;
-            margin-top: 10px;
-            @media (max-width: 768px) {
-              margin: 0.5rem 0 1rem 0;
-            }
-          }
-          .d-bts {
-            padding-top: 1rem;
-            .el-button--default {
-              width: 160px;
+        height: 300px;
+        .w_1280 {
+          .w_left {
+            .img {
+              width: auto;
+              height: auto;
               @media (max-width: 768px) {
-                margin: 0 0 1rem 0;
+                width: 100%;
               }
             }
           }
-
+          .w_right {
+            @media (max-width: 768px) {
+              margin: 0 0 2rem 0;
+            }
+            .h6 {
+              color: @color_1;
+              font-size: 28px;
+              line-height: 30px;
+              margin: 40px 0 30px 0;
+              @media (max-width: 768px) {
+                margin: 1rem 0 0.5rem 0;
+                font-size: 1.2rem;
+                text-align: left;
+                padding: 0 0 0 0.5rem;
+              }
+            }
+            .c_green {
+              line-height: 36px;
+              @media (max-width: 768px) {
+                padding: 0 0 0 0.5rem;
+              }
+            }
+          }
+        }
+      }
+      .d-center {
+        background-color: #F5F9FF;
+        height: 380px;
+        @media (max-width: 768px) {
+          height: 15rem;
+        }
+        .w_1280 {
+          .h2 {
+            margin: 0 auto;
+            padding: 40px 0;
+          }
+          .t_ul {
+            .t_li {
+              width: 33.333%;
+              text-align: center;
+              @media (max-width: 768px) {
+              }
+              .img {
+                @media (max-width: 768px) {
+                  width: 40%;
+                }
+              }
+              .c_green {
+                line-height: 40px;
+                @media (max-width: 768px) {
+                  font-size: 0.8rem;
+                  line-height: 1.5rem;
+                }
+              }
+            }
+          }
         }
       }
       .d-bottom {
         background: url("./../assets/images/developer-bg.png") #e9f4f9 no-repeat right;
         background-size: 25%;
-        margin: 20px auto 120px;
+        margin: 0 auto 120px;
         padding: 0;
-        max-height: 765px;
+        max-height: 1000px;
         @media (max-width: 768px) {
           max-width: 100%;
-          margin: 1rem 0 4rem;
+          margin: 0 0 4rem;
           background: #e9f4f9 no-repeat left;
           padding: 0;
         }
-        .w1280 {
-          max-width: 1280px;
-          margin: 0 auto;
+        .w_1280 {
           @media (max-width: 768px) {
-            max-width: 90%;
+            max-width: 100%;
           }
         }
         h3 {
@@ -171,7 +199,8 @@
           padding: 120px 0 60px 0;
           @media (max-width: 768px) {
             margin-left: 0;
-            padding: 3rem 0 1.5rem 0;
+            padding: 2rem 0 0 0;
+            text-align: center;
           }
         }
         p {
@@ -181,21 +210,25 @@
           margin: 0;
           text-align: left;
           @media (max-width: 768px) {
-            width: 90%;
+            width: 100%;
             margin: 0;
             padding: 1.5rem 0.5rem;
+            line-height: 1.5rem;
           }
         }
         .d-bts {
           max-width: 1280px;
           margin: 0 auto;
           padding-bottom: 30px;
-          .el-button{
-           width: 225px;
+          @media (max-width: 768px) {
+            text-align: center;
+          }
+          .el-button {
+            width: 225px;
           }
         }
         .d-bts1 {
-          padding-bottom: 130px;
+          margin-bottom: 130px;
           @media (max-width: 768px) {
             padding-bottom: 3rem;
           }

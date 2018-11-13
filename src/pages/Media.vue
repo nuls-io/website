@@ -48,17 +48,52 @@
       </el-tab-pane>
 
       <el-tab-pane label="Find Us" name="social">
-        <h3>
-          Join Community
-        </h3>
-        <ul class="social-list" v-loading="findUsListLoading">
-          <template v-for="site in findUsList">
-          <li @click="toLink(site.link)">
-            <img :src=site.imgUrl>
-            <p class="overflow">{{site.title}}</p>
-          </li>
-          </template>
-        </ul>
+       <div class="steps">
+         <div class="step">
+           <div class="step-data fl">
+             <div class="line"></div>
+             <img src="./../assets/images/Docs.png" />
+             <label>2018-08-08</label>
+           </div>
+           <div class="step-info fl">
+             <h6 class="h6">NULS members are highly experienced</h6>
+             <p class="font-20"> {{$t('team.info')}}</p>
+           </div>
+         </div>
+         <div class="step">
+           <div class="step-data fl">
+             <div class="line"></div>
+             <img src="./../assets/images/Docs.png" />
+             <label>2018-08-08</label>
+           </div>
+           <div class="step-info fl">
+             <h6 class="h6">NULS members are highly experienced</h6>
+             <p class="font-20"> {{$t('team.info')}}</p>
+           </div>
+         </div>
+         <div class="step">
+           <div class="step-data fl">
+             <div class="line"></div>
+             <img src="./../assets/images/Docs.png" />
+             <label>2018-08-08</label>
+           </div>
+           <div class="step-info fl">
+             <h6 class="h6">NULS members are highly experienced</h6>
+             <p class="font-20"> {{$t('team.info')}}</p>
+           </div>
+         </div>
+         <div class="step">
+           <div class="step-data fl">
+             <div class="line"></div>
+             <img src="./../assets/images/Docs.png" />
+             <label>2018-08-08</label>
+           </div>
+           <div class="step-info fl">
+             <h6 class="h6">NULS members are highly experienced</h6>
+             <p class="font-20"> {{$t('team.info')}}</p>
+           </div>
+         </div>
+       </div>
 
       </el-tab-pane>
     </el-tabs>
@@ -68,7 +103,7 @@
 </template>
 
 <script>
-  import {getBannerList,getNewList,getGuideList,getFindUsList} from '@/api/httpData'
+  import {getBannerList,getNewList,getGuideList} from '@/api/httpData'
   import {API_ROOT} from '@/api/https'
   import {arrItemSort} from '@/util/util';
   import HeaderList from '@/components/HeaderList';
@@ -81,13 +116,11 @@
         language:'2',
         mediasLoading:true,
         bannerList:[],
-        activeMedia: 'news',
+        activeMedia: 'social',
         newsListLoading:true,
         newList: [],
         newlistTotal:0,
         guideList:[],
-        findUsListLoading:true,
-        findUsList:[],
       }
     },
     watch:{
@@ -166,7 +199,7 @@
         }else if(tab.name ==='guide'){
           this.getGuideList(this.language, 10, 1);
         }else if(tab.name ==='social') {
-          this.getFindUsList(1, 10, 1);
+          //this.getFindUsList(1, 10, 1);
         }else {
           console.log("")
         }
@@ -281,6 +314,7 @@
 </script>
 
 <style lang="less">
+  @import url("../assets/css/style.less");
   .medias {
     background-color: #FFFFFF;
     width: 100%;
@@ -294,7 +328,7 @@
       .header {
         z-index: 9;
         position: absolute;
-        max-width: 1280px;
+        width: 1280px;
       }
 
       .el-loading-mask{
@@ -533,6 +567,72 @@
             }
           }
         }
+      }
+    }
+
+    .steps{
+      height: 500px;
+      .step{
+        .step-data{
+          width: 80px;
+          text-align: center;
+          @media (max-width: 768px) {
+            width: 4.2rem;
+          }
+          .line{
+            border-left: 1px solid #c1c1c1;
+            height: 183px;
+            margin:  28px 0 0 40px;
+            position: absolute;
+            @media (max-width: 768px) {
+              height: 19rem;
+              margin:  1.7rem 0 0 2rem;
+            }
+          }
+          img{
+            width: 30px;
+            height: 30px;
+          }
+          label{
+            display: block;
+            background-color: #F8F8F8;
+            border: 1px solid #c1c1c1;
+            position: relative;
+            font-size: 12px;
+            line-height: 24px;
+            color: #c1c1c1;
+            margin: 5px 0 0 0;
+            @media (max-width: 768px) {
+              margin: 0.25rem 0 0 0.2rem;
+
+            }
+          }
+        }
+        .step-info{
+          width: 88%;
+          height: 200px;
+          margin: 10px 0 0 30px;
+          @media (max-width: 768px) {
+            width: 75%;
+            height: 20rem;
+            margin: 0.5rem 0 0 0.5rem;
+          }
+          h6{
+            color: @color_1;
+            padding: 0 0 20px 0;
+            @media (max-width: 768px) {
+              padding: 0 0 0.8rem 0;
+            }
+          }
+          p{
+            color: @color_1;
+            line-height: 30px;
+            @media (max-width: 768px) {
+              line-height: 1.5rem;
+            }
+          }
+        }
+
       }
     }
 

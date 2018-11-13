@@ -68,5 +68,10 @@ export default new Router({
       name: 'faqs',
       component: resolve => require(['@/pages/Qaqs'], resolve),
     },
+    {
+      path: '/commnunity',
+      name: 'commnunity',
+      component: resolve => require(['@/pages/Commnunity'], resolve),
+    },
   ]
 })
