@@ -47,12 +47,12 @@
         </ul>
       </el-tab-pane>
 
-      <el-tab-pane label="Find Us" name="social">
+      <el-tab-pane label="Guide" name="social">
        <div class="steps">
          <div class="step">
            <div class="step-data fl">
              <div class="line"></div>
-             <img src="./../assets/images/Docs.png" />
+             <i class="ico"></i>
              <label>2018-08-08</label>
            </div>
            <div class="step-info fl">
@@ -63,7 +63,7 @@
          <div class="step">
            <div class="step-data fl">
              <div class="line"></div>
-             <img src="./../assets/images/Docs.png" />
+             <i class="ico"></i>
              <label>2018-08-08</label>
            </div>
            <div class="step-info fl">
@@ -74,7 +74,7 @@
          <div class="step">
            <div class="step-data fl">
              <div class="line"></div>
-             <img src="./../assets/images/Docs.png" />
+             <i class="ico"></i>
              <label>2018-08-08</label>
            </div>
            <div class="step-info fl">
@@ -85,7 +85,7 @@
          <div class="step">
            <div class="step-data fl">
              <div class="line"></div>
-             <img src="./../assets/images/Docs.png" />
+             <i class="ico"></i>
              <label>2018-08-08</label>
            </div>
            <div class="step-info fl">
@@ -581,17 +581,21 @@
           }
           .line{
             border-left: 1px solid #c1c1c1;
-            height: 183px;
-            margin:  28px 0 0 40px;
+            height: 160px;
+            margin:  50px 0 0 40px;
             position: absolute;
             @media (max-width: 768px) {
               height: 19rem;
               margin:  1.7rem 0 0 2rem;
             }
           }
-          img{
-            width: 30px;
-            height: 30px;
+          .ico{
+            display: block;
+            background: url("./../assets/images/Bi-Monthly.png") no-repeat center #34ce57;
+            border-radius: 50px;
+            width: 50px;
+            height: 50px;
+            margin: 0 0 0 15px;
           }
           label{
             display: block;
@@ -601,7 +605,7 @@
             font-size: 12px;
             line-height: 24px;
             color: #c1c1c1;
-            margin: 5px 0 0 0;
+            margin: 10px 0 0 0;
             @media (max-width: 768px) {
               margin: 0.25rem 0 0 0.2rem;
 

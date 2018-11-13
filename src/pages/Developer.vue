@@ -112,8 +112,10 @@
             .img {
               width: auto;
               height: auto;
+              margin-top: 50px;
               @media (max-width: 768px) {
-                width: 100%;
+                width: 80%;
+                margin: 2rem 0 0 1.8rem;
               }
             }
           }

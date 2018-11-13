@@ -170,7 +170,7 @@
           min-height: 20rem;
         }
         .centers {
-          background: url("./../assets/images/consititution.png") no-repeat right 100%, 50%;
+          background: url("./../assets/images/sustainable-improvement-ff.svg") no-repeat right 100%, 50%;
           @media (max-width: 768px) {
             background: transparent;
           }
