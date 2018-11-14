@@ -201,7 +201,7 @@
         }
       }
       .c-what {
-        min-height: 500px;
+        min-height: 445px;
         @media (max-width: 768px) {
           min-height: 15rem;
         }
@@ -214,6 +214,7 @@
           }
           .h2 {
             text-align: right;
+            margin: 120px auto 50px;
             @media (max-width: 768px) {
               text-align: center;
             }
@@ -231,8 +232,8 @@
           }
           label {
             display: block;
+            padding: 50px 0 0 0;
             @media (max-width: 768px) {
-
               padding: 1rem 0 0 0.5rem;
             }
           }

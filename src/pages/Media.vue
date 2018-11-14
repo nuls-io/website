@@ -12,6 +12,56 @@
       </el-carousel>
     </div>
     <el-tabs v-model="activeMedia" @tab-click="handleClick">
+      <el-tab-pane label="Bi-Monthly" name="social">
+        <div class="steps">
+          <div class="step">
+            <div class="step-data fl">
+              <div class="line"></div>
+              <i class="ico"></i>
+              <label>2018-08-08</label>
+            </div>
+            <div class="step-info fl">
+              <h6 class="h6">NULS members are highly experienced</h6>
+              <p class="font-20"> {{$t('team.info')}}</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-data fl">
+              <div class="line"></div>
+              <i class="ico"></i>
+              <label>2018-08-08</label>
+            </div>
+            <div class="step-info fl">
+              <h6 class="h6">NULS members are highly experienced</h6>
+              <p class="font-20"> {{$t('team.info')}}</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-data fl">
+              <div class="line"></div>
+              <i class="ico"></i>
+              <label>2018-08-08</label>
+            </div>
+            <div class="step-info fl">
+              <h6 class="h6">NULS members are highly experienced</h6>
+              <p class="font-20"> {{$t('team.info')}}</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-data fl">
+              <div class="line"></div>
+              <i class="ico"></i>
+              <label>2018-08-08</label>
+            </div>
+            <div class="step-info fl">
+              <h6 class="h6">NULS members are highly experienced</h6>
+              <p class="font-20"> {{$t('team.info')}}</p>
+            </div>
+          </div>
+        </div>
+
+      </el-tab-pane>
+
       <el-tab-pane label="News" name="news">
         <ul class="news-list" v-loading="newsListLoading">
             <li @click="toMediaDetails(site.url)"  v-for="site in newList">
@@ -46,56 +96,6 @@
           </template>
         </ul>
       </el-tab-pane>
-
-      <el-tab-pane label="Guide" name="social">
-       <div class="steps">
-         <div class="step">
-           <div class="step-data fl">
-             <div class="line"></div>
-             <i class="ico"></i>
-             <label>2018-08-08</label>
-           </div>
-           <div class="step-info fl">
-             <h6 class="h6">NULS members are highly experienced</h6>
-             <p class="font-20"> {{$t('team.info')}}</p>
-           </div>
-         </div>
-         <div class="step">
-           <div class="step-data fl">
-             <div class="line"></div>
-             <i class="ico"></i>
-             <label>2018-08-08</label>
-           </div>
-           <div class="step-info fl">
-             <h6 class="h6">NULS members are highly experienced</h6>
-             <p class="font-20"> {{$t('team.info')}}</p>
-           </div>
-         </div>
-         <div class="step">
-           <div class="step-data fl">
-             <div class="line"></div>
-             <i class="ico"></i>
-             <label>2018-08-08</label>
-           </div>
-           <div class="step-info fl">
-             <h6 class="h6">NULS members are highly experienced</h6>
-             <p class="font-20"> {{$t('team.info')}}</p>
-           </div>
-         </div>
-         <div class="step">
-           <div class="step-data fl">
-             <div class="line"></div>
-             <i class="ico"></i>
-             <label>2018-08-08</label>
-           </div>
-           <div class="step-info fl">
-             <h6 class="h6">NULS members are highly experienced</h6>
-             <p class="font-20"> {{$t('team.info')}}</p>
-           </div>
-         </div>
-       </div>
-
-      </el-tab-pane>
     </el-tabs>
     <Bottombar></Bottombar>
     <GoTop></GoTop>
@@ -113,7 +113,7 @@
   export default {
     data() {
       return {
-        language:'2',
+        language:2,
         mediasLoading:true,
         bannerList:[],
         activeMedia: 'social',
@@ -132,7 +132,7 @@
           }else if(this.activeMedia ==='guide'){
             this.getGuideList(this.language, 10, 1);
           }else if(this.activeMedia ==='social') {
-            this.getFindUsList(1, 10, 1);
+            //this.getFindUsList(1, 10, 1);
           }else {
             console.log("")
           }
@@ -146,9 +146,9 @@
     },
     mounted() {
 
-     /* setInterval(() => {
-        this.language=sessionStorage.hasOwnProperty('langs') ? sessionStorage.getItem('langs') ==='zh' ? '1' : '2' : '2'
-      }, 100);*/
+      setInterval(() => {
+        this.language=sessionStorage.hasOwnProperty('langs') ? sessionStorage.getItem('langs') ==='zh' ? 1 : 2 : 2
+      }, 100);
 
       this.getBannerList(this.language);
 
@@ -158,7 +158,7 @@
         }else if(this.activeMedia ==='guide'){
           this.getGuideList(this.language, 10, 1);
         }else if(this.activeMedia ==='social') {
-          this.getFindUsList(1, 10, 1);
+          //this.getFindUsList(1, 10, 1);
         }else {
           console.log("")
         }
@@ -175,7 +175,6 @@
         let that = this;
         getBannerList(siteId)
           .then(function (response) {
-            console.log(response);
             for (let list of response.data.contentList) {
               list.url = API_ROOT + list.url;
             }
@@ -580,9 +579,9 @@
             width: 4.2rem;
           }
           .line{
-            border-left: 1px solid #c1c1c1;
-            height: 160px;
-            margin:  50px 0 0 40px;
+            border-left: 1px solid #dedede;
+            height: 168px;
+            margin:  42px 0 0 40px;
             position: absolute;
             @media (max-width: 768px) {
               height: 19rem;
@@ -591,21 +590,22 @@
           }
           .ico{
             display: block;
-            background: url("./../assets/images/Bi-Monthly.png") no-repeat center #34ce57;
-            border-radius: 50px;
-            width: 50px;
-            height: 50px;
-            margin: 0 0 0 15px;
+            background: url("./../assets/images/Bi-Monthly.png") no-repeat center ,linear-gradient(360deg, #56c400, #8fe400);
+            border-radius: 42px;
+            width: 42px;
+            height: 42px;
+            margin: 0 0 0 21px;
           }
           label{
             display: block;
-            background-color: #F8F8F8;
-            border: 1px solid #c1c1c1;
+            background-color: #fefefe;
+            border: 1px solid #dedede;
             position: relative;
             font-size: 12px;
-            line-height: 24px;
-            color: #c1c1c1;
+            line-height: 20px;
+            color: #a6a9ad;
             margin: 10px 0 0 0;
+            border-radius: 2px;
             @media (max-width: 768px) {
               margin: 0.25rem 0 0 0.2rem;
 
@@ -623,7 +623,7 @@
           }
           h6{
             color: @color_1;
-            padding: 0 0 20px 0;
+            padding: 0 0 18px 0;
             @media (max-width: 768px) {
               padding: 0 0 0.8rem 0;
             }

@@ -10,7 +10,7 @@
           <div class="w_left fl">
             <img class="img" src="./../assets/images/d-top-bg.png">
           </div>
-          <div class="w_right fr">
+          <div class="w_right fl">
             <h6 class="h6 font-30">Become one of CCC,make NULS better</h6>
             <p class="font-18 c_green cursor-p" @click="toUrl('')">Click for detaile ></p>
             <p class="font-18 c_green cursor-p" @click="toUrl('')">CCC Handbook Guide (test version) ></p>
@@ -20,18 +20,18 @@
       </div>
       <div class="d-center cb">
         <div class="w_1280">
-          <h2 class="h2">TITLE</h2>
+          <h2 class="h2">Start To Develop</h2>
           <ul class="t_ul">
             <li class="t_li fl">
-              <img class="img" src="./../assets/images/Github-1.png">
+              <p class="img"><img src="./../assets/images/Github-1.png"></p>
               <p class="c_green cursor-p" @click="toUrl('https://github.com/nuls-io')">Github ></p>
             </li>
             <li class="t_li fl">
-              <img class="img" src="./../assets/images/Docs.png">
+              <p class="img"><img src="./../assets/images/Docs.png"></p>
               <p class="c_green cursor-p" @click="toUrl('http://dev.nuls.io')">Docs ></p>
             </li>
             <li class="t_li fl">
-              <img class="img" src="./../assets/images/Tools.png">
+              <p class="img"><img src="./../assets/images/Tools.png"></p>
               <p class="c_green cursor-p" @click="toUrl('http://dev.nuls.io/contract/IdeaPlugin.html')">IDEA Plugin
                 ></p>
               <p class="c_green cursor-p" @click="toUrl('http://dev.nuls.io/docs/sdk.html')">SDK ></p>
@@ -41,7 +41,7 @@
       </div>
       <div class="d-bottom cb">
         <div class="w_1280">
-          <h3 class="h3">{{$t('developer.title2')}}</h3>
+          <h2 class="h2">{{$t('developer.title2')}}</h2>
           <p>{{$t('developer.info')}}</p>
           <div class="d-bts">
             <el-button type="success" @click="toUrl('https://github.com/nuls-io/nuls/releases')">{{$t('developer.bt1')}}
@@ -101,7 +101,7 @@
     }
 
     .developer-info {
-      max-height: 1200px;
+      min-height: 1200px;
       @media (max-width: 768px) {
         max-height: 100%;
       }
@@ -110,8 +110,8 @@
         .w_1280 {
           .w_left {
             .img {
-              width: auto;
-              height: auto;
+              width: 418px;
+              height: 168px;
               margin-top: 50px;
               @media (max-width: 768px) {
                 width: 80%;
@@ -120,14 +120,14 @@
             }
           }
           .w_right {
+            margin-left: 96px;
             @media (max-width: 768px) {
               margin: 0 0 2rem 0;
             }
             .h6 {
-              color: @color_1;
-              font-size: 28px;
-              line-height: 30px;
-              margin: 40px 0 30px 0;
+              color: #0a2140;
+              font-size: 30px;
+              margin: 40px 0 36px 0;
               @media (max-width: 768px) {
                 margin: 1rem 0 0.5rem 0;
                 font-size: 1.2rem;
@@ -136,7 +136,8 @@
               }
             }
             .c_green {
-              line-height: 36px;
+              line-height: normal;
+              padding: 0 0 20px 0;
               @media (max-width: 768px) {
                 padding: 0 0 0 0.5rem;
               }
@@ -146,24 +147,37 @@
       }
       .d-center {
         background-color: #F5F9FF;
-        height: 380px;
+        height: 580px;
         @media (max-width: 768px) {
           height: 15rem;
         }
         .w_1280 {
           .h2 {
             margin: 0 auto;
-            padding: 40px 0;
+            padding: 120px 0 100px;
           }
           .t_ul {
+            width: 1000px;
+            min-height: 100px;
+            margin: 0 auto;
             .t_li {
               width: 33.333%;
               text-align: center;
               @media (max-width: 768px) {
               }
               .img {
+                background-color: #ffffff;
+                height: 92px;
+                width: 92px;
+                border-radius: 92px;
+                text-align: center;
+                margin: 0 0 25px 120px;
                 @media (max-width: 768px) {
                   width: 40%;
+                }
+                img {
+                  margin: 20px 0 0 0;
+                  width: auto;
                 }
               }
               .c_green {
@@ -178,11 +192,11 @@
         }
       }
       .d-bottom {
-        background: url("./../assets/images/developer-bg.png") #e9f4f9 no-repeat right;
+        background: url("./../assets/images/developer-bg.png") #ffffff no-repeat right;
         background-size: 25%;
-        margin: 0 auto 120px;
+        margin: 0 auto 0;
         padding: 0;
-        max-height: 1000px;
+        height: 640px;
         @media (max-width: 768px) {
           max-width: 100%;
           margin: 0 0 4rem;
@@ -194,21 +208,25 @@
             max-width: 100%;
           }
         }
-        h3 {
+        .h2 {
           color: #0b1422;
           font-size: 28px;
           opacity: 0.9;
           padding: 120px 0 60px 0;
+          margin: 0 auto;
+          text-align: left;
           @media (max-width: 768px) {
-            margin-left: 0;
+            margin: 0 auto;
             padding: 2rem 0 0 0;
             text-align: center;
           }
         }
         p {
           color: #0b1422;
-          padding: 0 0 130px 0;
+          padding: 0 0 60px 0;
           max-width: 600px;
+          line-height: 30px;
+          font-size: 24px;
           margin: 0;
           text-align: left;
           @media (max-width: 768px) {

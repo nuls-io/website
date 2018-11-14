@@ -33,8 +33,16 @@
     data() {
       return {
         downloadsListLoading:true,
+        language:2,
         downloadsList:[],
       }
+    },
+    watch:{
+      language(curVal,oldVal){
+        if(curVal.toString() !== oldVal.toString()){
+          this.getDownloadsList(this.language, 10, 1)
+        }
+      },
     },
     components: {
       HeaderList,
@@ -42,7 +50,11 @@
       GoTop
     },
     mounted() {
-      this.getDownloadsList(1, 10, 1)
+       setInterval(() => {
+        this.language=sessionStorage.hasOwnProperty('langs') ? sessionStorage.getItem('langs') ==='zh' ? 1 : 2 : 2
+      }, 100);
+
+      this.getDownloadsList(this.language, 10, 1)
     },
     methods: {
       /**
