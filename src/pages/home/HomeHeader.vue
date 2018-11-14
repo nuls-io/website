@@ -13,7 +13,7 @@
       <el-col :xs="24" :sm="8">
         <div class="vedio">
           <div class="vedio-info" @click="toVedio">
-            <p class="font-18 font-bold">{{$t('home.vedio_title')}}</p><img src="./../../assets/images/vedio.png"/>
+            <p class="font-16 font-bold">{{$t('home.vedio_title')}}</p><img src="./../../assets/images/vedio.png"/>
           </div>
         </div>
 
@@ -84,6 +84,7 @@
 </script>
 
 <style lang="less">
+  @import url("./../../assets/css/style.less");
   .homeHeader {
     background: url("./../../assets/images/wallet-section-bg.jpg") 100% 100%;
     width: 100%;
@@ -121,6 +122,8 @@
         p {
           width: 160px;
           float: left;
+          color: @color;
+          padding: 0;
         }
         img {
           width: 20px;

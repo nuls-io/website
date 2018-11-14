@@ -18,12 +18,12 @@
               </el-menu-item>
             </el-submenu>
             <el-menu-item index="3">{{$t('nav.developer')}}</el-menu-item>
+            <el-menu-item index="7">{{$t('nav.about7')}}</el-menu-item>
             <el-menu-item index="4">{{$t('nav.about1')}}</el-menu-item>
             <el-menu-item index="5">{{$t('nav.media')}}</el-menu-item>
             <el-submenu index="6">
               <template slot="title">{{$t('nav.about')}}</template>
               <el-menu-item index="6-5">{{$t('nav.about5')}}</el-menu-item>
-              <el-menu-item index="6-7"><!--<a href="https://nuls.community" target="_blank">{{$t('nav.about7')}}</a>-->{{$t('nav.about7')}}</el-menu-item>
               <el-menu-item index="6-6"><a href="https://swap.nuls.io/swap.html" target="_blank">{{$t('nav.about6')}}</a></el-menu-item>
               <el-menu-item index="6-1"><a href="https://nulscan.io/" target="_blank">{{$t('nav.explorer')}}</a></el-menu-item>
               <el-menu-item index="6-2">{{$t('nav.about2')}}</el-menu-item>
@@ -52,20 +52,15 @@
   import 'element-ui/lib/theme-chalk/base.css';
   // collapse 展开折叠
   import CollapseTransition from 'element-ui/lib/transitions/collapse-transition';
-  import Vue from 'vue'
+  import Vue from 'vue';
+  import {getLanguagelist} from '@/api/httpData';
   Vue.component(CollapseTransition.name, CollapseTransition);
   export default {
     data() {
       return {
         activeMenu: sessionStorage.hasOwnProperty('activeMenu') ? sessionStorage.getItem('activeMenu') : '1',
         languageValue: sessionStorage.hasOwnProperty('langs') ? sessionStorage.getItem('langs') : 'en',
-        languageOptions: [{
-          value: 'zh',
-          label: '简体中文'
-        }, {
-          value: 'en',
-          label: 'English'
-        }],
+        languageOptions: [],
         showNav:false,
       }
     },
@@ -73,7 +68,8 @@
     },
     mounted() {
       const lang = sessionStorage.hasOwnProperty('langs') ? sessionStorage.getItem('langs') : 'en';
-      this.changeLanguage(lang)
+      this.changeLanguage(lang);
+      this.getLanguagelist();
     },
     //离开当前页面后执行
     destroyed() {
@@ -127,7 +123,7 @@
           this.$router.push({
             name: 'whiteYellow',
           });
-        }else if(key === '6-7'){
+        }else if(key === '7'){
           this.$router.push({
             name: 'commnunity',
           });
@@ -136,6 +132,21 @@
             name: 'home',
           })
         }
+      },
+
+      /**
+       * 获取语言列表 Get languages list
+       **/
+      getLanguagelist(){
+        let that = this;
+        getLanguagelist()
+          .then(function (response) {
+            //console.log(response);
+            that.languageOptions = response.data.siteList;
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
       },
 
       /**

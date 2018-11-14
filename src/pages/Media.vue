@@ -580,12 +580,12 @@
           }
           .line{
             border-left: 1px solid #dedede;
-            height: 168px;
+            height: 148px;
             margin:  42px 0 0 40px;
             position: absolute;
             @media (max-width: 768px) {
-              height: 19rem;
-              margin:  1.7rem 0 0 2rem;
+              height: 17.9rem;
+              margin:  2.6rem 0 0 2rem;
             }
           }
           .ico{
@@ -595,26 +595,29 @@
             width: 42px;
             height: 42px;
             margin: 0 0 0 21px;
+            @media (max-width: 768px) {
+              margin: 0 0 0 0.7rem;
+            }
           }
           label{
             display: block;
             background-color: #fefefe;
             border: 1px solid #dedede;
             position: relative;
-            font-size: 12px;
+            font-size: 14px;
             line-height: 20px;
             color: #a6a9ad;
             margin: 10px 0 0 0;
             border-radius: 2px;
             @media (max-width: 768px) {
-              margin: 0.25rem 0 0 0.2rem;
-
+              margin: 0.5rem 0 0 0.2rem;
+              font-size: 0.5rem;
             }
           }
         }
         .step-info{
           width: 88%;
-          height: 200px;
+          height: 180px;
           margin: 10px 0 0 30px;
           @media (max-width: 768px) {
             width: 75%;
@@ -623,7 +626,7 @@
           }
           h6{
             color: @color_1;
-            padding: 0 0 18px 0;
+            padding: 0 0 5px 0;
             @media (max-width: 768px) {
               padding: 0 0 0.8rem 0;
             }

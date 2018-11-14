@@ -227,7 +227,7 @@
         p {
           color: #445569;
           font-size: 24px;
-          line-height: 30px;
+          line-height: 40px;
           width: 500px;
           text-align: left;
           @media (max-width: 768px) {

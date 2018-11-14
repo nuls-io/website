@@ -10,7 +10,7 @@
         <li v-for="site in teamList">
           <h2 class="cursor-p" @click="tolink(site.linkedin)"><img :src=site.headUrl height="600" width="660"/></h2>
           <h3>{{site.ename}}</h3>
-          <h4>{{site.position}}</h4>
+          <h4>{{site.positions}}</h4>
         </li>
       </ul>
       <h2 class="h2 cb" v-show="angelList.length > 0">Angel Investor</h2>
@@ -59,7 +59,15 @@
         angelList: [],
         advisorList: [],
         communityList: [],
+        language:sessionStorage.hasOwnProperty('langs') ? sessionStorage.getItem('langs') ==='zh' ? 1 : 2 : 2,
       }
+    },
+    watch:{
+      language(curVal,oldVal){
+        if(curVal.toString() !== oldVal.toString()){
+          this.getTeamList(1, 100, 1)
+        }
+      },
     },
     components: {
       HeaderList,
@@ -67,6 +75,9 @@
       GoTop,
     },
     mounted() {
+      setInterval(() => {
+        this.language=sessionStorage.hasOwnProperty('langs') ? sessionStorage.getItem('langs') ==='zh' ? 1 : 2 : 2
+      }, 100);
       this.getTeamList(1, 100, 1)
     },
     methods: {
@@ -79,11 +90,16 @@
        */
       getTeamList(siteId, pageSize, pageNum) {
         let that = this;
+        that.teamList =[];
+        that.angelList =[];
+        that.advisorList =[];
+        that.communityList =[];
         getTeamList(siteId, pageSize, pageNum)
           .then(function (response) {
-            //console.log(response);
+            console.log(response);
             for (let list of response.data) {
               list.headUrl = API_ROOT + list.headUrl;
+              list.positions = that.language === 1 ? list.user_zh_position : list.position;
               if (list.types === '1') {
                 that.teamList.push(list)
               } else if (list.types === '2') {

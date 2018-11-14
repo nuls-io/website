@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="roadmap-bg">
 		<div class="container">
 			<h2 class="h2">{{$t('home.road_title')}}</h2>
 			<div class="buttons">
@@ -172,7 +172,17 @@
   }
 </script>
 
-<style scoped>
+<style lang="less">
+  .roadmap-bg{
+    background-color: #ebf4f9;
+    .container{
+      .h2{
+        margin: 0 auto;
+        padding: 120px 0 80px 0;
+      }
+    }
+  }
+
 	.buttonParent {
 		display: inline-block;
 	}
@@ -183,8 +193,7 @@
 		padding: 0 43px;
 	}
 	.roadmap {
-		margin-top: 174px;
-		margin-bottom: 100px;
+		margin: 174px 0 0 0;
 	}
 	.roadmap .line {
 		background: #87e300;
@@ -192,7 +201,8 @@
 		width: 100%;
 	}
 	.roadmap .container {
-		margin-top: -124px;
+		margin: -124px auto 0;
+    padding:0 0 100px 0;
 	}
 	.roadmap .items {
 		display: flex;

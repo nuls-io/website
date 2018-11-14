@@ -127,6 +127,10 @@ module.exports = {
     info: '如果你需要测试网NULS,请下载测试网钱包并用你的地址去申请测试网NULS',
     bt1: '下载测试网钱包',
     bt2: '申请测试网NULS',
+    title3:'成为CCC的一员，让NULS变得更好',
+    info1:'了解更多',
+    info2:'CCC指导手册（测试版）',
+    info3:'开发者周报',
   },
 
   team:{
@@ -164,16 +168,35 @@ module.exports = {
     info:'We are now recruiting committed and passionate individuals to contribute to NULS open-source community.Join us now! Together we can learn, grow and share, building something amazing in the process.',
   },
 
+  community:{
+    title:'社区',
+    info:'欢迎加入NULS社区并成为我们的一员，NULS社区是对NULS社区文化和理念高度认可的一群人的合集，本着共同的目标和愿景共同为NULS社区生态发展而努力的组织。NULS社区成员由NULS基金会、理事会成员、贡献者角色、开源技术社区CODE CRAFT COUNCIL（CCC）和其他所有的NULS Holder构成。',
+
+    title1:'来NULS社区一起讨论和创造未来',
+    c_name:'NULS社区',
+    c_name_by:'By CCC Moshe',
+    c_forun:'NULS社区论坛',
+    c_forun_sg:'By NULS SG',
+    c_chinese:'NULS中文社区论坛',
+    c_chinese_wheat:'By 小麦',
+    enter:'进入',
+
+    cc_title:'社区章程',
+    cc_info:'根据NULS项目的发展需要，为了更好的促进NULS社区良性运转，达成NULS让区块链技术更简单的愿景。NULS社区将不断探索和实施NULS社区自治，实现NULS项目自治和自进化。基于NULS社区文化和社区理念，特此制定社区发展章程。',
+    cc_more:'了解更多，社区章程。',
+
+    you_title:'为社区做贡献，我能做点什么？',
+    you_info:'NULS社区是NULS发展的源动力，我们需要每一位有共同愿景的伙伴加入，来这里找到你想要做的事情，为社区贡献一份力量，为NULS社区生态发展添砖加瓦。',
+  },
+
   bottom: {
     title: 'Join The NULS Community',
     info: 'NULS wants to reshape the world with blockchain. If you would like to be a part of our growing community and participate in this journey, join our social media channels today',
     team: 'View NULS Team',
-
     list0: 'Copyright',
     list1: 'Proudly built in Singapore',
     list2: 'Website design by petravic',
     list3: '白皮书',
     list4: '黄皮书',
-
   }
 };

@@ -46,7 +46,7 @@
 
 <style lang="less">
   .mission {
-    background-color: #fff;
+    background: url(./../../assets/images/mission-img.png) no-repeat right #fff;
     text-align: center;
     clear: none;
     .spaceship {
@@ -57,7 +57,6 @@
         padding: 0;
       }
       .spaceship-content {
-	      background: url(./../../assets/images/mission-img.png) no-repeat right;
 	      width: 100%;
         max-width: 1280px;
         margin: 0 auto;

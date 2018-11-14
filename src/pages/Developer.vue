@@ -11,10 +11,10 @@
             <img class="img" src="./../assets/images/d-top-bg.png">
           </div>
           <div class="w_right fl">
-            <h6 class="h6 font-30">Become one of CCC,make NULS better</h6>
-            <p class="font-18 c_green cursor-p" @click="toUrl('')">Click for detaile ></p>
-            <p class="font-18 c_green cursor-p" @click="toUrl('')">CCC Handbook Guide (test version) ></p>
-            <p class="font-18 c_green cursor-p" @click="toUrl('')">Weekly update ></p>
+            <h6 class="h6 font-30">{{$t('developer.title3')}}</h6>
+            <p class="font-18 c_green cursor-p" @click="toUrl('https://nuls.community/d/9-invitation-of-community-developers')">{{$t('developer.info1')}} <i class="el-icon-arrow-right"></i></p>
+            <p class="font-18 c_green cursor-p" @click="toUrl('https://goo.gl/AhwqhM')">{{$t('developer.info2')}} <i class="el-icon-arrow-right"></i></p>
+            <p class="font-18 c_green cursor-p" @click="toUrl('https://nuls.community/d/173-nuls-dev-community-weekly-summary/2')">{{$t('developer.info3')}} <i class="el-icon-arrow-right"></i></p>
           </div>
         </div>
       </div>
@@ -23,18 +23,18 @@
           <h2 class="h2">Start To Develop</h2>
           <ul class="t_ul">
             <li class="t_li fl">
-              <p class="img"><img src="./../assets/images/Github-1.png"></p>
-              <p class="c_green cursor-p" @click="toUrl('https://github.com/nuls-io')">Github ></p>
+              <p class="img shadow"><img src="./../assets/images/Github-1.png"></p>
+              <p class="c_green cursor-p" @click="toUrl('https://github.com/nuls-io')">Github <i class="el-icon-arrow-right"></i></p>
             </li>
             <li class="t_li fl">
-              <p class="img"><img src="./../assets/images/Docs.png"></p>
-              <p class="c_green cursor-p" @click="toUrl('http://dev.nuls.io')">Docs ></p>
+              <p class="img shadow"><img src="./../assets/images/Docs.png"></p>
+              <p class="c_green cursor-p" @click="toUrl('http://dev.nuls.io')">Docs <i class="el-icon-arrow-right"></i></p>
             </li>
             <li class="t_li fl">
-              <p class="img"><img src="./../assets/images/Tools.png"></p>
+              <p class="img shadow"><img style="margin-top: 17px" src="./../assets/images/Tools.png"></p>
               <p class="c_green cursor-p" @click="toUrl('http://dev.nuls.io/contract/IdeaPlugin.html')">IDEA Plugin
-                ></p>
-              <p class="c_green cursor-p" @click="toUrl('http://dev.nuls.io/docs/sdk.html')">SDK ></p>
+                <i class="el-icon-arrow-right"></i></p>
+              <p class="c_green cursor-p" @click="toUrl('http://dev.nuls.io/docs/sdk.html')">SDK <i class="el-icon-arrow-right"></i></p>
             </li>
           </ul>
         </div>
@@ -103,6 +103,7 @@
     .developer-info {
       min-height: 1200px;
       @media (max-width: 768px) {
+        min-height: 45rem;
         max-height: 100%;
       }
       .d-top {
@@ -112,22 +113,23 @@
             .img {
               width: 418px;
               height: 168px;
-              margin-top: 50px;
+              margin-top: 120px;
               @media (max-width: 768px) {
-                width: 80%;
-                margin: 2rem 0 0 1.8rem;
+                width: 90%;
+                height: auto;
+                margin: 2rem 0 0 1rem;
               }
             }
           }
           .w_right {
-            margin-left: 96px;
+            margin: 0 0 100px 96px;
             @media (max-width: 768px) {
               margin: 0 0 2rem 0;
             }
             .h6 {
               color: #0a2140;
               font-size: 30px;
-              margin: 40px 0 36px 0;
+              margin: 120px 0 30px 0;
               @media (max-width: 768px) {
                 margin: 1rem 0 0.5rem 0;
                 font-size: 1.2rem;
@@ -139,7 +141,7 @@
               line-height: normal;
               padding: 0 0 20px 0;
               @media (max-width: 768px) {
-                padding: 0 0 0 0.5rem;
+                padding: 0 0 0.5rem 0.5rem;
               }
             }
           }
@@ -147,19 +149,25 @@
       }
       .d-center {
         background-color: #F5F9FF;
-        height: 580px;
+        height: 545px;
         @media (max-width: 768px) {
           height: 15rem;
         }
         .w_1280 {
           .h2 {
             margin: 0 auto;
-            padding: 120px 0 100px;
+            padding: 114px 0 80px;
+            @media (max-width: 768px) {
+              padding: 1rem 0 1rem;
+            }
           }
           .t_ul {
             width: 1000px;
             min-height: 100px;
             margin: 0 auto;
+            @media (max-width: 768px) {
+              width: 100%;
+            }
             .t_li {
               width: 33.333%;
               text-align: center;
@@ -171,17 +179,17 @@
                 width: 92px;
                 border-radius: 92px;
                 text-align: center;
-                margin: 0 0 25px 120px;
+                margin: 0 0 32px 120px;
                 @media (max-width: 768px) {
-                  width: 40%;
+                  margin: 0 0 0.5rem 0.5rem;
                 }
                 img {
-                  margin: 20px 0 0 0;
+                  margin: 15px 0 0 0;
                   width: auto;
                 }
               }
               .c_green {
-                line-height: 40px;
+                line-height: 18px;
                 @media (max-width: 768px) {
                   font-size: 0.8rem;
                   line-height: 1.5rem;
@@ -198,6 +206,7 @@
         padding: 0;
         height: 640px;
         @media (max-width: 768px) {
+          height: 25rem;
           max-width: 100%;
           margin: 0 0 4rem;
           background: #e9f4f9 no-repeat left;
@@ -209,10 +218,10 @@
           }
         }
         .h2 {
-          color: #0b1422;
+          color: #0a2140;
           font-size: 28px;
           opacity: 0.9;
-          padding: 120px 0 60px 0;
+          padding: 120px 0 50px 0;
           margin: 0 auto;
           text-align: left;
           @media (max-width: 768px) {
@@ -222,16 +231,17 @@
           }
         }
         p {
-          color: #0b1422;
+          color: @color_1;
           padding: 0 0 60px 0;
           max-width: 600px;
-          line-height: 30px;
+          line-height: 40px;
           font-size: 24px;
           margin: 0;
           text-align: left;
           @media (max-width: 768px) {
             width: 100%;
             margin: 0;
+            font-size: 1.2rem;
             padding: 1.5rem 0.5rem;
             line-height: 1.5rem;
           }
@@ -245,6 +255,12 @@
           }
           .el-button {
             width: 225px;
+          }
+          .btn-lang{
+            background: transparent;
+            span{
+              color: #59a500;
+            }
           }
         }
         .d-bts1 {

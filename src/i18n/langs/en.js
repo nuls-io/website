@@ -127,6 +127,10 @@ module.exports = {
     info: 'If you need testnet NULS,please download the testnet wallet and offer your address to apply testnet NULS',
     bt1: 'Download Testnet wallet',
     bt2: 'Applying for NULS Test Tokens',
+    title3:'Become one of CCC,make NULS better',
+    info1:'Click for detaile',
+    info2:'CCC Handbook Guide (test version)',
+    info3:'Weekly update',
   },
 
   team:{
@@ -162,6 +166,27 @@ module.exports = {
   joinNuls:{
     title:'Join NULS Community',
     info:'We are now recruiting committed and passionate individuals to contribute to NULS open-source community.Join us now! Together we can learn, grow and share, building something amazing in the process.',
+  },
+
+  community:{
+    title:'Community',
+    info:'We welcome you to join us and become a part of the NULS Community. Our community is a collection of people who are highly educated about our culture and philosophy. Together to  make progress  towards the ecological development of NULS by sharing our community goals and vision. The NULS community is composed of many members with m any talents and roles: the NULS Foundation, board members, contributors, including the open source technology community known as the CODE CRAFT COUNCIL (CCC), and all NULS holders, traders and investors.',
+
+    title1:'Find Out More About the NULS Community',
+    c_name:'Community Wheat',
+    c_name_by:'By CCC Moshe',
+    c_forun:'Community Forum',
+    c_forun_sg:'By NULS SG',
+    c_chinese:'Chinese Community Forum ',
+    c_chinese_wheat:'By Wheat',
+    enter:'Enter',
+
+    cc_title:'Community Constitution',
+    cc_info:'In order to establish the development of the NULS project and promote the seamless cooperation of the NULS community, and to achieve the NULS vision of making blockchain technology easier, we will continue to explore and implement NULS community autonomy to enable self-governance and self-evolution. For the purpose of advancing the NULS community culture and community philosophy, a community development constitution is hereby established.',
+    cc_more:'Learn More About the Community Constitution',
+
+    you_title:'How Can You Make a Contribution to the Community?',
+    you_info:'The NULS community is the driving force behind the development of NULS. We invite you to share in our vision and join us. Simply find what you want to do and start today! We offer many bounties for your contributions as a way to show our gratitude for your participation in our ecological development.',
   },
 
   bottom: {
