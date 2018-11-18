@@ -44,7 +44,7 @@
       </div>
       <div class="c-join cb">
         <div class="centers">
-          <h2 class="h2">Join Group</h2>
+          <h2 class="h2">{{$t('community.join')}}</h2>
           <ul>
             <li class="shadow fl cursor-p" @click="toUrl(site.link)" v-for="site in findUsList">
               <img class="fl" :src=site.imgUrl>
@@ -90,7 +90,7 @@
         let that = this;
         getFindUsList(siteId, pageSize, pageNum)
           .then(function (response) {
-            console.log(response);
+            //console.log(response);
             for (let list of response.data.contentList) {
               list.imgUrl = API_ROOT + list.imgUrl.substr(1, list.imgUrl.length);
             }
@@ -194,7 +194,7 @@
             }
           }
           p {
-            max-width: 800px;
+            max-width: 750px;
             color: @color_1;
             line-height: 40px;
             margin: 0 0 50px 0;
@@ -238,7 +238,7 @@
             float: right;
             color: @color_1;
             line-height: 45px;
-            text-align: right;
+            text-align: left;
             @media (max-width: 768px) {
               width: 100%;
               line-height: 1.4rem;

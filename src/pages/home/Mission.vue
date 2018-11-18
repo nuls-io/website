@@ -12,7 +12,7 @@
     </div>
 
     <el-dialog title="" :visible.sync="dialogFormVisible">
-      <p>Download the whitepaper in your preferred language choice</p>
+      <p>{{$t('home.w_title')}}</p>
       <ul>
         <li><a href="https://nuls.io/api/v1/download/files/papers/white/NulsWhitepaper1.1.pdf" target="_blank">English</a></li>
         <li><a href="https://nuls.io/api/v1/download/files/papers/white/NULS_whitepaper_zh_V1.0.pdf" target="_blank">中文</a></li>
@@ -47,8 +47,12 @@
 <style lang="less">
   .mission {
     background: url(./../../assets/images/mission-img.png) no-repeat right #fff;
+
     text-align: center;
     clear: none;
+    @media (max-width: 768px){
+      background: #fff;
+    }
     .spaceship {
       min-height: 459px;
       padding:0;

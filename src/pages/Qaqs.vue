@@ -2,34 +2,23 @@
   <div class="faqs">
     <div class="header-bg">
       <HeaderList></HeaderList>
-      <h1 class="h1 cb">FAQ</h1>
+      <h1 class="h1 cb">{{$t('qaqs.title')}}</h1>
     </div>
     <div class="faqs-info">
-      <h3>1. What is NULS?</h3>
-      <p>NULS is a highly customizable modular blockchain infrastructure</p>
-      <p>It consists of a microkernel and functional modules. NULS provides smart contract, multi-chain mechanism and
-        cross-chain consensus. It aims to break the technical barriers of blockchain, to reduce the cost of development,
-        and to promote the usage of blockchain technology in the commercial field.</p>
-      <p>What is the biggest advantage NULS has over competitors? Nuls aims to cater for a variety of applications, and
-        its modular design makes it easy for small-businesses and the community to create, update and implement
-        applications via our platform.</p>
-      <h3>2. When was the ICO?</h3>
-      <p>There was no ICO, the tokens were airdropped in accordance with INS (InChain) holders 1:1.</p>
-      <p>What does Nuls have to do with InChain InChain was created for businesses purposes by the team, Nuls aims to
-        cater for anyone in the world small-businesses, innovators and developers. The Nuls project will be built by the
-        InChain team and in the future the InChain project will be implemented into the Nuls Blockchain as a
-        Side-Chain.</p>
-      <h3>3. What is Inchain?</h3>
-      <p>Inchain is an anti-counterfeiting blockchain already established and a fully working product.
-        <a href="https://www.inchain.org/index_en.html#page2" target="_blank">https://www.inchain.org/index_en.html#page2.</a>
+      <h3>{{$t('qaqs.title0')}}</h3>
+      <p>{{$t('qaqs.p0_0')}}</p>
+      <p>{{$t('qaqs.p0_1')}}</p>
+      <p>{{$t('qaqs.p0_2')}}</p>
+      <h3>{{$t('qaqs.title1')}}</h3>
+      <p>{{$t('qaqs.p1_0')}}</p>
+      <p>{{$t('qaqs.p1_1')}}</p>
+      <h3>{{$t('qaqs.title2')}}</h3>
+      <p>{{$t('qaqs.p2_0')}}<a href="https://www.inchain.org/index_en.html#page2" target="_blank">https://www.inchain.org/index_en.html#page2.</a>
       </p>
-      <h3>What is the total supply/max supply?</h3>
-      <p>The total supply on main-net launch is 100M. 40M are circulating and airdropped for Inchain holders, the rest
-        of the supply is used to grow our project on several fronts eg; funding for projects, community growth,
-        community developers. You can learn more by viewing our whitepaper.
-        <a href="https://nuls.io/papers" target="_blank"></a>https://nuls.io/papers
+      <h3>{{$t('qaqs.title3')}}</h3>
+      <p>{{$t('qaqs.p3_0')}}<a href="https://nuls.io/papers" target="_blank"></a>https://nuls.io/papers
       </p>
-      <p>Where do the rewards come from and what are they?</p>
+      <p>{{$t('qaqs.p3_1')}}</p>
     </div>
     <Bottom></Bottom>
   </div>

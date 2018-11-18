@@ -14,7 +14,7 @@
 					</div>
 				</div>
 				<div class="buttonParent" @click="setActive('steam')">
-					<div class="button" :class="{ isActive: isActive('steem') }">
+					<div class="button" :class="{ isActive: isActive('steam') }">
 						{{$t('home.road_tab_title2')}}
 					</div>
 				</div>
@@ -59,23 +59,24 @@
 				<swiper v-if="isActive('water')" :options="swiperOptions" :key="`${slidesPerView}-${active}`">
 					<swiper-slide>
 						<div class="triangle" />
-						<p class="bold">{{$t('home.road_tab_water_1.p0')}}1</p>
+						<p class="bold">{{$t('home.road_tab_water_1.p0')}}</p>
 						<p>{{$t('home.road_tab_water_1.p1')}}</p>
 						<p>{{$t('home.road_tab_water_1.p2')}}</p>
 						<p>{{$t('home.road_tab_water_1.p3')}}</p>
 					</swiper-slide>
 					<swiper-slide>
 						<div class="triangle" />
-						<p class="bold">Main-net test2</p>
-						<p>{{$t('home.road_tab_water_2.p0')}}</p>
+						<p class="bold">{{$t('home.road_tab_water_2.p0')}}</p>
 						<p>{{$t('home.road_tab_water_2.p1')}}</p>
 						<p>{{$t('home.road_tab_water_2.p2')}}</p>
 						<p>{{$t('home.road_tab_water_2.p3')}}</p>
+						<p>{{$t('home.road_tab_water_2.p4')}}</p>
 					</swiper-slide>
 					<swiper-slide>
 						<div class="triangle" />
-						<p class="bold">{{$t('home.road_tab_water_3.p0')}}3</p>
+						<p class="bold">{{$t('home.road_tab_water_3.p0')}}</p>
 						<p>{{$t('home.road_tab_water_3.p1')}}</p>
+						<p>{{$t('home.road_tab_water_3.p2')}}</p>
 					</swiper-slide>
 				</swiper>
 				<swiper v-if="isActive('steam')" :options="swiperOptions" :key="`${slidesPerView}-${active}`">
@@ -86,10 +87,10 @@
 					</swiper-slide>
 					<swiper-slide>
 						<div class="triangle" />
-						<p class="bold">Main-net test</p>
-						<p>{{$t('home.road_tab_steam_2.p0')}}</p>
+						<p class="bold">{{$t('home.road_tab_steam_2.p0')}}</p>
 						<p>{{$t('home.road_tab_steam_2.p1')}}</p>
 						<p>{{$t('home.road_tab_steam_2.p2')}}</p>
+						<p>{{$t('home.road_tab_steam_2.p3')}}</p>
 					</swiper-slide>
 					<swiper-slide>
 						<div class="triangle" />

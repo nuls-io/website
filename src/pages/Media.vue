@@ -12,7 +12,7 @@
       </el-carousel>
     </div>
     <el-tabs v-model="activeMedia" @tab-click="handleClick">
-      <el-tab-pane label="Bi-Monthly" name="social">
+      <el-tab-pane :label="$t('media.tab0')"  name="social">
         <div class="steps">
           <div class="step">
             <div class="step-data fl">
@@ -62,7 +62,7 @@
 
       </el-tab-pane>
 
-      <el-tab-pane label="News" name="news">
+      <el-tab-pane :label="$t('media.tab1')" name="news">
         <ul class="news-list" v-loading="newsListLoading">
             <li @click="toMediaDetails(site.url)"  v-for="site in newList">
               <p class="fl">
@@ -83,7 +83,7 @@
         </el-pagination>
       </el-tab-pane>
 
-      <el-tab-pane label="Guide" name="guide">
+      <el-tab-pane :label="$t('media.tab2')" name="guide">
         <ul class="news-list">
           <template v-for="site in guideList">
             <li @click="toMediaDetails(site.url)">

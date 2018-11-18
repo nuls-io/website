@@ -31,13 +31,13 @@
               <el-menu-item index="6-4">{{$t('nav.about4')}}</el-menu-item>
             </el-submenu>
           </el-menu>
-          <div class="language" v-show="false">
+          <div class="language">
             <el-select v-model="languageValue" @change="changeLanguage">
               <el-option
                 v-for="item in languageOptions"
-                :key="item.value"
-                :label="item.label"
-                :value="item.value">
+                :key="item.id"
+                :label="item.desc"
+                :value="item.name">
               </el-option>
             </el-select>
 
@@ -317,4 +317,9 @@
     padding: 0;
     border-radius: 15px;
   }
+
+/*  .el-select-dropdown{
+    background-color: transparent;
+    border: 1px solid #c1c1c1;
+  }*/
 </style>

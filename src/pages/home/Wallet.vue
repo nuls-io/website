@@ -24,11 +24,11 @@
         <div class="w-bt">
           <el-dropdown class="w-select">
             <el-button type="success">
-              {{valueDownload}}<i class="el-icon-arrow-down el-icon--right"></i>
+              {{$t('home.wallet_list_title')}}{{valueDownload}}<i class="el-icon-arrow-down el-icon--right"></i>
             </el-button>
             <el-dropdown-menu slot="dropdown">
               <template v-for="item in optionsDownload">
-                <el-dropdown-item @click.native="toDownload(item.value)">{{item.label}}
+                <el-dropdown-item @click.native="toDownload(item.value)">{{$t("home.wallet_list_"+ item.label)}}
                 </el-dropdown-item>
               </template>
             </el-dropdown-menu>
@@ -54,11 +54,11 @@
     data() {
       return {
         optionsDownload: [
-          {value: '1', label: 'Windows Download'},
-          {value: '2', label: 'Mac Download'},
-          {value: '3', label: 'Linux Download'},
+          {value: '1', label: '0'},
+          {value: '2', label: '1'},
+          {value: '3', label: '2'},
         ],
-        valueDownload: 'Download'
+        valueDownload: ''
       }
     },
     mounted() {
@@ -77,7 +77,7 @@
         getWalletDownloadList(siteId, pageSize, pageNum)
           .then(function (response) {
             //console.log(response);
-            that.valueDownload = 'Download ' + response.data.contentList[0].title;
+            that.valueDownload = response.data.contentList[0].title;
             that.optionsDownload[0].value = response.data.contentList[0].windowslink;
             that.optionsDownload[1].value = response.data.contentList[0].maclink;
             that.optionsDownload[2].value = response.data.contentList[0].linuxlink;

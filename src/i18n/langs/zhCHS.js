@@ -51,74 +51,78 @@ module.exports = {
 
     wallet_title: 'NULS钱包',
     wallet_info: 'NULS钱包由核心团队开发，支持在多种平台上使用',
-    wallet_list_title: '桌面钱包',
+    wallet_list_title: '下载',
     wallet_list_0: 'Windows版本下载',
     wallet_list_1: 'MacOS版本下载',
     wallet_list_2: 'Linux版本下载',
     wallet_online:'网页钱包',
 
     road_title: '路线图',
-    road_tab_title0: '冰川',
-    road_tab_title1: '海洋',
-    road_tab_title2: '风云',
+    road_tab_title0: '冰',
+    road_tab_title1: '水',
+    road_tab_title2: '汽',
 
     road_tab_ice_1: {
       time: '2018.05',
-      p0: 'Main-net test',
-      p1: 'Complete the main-net\'s development, testing phase commence',
-      p2: 'Improve the technical design documentation',
+      p0: '主网测试',
+      p1: '完成主网开发，并进入测试阶段',
+      p2: '改进技术设计文档',
     },
     road_tab_ice_2: {
       time: '2018.07',
-      p0: 'Main-net launch',
-      p1: 'Complete development of basic modules',
-      p2: 'Continuous improvements of the built-in modules',
-      p3: 'Launch blockchain explorer',
-      p4: 'Establish and expand an open-source development community',
+      p0: '主网发布',
+      p1: '完成基础模块的开发',
+      p2: '持续改进内置模块',
+      p3: '发布区块链浏览器',
+      p4: '成立并拓展开源技术社区',
     },
     road_tab_ice_3: {
       time: '2018.09',
-      p0: 'Release smart contract module',
-      p1: 'Release universal ledger module',
-      p2: 'Ecosystem improvements',
-      p3: 'Start and promote more applications to be accessed within the NULS ecosystem',
+      p0: '推出智能合约模块',
+      p1: '推出通用账本模块',
+      p2: '完善NULS生态',
+      p3: '启动并拓展更多可在NULS生态系统中访问的应用程序',
     },
     road_tab_ice_4: {
       time: '2018.12',
-      p0: 'Chain Factory launch',
-      p1: 'NULS innovative design system, which allows for the creation of a customizable chain using our module repository, in addition to connecting to other chains in the NULS ecosystem.',
+      p0: '链工厂的发布',
+      p1: 'NULS系统的创新设计，允许任何人使用模块仓库进行定制发链，同时可与NULS生态系统中的其它链进行连接。',
     },
     road_tab_water_1: {
-      p0: 'Technology',
-      p1: 'Complete more consensus module implementations',
-      p2: 'Grasp self-evolution of network and storage modules (support Exabyte of data volume storage)',
-      p3: 'Form a set of standard technical solutions to be used in various industries',
-      p4: 'Establish a new ecosystem which is composed of blockchain and other fields such as big data and artificial intelligence',
+      p0: '技术',
+      p1: '实现网络、储存等模块的自我进化',
+      p2: '支持EB级数据量储存，形成对接各行业应用的标准技术方案体系',
+      p3: '探索区块链与大数据、人工智能等领域结合的新生态系统',
+      p4: '',
     },
     road_tab_water_2: {
-      p0: 'Complete more functional modules, including POWER module and POS module',
-      p1: 'At least 5 sub-chains join NULS',
-      p2: 'At least 15 applications run on NULS',
-      p3: 'Provide technicals solutions for at least 3 industries',
+      p0: '主网',
+      p1: '开发包括POW、POS等共识模块',
+      p2: '至少接入5条友链',
+      p3: '至少运行15种应用',
+      p4: '设计至少3个行业技术方案',
     },
     road_tab_water_3: {
-      p0: 'Ecology',
-      p1: 'Build a mature open-source community, large scale set up application sub-chain',
+      p0: '生态',
+      p1: '形成一个成熟的开源社区',
+      p2: '大范围建立应用友链',
     },
     road_tab_steam_1: {
-      p0: 'Technology',
-      p1: 'Providing a complete solution to solve production and management in both industry and agriculture. Consisting of a complete technology platform for the integration of blockchain big data and artificial intelligence all in one ecosystem.',
+      p0: '技术',
+      p1: '建立一个区块链、大数据和人工智能融合发展的技术平台，为工业、农业和服务业的生产和经营需求提供全方位的解决方案',
     },
     road_tab_steam_2: {
-      p0: 'At least 30 sub-chains join NULS',
-      p1: 'At least 50 applications run on NULS',
-      p2: 'Provides technical solutions for at least 20 industries, build eco ecosystem based on NULS, such as big data',
+      p0: '主网',
+      p1: '接入至少30条友链',
+      p2: '运行至少50个应用',
+      p3: '完成至少20个行业解决方案，建立以NULS为基础的新生态系统（比如大数据）',
     },
     road_tab_steam_3: {
-      p0: 'Ecology',
-      p1: 'Build an open-source community integrated within the blockchain, big data, artificial intelligence sectors. Provide comprehensive value docking and collaboration platforms.',
+      p0: '生态',
+      p1: '形成一个以区块链、大数据和人工智能融合发展的开源社区，提供全面的价值交互和协作平台。',
     },
 
+    w_title:'请选择白皮书的语言',
   },
 
   developer: {
@@ -131,6 +135,7 @@ module.exports = {
     info1:'了解更多',
     info2:'CCC指导手册（测试版）',
     info3:'开发者周报',
+    title4:'开发工具',
   },
 
   team:{
@@ -139,14 +144,14 @@ module.exports = {
   },
 
   whiteYellow:{
-    h51:'NULS is a blockchain infrastructure for customizable services, driven by our global open-source community.',
-    p1:'Following the principles of pluggability, modularization and parallel expansion, NULS provides smart contracts, multi-chain mechanism and cross-chain consensus to reduce cost of development and usage, and to promote the application of blockchain in the commercial field and the interaction among chains.',
-    h52:'NULS is a global blockchain open-source project',
-    p2:'Upholding the "chain" as the core in the NULS development philosophy, NULS is striving for building its core product: "Chain Factory". In the meantime, NULS will realize the value circulation among chains through cross-chain module and build the ecosystem of blockchains.',
-    h53:'Whitepaper and Yellowpaper',
-    p3:'The NULS whitepaper is an authoritative report that addresses what NULS’ goal is and how we plan to achieve it.',
-    p4:'The NULS yellowpaper is the technical detailed version of the whitepaper, which drills down into the underlying aspects of NULS.',
-    download:'Download',
+    h51:'NULS是由我们的全球开源社区驱动的可定制服务的Blog Stand基础设施',
+    p1:'NULS遵循可插拔、模块化和并行扩展的原则，提供智能合同、多链机制和跨链一致性，以降低开发和使用成本，并促进模块链在商业领域的应用以及模块链之间的相互作用链。',
+    h52:'Nuls是一个全球性的BlokCu链开源项目',
+    p2:'NULS秉承“链”为核心的发展理念，努力打造其核心产品——“连锁工厂”，同时通过跨链模块实现连锁企业之间的价值循环，构建连锁企业生态系统。',
+    h53:'白皮书和黄皮书',
+    p3:'Nuls白皮书是一个权威性的报告，它指出了Nuls的目标是什么，以及我们打算如何实现它。',
+    p4:'Nuls黄纸是白皮书的技术详细版本，它深入研究了NULs的基本方面。',
+    download:'下载',
   },
 
   downloads:{
@@ -160,12 +165,17 @@ module.exports = {
 
   partners:{
     title:'合作伙伴',
-    info:'根据不同类型的合作需求，NULS的合作伙伴涉及技术支持、社区协助，市场扩展与营销等方面，助力NULS实现既定的目标，并携手打造NULS大生态。 ',
+    info:'根据不同类型的合作需求，NULS的合作伙伴涉及技术支持、社区协助，市场扩展与营销等方面，助力NULS实现既定的目标，并携手打造NULS大生态。',
+    name0:'战略投资',
+    name1:'生态伙伴',
+    name2:'战略伙伴',
+    name3:'媒体合作',
+    name4:'平台',
   },
 
   joinNuls:{
-    title:'Join NULS Community',
-    info:'We are now recruiting committed and passionate individuals to contribute to NULS open-source community.Join us now! Together we can learn, grow and share, building something amazing in the process.',
+    title:'加入Nuls',
+    info:'我们正在招募致力于和热情的个人为Nuls开源社区做出贡献。加入我们吧！我们可以一起学习、成长和分享，在这个过程中创造出惊人的东西。',
   },
 
   community:{
@@ -187,16 +197,51 @@ module.exports = {
 
     you_title:'为社区做贡献，我能做点什么？',
     you_info:'NULS社区是NULS发展的源动力，我们需要每一位有共同愿景的伙伴加入，来这里找到你想要做的事情，为社区贡献一份力量，为NULS社区生态发展添砖加瓦。',
+
+    join:'加入组织',
+  },
+
+  media:{
+    tab0:'半月报',
+    tab1:'新闻',
+    tab2:'指南',
+  },
+
+  qaqs:{
+    title:'常见问题解答',
+
+    title0:'1.NULS是什么？',
+    p0_0:'NULS是高度可定制的模块化链链基础设施。',
+    p0_1:'它由一个微内核和功能模块组成。NULS提供了智能契约、多链机制和跨链共识。旨在打破连锁经营的技术壁垒，降低发展成本，促进连锁经营技术在商业领域的应用。',
+    p0_2:'Nuls在竞争对手上的最大优势是什么？Nuls旨在满足各种应用，其模块化设计使得小企业和社区能够通过我们的平台容易地创建、更新和实现应用。',
+
+    title1:'2.ICO是什么时候？',
+    p1_0:'没有ICO，根据INS（INSLINK）持有人1:1空投令牌。',
+    p1_1:'Nuls与InChain InChain有什么关系？InChain是由团队为商业目的而创建的，Nuls旨在迎合世界上任何小企业、创新者和开发者。Nuls项目将由InChain团队构建，将来InChain项目将作为侧链实现到NulsBlock.。',
+
+    title2:'3.Inchain是什么？',
+    p2_0:'“Inchain”是一种已建立的防伪链链，是一种完全有效的产品。',
+
+    title3:'4. 总供给量和最大供应量是多少？',
+    p3_0:'主网投放的总供应量是100兆。40兆的流通和空投给仁川持有人，其余的供应量用于在几个方面发展我们的项目，例如：项目资金、社区发展、社区开发商。你可以通过看我们的白皮书了解更多。',
+    p3_1:'奖励来自哪里？他们是什么？',
   },
 
   bottom: {
-    title: 'Join The NULS Community',
-    info: 'NULS wants to reshape the world with blockchain. If you would like to be a part of our growing community and participate in this journey, join our social media channels today',
+    title: '加入NULS社区',
+    info: 'NULS想用区块链重塑世界。 如果您想成为我们不断发展的社区的一员并参与这个过程，请通过我们的社交媒体立即加入我们吧',
     team: 'View NULS Team',
     list0: 'Copyright',
     list1: 'Proudly built in Singapore',
     list2: 'Website design by petravic',
     list3: '白皮书',
     list4: '黄皮书',
+
+    list5: '什么是NULS',
+    list6: '支持',
+    list7: '问答',
+
+    inputTitle:'请留下你的邮箱，我们会把最新消息发送给你',
+    inputSubmit:'发送',
   }
 };

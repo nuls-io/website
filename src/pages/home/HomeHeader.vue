@@ -29,13 +29,14 @@
     </el-row>
 
     <el-dialog title="" :visible.sync="videoDialog" v-if="videoDialog"  width="1024" center @close="closeVideoDialog">
-      <div class="pc">
-        <iframe width="1024" height="576" src="https://www.youtube.com/embed/2rgcxxaJrWs" frameborder="0"
-                 allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div class="pc" v-html="iframeUrl">
+       <!-- <iframe width="1024" height="576" src="https://www.youtube.com/embed/2rgcxxaJrWs" frameborder="0"
+                 allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
+        <!--<iframe width="1024" height="576" frameborder="0" src="https://v.qq.com/txp/iframe/player.html?vid=h0794er9ny4" allowFullScreen="true"></iframe>-->
       </div>
-      <div class="iphone">
-        <iframe width="100%" height="320" src="https://www.youtube.com/embed/2rgcxxaJrWs" frameborder="0"
-                allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div class="iphone" v-html="iframeUrlIphone">
+       <!-- <iframe width="100%" height="320" src="https://www.youtube.com/embed/2rgcxxaJrWs" frameborder="0"
+                allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
       </div>
     </el-dialog>
   </div>
@@ -48,6 +49,8 @@
     data() {
       return {
         videoDialog: true,
+        iframeUrl:'',
+        iframeUrlIphone:'',
       };
     },
     components: {
@@ -59,11 +62,16 @@
       }, 1);
     },
     mounted() {
-      let tag = document.createElement('script');
-      tag.src = "https://www.youtube.com/iframe_api";
-      let firstScriptTag = document.getElementsByTagName('script')[0];
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
+      setInterval(() => {
+        let language=sessionStorage.hasOwnProperty('langs') ? sessionStorage.getItem('langs') ==='zh' ? 1 : 2 : 2;
+        if(language.toString() === '2'){
+          this.iframeUrl = "<iframe width=\"1024\" height=\"576\" src=\"https://www.youtube.com/embed/2rgcxxaJrWs\" frameborder=\"0\"\n" +"allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>";
+          this.iframeUrlIphone = "<iframe width=\"100%\" height=\"320\" src=\"https://www.youtube.com/embed/2rgcxxaJrWs\" frameborder=\"0\"\n" +"allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>";
+        }else {
+          this.iframeUrl ="<iframe width=\"1024\" height=\"576\" frameborder=\"0\" src=\"https://v.qq.com/txp/iframe/player.html?vid=h0794er9ny4\" allowFullScreen=\"true\"></iframe>"
+          this.iframeUrlIphone ="<iframe width=\"100%\" height=\"320\" frameborder=\"0\" src=\"https://v.qq.com/txp/iframe/player.html?vid=h0794er9ny4\" allowFullScreen=\"true\"></iframe>"
+        }
+      }, 100);
     },
     methods: {
       /**

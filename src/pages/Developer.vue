@@ -20,7 +20,7 @@
       </div>
       <div class="d-center cb">
         <div class="w_1280">
-          <h2 class="h2">Start To Develop</h2>
+          <h2 class="h2">{{$t('developer.title4')}}</h2>
           <ul class="t_ul">
             <li class="t_li fl">
               <p class="img shadow"><img src="./../assets/images/Github-1.png"></p>

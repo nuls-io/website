@@ -9,7 +9,7 @@
           <p>{{$t('partners.info')}}</p>
         </div>
         <div class="investment-list">
-          <h2 class="h2">Strategic Investment</h2>
+          <h2 class="h2">{{$t('partners.name0')}}</h2>
           <ul>
             <li v-for="site in investmentList">
               <a :href="site.link" target="_blank"><img :src="site.url"  /></a>
@@ -17,7 +17,7 @@
           </ul>
         </div>
         <div class="ecological-list cb">
-          <h2 class="h2">Ecological Partners</h2>
+          <h2 class="h2">{{$t('partners.name1')}}</h2>
           <ul>
             <li v-for="site in ecologicalList">
               <a :href="site.link" target="_blank"><img :src="site.url"  /></a>
@@ -25,7 +25,7 @@
           </ul>
         </div>
         <div class="strategic-list cb">
-          <h2 class="h2">Strategic Partners</h2>
+          <h2 class="h2">{{$t('partners.name2')}}</h2>
           <ul>
             <li v-for="site in strategicList">
               <a :href="site.link" target="_blank"><img :src="site.url"  /></a>
@@ -33,7 +33,7 @@
           </ul>
         </div>
         <div class="media-list cb"  v-show="mediaList.length > 0">
-          <h2 class="h2">Media Partners</h2>
+          <h2 class="h2">{{$t('partners.name3')}}</h2>
           <ul>
             <li v-for="site in mediaList">
               <a :href="site.link" target="_blank"><img :src="site.url"  /></a>
@@ -41,7 +41,7 @@
           </ul>
         </div>
         <div class="platforms-list cb" v-show="platformsList.length > 0">
-          <h2 class="h2">Platforms</h2>
+          <h2 class="h2">{{$t('partners.name4')}}</h2>
           <ul>
             <li v-for="site in platformsList">
               <a :href="site.link" target="_blank"><img :src="site.url"  /></a>

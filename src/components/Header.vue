@@ -125,7 +125,6 @@
         let that = this;
         getLanguagelist()
           .then(function (response) {
-            //console.log(response);
             that.languageOptions = response.data.siteList;
           })
           .catch(function (error) {

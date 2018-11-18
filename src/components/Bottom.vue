@@ -29,10 +29,10 @@
         <el-form :inline="true" :model="emailForm" :rules="emailRules" ref="emailForm">
           <el-form-item label="" prop="emailAddress">
             <el-input v-model="emailForm.emailAddress"
-                      placeholder="Leave your email and we will send you the latest information"></el-input>
+                      :placeholder="$t('bottom.inputTitle')" ></el-input>
           </el-form-item>
           <el-form-item class="form-bt">
-            <el-button type="primary" class="bg-green-btn" @click="submitForm('emailForm')">Contact us</el-button>
+            <el-button type="primary" class="bg-green-btn" @click="submitForm('emailForm')">{{$t('bottom.inputSubmit')}}</el-button>
           </el-form-item>
         </el-form>
       </div>
@@ -46,7 +46,7 @@
           <ul>
             <li>{{$t('nav.about')}}</li>
             <li>
-              <router-link :to="{ name: 'whiteYellow' }">What is NULS</router-link>
+              <router-link :to="{ name: 'whiteYellow' }">{{$t('bottom.list5')}}</router-link>
             </li>
             <li>
               <router-link :to="{ name: 'team' }">{{$t('nav.about2')}}</router-link>
@@ -82,8 +82,8 @@
               target="_blank">Slack</a></li>
           </ul>
           <ul>
-            <li>Support</li>
-            <li @click="toQaqs">FAQ</li>
+            <li>{{$t('bottom.list6')}}</li>
+            <li @click="toQaqs">{{$t('bottom.list7')}}</li>
           </ul>
         </div>
       </div>

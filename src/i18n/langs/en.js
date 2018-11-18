@@ -51,7 +51,7 @@ module.exports = {
 
     wallet_title: 'NULS Wallet',
     wallet_info: 'NULS wallet is developed by NULS core technical team Supported on various platforms',
-    wallet_list_title: 'Computer Wallet',
+    wallet_list_title: 'Download',
     wallet_list_0: 'Windowc Download',
     wallet_list_1: 'MacOS Download',
     wallet_list_2: 'Linux Download',
@@ -104,6 +104,7 @@ module.exports = {
     road_tab_water_3: {
       p0: 'Ecology',
       p1: 'Build a mature open-source community, large scale set up application sub-chain',
+      p2: '',
     },
     road_tab_steam_1: {
       p0: 'Technology',
@@ -113,12 +114,14 @@ module.exports = {
       p0: 'At least 30 sub-chains join NULS',
       p1: 'At least 50 applications run on NULS',
       p2: 'Provides technical solutions for at least 20 industries, build eco ecosystem based on NULS, such as big data',
+      p3: '',
     },
     road_tab_steam_3: {
       p0: 'Ecology',
       p1: 'Build an open-source community integrated within the blockchain, big data, artificial intelligence sectors. Provide comprehensive value docking and collaboration platforms.',
     },
 
+    w_title:'Download the whitepaper in your preferred language choice',
   },
 
   developer: {
@@ -131,6 +134,7 @@ module.exports = {
     info1:'Click for detaile',
     info2:'CCC Handbook Guide (test version)',
     info3:'Weekly update',
+    title4:'Start To Develop',
   },
 
   team:{
@@ -161,6 +165,13 @@ module.exports = {
   partners:{
     title:'Our Partnerships',
     info:'NULS Partner Network is a collaborative framework between NULS and partners to meet different types of cooperation needs, including technical support, communication, community assistance, market expansion and marketing, to ensure that partners and NULS are able to achieve their goals.',
+
+    name0:'Strategic Investment',
+    name1:'Ecological Partners',
+    name2:'Strategic Partners',
+    name3:'Media Partners',
+    name4:'Platforms',
+
   },
 
   joinNuls:{
@@ -187,6 +198,35 @@ module.exports = {
 
     you_title:'How Can You Make a Contribution to the Community?',
     you_info:'The NULS community is the driving force behind the development of NULS. We invite you to share in our vision and join us. Simply find what you want to do and start today! We offer many bounties for your contributions as a way to show our gratitude for your participation in our ecological development.',
+
+    join:'Join Group',
+
+  },
+
+  media:{
+    tab0:'Bi-Monthly',
+    tab1:'News',
+    tab2:'Guide',
+  },
+
+  qaqs:{
+    title:'FAQ',
+
+    title0:'1. What is NULS?',
+    p0_0:'NULS is a highly customizable modular blockchain infrastructure',
+    p0_1:'It consists of a microkernel and functional modules. NULS provides smart contract, multi-chain mechanism and cross-chain consensus. It aims to break the technical barriers of blockchain, to reduce the cost of development,and to promote the usage of blockchain technology in the commercial field.',
+    p0_2:'What is the biggest advantage NULS has over competitors? Nuls aims to cater for a variety of applications, and its modular design makes it easy for small-businesses and the community to create, update and implement applications via our platform.',
+
+    title1:'2. When was the ICO?',
+    p1_0:'There was no ICO, the tokens were airdropped in accordance with INS (InChain) holders 1:1.',
+    p1_1:'What does Nuls have to do with InChain InChain was created for businesses purposes by the team, Nuls aims to cater for anyone in the world small-businesses, innovators and developers. The Nuls project will be built by the InChain team and in the future the InChain project will be implemented into the Nuls Blockchain as a Side-Chain.',
+
+    title2:'3. What is Inchain?',
+    p2_0:'Inchain is an anti-counterfeiting blockchain already established and a fully working product. ',
+
+    title3:'4. What is the total supply/max supply?',
+    p3_0:'The total supply on main-net launch is 100M. 40M are circulating and airdropped for Inchain holders, the rest  of the supply is used to grow our project on several fronts eg; funding for projects, community growth, community developers. You can learn more by viewing our whitepaper. ',
+    p3_1:'Where do the rewards come from and what are they? ',
   },
 
   bottom: {
@@ -199,6 +239,13 @@ module.exports = {
     list2: 'Website design by petravic',
     list3: 'Whitepaper',
     list4: 'Yellowpaper',
+
+    list5: 'What is nuls',
+    list6: 'Support',
+    list7: 'FAQ',
+
+    inputTitle:'Leave your email and we will send you the latest information',
+    inputSubmit:'Send',
 
   }
 };
