@@ -71,9 +71,9 @@
         height: auto;
       }
       h1 {
-       padding: 30px 0 0 0;
+        line-height: 9rem;
         @media (max-width: 768px) {
-          padding: 1.8rem 0 2.6rem 0;
+          line-height: 0;
         }
       }
     }

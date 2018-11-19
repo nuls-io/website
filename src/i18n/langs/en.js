@@ -19,6 +19,10 @@ module.exports = {
     about7: 'Community',
   },
 
+  publics:{
+    top:'TOP',
+  },
+
   home: {
     top_title: 'Adaptable Blockchain For Enterprise Solutions',
     vedio_title: 'Watch overview',
@@ -135,6 +139,9 @@ module.exports = {
     info2:'CCC Handbook Guide (test version)',
     info3:'Weekly update',
     title4:'Start To Develop',
+
+    docs:'Docs',
+    plugin:'Plugin',
   },
 
   team:{
@@ -182,6 +189,7 @@ module.exports = {
   community:{
     title:'Community',
     info:'We welcome you to join us and become a part of the NULS Community. Our community is a collection of people who are highly educated about our culture and philosophy. Together to  make progress  towards the ecological development of NULS by sharing our community goals and vision. The NULS community is composed of many members with m any talents and roles: the NULS Foundation, board members, contributors, including the open source technology community known as the CODE CRAFT COUNCIL (CCC), and all NULS holders, traders and investors.',
+    more:'Task Bounty',
 
     title1:'Find Out More About the NULS Community',
     c_name:'Community Wheat',
@@ -246,6 +254,9 @@ module.exports = {
 
     inputTitle:'Leave your email and we will send you the latest information',
     inputSubmit:'Send',
+
+    error0:'Please input your email address.',
+    error1:'Please input the correct email address.',
 
   }
 };

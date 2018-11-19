@@ -113,7 +113,7 @@
   export default {
     data() {
       return {
-        language:2,
+        language:sessionStorage.hasOwnProperty('langs') ? sessionStorage.getItem('langs') ==='zh' ? 1 : 2 : 2,
         mediasLoading:true,
         bannerList:[],
         activeMedia: 'social',

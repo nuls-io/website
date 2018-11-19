@@ -76,6 +76,15 @@ export const getPartnerList = (siteId=1,pageSize=10,pageNum=1) => fetch('partner
 export const getDownloadsList = (siteId=1,pageSize=10,pageNum=1) => fetch('downloads.html?siteId=' + siteId + '&pageSize=' + pageSize + '&pageNum=' + pageNum);
 
 /**
+ *  获取首页下载列表 Get getFaqList list
+ * @param siteId
+ * @param pageSize
+ * @param pageNum
+ * @returns {Promise}
+ */
+export const getFaqList= (siteId=1) => fetch('faq.html?siteId=' + siteId);
+
+/**
  *  获取首页下载列表 Get getWalletDownloadList list
  * @param siteId
  * @param pageSize

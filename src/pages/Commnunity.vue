@@ -39,7 +39,7 @@
         <div class="centers">
           <h2 class="h2">{{$t('community.you_title')}}</h2>
           <p class="font-24">{{$t('community.info')}}</p>
-          <label class="c_green cursor-p font-20 cb cursor-p" @click="toUrl('https://nuls.community/t/task-bounty')">Task Bounty <i class="el-icon-arrow-right"></i></label>
+          <label class="c_green cursor-p font-20 cb cursor-p" @click="toUrl('https://nuls.community/t/task-bounty')">{{$t('community.more')}} <i class="el-icon-arrow-right"></i></label>
         </div>
       </div>
       <div class="c-join cb">

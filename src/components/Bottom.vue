@@ -110,8 +110,8 @@
         },
         emailRules: {
           emailAddress: [
-            {required: true, message: 'Please input your email address.', trigger: 'blur'},
-            {type: 'email', message: 'Please input the correct email address.', trigger: ['blur', 'change']}
+            {required: true, message: this.$t('bottom.error0'), trigger: 'blur'},
+            {type: 'email', message: this.$t('bottom.error1'), trigger: ['blur', 'change']}
           ]
         }
       };
@@ -201,7 +201,6 @@
     .bottom-top {
       margin: auto;
       max-width: 1280px;
-      /*height: 300px;*/
       background-image: linear-gradient(-133deg, #002e5e, #092243 89%, #0a2140);
       -webkit-box-shadow: 0 16px 64px 0 rgba(0, 0, 0, .24);
       box-shadow: 0 16px 64px 0 rgba(0, 0, 0, .24);
@@ -210,15 +209,12 @@
       top: -60px;
       padding: 50px 85px;
       @media (max-width: 768px) {
-        /*height: 350px;*/
         padding: 10px;
         width: 98%;
       }
       h3 {
         font-size: 48px;
         font-weight: 700;
-	      margin-bottom: 77px;
-        /*line-height: 77px;*/
         @media (max-width: 768px) {
           font-size: 24px;
 	        margin: 1rem 0 1.5rem 0;
@@ -227,8 +223,7 @@
       }
       p {
         font-size: 16px;
-        line-height: 23px;
-        margin-bottom: 16px;
+        margin:40px 0 30px 0;
         @media (max-width: 768px) {
           font-size: 13px;
           line-height: 24px;

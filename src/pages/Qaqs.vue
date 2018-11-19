@@ -5,20 +5,10 @@
       <h1 class="h1 cb">{{$t('qaqs.title')}}</h1>
     </div>
     <div class="faqs-info">
-      <h3>{{$t('qaqs.title0')}}</h3>
-      <p>{{$t('qaqs.p0_0')}}</p>
-      <p>{{$t('qaqs.p0_1')}}</p>
-      <p>{{$t('qaqs.p0_2')}}</p>
-      <h3>{{$t('qaqs.title1')}}</h3>
-      <p>{{$t('qaqs.p1_0')}}</p>
-      <p>{{$t('qaqs.p1_1')}}</p>
-      <h3>{{$t('qaqs.title2')}}</h3>
-      <p>{{$t('qaqs.p2_0')}}<a href="https://www.inchain.org/index_en.html#page2" target="_blank">https://www.inchain.org/index_en.html#page2.</a>
-      </p>
-      <h3>{{$t('qaqs.title3')}}</h3>
-      <p>{{$t('qaqs.p3_0')}}<a href="https://nuls.io/papers" target="_blank"></a>https://nuls.io/papers
-      </p>
-      <p>{{$t('qaqs.p3_1')}}</p>
+      <template v-for="item of FaqList">
+        <h3>{{item.title_name}}</h3>
+        <div v-html="item.content"></div>
+      </template>
     </div>
     <Bottom></Bottom>
   </div>
@@ -27,11 +17,49 @@
 <script>
   import HeaderList from '@/components/HeaderList';
   import Bottom from '@/components/Bottom';
+  import {getFaqList} from '@/api/httpData';
 
   export default {
+    data() {
+      return {
+        FaqList: [],
+        language:sessionStorage.hasOwnProperty('langs') ? sessionStorage.getItem('langs') ==='zh' ? 1 : 2 : 2,
+      }
+    },
     components: {
       HeaderList,
       Bottom,
+    },
+    mounted() {
+      setInterval(() => {
+        this.language=sessionStorage.hasOwnProperty('langs') ? sessionStorage.getItem('langs') ==='zh' ? 1 : 2 : 2
+      }, 100);
+      this.getFaqList(this.language)
+    },
+    methods: {
+
+      /**
+       * 获取轮播图片列表
+       * @param siteId
+       **/
+      getFaqList(siteId){
+        let that = this;
+        getFaqList(siteId)
+          .then(function (response) {
+           //console.log(response)
+            that.FaqList = response.data.contentList
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+      },
+    },
+    watch: {
+      language(curVal, oldVal) {
+        if (curVal.toString() !== oldVal.toString()) {
+          this.getFaqList(this.language);
+        }
+      }
     }
   }
 </script>
@@ -48,9 +76,9 @@
         height: auto;
       }
       h1 {
-        padding: 30px 0 0 0;
+        line-height: 9rem;
         @media (max-width: 768px) {
-          padding: 1.8rem 0 2.6rem 0;
+          line-height: 0;
         }
       }
     }
@@ -66,6 +94,7 @@
         padding: 70px 0 25px 0;
         border-bottom: 1px solid #ededed;
         color: #0a2140;
+        font-size: 26px;
         @media (max-width: 768px) {
           width: 90%;
           padding: 30px 0 30px 0;
@@ -74,10 +103,11 @@
       p {
         width: 70%;
         margin: 0 auto;
-        font-size: 24px;
+        font-size: 16px;
         color: #445569;
-        line-height: 30px;
+        line-height: 36px;
         padding: 0 0 0 0;
+        text-indent: 2rem;
         @media (max-width: 768px) {
           width: 90%;
           font-size: 1.2rem;

@@ -2,7 +2,7 @@
   <div id="goTop">
     <div class="goTop" v-show="goTopShow" @click="goTop">
       <i class="el-icon-arrow-up"></i>
-      <div class="top-text">TOP</div>
+      <div class="top-text">{{$t('publics.top')}}</div>
     </div>
   </div>
 </template>

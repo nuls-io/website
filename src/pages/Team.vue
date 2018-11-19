@@ -18,7 +18,7 @@
         <li v-for="site in angelList">
           <h2 class="cursor-p" @click="tolink(site.linkedin)"><img :src=site.headUrl height="600" width="660"/></h2>
           <h3>{{site.ename}}</h3>
-          <h4>{{site.position}}</h4>
+          <h4>{{site.positions}}</h4>
         </li>
       </ul>
       <h2 class="h2 cb" v-show="communityList.length > 0">NULS Code Craft Council</h2>
@@ -26,7 +26,7 @@
         <li v-for="site in communityList">
           <h2 class="cursor-p" @click="tolink(site.linkedin)"><img :src=site.headUrl height="600" width="660"/></h2>
           <h3>{{site.ename}}</h3>
-          <h4>{{site.position}}</h4>
+          <h4>{{site.positions}}</h4>
         </li>
       </ul>
       <h2 class="h2 cb" v-show="advisorList.length > 0">Advisors</h2>
@@ -34,7 +34,7 @@
         <li v-for="site in advisorList">
           <h2 class="cursor-p" @click="tolink(site.linkedin)"><img :src=site.headUrl height="600" width="660"/></h2>
           <h3>{{site.ename}}</h3>
-          <h4>{{site.position}}</h4>
+          <h4>{{site.positions}}</h4>
         </li>
       </ul>
     </div>

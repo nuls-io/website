@@ -28,11 +28,11 @@
             </li>
             <li class="t_li fl">
               <p class="img shadow"><img src="./../assets/images/Docs.png"></p>
-              <p class="c_green cursor-p" @click="toUrl('http://dev.nuls.io')">Docs <i class="el-icon-arrow-right"></i></p>
+              <p class="c_green cursor-p" @click="toUrl('http://dev.nuls.io')">{{$t('developer.docs')}} <i class="el-icon-arrow-right"></i></p>
             </li>
             <li class="t_li fl">
               <p class="img shadow"><img style="margin-top: 17px" src="./../assets/images/Tools.png"></p>
-              <p class="c_green cursor-p" @click="toUrl('http://dev.nuls.io/contract/IdeaPlugin.html')">IDEA Plugin
+              <p class="c_green cursor-p" @click="toUrl('http://dev.nuls.io/contract/IdeaPlugin.html')">IDEA {{$t('developer.plugin')}}
                 <i class="el-icon-arrow-right"></i></p>
               <p class="c_green cursor-p" @click="toUrl('http://dev.nuls.io/docs/sdk.html')">SDK <i class="el-icon-arrow-right"></i></p>
             </li>
@@ -190,6 +190,7 @@
               }
               .c_green {
                 line-height: 18px;
+                margin-bottom: 10px;
                 @media (max-width: 768px) {
                   font-size: 0.8rem;
                   line-height: 1.5rem;
