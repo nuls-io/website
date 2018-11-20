@@ -1,14 +1,12 @@
 * html .clearfix {height: 1%}
 *{box-sizing: border-box;}
-body, div, dl, dt, dd, ul,ol,li, h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote，th,td {margin: 0;padding: 0;font-family: Helvetica,'微软雅黑',sans-serif;color: #FFFFFF;}
+body, div, dl, dt, dd, ul,ol,li, h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p{margin: 0;padding: 0;font-family: Helvetica,'微软雅黑',sans-serif;color: #FFFFFF;}
 body {background-color: #0c1323;}
 table {border-collapse: collapse;border-spacing: 0;}
 fieldset, img {border: 0;}
 address,caption,cite,code,dfn,em,strong,th,var {font-style: normal;font-weight: normal;}
 ol,ul {list-style: none;}
 q:before, q:after {content: ' '}
-abbr,acronym {border: 0;}
-input[type="text"],input[type="password"],select {background: #0b1422;}
 a {text-decoration: none;color: #5c5c5c;outline: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
 a:hover {text-decoration: none}
 a:focus {outline: none;}
@@ -23,40 +21,8 @@ a:focus {outline: none;}
 .hidden {visibility: hidden;}
 .none {display: none;}
 
-/**箭头**/
-.arrow {
-  display: block;
-  width: 7px;
-  height: 7px;
-  border-top: 0.1rem solid #BCBCBC;
-  border-right: 0.1rem solid #BCBCBC;
-  margin-top: 1.25rem;
-  margin-left: 0.8rem;
-}
-.left-arrow {
-  transform: rotate(225deg);
-}
-.right-arrow {
-  transform: rotate(45deg);
-}
-
-/**虚线**/
-.dotted-line {
-  border: 0.1rem dashed #D7D7D7;
-  width: 100%;
-}
-
-/**实线**/
-.solid-line {
-  border: 0.1rem solid #D7D7D7;
-  width: 100%;
-}
-
 /**手指样式**/
 .cursor-p {cursor: pointer;}
-
-/**下划线**/
-.text-d {box-shadow: 0 -1px #C1C5C9 inset;}
 
 /**超长显示...**/
 .overflow {

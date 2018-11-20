@@ -63,6 +63,7 @@
             color: #FFFFFF;
             line-height: 1.25rem;
             opacity: 1;
+            text-align: center;
           }
         }
         p{
@@ -82,6 +83,7 @@
             color: #FFFFFF;
             line-height: 25px;
             opacity: 1;
+            text-align: center;
           }
         }
         p{
@@ -101,6 +103,7 @@
             color: #FFFFFF;
             line-height: 25px;
             opacity: 1;
+            text-align: center;
           }
         }
         p{

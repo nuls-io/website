@@ -102,7 +102,7 @@
       margin: 0 auto;
       padding: 130px 0 60px;
       @media (max-width: 768px) {
-        padding: 1.5rem 0.5rem 1.5rem;
+        padding: 1rem 0.5rem;
       }
     }
     .vedio {

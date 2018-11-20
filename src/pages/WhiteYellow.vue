@@ -36,10 +36,20 @@
   import {tolink} from '@/util/util';
 
   export default {
+    data() {
+      return {
+        language:sessionStorage.hasOwnProperty('langs') ? sessionStorage.getItem('langs') ==='zh' ? 1 : 2 : 2,
+      }
+    },
     components: {
       HeaderList,
       Bottom,
       GoTop,
+    },
+    mounted() {
+      setInterval(() => {
+        this.language=sessionStorage.hasOwnProperty('langs') ? sessionStorage.getItem('langs') ==='zh' ? 1 : 2 : 2
+      }, 100);
     },
     methods: {
 
@@ -50,9 +60,13 @@
        */
       toDownload(link) {
         if(link === 'white'){
-          tolink('https://nuls.io/api/v1/download/files/papers/white/NulsWhitepaper1.1.pdf');
+          let cnUrl ='https://nuls.io/api/v1/download/files/papers/white/NULS_whitepaper_zh_V1.0.pdf';
+          let enUrl ='https://nuls.io/api/v1/download/files/papers/white/NulsWhitepaper1.1.pdf';
+          tolink(this.language.toString() ===  '1' ? cnUrl : enUrl);
         }else {
-          tolink('https://nuls.io/api/v1/download/files/papers/yellow/NulsYellowpaper1.1.pdf');
+          let cnUrl ='https://nuls.io/api/v1/download/files/papers/white/NULS_whitepaper_zh_V1.0.pdf';
+          let enUrl ='https://nuls.io/api/v1/download/files/papers/yellow/NulsYellowpaper1.1.pdf';
+          tolink(this.language.toString() ===  '1' ? cnUrl : enUrl);
         }
       },
     }
@@ -81,16 +95,22 @@
     .whiteYellow-info{
       color: #0a2140;
       background: #FFFFFF;
-      min-height: 500px;
       margin: 50px auto 100px;
+      @media (max-width: 768px) {
+        margin: 1rem auto;
+      }
       h5{
         width: 70%;
         margin: 0 auto;
-        padding: 120px 0 60px 0;
+        padding: 60px 0 40px 0;
+        line-height: 40px;
         color: #0a2140;
         @media (max-width: 768px) {
-          width: 90%;
-          padding: 30px 0 30px 0;
+          width: 100%;
+          padding: 0.5rem 1rem;
+          line-height: 1.8rem;
+          text-align: left;
+          font-size: 1rem;
         }
       }
       p{
@@ -102,7 +122,7 @@
         padding: 0 0 100px 0 ;
         @media (max-width: 768px) {
           width: 90%;
-          font-size: 1.2rem;
+          font-size: 0.8rem;
           line-height: 1.4rem;
           padding: 0 0 2rem 0 ;
         }
@@ -114,14 +134,20 @@
         background-color: #e9f4f9;
         p{
           padding: 100px 0 100px 0;
+          @media (max-width: 768px) {
+            font-size: 0.8rem;
+            line-height: 1.4rem;
+            padding: 2rem 0;
+          }
         }
       }
       .w-three{
-        min-height: 680px;
+        min-height: 550px;
         max-width: 1280px;
         margin: 0 auto;
         @media (max-width: 768px) {
           max-width: 100%;
+          min-height: 38rem;
         }
         h5{
           max-width: 100%;
@@ -149,26 +175,24 @@
             line-height: 34px;
             right: 0;
             @media (max-width: 768px) {
-              padding: 1.2rem 0 1.2rem 0;
-              font-size: 1.2rem;
+              font-size: 0.8rem;
               line-height: 1.4rem;
+              padding: 2rem 0;
               text-align: left;
             }
           }
           .el-button{
             margin: 80px 0 0 0;
             @media (max-width: 768px) {
-              margin: 4rem 0 2rem 0;
+              margin: 1rem 0 2rem 0;
             }
           }
         }
         .w-three-right{
           float: right;
         }
-
       }
     }
-
   }
 
 </style>

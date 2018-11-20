@@ -66,7 +66,7 @@
       width: 100%;
       min-height: 120px;
       margin: 0 auto;
-      background: url("./../assets/images/top_bg.jpg") no-repeat 100%,100%;
+      background: url("./../assets/images/top_bg.jpg") no-repeat 100%,100% #0a2140;
       @media (max-width: 768px) {
         min-height: 60px;
       }
@@ -76,7 +76,6 @@
         .header {
           max-width: 1280px;
           z-index: 9;
-          position: absolute;
         }
       }
 

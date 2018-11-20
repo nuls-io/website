@@ -1,76 +1,45 @@
 <template>
   <div class="medias">
-    <div class="medias-top"  v-loading="mediasLoading">
+    <div class="medias-top" v-loading="mediasLoading">
       <HeaderList></HeaderList>
     </div>
 
     <div class="carousel cb">
       <el-carousel :interval="5000" arrow="always">
         <el-carousel-item v-for="item in bannerList" :key="item.name">
-          <a :href="item.link" target="_blank"><img :src="item.url" /></a>
+          <a :href="item.link" target="_blank"><img :src="item.url"/></a>
         </el-carousel-item>
       </el-carousel>
     </div>
     <el-tabs v-model="activeMedia" @tab-click="handleClick">
-      <el-tab-pane :label="$t('media.tab0')"  name="social">
+      <el-tab-pane :label="$t('media.tab0')" name="social">
         <div class="steps">
-          <div class="step">
-            <div class="step-data fl">
-              <div class="line"></div>
-              <i class="ico"></i>
-              <label>2018-08-08</label>
+          <template v-for="item of bimonthlyList">
+            <div class="step">
+              <div class="step-data fl">
+                <div class="line"></div>
+                <i class="ico"></i>
+                <label>{{item.time}}</label>
+              </div>
+              <div class="step-info fl">
+                <h6 class="h6 cursor-p" @click="toLink(item.link)">{{item.title}}</h6>
+                <p class="font-20 cursor-p" @click="toLink(item.link)"> {{item.desc}} </p>
+              </div>
             </div>
-            <div class="step-info fl">
-              <h6 class="h6">NULS members are highly experienced</h6>
-              <p class="font-20"> {{$t('team.info')}}</p>
-            </div>
-          </div>
-          <div class="step">
-            <div class="step-data fl">
-              <div class="line"></div>
-              <i class="ico"></i>
-              <label>2018-08-08</label>
-            </div>
-            <div class="step-info fl">
-              <h6 class="h6">NULS members are highly experienced</h6>
-              <p class="font-20"> {{$t('team.info')}}</p>
-            </div>
-          </div>
-          <div class="step">
-            <div class="step-data fl">
-              <div class="line"></div>
-              <i class="ico"></i>
-              <label>2018-08-08</label>
-            </div>
-            <div class="step-info fl">
-              <h6 class="h6">NULS members are highly experienced</h6>
-              <p class="font-20"> {{$t('team.info')}}</p>
-            </div>
-          </div>
-          <div class="step">
-            <div class="step-data fl">
-              <div class="line"></div>
-              <i class="ico"></i>
-              <label>2018-08-08</label>
-            </div>
-            <div class="step-info fl">
-              <h6 class="h6">NULS members are highly experienced</h6>
-              <p class="font-20"> {{$t('team.info')}}</p>
-            </div>
-          </div>
+          </template>
         </div>
 
       </el-tab-pane>
 
       <el-tab-pane :label="$t('media.tab1')" name="news">
         <ul class="news-list" v-loading="newsListLoading">
-            <li @click="toMediaDetails(site.url)"  v-for="site in newList">
-              <p class="fl">
-                <label>{{ site.title }}</label>
-                <span>{{ site.create_time }}</span>
-              </p>
-              <img class="fr" :src=site.thumbnail />
-            </li>
+          <li @click="toMediaDetails(site.url)" v-for="site in newList">
+            <p class="fl">
+              <label>{{ site.title }}</label>
+              <span>{{ site.create_time }}</span>
+            </p>
+            <img class="fr" :src=site.thumbnail>
+          </li>
         </ul>
 
         <el-pagination
@@ -91,7 +60,7 @@
                 <label>{{ site.title }}</label>
                 <span>{{ site.create_time }}</span>
               </p>
-              <img class="fr" :src=site.imgUrl />
+              <img class="fr" :src=site.imgUrl>
             </li>
           </template>
         </ul>
@@ -103,7 +72,7 @@
 </template>
 
 <script>
-  import {getBannerList,getNewList,getGuideList} from '@/api/httpData'
+  import {getBannerList, getNewList, getGuideList, getBimonthlyList} from '@/api/httpData'
   import {API_ROOT} from '@/api/https'
   import {arrItemSort} from '@/util/util';
   import HeaderList from '@/components/HeaderList';
@@ -113,27 +82,28 @@
   export default {
     data() {
       return {
-        language:sessionStorage.hasOwnProperty('langs') ? sessionStorage.getItem('langs') ==='zh' ? 1 : 2 : 2,
-        mediasLoading:true,
-        bannerList:[],
+        language: sessionStorage.hasOwnProperty('langs') ? sessionStorage.getItem('langs') === 'zh' ? 1 : 2 : 2,
+        mediasLoading: true,
+        bannerList: [],
         activeMedia: 'social',
-        newsListLoading:true,
+        newsListLoading: true,
         newList: [],
-        newlistTotal:0,
-        guideList:[],
+        newlistTotal: 0,
+        guideList: [],
+        bimonthlyList: [],
       }
     },
-    watch:{
-      language(curVal,oldVal){
-        if(curVal.toString() !== oldVal.toString()){
+    watch: {
+      language(curVal, oldVal) {
+        if (curVal.toString() !== oldVal.toString()) {
           this.getBannerList(this.language);
-          if(this.activeMedia ==='news'){
+          if (this.activeMedia === 'news') {
             this.getNewList(this.language, 10, 1);
-          }else if(this.activeMedia ==='guide'){
+          } else if (this.activeMedia === 'guide') {
             this.getGuideList(this.language, 10, 1);
-          }else if(this.activeMedia ==='social') {
-            //this.getFindUsList(1, 10, 1);
-          }else {
+          } else if (this.activeMedia === 'social') {
+            this.getBimonthlyList(this.language);
+          } else {
             console.log("")
           }
         }
@@ -147,22 +117,22 @@
     mounted() {
 
       setInterval(() => {
-        this.language=sessionStorage.hasOwnProperty('langs') ? sessionStorage.getItem('langs') ==='zh' ? 1 : 2 : 2
+        this.language = sessionStorage.hasOwnProperty('langs') ? sessionStorage.getItem('langs') === 'zh' ? 1 : 2 : 2
       }, 100);
 
       this.getBannerList(this.language);
 
       setTimeout(() => {
-        if(this.activeMedia ==='news'){
+        if (this.activeMedia === 'news') {
           this.getNewList(this.language, 10, 1);
-        }else if(this.activeMedia ==='guide'){
+        } else if (this.activeMedia === 'guide') {
           this.getGuideList(this.language, 10, 1);
-        }else if(this.activeMedia ==='social') {
-          //this.getFindUsList(1, 10, 1);
-        }else {
+        } else if (this.activeMedia === 'social') {
+          this.getBimonthlyList(this.language);
+        } else {
           console.log("")
         }
-      },100);
+      }, 100);
 
     },
     methods: {
@@ -171,7 +141,7 @@
        * 获取轮播图片列表
        * @param siteId
        **/
-      getBannerList(siteId){
+      getBannerList(siteId) {
         let that = this;
         getBannerList(siteId)
           .then(function (response) {
@@ -192,14 +162,14 @@
        * @param event
        */
       handleClick(tab, event) {
-        this.language=sessionStorage.hasOwnProperty('langs') ? sessionStorage.getItem('langs') ==='zh' ? '1' : '2' : '2';
-        if(tab.name ==='news'){
+        this.language = sessionStorage.hasOwnProperty('langs') ? sessionStorage.getItem('langs') === 'zh' ? '1' : '2' : '2';
+        if (tab.name === 'news') {
           this.getNewList(this.language, 10, 1);
-        }else if(tab.name ==='guide'){
+        } else if (tab.name === 'guide') {
           this.getGuideList(this.language, 10, 1);
-        }else if(tab.name ==='social') {
-          //this.getFindUsList(1, 10, 1);
-        }else {
+        } else if (tab.name === 'social') {
+          this.getBimonthlyList(this.language);
+        } else {
           console.log("")
         }
       },
@@ -212,7 +182,7 @@
        */
       getNewList(siteId, pageSize, pageNum) {
         let that = this;
-        getNewList(siteId,pageSize,pageNum)
+        getNewList(siteId, pageSize, pageNum)
           .then(function (response) {
             //console.log(response);
             that.newlistTotal = response.data.totalRow;
@@ -220,8 +190,8 @@
               list.thumbnail = API_ROOT + list.thumbnail;
             }
             setTimeout(() => {
-              let newListSort = arrItemSort(response.data.contentList,"id",0);
-              that.newList  = newListSort;
+              let newListSort = arrItemSort(response.data.contentList, "id", 0);
+              that.newList = newListSort;
               that.newsListLoading = false;
             }, 100);
           })
@@ -233,7 +203,7 @@
       /**
        * 新闻列表分页
        **/
-      newlistSize(e){
+      newlistSize(e) {
         this.getNewList(this.language, 10, e);
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
@@ -243,7 +213,7 @@
        * 跳转详情
        * @param url
        */
-      toMediaDetails(url){
+      toMediaDetails(url) {
         this.$router.push({
           name: 'mediaDetails',
           query: {url: url},
@@ -253,7 +223,7 @@
       /**
        * link 跳转
        **/
-      toLink(url){
+      toLink(url) {
         //console.log(url)
         window.open(url);
       },
@@ -266,15 +236,15 @@
        */
       getGuideList(siteId, pageSize, pageNum) {
         let that = this;
-        getGuideList(siteId,pageSize,pageNum)
+        getGuideList(siteId, pageSize, pageNum)
           .then(function (response) {
             //console.log(response);
             for (let list of response.data.contentList) {
               list.imgUrl = API_ROOT + list.imgUrl;
             }
             setTimeout(() => {
-              let guideListSort = arrItemSort(response.data.contentList,"id",0);
-              that.guideList  = guideListSort;
+              let guideListSort = arrItemSort(response.data.contentList, "id", 0);
+              that.guideList = guideListSort;
             }, 100);
           })
           .catch(function (error) {
@@ -283,25 +253,21 @@
       },
 
       /**
-       * 获取findUs列表
+       * 获取半月报列表
        * @param siteId
        * @param pageSize
        * @param pageNum
        */
-      getFindUsList(siteId, pageSize, pageNum) {
+      getBimonthlyList(siteId) {
         let that = this;
-        getFindUsList(siteId,pageSize,pageNum)
+        getBimonthlyList(siteId)
           .then(function (response) {
-            //console.log(response);
-            for (let list of response.data.contentList) {
-              list.imgUrl = API_ROOT + list.imgUrl;
+            console.log(response);
+            //let bimonthlyListSort = arrItemSort(response.data, "id", 0);
+            for(let item of response.data){
+              item.time = item.bimonthly_date.substr(0,11)
             }
-            setTimeout(() => {
-              let findUsListSort = arrItemSort(response.data.contentList,"id",0);
-              that.findUsList  = findUsListSort;
-              that.findUsListLoading = false;
-            }, 100);
-
+            that.bimonthlyList = response.data;
           })
           .catch(function (error) {
             console.log(error);
@@ -314,6 +280,7 @@
 
 <style lang="less">
   @import url("../assets/css/style.less");
+
   .medias {
     background-color: #FFFFFF;
     width: 100%;
@@ -330,23 +297,23 @@
         width: 1280px;
       }
 
-      .el-loading-mask{
-        margin: 10% 0 0 0 ;
+      .el-loading-mask {
+        margin: 10% 0 0 0;
       }
     }
     .carousel {
       z-index: 8;
-      .el-carousel{
-        .el-carousel__container{
+      .el-carousel {
+        .el-carousel__container {
           height: 360px;
           @media (max-width: 768px) {
             height: 8rem;
           }
-          .el-carousel__item{
+          .el-carousel__item {
             text-align: center;
             background-color: #111a39;
-            a{
-              img{
+            a {
+              img {
                 /*width: 100%;
                 height: 100%;*/
                 @media (max-width: 768px) {
@@ -357,13 +324,13 @@
             }
           }
         }
-        .el-carousel__indicators{
-          .el-carousel__indicator{
+        .el-carousel__indicators {
+          .el-carousel__indicator {
             padding: 12px 15px 40px 15px;
             @media (max-width: 768px) {
               padding: 12px 5px 5px 5px;
             }
-            .el-carousel__button{
+            .el-carousel__button {
               width: 8px;
               height: 8px;
             }
@@ -381,7 +348,7 @@
       .el-tabs__header {
         margin: 0 0 50px;
         @media (max-width: 768px) {
-          margin:0 0 0 0.5rem;
+          margin: 0 0 0 0.5rem;
         }
         .el-tabs__nav-wrap {
           &:after {
@@ -439,20 +406,20 @@
       }
       .el-tabs__content {
         margin-bottom: 120px;
-        .el-tab-pane{
+        .el-tab-pane {
         }
         .news-list {
           li {
             height: 200px;
             box-shadow: 5px 8px 9px -5px #C1C5C9;
-            border:1px solid #C1C5C9;
+            border: 1px solid #C1C5C9;
             border-radius: 8px;
             margin: 20px 0 0 0;
             @media (max-width: 768px) {
               height: 8rem;
               margin: 0.5rem;
             }
-            &:hover{
+            &:hover {
               cursor: pointer;
             }
             p {
@@ -477,7 +444,7 @@
                   line-height: 1.4rem;
                   height: 3.5rem;
                 }
-                &:hover{
+                &:hover {
                   cursor: pointer;
                 }
               }
@@ -491,18 +458,18 @@
                   font-size: 0.8rem;
                 }
               }
-              &:hover{
+              &:hover {
                 cursor: pointer;
               }
             }
             img {
-              margin:10px 10px 10px 10px;
+              margin: 10px 10px 10px 10px;
               width: 340px;
               height: 180px;
               @media (max-width: 768px) {
-               display: none;
+                display: none;
                 width: 102px;
-                height:48px;
+                height: 48px;
                 z-index: 5;
                 position: absolute;
               }
@@ -561,7 +528,7 @@
               @media (max-width: 768px) {
                 width: 230px;
                 font-size: 1.2rem;
-                line-height:4.5rem;
+                line-height: 4.5rem;
               }
             }
           }
@@ -569,28 +536,28 @@
       }
     }
 
-    .steps{
+    .steps {
       height: 500px;
-      .step{
-        .step-data{
+      .step {
+        .step-data {
           width: 80px;
           text-align: center;
           @media (max-width: 768px) {
             width: 4.2rem;
           }
-          .line{
+          .line {
             border-left: 1px solid #dedede;
             height: 148px;
-            margin:  42px 0 0 40px;
+            margin: 42px 0 0 40px;
             position: absolute;
             @media (max-width: 768px) {
               height: 17.9rem;
-              margin:  2.6rem 0 0 2rem;
+              margin: 2.6rem 0 0 2rem;
             }
           }
-          .ico{
+          .ico {
             display: block;
-            background: url("./../assets/images/Bi-Monthly.png") no-repeat center ,linear-gradient(360deg, #56c400, #8fe400);
+            background: url("./../assets/images/Bi-Monthly.png") no-repeat center, linear-gradient(360deg, #56c400, #8fe400);
             border-radius: 42px;
             width: 42px;
             height: 42px;
@@ -599,7 +566,7 @@
               margin: 0 0 0 0.7rem;
             }
           }
-          label{
+          label {
             display: block;
             background-color: #fefefe;
             border: 1px solid #dedede;
@@ -615,7 +582,7 @@
             }
           }
         }
-        .step-info{
+        .step-info {
           width: 88%;
           height: 180px;
           margin: 10px 0 0 30px;
@@ -624,14 +591,14 @@
             height: 20rem;
             margin: 0.5rem 0 0 0.5rem;
           }
-          h6{
+          h6 {
             color: @color_1;
             padding: 0 0 5px 0;
             @media (max-width: 768px) {
               padding: 0 0 0.8rem 0;
             }
           }
-          p{
+          p {
             color: @color_1;
             line-height: 30px;
             @media (max-width: 768px) {

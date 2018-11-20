@@ -11,6 +11,7 @@
       </template>
     </div>
     <Bottom></Bottom>
+    <GoTop></GoTop>
   </div>
 </template>
 
@@ -18,6 +19,7 @@
   import HeaderList from '@/components/HeaderList';
   import Bottom from '@/components/Bottom';
   import {getFaqList} from '@/api/httpData';
+  import GoTop from '@/components/GoTop';
 
   export default {
     data() {
@@ -29,6 +31,7 @@
     components: {
       HeaderList,
       Bottom,
+      GoTop
     },
     mounted() {
       setInterval(() => {

@@ -13,33 +13,38 @@
             <li class="shadow fl">
               <h6 class="h6">{{$t('community.c_name')}}</h6>
               <label class="name_by font-20 tc">{{$t('community.c_name_by')}}</label>
-              <p class="c_green font-24 font-bold cursor-p" @click="toUrl('https://nuls.community/')">{{$t('community.enter')}} <i class="el-icon-arrow-right"></i></p>
+              <p class="c_green font-24 font-bold cursor-p" @click="toUrl('https://nuls.community/')">
+                {{$t('community.enter')}} <i class="el-icon-arrow-right"></i></p>
             </li>
             <li class="shadow fl">
               <h6 class="h6">{{$t('community.c_forun')}}</h6>
               <label class="name_by font-20 tc">{{$t('community.c_forun_sg')}}</label>
-              <p class="c_green font-24 font-bold cursor-p" @click="toUrl('http://nulscommunityforum.com/')">{{$t('community.enter')}} <i class="el-icon-arrow-right"></i></p>
+              <p class="c_green font-24 font-bold cursor-p" @click="toUrl('http://nulscommunityforum.com/')">
+                {{$t('community.enter')}} <i class="el-icon-arrow-right"></i></p>
             </li>
             <li class="shadow fl">
               <h6 class="h6">{{$t('community.c_chinese')}}</h6>
               <label class="name_by font-20 tc">{{$t('community.c_chinese_wheat')}}</label>
-              <p class="c_green font-24 font-bold cursor-p" @click="toUrl('http://nuls.org.cn/')">{{$t('community.enter')}} <i class="el-icon-arrow-right"></i></p>
+              <p class="c_green font-24 font-bold cursor-p" @click="toUrl('http://nuls.org.cn/')">
+                {{$t('community.enter')}} <i class="el-icon-arrow-right"></i></p>
             </li>
           </ul>
         </div>
       </div>
-      <div class="c-consititution">
+      <div class="c-consititution" v-show="false">
         <div class="centers">
           <h2 class="h2">{{$t('community.cc_title')}}</h2>
           <p class="font-24">{{$t('community.cc_info')}}</p>
-          <label class="c_green cursor-p font-20">{{$t('community.cc_more')}} <i class="el-icon-arrow-right"></i></label>
+          <label class="c_green cursor-p font-20">{{$t('community.cc_more')}} <i
+            class="el-icon-arrow-right"></i></label>
         </div>
       </div>
       <div class="c-what cb">
         <div class="centers">
           <h2 class="h2">{{$t('community.you_title')}}</h2>
           <p class="font-24">{{$t('community.info')}}</p>
-          <label class="c_green cursor-p font-20 cb cursor-p" @click="toUrl('https://nuls.community/t/task-bounty')">{{$t('community.more')}} <i class="el-icon-arrow-right"></i></label>
+          <label class="c_green cursor-p font-20 cb cursor-p" @click="toUrl('https://nuls.community/t/task-bounty')">{{$t('community.more')}}
+            <i class="el-icon-arrow-right"></i></label>
         </div>
       </div>
       <div class="c-join cb">
@@ -49,13 +54,13 @@
             <li class="shadow fl cursor-p" @click="toUrl(site.link)" v-for="site in findUsList">
               <img class="fl" :src=site.imgUrl>
               <span class="font-24 fl overflow">{{site.title}}</span>
-              <p class="overflow">{{site.title}}</p>
             </li>
           </ul>
         </div>
       </div>
     </div>
     <Bottom></Bottom>
+    <GoTop></GoTop>
   </div>
 </template>
 
@@ -65,21 +70,28 @@
   import {getFindUsList} from '@/api/httpData';
   import {API_ROOT} from '@/api/https';
   import {arrItemSort} from '@/util/util';
+  import GoTop from '@/components/GoTop';
 
   export default {
     data() {
       return {
+        language:sessionStorage.hasOwnProperty('langs') ? sessionStorage.getItem('langs') ==='zh' ? 1 : 2 : 2,
         findUsList: [],
       }
     },
     components: {
       HeaderList,
       Bottom,
+      GoTop
     },
     mounted() {
-      this.getFindUsList(1, 10, 1)
+      setInterval(() => {
+        this.language=sessionStorage.hasOwnProperty('langs') ? sessionStorage.getItem('langs') ==='zh' ? 1 : 2 : 2
+      }, 100);
+      this.getFindUsList(this.language, 10, 1);
     },
     methods: {
+
       /**
        * 获取findUs列表
        * @param siteId
@@ -90,7 +102,7 @@
         let that = this;
         getFindUsList(siteId, pageSize, pageNum)
           .then(function (response) {
-            //console.log(response);
+            console.log(response);
             for (let list of response.data.contentList) {
               list.imgUrl = API_ROOT + list.imgUrl.substr(1, list.imgUrl.length);
             }
@@ -111,6 +123,13 @@
        */
       toUrl(url) {
         window.open(url);
+      }
+    },
+    watch: {
+      language(curVal, oldVal) {
+        if (curVal.toString() !== oldVal.toString()) {
+          this.getFindUsList(this.language, 10, 1);
+        }
       }
     }
   }
@@ -162,7 +181,7 @@
               text-align: center;
               padding: 30px 0 10px;
             }
-            .name_by{
+            .name_by {
               display: block;
               color: @color_1;
             }
@@ -205,9 +224,9 @@
             }
           }
           label {
-            padding: 20px 0 0 0 ;
+            padding: 20px 0 0 0;
             @media (max-width: 768px) {
-              padding:0.5rem 0 1rem 0.5rem;
+              padding: 0.5rem 0 1rem 0.5rem;
             }
           }
         }
@@ -257,7 +276,10 @@
       }
       .c-join {
         background-color: #F5F9FF;
-        min-height: 550px;
+        min-height: 650px;
+        @media (max-width: 768px) {
+          min-height: 60rem;
+        }
         .centers {
           margin: 0 auto;
           .h2 {
@@ -273,7 +295,7 @@
             li {
               width: 400px;
               height: 140px;
-              margin-right: 40px;
+              margin: 0 0 20px 25px;
               border-radius: 5px;
               background-color: @bg-color1;
               &:last-child {
@@ -282,7 +304,7 @@
               @media (max-width: 768px) {
                 width: 90%;
                 height: 6.5rem;
-                margin:0 0 1rem 5% ;
+                margin: 0 0 1rem 5% ;
               }
               img {
                 width: 100px;
@@ -299,8 +321,10 @@
                 color: @color_1;
                 line-height: 30px;
                 margin: 60px 0 0 10px;
+                max-width: 270px;
                 font-size: 30px;
                 @media (max-width: 768px) {
+                  max-width: 12rem;
                   line-height: 30px;
                   margin: 2rem 0 0 0.5rem;
                   font-size: 1.4rem;

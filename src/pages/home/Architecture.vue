@@ -111,7 +111,7 @@
         padding: 120px 0 80px;
         margin: 0 auto;
         @media (max-width: 768px) {
-         padding: 5rem 0 3rem 0;
+         padding: 2rem 0;
         }
       }
       .architecture-info {
@@ -198,7 +198,7 @@
             margin:0 10px 20px 15px;
             padding:0 0 15px 10px;
             @media (max-width: 768px) {
-            	margin:0 0.5rem 1rem 1.25rem;
+            	margin:1rem 0.5rem;
               padding:0 0 0.75rem 0.8rem;
             }
             h4,p{

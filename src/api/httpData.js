@@ -76,13 +76,20 @@ export const getPartnerList = (siteId=1,pageSize=10,pageNum=1) => fetch('partner
 export const getDownloadsList = (siteId=1,pageSize=10,pageNum=1) => fetch('downloads.html?siteId=' + siteId + '&pageSize=' + pageSize + '&pageNum=' + pageNum);
 
 /**
- *  获取首页下载列表 Get getFaqList list
+ *  获取常见问题列表 Get getFaqList list
+ * @param siteId
+ * @returns {Promise}
+ */
+export const getFaqList= (siteId=1,pageSize=100,pageNum=1) => fetch('faq.html?siteId=' + siteId + '&pageSize=' + pageSize + '&pageNum=' + pageNum);
+
+/**
+ *  获取半月报列表 Get getBimonthlyList list
  * @param siteId
  * @param pageSize
  * @param pageNum
  * @returns {Promise}
  */
-export const getFaqList= (siteId=1) => fetch('faq.html?siteId=' + siteId);
+export const getBimonthlyList= (siteId=1,pageSize=100,pageNum=1) => fetch('bimonthly.html?siteId=' + siteId + '&pageSize=' + pageSize + '&pageNum=' + pageNum);
 
 /**
  *  获取首页下载列表 Get getWalletDownloadList list
