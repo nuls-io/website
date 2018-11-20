@@ -215,6 +215,7 @@
       h3 {
         font-size: 48px;
         font-weight: 700;
+        color: #ffffff;
         @media (max-width: 768px) {
           font-size: 24px;
 	        margin: 1rem 0 1.5rem 0;
@@ -224,6 +225,7 @@
       p {
         font-size: 16px;
         margin:40px 0 30px 0;
+        color: #f0f7ff;
         @media (max-width: 768px) {
           font-size: 13px;
           line-height: 24px;
@@ -336,6 +338,7 @@
             display: none;
           }
           p {
+            color: #f0f7ff;
             line-height: 23px;
             opacity: 0.5;
             margin-bottom: 16px;

@@ -1,6 +1,6 @@
 * html .clearfix {height: 1%}
 *{box-sizing: border-box;}
-body, div, dl, dt, dd, ul,ol,li, h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p{margin: 0;padding: 0;font-family: Helvetica,'微软雅黑',sans-serif;color: #FFFFFF;}
+body, div, dl, dt, dd, ul,ol,li, h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea{margin: 0;padding: 0;font-family: Helvetica,'微软雅黑',sans-serif;color: #FFFFFF;}
 body {background-color: #0c1323;}
 table {border-collapse: collapse;border-spacing: 0;}
 fieldset, img {border: 0;}

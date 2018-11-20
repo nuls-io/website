@@ -64,7 +64,7 @@
           let enUrl ='https://nuls.io/api/v1/download/files/papers/white/NulsWhitepaper1.1.pdf';
           tolink(this.language.toString() ===  '1' ? cnUrl : enUrl);
         }else {
-          let cnUrl ='https://nuls.io/api/v1/download/files/papers/white/NULS_whitepaper_zh_V1.0.pdf';
+          let cnUrl ='https://nuls.io/api/v1/download/files/papers/yellow/NulsYellowpaper1.1.pdf';
           let enUrl ='https://nuls.io/api/v1/download/files/papers/yellow/NulsYellowpaper1.1.pdf';
           tolink(this.language.toString() ===  '1' ? cnUrl : enUrl);
         }

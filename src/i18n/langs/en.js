@@ -93,26 +93,26 @@ module.exports = {
       p1: 'Multi-assets launch',
       p2: 'Changes function launch'
     },
-    road_tab_water_1: {
-      p0: 'Technology',
-      p1: 'Complete more consensus module implementations',
-      p2: 'Grasp self-evolution of network and storage modules (support Exabyte of data volume storage)',
-      p3: 'Form a set of standard technical solutions to be used in various industries',
-      p4: 'Establish a new ecosystem which is composed of blockchain and other fields such as big data and artificial intelligence',
-    },
+   road_tab_water_1: {
+      p0: 'NULS 2.0',
+      p1: 'New architecture achieving more flexible and independent modules (including cross-chain) supported by micro services  that will allow building modules in many development languages and with an interface that will minimize development time and costs for external developers and companies interested in building systems around NULS',
+      p2:'',
+      p3:'',
+   },
     road_tab_water_2: {
-      p0: 'Complete more functional modules, including POWER module and POS module',
-      p1: 'At least 5 sub-chains join NULS',
-      p2: 'At least 15 applications run on NULS',
-      p3: 'Provide technicals solutions for at least 3 industries',
+      p0: 'Chain Factory launch',
+      p1: 'NULS innovative design system, which allows for the creation of a customizable chain using our module repository, in addition to connecting to other chains in the NULS ecosystem',
+      p2:'',
+      p3:'',
       p4:'',
     },
     road_tab_water_3: {
-      p0: 'Ecology',
-      p1: 'Build a mature open-source community, large scale set up application sub-chain',
-      p2: '',
+      p0: 'Technology',
+      p1: 'Complete more consensus module implementations',
+      p2: 'Grasp self-evolution of network and storage modules (support Exabyte of data volume storage)',
+      p3: 'Form a set of standard technical solutions to be used in various industries'
     },
-    road_tab_water_4: {
+     road_tab_water_4: {
       p0: 'Main-net',
       p1: 'Complete more functional modules, including PoW module and PoS module',
       p2: 'At least 5 sub-chains join NULS',
@@ -136,7 +136,7 @@ module.exports = {
     },
     road_tab_steam_3: {
       p0: 'Ecology',
-      p1: 'Build an open-source community integrated within the blockchain, big data, artificial intelligence sectors. Provide comprehensive value docking and collaboration platforms.',
+      p1: 'Build an open-source community integrated within the blockchain, big data, artificial intelligence sectors. Provide comprehensive value docking and collaboration platforms',
     },
 
     w_title: 'Download the whitepaper in your preferred language choice',
