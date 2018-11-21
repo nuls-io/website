@@ -88,51 +88,58 @@ module.exports = {
       p3: 'Start and promote more applications to be accessed within the NULS ecosystem',
     },
     road_tab_ice_4: {
-      time: '2018.11',
-      p0: 'Main-net with smart contract function launch',
+      time: '2018.12',
+      p0: 'Chain Factory launch',
+      p1: 'NULS innovative design system, which allows for the creation of a customizable chain using our module repository',
+      p2: 'In addition to connecting to other chains in the NULS ecosystem',
+      /* p0: 'Main-net with smart contract function launch',
       p1: 'Multi-assets launch',
-      p2: 'Changes function launch'
+      p2: 'Changes function launch'*/
     },
-   road_tab_water_1: {
+    /*road_tab_water_1: {
       p0: 'NULS 2.0',
       p1: 'New architecture achieving more flexible and independent modules (including cross-chain) supported by micro services  that will allow building modules in many development languages and with an interface that will minimize development time and costs for external developers and companies interested in building systems around NULS',
-      p2:'',
-      p3:'',
-   },
+      p2: '',
+      p3: '',
+      p4: '',
+    },
     road_tab_water_2: {
       p0: 'Chain Factory launch',
       p1: 'NULS innovative design system, which allows for the creation of a customizable chain using our module repository, in addition to connecting to other chains in the NULS ecosystem',
-      p2:'',
-      p3:'',
-      p4:'',
-    },
-    road_tab_water_3: {
+      p2: '',
+      p3: '',
+      p4: '',
+    },*/
+    road_tab_water_1: {
       p0: 'Technology',
       p1: 'Complete more consensus module implementations',
       p2: 'Grasp self-evolution of network and storage modules (support Exabyte of data volume storage)',
       p3: 'Form a set of standard technical solutions to be used in various industries'
     },
-     road_tab_water_4: {
+    road_tab_water_2: {
       p0: 'Main-net',
       p1: 'Complete more functional modules, including PoW module and PoS module',
       p2: 'At least 5 sub-chains join NULS',
       p3: 'At least 15 applications run on NULS',
       p4: 'Provide technicals solutions for at least 3 industries'
     },
-    road_tab_water_5: {
+    road_tab_water_3: {
       p0: 'Ecology',
       p1: 'Build a mature open-source community',
-      p2: 'Large scale set up application sub-chain'
+      p2: 'Large scale set up application sub-chain',
+      p3: '',
+
     },
     road_tab_steam_1: {
       p0: 'Technology',
       p1: 'Providing a complete solution to solve production and management in both industry and agriculture. Consisting of a complete technology platform for the integration of blockchain big data and artificial intelligence all in one ecosystem.',
     },
     road_tab_steam_2: {
-      p0: 'At least 30 sub-chains join NULS',
-      p1: 'At least 50 applications run on NULS',
-      p2: 'Provides technical solutions for at least 20 industries, build eco ecosystem based on NULS, such as big data',
-      p3: '',
+      p0: 'Main-net',
+      p1: 'At least 30 sub-chains join NULS',
+      p2: 'At least 50 applications run on NULS',
+      p3: 'Provides technical solutions for at least 20 industries, build eco ecosystem based on NULS, such as big data',
+      p4: '',
     },
     road_tab_steam_3: {
       p0: 'Ecology',
@@ -162,9 +169,9 @@ module.exports = {
     title: 'NULS Team',
     info: 'The core team members are highly experienced professionals who are well versed in blockchain technology and community building. The catalyst which brought this team together is the shared vision of blockchain, and a desire to create an open, innovative and technologically advanced platform.',
 
-    angel:'Angel Investor',
-    craft:'NULS Code Craft Council',
-    advisors:'Advisors',
+    angel: 'Angel Investor',
+    craft: 'NULS Code Craft Council',
+    advisors: 'Advisors',
 
   },
 

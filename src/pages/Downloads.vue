@@ -175,14 +175,16 @@
               color: #0b1422;
               opacity: 0.86;
               display: block;
+              padding: 0 30px 0 0;
               width: 85%;
               float: left;
               @media (max-width: 768px) {
                 width: 100%;
                 float: none;
+                padding: 0 0.5rem;
               }
             }
-            button{
+            .el-button{
               display: block;
               margin: 1rem auto;
               width: 15%;
@@ -190,6 +192,7 @@
               span{
                 width: 100%;
                 color: #ffffff;
+                padding: 0;
                 @media (max-width: 768px) {
                   font-size: 1.2rem;
                 }
@@ -198,7 +201,6 @@
                 width: 100%;
                 float: none;
                 text-align: center;
-
               }
             }
           }

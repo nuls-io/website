@@ -27,32 +27,33 @@
           <swiper-slide class="swiper-slide-ice">
             <p class="date">{{$t('home.road_tab_ice_1.time')}}</p>
             <div class="triangle"></div>
-            <p class="bold">{{$t('home.road_tab_ice_1.p0')}}</p>
-            <p class="bold">{{$t('home.road_tab_ice_1.p1')}}</p>
-            <p class="bold">{{$t('home.road_tab_ice_1.p2')}}</p>
+            <p>{{$t('home.road_tab_ice_1.p0')}}</p>
+            <p>{{$t('home.road_tab_ice_1.p1')}}</p>
+            <p>{{$t('home.road_tab_ice_1.p2')}}</p>
           </swiper-slide>
           <swiper-slide class="swiper-slide-ice">
             <p class="date">{{$t('home.road_tab_ice_2.time')}}</p>
             <div class="triangle"></div>
-            <p class="bold">{{$t('home.road_tab_ice_2.p0')}}</p>
-            <p class="bold">{{$t('home.road_tab_ice_2.p1')}}</p>
-            <p class="bold">{{$t('home.road_tab_ice_2.p2')}}</p>
-            <p class="bold">{{$t('home.road_tab_ice_2.p3')}}</p>
-            <p class="bold">{{$t('home.road_tab_ice_2.p4')}}</p>
+            <p>{{$t('home.road_tab_ice_2.p0')}}</p>
+            <p>{{$t('home.road_tab_ice_2.p1')}}</p>
+            <p>{{$t('home.road_tab_ice_2.p2')}}</p>
+            <p>{{$t('home.road_tab_ice_2.p3')}}</p>
+            <p>{{$t('home.road_tab_ice_2.p4')}}</p>
           </swiper-slide>
           <swiper-slide class="swiper-slide-ice">
             <p class="date cbuld">{{$t('home.road_tab_ice_3.time')}}</p>
             <div class="triangle active"></div>
-            <p class="bold cbuld">{{$t('home.road_tab_ice_3.p0')}}</p>
-            <p class="bold cbuld">{{$t('home.road_tab_ice_3.p1')}}</p>
-            <p class="bold cbuld">{{$t('home.road_tab_ice_3.p2')}}</p>
+            <p class="cbuld">{{$t('home.road_tab_ice_3.p0')}}</p>
+            <p class="cbuld">{{$t('home.road_tab_ice_3.p1')}}</p>
+            <p class="cbuld">{{$t('home.road_tab_ice_3.p2')}}</p>
             <p class="cbuld">{{$t('home.road_tab_ice_3.p3')}}</p>
           </swiper-slide>
           <swiper-slide class="swiper-slide-ice">
             <p class="date">{{$t('home.road_tab_ice_4.time')}}</p>
             <div class="triangle"></div>
-            <p class="bold">{{$t('home.road_tab_ice_4.p0')}}</p>
-            <p class="bold">{{$t('home.road_tab_ice_4.p1')}}</p>
+            <p>{{$t('home.road_tab_ice_4.p0')}}</p>
+            <p>{{$t('home.road_tab_ice_4.p1')}}</p>
+            <p>{{$t('home.road_tab_ice_4.p2')}}</p>
           </swiper-slide>
         </swiper>
         <swiper v-if="isActive('water')" :options="swiperOptions" :key="`${slidesPerView}-${active}`">
@@ -78,7 +79,7 @@
             <p>{{$t('home.road_tab_water_3.p2')}}</p>
             <p>{{$t('home.road_tab_water_3.p3')}}</p>
           </swiper-slide>
-          <swiper-slide>
+         <!-- <swiper-slide>
             <div class="triangle"/>
             <p class="bold">{{$t('home.road_tab_water_4.p0')}}</p>
             <p>{{$t('home.road_tab_water_4.p1')}}</p>
@@ -91,8 +92,8 @@
             <p class="bold">{{$t('home.road_tab_water_5.p0')}}</p>
             <p>{{$t('home.road_tab_water_5.p1')}}</p>
             <p>{{$t('home.road_tab_water_5.p2')}}</p>
-          </swiper-slide>
-          <div slot="pagination" class="swiper-pagination"/>
+          </swiper-slide>-->
+          <!--<div slot="pagination" class="swiper-pagination"/>-->
         </swiper>
         <swiper v-if="isActive('steam')" :options="swiperOptions" :key="`${slidesPerView}-${active}`">
           <swiper-slide>
@@ -228,7 +229,7 @@
 
   .line.ice {
     position: relative;
-    top: -55px;
+    top: -42px;
   }
 
   .line.water,
@@ -240,9 +241,9 @@
   p {
     padding: 0;
     margin: 10px 0 0 0;
-    color: #445569;
     font-size: 16px;
-    line-height: 30px;
+    color: #0a2140;
+    line-height: 28px;
     @media (max-width: 768px) {
       margin: 0.3rem 0 0 0;
       font-size: 0.8rem;
@@ -253,8 +254,8 @@
   p.bold {
     font-family: SofiaProRegular, sans-serif;
     font-size: 16px;
-    letter-spacing: -0.41px;
     color: #0a2140;
+    line-height: 28px;
   }
 
   p.date {

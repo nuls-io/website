@@ -100,6 +100,7 @@
         width: auto;
         height: auto;
         margin: 20px 0;
+        color: #333333;
         img{
           @media (max-width: 768px) {
             width: 100%;
@@ -109,15 +110,15 @@
           text-align: left;
         }
         p{
-          font-size: 18px;
-          color: #8E9496;
+          font-size: 16px;
+          color: #333333;
           letter-spacing: 0;
-          line-height: 25px;
+          line-height: 30px;
           font-weight: 300;
-          margin: 0 auto 20px;
+          margin: 0 auto 10px;
           @media (max-width: 768px) {
             margin: 0 auto;
-            font-size: 0.7rem;
+            font-size: 0.6rem;
             padding:0.5rem;
           }
         }
