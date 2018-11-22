@@ -1,0 +1,162 @@
+@import url("./el-index.less");
+//background color
+@bg-color: #0b1422;
+@bg-color1: #FFFFFF;
+//color
+@color:#FFFFFF;
+@color_1:#445569;
+@h-color: #17202e;
+//border color
+@bd-color: #658ec7;
+
+.h1{
+  font-size: 48px;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 48px;
+  padding: 50px 0 40px 0;
+  @media (max-width: 768px) {
+    line-height:2rem;
+    font-size:2rem;
+    padding: 2rem 0 1rem 0;
+  }
+}
+.h2{
+  font-size: 48px;
+  text-align: center;
+  font-weight:bold;
+  color: #0a2140;
+  margin: 120px auto 80px;
+  @media (max-width: 768px) {
+    font-size:1.4rem;
+    margin: 0 auto 1rem;
+    padding: 1rem 0 0 0;
+  }
+}
+.h3{}
+.h4{
+  color: #0a2140;
+  font-size: 30px;
+  text-align: center;
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
+}
+.h5 {
+  font-size: 38px;
+  opacity: 0.7;
+  color: @color;
+  letter-spacing: 0;
+  line-height: 32px;
+  padding: 20px;
+  text-align: center;
+  @media (max-width: 768px) {
+    line-height: 1.6rem;
+    font-size: 1.6rem;
+  }
+}
+.h6{
+  font-size: 24px;
+  font-weight: bold;
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
+}
+.w_1280{
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.w_810{
+  max-width: 810px;
+  margin: 0 auto;
+  padding: 15px 0;
+  @media (max-width: 768px) {
+    padding: 0.5rem;
+  }
+}
+.font-12{
+  font-size:12px;
+}
+.font-14{
+  font-size:14px;
+}
+.font-16{
+  font-size:16px;
+}
+.font-18{
+  font-size:18px;
+}
+.font-20{
+  font-size:20px;
+  @media (max-width: 768px){
+    font-size:1rem;
+  }
+}
+.font-24{
+  font-size:24px;
+  @media (max-width: 768px){
+    font-size: 0.9rem;
+  }
+}
+.font-30{
+  font-size:30px;
+  @media (max-width: 768px){
+    font-size: 0.9rem;
+  }
+}
+.font-36{
+  font-size:32px;
+  line-height: 46px;
+  @media (max-width: 768px){
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+  }
+}
+.font-bold{
+  font-weight: bold;
+}
+.c_green{
+  color: #59a500;
+}
+.pointer{
+  cursor: pointer;
+}
+.flex{
+  display:flex;
+  justify-content: space-between;
+}
+.clipPath {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+}
+.header-bg{
+  background: url('./../images/map-bg.jpg') no-repeat;
+  background-size: 100% 100%;
+  padding: 0 0 80px 0;
+  @media (max-width: 768px){
+    padding: 0 0 2rem 0;
+  }
+}
+.centers{
+  max-width: 1280px;
+  margin: 0 auto 100px;
+  @media (max-width: 768px){
+    margin: 0 auto 3rem;
+  }
+}
+.shadow{
+  -moz-box-shadow: 1px 1px 2px #333333;
+  -webkit-box-shadow: 1px 1px 2px #333333;
+  box-shadow: 1px 1px 2px #333333;
+}
+.pc{
+  @media (max-width: 768px){
+    display: none;
+  }
+}
+.iphone{
+  display: none;
+  @media (max-width: 768px){
+    display: block;
+  }
+}
+

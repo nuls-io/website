@@ -1,0 +1,39 @@
+* html .clearfix {height: 1%}
+*{box-sizing: border-box;}
+body, div, dl, dt, dd, ul,ol,li, h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea{margin: 0;padding: 0;font-family: Helvetica,'微软雅黑',sans-serif;color: #FFFFFF;}
+body {background-color: #0c1323;}
+table {border-collapse: collapse;border-spacing: 0;}
+fieldset, img {border: 0;}
+address,caption,cite,code,dfn,em,strong,th,var {font-style: normal;font-weight: normal;}
+ol,ul {list-style: none;}
+q:before, q:after {content: ' '}
+a {text-decoration: none;color: #5c5c5c;outline: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
+a:hover {text-decoration: none}
+a:focus {outline: none;}
+
+.tl {text-align: left;}
+.tc {text-align: center;}
+.tr {text-align: right;}
+.bc {margin-left: auto;margin-right: auto;}
+.fl {float: left;display: inline;}
+.fr {float: right;display: inline;}
+.cb {clear: both;}
+.hidden {visibility: hidden;}
+.none {display: none;}
+
+/**手指样式**/
+.cursor-p {cursor: pointer;}
+
+/**超长显示...**/
+.overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+
+
+
+
+

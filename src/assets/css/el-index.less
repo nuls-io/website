@@ -1,0 +1,130 @@
+.el-button {
+  width: 200px;
+  height: 50px;
+  border-radius: 50px;
+  padding: 10px 0;
+  color: #0b1422;
+  &:hover, &:focus {
+    color: #0b1422;
+  }
+}
+
+.el-button.bg-green-btn {
+  width: 200px;
+  height: 50px;
+  border-radius: 50px;
+  padding: 10px 0;
+  background: linear-gradient(-180deg, #56c400, #8fe400);
+  border-color: #59a500;
+  color: #ffffff;
+  &:hover, &:focus {
+    background: linear-gradient(-180deg, #56c400, #3a7e05);
+    border-color: #59a500;
+    color: #eae4e4;
+  }
+}
+
+/**
+ * el-menu--horizontal
+ **/
+.el-menu--horizontal {
+  .el-menu {
+    width: 180px;
+    .el-menu-item{
+      height: 52px;
+      color: #445569;
+      font-size: 16px;
+      line-height: 52px;
+      border-bottom: 1px solid #445569;
+      margin: 0 10px 0;
+      z-index: 99999;
+      &:first-child{
+         border-top-right-radius: 5px;
+         border-top-left-radius: 5px;
+       }
+      &:last-child{
+        border-bottom: 0 solid #445569;
+      }
+    }
+  }
+}
+
+.carousel{
+  .el-carousel{
+    .el-carousel__indicators{
+      .el-carousel__indicator{
+        .el-carousel__button{
+          width: 10px;
+          height: 10px;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}
+
+/**
+ *el-pagination
+ **/
+.el-pagination{
+   text-align: center;
+  margin: 20px auto;
+  .el-pager{
+    .active{
+      background-color: #3e8900;
+    }
+  }
+}
+
+.el-pagination.is-background .el-pager li:not(.disabled).active {
+  background-color: #3e8900;
+  color: #fff;
+}
+
+.el-menu--horizontal>.el-submenu.is-active .el-submenu__title{
+  border-bottom: 2px solid #9cbe82;
+}
+
+.el-dropdown-menu {
+  .el-dropdown-menu__item{
+    line-height: 52px;
+    width: 180px;
+    border-bottom: 1px solid #c1c5c9;
+    margin: 0 10px;
+    &:last-child{
+      border-bottom: 0 solid #445569;
+    }
+  }
+}
+
+.el-button,.el-button--success{
+  color: #ffffff;
+  background-image: linear-gradient(to top,#56c400, #8fe400);
+  border-color: #67c23a;
+  &:hover{
+    color: #eae4e4;
+    background-image: linear-gradient(to top, #56c400,#3a7e05);
+    border-color: #67c23a;
+  }
+}
+
+.el-steps{
+  .el-step{
+    .el-step__head {
+      color: #c1c1c1;
+      border-color: #c1c1c1;
+    }
+    .el-step__icon{
+      i{
+        color: #3e8900;
+      }
+    }
+    .el-step__main{
+      .el-step__title{
+        .el-step__description{
+
+        }
+      }
+    }
+  }
+}

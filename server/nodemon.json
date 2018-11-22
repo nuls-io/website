@@ -1,3 +1,0 @@
-{
-  "ignoreRoot": [".git", "node_modules", "!node_modules/ang-server/**/*", "package.json", "data/*"]
-}
