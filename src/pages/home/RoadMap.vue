@@ -79,7 +79,7 @@
             <p>{{$t('home.road_tab_water_3.p2')}}</p>
             <p>{{$t('home.road_tab_water_3.p3')}}</p>
           </swiper-slide>
-         <!-- <swiper-slide>
+          <swiper-slide>
             <div class="triangle"/>
             <p class="bold">{{$t('home.road_tab_water_4.p0')}}</p>
             <p>{{$t('home.road_tab_water_4.p1')}}</p>
@@ -92,8 +92,9 @@
             <p class="bold">{{$t('home.road_tab_water_5.p0')}}</p>
             <p>{{$t('home.road_tab_water_5.p1')}}</p>
             <p>{{$t('home.road_tab_water_5.p2')}}</p>
-          </swiper-slide>-->
-          <!--<div slot="pagination" class="swiper-pagination"/>-->
+            <p>{{$t('home.road_tab_water_5.p3')}}</p>
+          </swiper-slide>
+          <div slot="pagination" class="swiper-pagination"/>
         </swiper>
         <swiper v-if="isActive('steam')" :options="swiperOptions" :key="`${slidesPerView}-${active}`">
           <swiper-slide>
@@ -230,6 +231,9 @@
   .line.ice {
     position: relative;
     top: -42px;
+    @media (max-width: 768px) {
+      top: -53px;
+    }
   }
 
   .line.water,

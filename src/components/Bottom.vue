@@ -384,6 +384,11 @@
         @media (max-width: 768px) {
           padding: 0 0 1.5rem 0;
         }
+        p{
+          @media (max-width: 768px) {
+            color: #f0f7ff;
+          }
+        }
       }
     }
   }

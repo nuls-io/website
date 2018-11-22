@@ -56,7 +56,7 @@ module.exports = {
     wallet_title: 'NULS Wallet',
     wallet_info: 'NULS wallet is developed by NULS core technical team Supported on various platforms',
     wallet_list_title: 'Download',
-    wallet_list_0: 'Windowc Download',
+    wallet_list_0: 'Windows Download',
     wallet_list_1: 'MacOS Download',
     wallet_list_2: 'Linux Download',
     wallet_online: 'Online Wallet',
@@ -69,7 +69,7 @@ module.exports = {
     road_tab_ice_1: {
       time: '2018.05',
       p0: 'Main-net test',
-      p1: 'Complete the main-net\'s development, testing phase commence',
+      p1: 'Complete the main-net development,testing phase commences',
       p2: 'Improve the technical design documentation',
     },
     road_tab_ice_2: {
@@ -85,49 +85,45 @@ module.exports = {
       p0: 'Release smart contract module',
       p1: 'Release universal ledger module',
       p2: 'Ecosystem improvements',
-      p3: 'Start and promote more applications to be accessed within the NULS ecosystem',
+      p3: 'Initiate, increase & promote applications accessed within NULS ecosystem',
     },
     road_tab_ice_4: {
-      time: '2018.12',
-      p0: 'Chain Factory launch',
-      p1: 'NULS innovative design system, which allows for the creation of a customizable chain using our module repository',
-      p2: 'In addition to connecting to other chains in the NULS ecosystem',
-      /* p0: 'Main-net with smart contract function launch',
-      p1: 'Multi-assets launch',
-      p2: 'Changes function launch'*/
+      time: '2018.11',
+      p0: 'Main-net with Smart Contract Function Launch',
+      p1: 'Multi-Assets Launch',
+      p2: 'Changes Function Launch',
     },
-    /*road_tab_water_1: {
+    road_tab_water_1: {
       p0: 'NULS 2.0',
-      p1: 'New architecture achieving more flexible and independent modules (including cross-chain) supported by micro services  that will allow building modules in many development languages and with an interface that will minimize development time and costs for external developers and companies interested in building systems around NULS',
-      p2: '',
-      p3: '',
-      p4: '',
+      p1: 'New architecture with increased flexibility and independence of modules (including cross-chain) supported by micro services: Modules can be built in multiple languages. Interface further minimizes development time and costs for external developers and companies interested in building systems around NULS.',
+      p2: 'Expected to Q1 2019：Alpha Test',
+      p3: 'Expected to Q2 2019：Public Beta',
     },
     road_tab_water_2: {
       p0: 'Chain Factory launch',
       p1: 'NULS innovative design system, which allows for the creation of a customizable chain using our module repository, in addition to connecting to other chains in the NULS ecosystem',
-      p2: '',
-      p3: '',
-      p4: '',
-    },*/
-    road_tab_water_1: {
+      p2: 'Expected to Q1 2019：Initiation',
+      p3: 'Expected to Q2 2019：Alpha Test',
+      p4: 'Expected to Q3 2019：Public Beta',
+    },
+    road_tab_water_3: {
       p0: 'Technology',
       p1: 'Complete more consensus module implementations',
       p2: 'Grasp self-evolution of network and storage modules (support Exabyte of data volume storage)',
       p3: 'Form a set of standard technical solutions to be used in various industries'
     },
-    road_tab_water_2: {
+    road_tab_water_4: {
       p0: 'Main-net',
       p1: 'Complete more functional modules, including PoW module and PoS module',
       p2: 'At least 5 sub-chains join NULS',
       p3: 'At least 15 applications run on NULS',
       p4: 'Provide technicals solutions for at least 3 industries'
     },
-    road_tab_water_3: {
+    road_tab_water_5: {
       p0: 'Ecology',
       p1: 'Build a mature open-source community',
-      p2: 'Large scale set up application sub-chain',
-      p3: '',
+      p2: 'Large-Scale Set-up Application Sub-chain',
+      p3: 'Current Partners：MC Payment PRISM、VICS、Superlinks、Realme.One etc.',
 
     },
     road_tab_steam_1: {

@@ -124,6 +124,7 @@
         padding: 0 10px;
         font-size: 20px;
         margin: 10px 0 0 0;
+        color: #f0f7ff;
         @media (max-width: 768px) {
          padding: 0 0 1rem 1rem;
          font-size: 1rem;

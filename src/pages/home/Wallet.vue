@@ -92,10 +92,10 @@
        * @param e
        */
       toDownload(e) {
-        console.log(e);
+        let url = "https"+ e.substr(4,e.length);
         try {
           let elemIF = document.createElement("iframe");
-          elemIF.src = e;
+          elemIF.src = url;
           elemIF.style.display = "none";
           document.body.appendChild(elemIF);
         } catch (e) {
