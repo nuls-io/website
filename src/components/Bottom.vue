@@ -16,7 +16,7 @@
                                                                                  height="34" width="41"/></a></li>
         <li><a href="https://steemit.com/@nuls" target="_blank"><img src="../assets/images/discord.png" height="28"
                                                                      width="40"/></a></li>
-        <li><a href="https://gitter.im/nul" target="_blank"><img src="../assets/images/steemit.png" height="40"
+        <li><a href="https://steemit.com/@nuls" target="_blank"><img src="../assets/images/steemit.png" height="40"
                                                                  width="38"/></a></li>
         <li><a
           href="https://nuls.slack.com/join/shared_invite/enQtMjQ4MTM4ODAyNTI4LWJjNGMwYTE0YjRlYmFlZGUwM2JhOGE4MDIwZmE4MzA2MDg1YzUyMmVkN2RhZjkyNWMzZjY5ZDU5ZmViMjZjNGQ"

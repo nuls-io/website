@@ -101,25 +101,28 @@
         height: auto;
         margin: 20px 0;
         color: #333333;
-        img{
-          @media (max-width: 768px) {
-            width: 100%;
-          }
-        }
+
         span{
           text-align: left;
         }
         p{
-          font-size: 16px;
-          color: #333333;
+          font-size: 14px !important;
+          color: #333333 !important;
           letter-spacing: 0;
-          line-height: 30px;
-          font-weight: 300;
-          margin: 0 auto 10px;
+          line-height: 30px !important;
+          font-weight: 300 !important;
+          margin: 0 auto 10px !important;
           @media (max-width: 768px) {
             margin: 0 auto;
             font-size: 0.6rem;
             padding:0.5rem;
+          }
+
+          img{
+            text-align: center;
+            @media (max-width: 768px) {
+              width: 100%;
+            }
           }
         }
 

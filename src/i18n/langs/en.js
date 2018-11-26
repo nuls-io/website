@@ -95,7 +95,7 @@ module.exports = {
     },
     road_tab_water_1: {
       p0: 'NULS 2.0',
-      p1: 'New architecture with increased flexibility and independence of modules (including cross-chain) supported by micro services: Modules can be built in multiple languages. Interface further minimizes development time and costs for external developers and companies interested in building systems around NULS.',
+      p1: 'New architecture with increased flexibility and independence of modules,including cross-chain universal,ledger module(compatible with UTXO and Account/Balance Model),supported by micro services: Modules can be built in multiple languages. Interface further minimizes development time and costs for external developers and companies interested in building systems around NULS.',
       p2: 'Expected to Q1 2019：Alpha Test',
       p3: 'Expected to Q2 2019：Public Beta',
     },
@@ -108,9 +108,9 @@ module.exports = {
     },
     road_tab_water_3: {
       p0: 'Technology',
-      p1: 'Complete more consensus module implementations',
+      p1: 'Complete additional consensus module implementations',
       p2: 'Grasp self-evolution of network and storage modules (support Exabyte of data volume storage)',
-      p3: 'Form a set of standard technical solutions to be used in various industries'
+      p3: 'Form set of standard technical solutions for use in various industries'
     },
     road_tab_water_4: {
       p0: 'Main-net',

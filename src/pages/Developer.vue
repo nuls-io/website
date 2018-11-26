@@ -12,7 +12,8 @@
           </div>
           <div class="w_right fl">
             <h6 class="h6 font-30">{{$t('developer.title3')}}</h6>
-            <p class="font-18 c_green cursor-p" @click="toUrl('https://nuls.community/d/9-invitation-of-community-developers')">{{$t('developer.info1')}} <i class="el-icon-arrow-right"></i></p>
+            <!--<p class="font-18 c_green cursor-p" @click="toUrl('https://nuls.community/d/9-invitation-of-community-developers')">{{$t('developer.info1')}} <i class="el-icon-arrow-right"></i></p>-->
+            <p class="font-18 c_green cursor-p" @click="languageUrl">{{$t('developer.info1')}} <i class="el-icon-arrow-right"></i></p>
             <p class="font-18 c_green cursor-p" @click="toUrl('https://goo.gl/AhwqhM')">{{$t('developer.info2')}} <i class="el-icon-arrow-right"></i></p>
             <p class="font-18 c_green cursor-p" @click="toUrl('https://nuls.community/d/173-nuls-dev-community-weekly-summary/2')">{{$t('developer.info3')}} <i class="el-icon-arrow-right"></i></p>
           </div>
@@ -64,11 +65,23 @@
   import Bottom from '@/components/Bottom';
 
   export default {
+    data() {
+      return {
+      }
+    },
     components: {
       HeaderList,
       Bottom,
     },
     methods: {
+
+      /**
+       * 根据语言跳转链接
+       **/
+      languageUrl(){
+        let language = sessionStorage.hasOwnProperty('langs') ? sessionStorage.getItem('langs') : 'en';
+        this.toUrl(language ==='en' ? 'https://nuls.community/d/9-invitation-of-community-developers' : 'https://nuls.community/d/90-nuls' )
+      },
 
       /**
        *  打开新连接
