@@ -5,8 +5,8 @@
       </div>
       <div v-loading="partnersLoading">
         <div class="partners-info">
-          <h1 class="h1">{{$t('partners.title')}}</h1>
-          <p>{{$t('partners.info')}}</p>
+          <h1 class="h1 cb">{{$t('partners.title')}}</h1>
+          <p class="w_1000 font-20">{{$t('partners.info')}}</p>
         </div>
         <div class="investment-list">
           <h2 class="h2">{{$t('partners.name0')}}</h2>
@@ -136,7 +136,7 @@
     .partners-header{
       background: url("./../assets/images/map-bg.jpg") no-repeat;
       background-size: 100% 100%;
-      height: 500px;
+      height: 330px;
       @media (max-width: 768px) {
         height: 25rem;
       }
@@ -153,19 +153,6 @@
         @media (max-width: 768px) {
           padding: 0;
           margin: 2rem auto 1rem;
-        }
-      }
-      p{
-        max-width:810px;
-        margin:0 auto;
-        padding: 15px 0;
-        font-size: 20px;
-        text-align: center;
-        line-height: 29px;
-        color: #FFFFFF;
-        @media (max-width: 768px) {
-          padding: 0.5rem;
-          font-size: 1rem;
         }
       }
     }

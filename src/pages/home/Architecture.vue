@@ -173,7 +173,7 @@
            width: 90%;
             opacity: 0;
             position: absolute;
-            left: 0;
+            left: 5%;
             -webkit-transition: opacity 0.2s ease-in-out;
             transition: opacity 1s ease-in-out;
             margin: auto;

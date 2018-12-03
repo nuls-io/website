@@ -32,16 +32,15 @@
       </el-tab-pane>
 
       <el-tab-pane :label="$t('media.tab1')" name="news">
-        <ul class="news-list" v-loading="newsListLoading">
-          <li @click="toMediaDetails(site.url)" v-for="site in newList">
-            <p class="fl">
-              <label>{{ site.title }}</label>
-              <span>{{ site.create_time }}</span>
-            </p>
-            <img class="fr" :src=site.thumbnail>
-          </li>
-        </ul>
-
+        <div @click="toMediaDetails(site.url)" v-for="site in newList">
+          <el-card shadow="always" class="new_list">
+            <div class="fl nw_info">
+              <p class="nw_title font-30">{{ site.title }}</p>
+              <p class="nw_time font-18">{{ site.create_time }}</p>
+            </div>
+            <div class="fr nw_img"><img :src=site.thumbnail></div>
+          </el-card>
+        </div>
         <el-pagination
           background
           v-show="this.newlistTotal > 10"
@@ -53,17 +52,16 @@
       </el-tab-pane>
 
       <el-tab-pane :label="$t('media.tab2')" name="guide">
-        <ul class="news-list">
-          <template v-for="site in guideList">
-            <li @click="toMediaDetails(site.url)">
-              <p class="fl">
-                <label>{{ site.title }}</label>
-                <span>{{ site.create_time }}</span>
-              </p>
-              <img class="fr" :src=site.imgUrl>
-            </li>
-          </template>
-        </ul>
+
+        <div @click="toMediaDetails(site.url)" v-for="site in guideList">
+          <el-card shadow="always" class="new_list">
+            <div class="fl nw_info">
+              <p class="nw_title font-30">{{ site.title }}</p>
+              <p class="nw_time font-18">{{ site.date }}</p>
+            </div>
+            <div class="fr nw_img"><img :src=site.imgUrl></div>
+          </el-card>
+        </div>
       </el-tab-pane>
     </el-tabs>
     <Bottombar></Bottombar>
@@ -262,10 +260,10 @@
         let that = this;
         getBimonthlyList(siteId)
           .then(function (response) {
-            console.log(response);
+            //console.log(response);
             //let bimonthlyListSort = arrItemSort(response.data, "id", 0);
-            for(let item of response.data){
-              item.time = item.bimonthly_date.substr(0,11)
+            for (let item of response.data) {
+              item.time = item.bimonthly_date.substr(0, 11)
             }
             that.bimonthlyList = response.data;
           })
@@ -371,7 +369,7 @@
                 margin: 0 30px;
                 padding: 0;
                 @media (max-width: 768px) {
-                  margin: 0 0.5rem;
+                  margin: 0.4rem 0.5rem 0 0.5rem;
                   width: 6.5rem;
                   height: 2rem;
                   line-height: 2rem;
@@ -380,8 +378,7 @@
                 &:hover {
                   color: #56c400;
                   background: #fff;
-                  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.2);
-                  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.2);
+                  box-shadow: 2px 4px 12px 2px #03143712;
                 }
                 &:first-child {
                   margin: 0 0 0 200px;
@@ -390,8 +387,7 @@
               .is-active {
                 background: #fff;
                 color: #56c400;
-                -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.2);
-                box-shadow: 0 3px 9px rgba(0, 0, 0, 0.2);
+                box-shadow: 2px 4px 12px 2px #03143712;
               }
               .el-tabs__active-bar {
                 background-color: transparent;
@@ -408,62 +404,40 @@
         margin-bottom: 120px;
         .el-tab-pane {
         }
-        .news-list {
-          li {
-            height: 200px;
-            box-shadow: 5px 8px 9px -5px #C1C5C9;
-            border: 1px solid #C1C5C9;
-            border-radius: 8px;
-            margin: 20px 0 0 0;
+        .new_list {
+          margin: 20px 0 0 0;
+          @media (max-width: 768px) {
+            width: 90%;
+            margin: 1rem 0 0 5%;
+          }
+          &:hover {
+            cursor: pointer;
+          }
+          .nw_info {
+            width: 70%;
             @media (max-width: 768px) {
-              height: 8rem;
-              margin: 0.5rem;
+              width: 100%;
             }
-            &:hover {
-              cursor: pointer;
-            }
-            p {
-              padding: 24px 10px 0 36px;
-              color: #445569;
-              font-size: 24px;
-              width: 70%;
+            .nw_title {
+              color: #0a2140;
+              margin: 20px 10px 30px 10px;
+              min-height: 100px;
               @media (max-width: 768px) {
-                width: 100%;
-                padding: 0.8rem;
-                z-index: 8;
-                //position: absolute;
+                margin: 0 0 1rem 0;
+                min-height: auto;
               }
-              label {
-                color: #0a2140;
-                font-size: 30px;
-                line-height: 40px;
-                display: block;
-                height: 100px;
-                @media (max-width: 768px) {
-                  font-size: 1rem;
-                  line-height: 1.4rem;
-                  height: 3.5rem;
-                }
-                &:hover {
-                  cursor: pointer;
-                }
-              }
-              span {
-                color: #a6a9ad;
-                font-size: 18px;
-                display: block;
-                position: relative;
-                top: 20px;
-                @media (max-width: 768px) {
-                  font-size: 0.8rem;
-                }
-              }
-              &:hover {
-                cursor: pointer;
-              }
+            }
+            .nw_time {
+              color: #a6a9ad;
+              margin: 0 10px 20px;
+            }
+          }
+          .nw_img {
+            @media (max-width: 768px) {
+              display: none;
             }
             img {
-              margin: 10px 10px 10px 10px;
+              margin: 10px 10px 24px 10px;
               width: 340px;
               height: 180px;
               @media (max-width: 768px) {
@@ -497,7 +471,7 @@
             margin: 1.5rem auto 0;
           }
           li {
-            box-shadow: 2px 1px 2px 3px #C1C5C9;
+            box-shadow: 2px 4px 12px 2px #03143712;
             max-width: 410px;
             height: 125px;
             margin: 20px 10px 10px 10px;

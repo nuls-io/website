@@ -305,7 +305,7 @@
     cursor: pointer;
     color: #56c400;
     background: #fff;
-    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 4px 12px 2px #03143712;
   }
 
   .buttons {

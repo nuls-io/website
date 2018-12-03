@@ -73,5 +73,10 @@ export default new Router({
       name: 'commnunity',
       component: resolve => require(['@/pages/Commnunity'], resolve),
     },
+    {
+      path: '/newWallet',
+      name: 'wallet',
+      component: resolve => require(['@/pages/newWallet'], resolve),
+    },
   ]
 })

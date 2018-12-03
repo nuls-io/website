@@ -106,7 +106,7 @@
         max-height: 150px;
       }
       h1 {
-        line-height: 9rem;
+        line-height: 6rem;
         @media (max-width: 768px) {
           line-height: 0;
         }

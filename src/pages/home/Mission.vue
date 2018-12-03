@@ -54,7 +54,7 @@
       background: #fff;
     }
     .spaceship {
-      min-height: 459px;
+      min-height: 500px;
       padding:0;
       position: relative;
       @media (max-width: 768px){

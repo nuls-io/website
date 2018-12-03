@@ -11,12 +11,7 @@
           </div>
           <el-menu :default-active="activeMenu" :mode="!showNav ? 'horizontal':'vertical'" @select="handleSelect">
             <el-menu-item index="1">{{$t('nav.home')}}</el-menu-item>
-            <el-submenu index="2">
-              <template slot="title">{{$t('nav.wallet')}}</template>
-              <el-menu-item index="2-1">{{$t('nav.wallet1')}}</el-menu-item>
-              <el-menu-item index="2-2"><a href="https://wallet.nuls.io/#/" target="_blank">{{$t('nav.wallet2')}}</a>
-              </el-menu-item>
-            </el-submenu>
+            <el-menu-item index="2">{{$t('nav.wallet')}}</el-menu-item>
             <el-menu-item index="3">{{$t('nav.developer')}}</el-menu-item>
             <el-menu-item index="7">{{$t('nav.about7')}}</el-menu-item>
             <el-menu-item index="5">{{$t('nav.media')}}</el-menu-item>
@@ -87,9 +82,9 @@
           this.$router.push({
             name: 'home',
           })
-        } else if (key === '2-1') {
+        }else if (key === '2') {
           this.$router.push({
-            name: 'walletDownloads',
+            name: 'wallet',
           })
         } else if (key === '3') {
           this.$router.push({

@@ -79,13 +79,13 @@
   .whiteYellow {
     background-color: #FFFFFF;
     .header-bg {
-      background: url("./../assets/images/top_bg.jpg") no-repeat 100% 100%;
+      background: url("./../assets/images/top_bg.jpg") no-repeat 100% 100% #0a2140;
       height: 300px;
       @media (max-width: 768px) {
         height: auto;
       }
       h1 {
-        line-height: 9rem;
+        line-height: 6rem;
         @media (max-width: 768px) {
           line-height: 0;
         }
@@ -158,7 +158,7 @@
           height: 360px;
           text-align: center;
           margin: 20px 0 0 0  ;
-          box-shadow: 2px 2px 5px 5px #C1C5C9;
+          box-shadow: 2px 4px 12px 2px #03143712;
           @media (max-width: 768px) {
             width: 90%;
             margin: 1rem 5%;

@@ -55,7 +55,7 @@ module.exports = {
 
     wallet_title: 'NULS Wallet',
     wallet_info: 'NULS wallet is developed by NULS core technical team Supported on various platforms',
-    wallet_list_title: 'Download',
+    wallet_list_title: 'Go to wallet page',
     wallet_list_0: 'Windows Download',
     wallet_list_1: 'MacOS Download',
     wallet_list_2: 'Linux Download',
@@ -257,6 +257,29 @@ module.exports = {
     title3: '4. What is the total supply/max supply?',
     p3_0: 'The total supply on main-net launch is 100M. 40M are circulating and airdropped for Inchain holders, the rest  of the supply is used to grow our project on several fronts eg; funding for projects, community growth, community developers. You can learn more by viewing our whitepaper. ',
     p3_1: 'Where do the rewards come from and what are they? ',
+  },
+
+  newWallet: {
+    info0:'When selecting the NULS Wallet, please keep these in mind:',
+    info1:'1. NULS Wallet is developed by the NULS core team, community developers as well as thrid-party platforms.',
+    info2:'2. You are held responsible to carefully choose wallets and keep your own private key safe.',
+    author:'Author',
+    core_team:'Core Team',
+    tab0_title:'Desktop',
+    tab0_windows:'Windows',
+    tab0_windows_p:'NULS Wallet (Client) participates in data maintenance of the network. It synchronizes all the on-chain data, making it more secure and the verification faster',
+    tab0_linux:'Linux',
+    tab0_linux_p:'NULS Wallet (Client) participates in data maintenance of the network. It synchronizes all the on-chain data, making it more secure and the verification faster',
+    tab0_mac:'Mac',
+    tab0_mac_p:'NULS Wallet (Client) participates in data maintenance of the network. It synchronizes all the on-chain data, making it more secure and the verification faster',
+
+    tab1_title:'App',
+    tab1_title_name:'Token++',
+    tab1_title_p:'Support multiple types of coin, Decentralized service Built-in high performance trading engine on blockchain Safe management, convenient transaction',
+
+    tab2_title:'Web',
+    tab2_title_name:'Web Wallet',
+    tab2_title_p:'It’s not necessary to synchronize all block data in NULS website wallet and the private key will be encrypted and stored on local devices, which makes it very safe. ',
   },
 
   bottom: {

@@ -114,13 +114,14 @@
         text-align: center;
         line-height: 50px;
         margin: 60px auto 0;
+        background: linear-gradient(-180deg, #56c400, #8fe400);
         @media (max-width: 768px) {
           margin: 1rem auto 0;
         }
         &:hover {
           cursor: pointer;
           border: 1px solid #8fe400;
-          background: #8fe400;
+          background: linear-gradient(-360deg, #56c400, #8fe400);
         }
         &:focus {
           cursor: pointer;

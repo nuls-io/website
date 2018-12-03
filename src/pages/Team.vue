@@ -1,9 +1,9 @@
 <template>
   <div class="team">
-    <div class="team-header">
+    <div class="header-bg">
       <HeaderList></HeaderList>
       <h1 class="h1 cb">{{$t('team.title')}}</h1>
-      <p>{{$t('team.info')}}</p>
+      <p class="w_1000 font-20">{{$t('team.info')}}</p>
     </div>
     <div class="team-info"  v-loading="teamLoading">
       <ul>
@@ -140,32 +140,14 @@
 </script>
 
 <style lang="less">
+  @import url("../assets/css/style.less");
   .team {
     background-color: #FFFFFF;
-    .team-header {
-      background: url("./../assets/images/map-bg.jpg") no-repeat;
-      background-size: 100% 100%;
-      min-height: 500px;
-      width: 100%;
-      @media (max-width: 768px) {
-        min-height: 32rem;
-      }
-      h1 {
-        width: 100%;
-        height: 150px;
-        line-height: 150px;
-      }
-      p {
-        max-width: 810px;
-        margin: 0 auto;
-        padding: 15px 0;
-        font-size: 20px;
-        text-align: center;
-        line-height: 29px;
-        color: #FFFFFF;
+    .header-bg {
+      .font-20 {
+        color: @color;
         @media (max-width: 768px) {
-          font-size: 16px;
-          padding: 10px;
+          padding: 0 0.5rem;
         }
       }
     }
@@ -209,9 +191,7 @@
           h2 {
             width: 220px;
             height: 200px;
-            -moz-box-shadow: 2px 2px 5px #333333;
-            -webkit-box-shadow: 2px 2px 5px #333333;
-            box-shadow: 2px 2px 5px #333333;
+            box-shadow: 2px 4px 12px 2px #03143712;
             border-radius: 6px;
             text-align: center;
             margin: auto;

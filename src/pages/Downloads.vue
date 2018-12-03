@@ -115,7 +115,7 @@
         max-height: 150px;
       }
       h1 {
-        line-height: 9rem;
+        line-height: 6rem;
         @media (max-width: 768px) {
           line-height: 4rem;
         }
@@ -155,8 +155,8 @@
             }
           };
           p{
-            box-shadow: 3px 3px 5px 5px #C1C5C9;
-            padding: 36px 40px;
+            box-shadow: 2px 4px 12px 2px #03143712;
+            padding: 25px 40px;
             margin: 40px 0 0 0 ;
             width: 100%;
             font-size: 24px;

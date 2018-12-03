@@ -55,7 +55,7 @@ module.exports = {
 
     wallet_title: 'NULS钱包',
     wallet_info: 'NULS钱包由核心团队开发，支持在多种平台上使用',
-    wallet_list_title: '下载',
+    wallet_list_title: '进入钱包页面',
     wallet_list_0: 'Windows版本下载',
     wallet_list_1: 'MacOS版本下载',
     wallet_list_2: 'Linux版本下载',
@@ -251,6 +251,29 @@ module.exports = {
     title3: '4. 总供给量和最大供应量是多少？',
     p3_0: '主网投放的总供应量是100兆。40兆的流通和空投给仁川持有人，其余的供应量用于在几个方面发展我们的项目，例如：项目资金、社区发展、社区开发商。你可以通过看我们的白皮书了解更多。',
     p3_1: '奖励来自哪里？他们是什么？',
+  },
+
+  newWallet: {
+    info0:'选择NULS钱包时，请注意以下事项： ',
+    info1:'1 NULS钱包作者来自于核心团队，社区开发者和第三方合作平台',
+    info2:'2 您有责任谨慎选择使用的钱包并保存好您的私匙',
+    author:'作者',
+    core_team:'核心团队',
+    tab0_title:'桌面',
+    tab0_windows:'Windows',
+    tab0_windows_p:'NULS全节点钱包参与到网络的数据维护中，同步了区块链上所有的数据，具有更为安全、验证更快等特点',
+    tab0_linux:'Linux',
+    tab0_linux_p:'NULS全节点钱包参与到网络的数据维护中，同步了区块链上所有的数据，具有更为安全、验证更快等特点',
+    tab0_mac:'Mac',
+    tab0_mac_p:'NULS全节点钱包参与到网络的数据维护中，同步了区块链上所有的数据，具有更为安全、验证更快等特点',
+
+    tab1_title:'App',
+    tab1_title_name:'Token++',
+    tab1_title_p:'支持多币种，去中心化服务，内置高性能链上交易引擎安全管理，交易方便',
+
+    tab2_title:'Web',
+    tab2_title_name:'轻钱包',
+    tab2_title_p:'NULS网页版轻钱包无需同步所有区块数据，且私钥加密存储在本地设备上，具有极高的安全性',
   },
 
   bottom: {

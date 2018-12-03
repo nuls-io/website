@@ -3,7 +3,7 @@
     <div class="header-bg">
       <HeaderList></HeaderList>
       <h1 class="h1 cb">{{$t('community.title')}}</h1>
-      <p class="w_1280 font-36">{{$t('community.info')}}</p>
+      <p class="w_1000 font-20">{{$t('community.info')}}</p>
     </div>
     <div class="community-info">
       <div class="c-learn">
@@ -13,19 +13,19 @@
             <li class="shadow fl">
               <h6 class="h6">{{$t('community.c_name')}}</h6>
               <label class="name_by font-20 tc">{{$t('community.c_name_by')}}</label>
-              <p class="c_green font-24 font-bold cursor-p" @click="toUrl('https://nuls.community/')">
+              <p class="c_green font-20 font-bold cursor-p" @click="toUrl('https://nuls.community/')">
                 {{$t('community.enter')}} <i class="el-icon-arrow-right"></i></p>
             </li>
             <li class="shadow fl">
               <h6 class="h6">{{$t('community.c_forun')}}</h6>
               <label class="name_by font-20 tc">{{$t('community.c_forun_sg')}}</label>
-              <p class="c_green font-24 font-bold cursor-p" @click="toUrl('http://nulscommunityforum.com/')">
+              <p class="c_green font-20 font-bold cursor-p" @click="toUrl('http://nulscommunityforum.com/')">
                 {{$t('community.enter')}} <i class="el-icon-arrow-right"></i></p>
             </li>
             <li class="shadow fl">
               <h6 class="h6">{{$t('community.c_chinese')}}</h6>
               <label class="name_by font-20 tc">{{$t('community.c_chinese_wheat')}}</label>
-              <p class="c_green font-24 font-bold cursor-p" @click="toUrl('http://nuls.org.cn/')">
+              <p class="c_green font-20 font-bold cursor-p" @click="toUrl('http://nuls.org.cn/')">
                 {{$t('community.enter')}} <i class="el-icon-arrow-right"></i></p>
             </li>
           </ul>
@@ -141,7 +141,7 @@
   .community {
     background-color: #FFFFFF;
     .header-bg {
-      .font-36 {
+      .font-20 {
         color: @color;
         @media (max-width: 768px) {
           padding: 0 0.5rem;
@@ -165,7 +165,7 @@
         ul {
           li {
             width: 355px;
-            height: 140px;
+            height: 160px;
             margin-right: 75px;
             border-radius: 4px;
             border-bottom: 4px solid #8fe400;
@@ -187,7 +187,7 @@
             }
             p {
               text-align: center;
-              margin-top: 5px;
+              padding: 5px 0 1px;
             }
           }
         }
