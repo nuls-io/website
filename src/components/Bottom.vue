@@ -34,7 +34,9 @@
           <el-form-item class="form-bt">
             <el-button type="primary" class="bg-green-btn" @click="submitForm('emailForm')">{{$t('bottom.inputSubmit')}}</el-button>
           </el-form-item>
+          <div class="font-18">{{$t('bottom.emailInfo')}}</div>
         </el-form>
+
       </div>
       <div class="flex">
         <div class="b-left">
@@ -101,7 +103,6 @@
 
 <script>
   import {postMailAddress} from '@/api/httpData';
-
   export default {
     data() {
       return {
@@ -154,8 +155,8 @@
        */
       emailAddress(email) {
         let that = this;
-        $.post("http://50.62.6.187:10031/api/v1/bbs/save?title=mail&content=" + email, function (data) {
-          //console.log(data);
+        $.post("https://50.62.6.187:10031/api/v1/bbs/save?title=mail&content=" + email, function (data) {
+          console.log(data);
           if (data.success) {
             that.$message({
               message: 'We will send our latest information to your email address',
@@ -165,13 +166,6 @@
             that.$message.error('Failure to submit, please try again.');
           }
         })
-        /*postMailAddress(email)
-          .then(function (response) {
-            console.log(response);
-          })
-          .catch(function (error) {
-            console.log(error);
-          });*/
       },
 
       /**
@@ -223,9 +217,9 @@
         }
       }
       p {
-        font-size: 16px;
+        font-size: 18px;
         margin:40px 0 30px 0;
-        color: #f0f7ff;
+        color: #7988a1;
         @media (max-width: 768px) {
           font-size: 13px;
           line-height: 24px;
@@ -268,8 +262,8 @@
           margin-bottom: 1rem;
         }
         .el-form {
-          width: 800px;
-          margin: 20px auto 0;
+          width: 1000px;
+          margin: 20px 0 0 85px;
           @media (max-width: 768px) {
             width: 98%;
             height: 6rem;
@@ -277,7 +271,8 @@
 	          padding: 1rem 0.5rem;
           }
           .el-form-item {
-            width: 500px;
+            width: 670px;
+            margin:10px 25px 40px 0;
             @media (max-width: 768px) {
               width: 65%;
               float: left;
@@ -323,6 +318,10 @@
               float: right;
             }
           }
+          .font-18{
+            color: #FFFFFF;
+            padding-bottom: 40px;
+          }
         }
       }
       .flex {
@@ -363,8 +362,7 @@
                 opacity: 1;
               }
               a {
-                color: #ffffff;
-                opacity: 0.9;
+                color: #7988a1;
                 text-decoration: none
               }
             }

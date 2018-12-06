@@ -280,6 +280,8 @@ module.exports = {
     tab2_title:'Web',
     tab2_title_name:'Web Wallet',
     tab2_title_p:'It’s not necessary to synchronize all block data in NULS website wallet and the private key will be encrypted and stored on local devices, which makes it very safe. ',
+
+    access:'Access',
   },
 
   bottom: {
@@ -302,6 +304,8 @@ module.exports = {
 
     error0: 'Please input your email address.',
     error1: 'Please input the correct email address.',
+
+    emailInfo:'You can directly contact us when you need some help: support@nuls.io',
 
   }
 };

@@ -48,6 +48,7 @@
     },
     methods: {
       toName(){
+        sessionStorage.setItem('activeMenu','2');
         this.$router.push({
           name: 'wallet',
         })

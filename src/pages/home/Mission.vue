@@ -130,6 +130,7 @@
           p{
             font-size: 26px;
             line-height: 30px;
+            color: #FFFFFF;
           }
           ul{
             margin: 0 0 0 20px;

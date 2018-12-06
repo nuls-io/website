@@ -6,6 +6,7 @@ import router from './router'
 import axios from 'axios'
 import ElementUI from 'element-ui';
 import VueI18n from 'vue-i18n'
+import $ from 'jquery'
 import {fetch, post, put} from './api/https'
 
 //定义全局变量

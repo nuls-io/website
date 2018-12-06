@@ -2,7 +2,9 @@
 
 </template>
 
-<script> export default {
+<script>
+  import axios from 'axios'
+  export default {
   data() {
     return {
       text: 'Anim pariatur cliche reprehenderit，enim eiusmod high life accusa'

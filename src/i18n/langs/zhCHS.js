@@ -271,9 +271,12 @@ module.exports = {
     tab1_title_name:'Token++',
     tab1_title_p:'支持多币种，去中心化服务，内置高性能链上交易引擎安全管理，交易方便',
 
-    tab2_title:'Web',
+    tab2_title:'网页',
     tab2_title_name:'轻钱包',
     tab2_title_p:'NULS网页版轻钱包无需同步所有区块数据，且私钥加密存储在本地设备上，具有极高的安全性',
+
+    access:'访问',
+
   },
 
   bottom: {
@@ -295,5 +298,7 @@ module.exports = {
 
     error0: '请输入您的电子邮件地址',
     error1: '请输入正确的电子邮件地址',
+
+    emailInfo:'当你需要帮助时，可以直接联系我们：support@nuls.io',
   }
 };

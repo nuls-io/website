@@ -36,7 +36,7 @@
           <ul class="nw_ul">
             <li class="nw_li fl">
               <h6 class="h6 tc">{{$t('newWallet.tab1_title_name')}}</h6>
-              <p class="nw_p tc font-20 color1">{{$t('newWallet.author')}}: <span @click="toUrl('https://www.tokenxx.com/#about_us')" class="cursor-p">Token++</span></p>
+              <p class="nw_p tc font-20 color1">{{$t('newWallet.author')}}: <span @click="toUrl('https://www.tokenxx.com/#about_us',1)" class="cursor-p">Token++</span></p>
               <p class="nw_p font-20 p_info">{{$t('newWallet.tab1_title_p')}}</p>
               <p class="nw_p c_green tc cursor-p font-20" @click="toDownload('https://www.tokenxx.com/',1)">{{$t('nav.about1')}} <i class="el-icon-download"></i></p>
             </li>
@@ -49,7 +49,7 @@
               <h6 class="h6 tc">{{$t('newWallet.tab2_title_name')}}</h6>
               <p class="nw_p tc font-20 color1">{{$t('newWallet.author')}}: <span @click="toUrl('https://nuls.io/team')" class="cursor-p">{{$t('newWallet.core_team')}}</span></p>
               <p class="nw_p font-20 p_info">{{$t('newWallet.tab2_title_p')}}</p>
-              <p class="nw_p c_green tc cursor-p font-20" @click="toDownload('https://wallet.nuls.io',1)">Access</p>
+              <p class="nw_p c_green tc cursor-p font-20" @click="toDownload('https://wallet.nuls.io',1)">{{$t('newWallet.access')}}</p>
             </li>
           </ul>
         </el-tab-pane>
@@ -122,7 +122,10 @@
         }
       },
 
-      toUrl(url){
+      toUrl(url,type=0){
+        if(type=1){
+          sessionStorage.setItem('activeMenu','555');
+        }
         tolink(url)
       },
 
@@ -155,6 +158,7 @@
       }
       .w_1000{
         //text-align: center;
+        color: @color;
         @media (max-width: 768px) {
           padding: 0 0.5rem;
         }
