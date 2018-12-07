@@ -260,7 +260,8 @@ module.exports = {
   },
 
   newWallet: {
-    info0:'When selecting the NULS Wallet, please keep these in mind:',
+    //info0:'When selecting the NULS Wallet, please keep these in mind:',
+    info0:'NULS Wallet is developed by the NULS core team, community developers as well as thrid-party platforms，You are held responsible to carefully choose wallets and keep your own private key safe',
     info1:'1. NULS Wallet is developed by the NULS core team, community developers as well as thrid-party platforms.',
     info2:'2. You are held responsible to carefully choose wallets and keep your own private key safe.',
     author:'Author',
@@ -275,6 +276,7 @@ module.exports = {
 
     tab1_title:'App',
     tab1_title_name:'Token++',
+    tips:'Third-party wallet. All rights reserved by service provider',
     tab1_title_p:'Support multiple types of coin, Decentralized service Built-in high performance trading engine on blockchain Safe management, convenient transaction',
 
     tab2_title:'Web',

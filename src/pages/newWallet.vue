@@ -4,8 +4,8 @@
       <HeaderList></HeaderList>
       <h1 class="h1 cb">{{$t('nav.wallet')}}</h1>
       <p class="w_1000 font-20">{{$t('newWallet.info0')}}</p>
-      <p class="w_1000 font-20">{{$t('newWallet.info1')}}</p>
-      <p class="w_1000 font-20">{{$t('newWallet.info2')}}</p>
+    <!--  <p class="w_1000 font-20">{{$t('newWallet.info1')}}</p>
+      <p class="w_1000 font-20">{{$t('newWallet.info2')}}</p>-->
     </div>
     <div class="new_wallet_info w_1280">
       <el-tabs v-model="activeName" @tab-click="handleClick">
@@ -37,6 +37,7 @@
             <li class="nw_li fl">
               <h6 class="h6 tc">{{$t('newWallet.tab1_title_name')}}</h6>
               <p class="nw_p tc font-20 color1">{{$t('newWallet.author')}}: <span @click="toUrl('https://www.tokenxx.com/#about_us',1)" class="cursor-p">Token++</span></p>
+              <p class="nw_p font-10 colorRed">{{$t('newWallet.tips')}}</p>
               <p class="nw_p font-20 p_info">{{$t('newWallet.tab1_title_p')}}</p>
               <p class="nw_p c_green tc cursor-p font-20" @click="toDownload('https://www.tokenxx.com/',1)">{{$t('nav.about1')}} <i class="el-icon-download"></i></p>
             </li>
@@ -295,6 +296,13 @@
                   @media (max-width: 768px) {
 
                   }
+                }
+                .colorRed{
+                  color: #f64b3e;
+                  padding: 10px 20px 0 20px;
+                  width: 80%;
+                  line-height: 18px;
+                  text-align: center;
                 }
                 .c_green {
                   margin: 30px auto 60px;

@@ -254,7 +254,8 @@ module.exports = {
   },
 
   newWallet: {
-    info0:'选择NULS钱包时，请注意以下事项： ',
+    //info0:'选择NULS钱包时，请注意以下事项： ',
+    info0:'NULS钱包的作者来自于核心团队，社区开发者和第三方合作平台，您有责任谨慎选择使用的钱包并保存好您的私匙',
     info1:'1 NULS钱包作者来自于核心团队，社区开发者和第三方合作平台',
     info2:'2 您有责任谨慎选择使用的钱包并保存好您的私匙',
     author:'作者',
@@ -269,6 +270,7 @@ module.exports = {
 
     tab1_title:'App',
     tab1_title_name:'Token++',
+    tips:'本钱包由第三方提供服务，所有解释权归钱包作者',
     tab1_title_p:'支持多币种，去中心化服务，内置高性能链上交易引擎安全管理，交易方便',
 
     tab2_title:'网页',
