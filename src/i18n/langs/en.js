@@ -261,8 +261,8 @@ module.exports = {
 
   newWallet: {
     //info0:'When selecting the NULS Wallet, please keep these in mind:',
-    info0:'NULS Wallet is developed by the NULS core team, community developers as well as thrid-party platforms，You are held responsible to carefully choose wallets and keep your own private key safe',
-    info1:'1. NULS Wallet is developed by the NULS core team, community developers as well as thrid-party platforms.',
+    info0:'NULS Wallet is developed by the NULS core team, community developers as well as THIRD-PARTY platforms，You are held responsible to carefully choose wallets and keep your own private key safe',
+    info1:'1. NULS Wallet is developed by the NULS core team, community developers as well as THIRD-PARTY platforms.',
     info2:'2. You are held responsible to carefully choose wallets and keep your own private key safe.',
     author:'Author',
     core_team:'Core Team',
@@ -275,8 +275,12 @@ module.exports = {
     tab0_mac_p:'NULS Wallet (Client) participates in data maintenance of the network. It synchronizes all the on-chain data, making it more secure and the verification faster',
 
     tab1_title:'App',
+    tips1:'Third-party wallet.',
+    tips2:' All rights reserved by service provider',
+    tab1_title_name0:'AnyBit',
+    tab1_title_author0:'AnyBit Team',
+    tab1_title_p0:'Support BTC, ETH, NULS and etc.One wallet: 10 plus main chains, 1000 plus tokens, manage within 1 click',
     tab1_title_name:'Token++',
-    tips:'Third-party wallet. All rights reserved by service provider',
     tab1_title_p:'Support multiple types of coin, Decentralized service Built-in high performance trading engine on blockchain Safe management, convenient transaction',
 
     tab2_title:'Web',

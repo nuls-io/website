@@ -269,8 +269,12 @@ module.exports = {
     tab0_mac_p:'NULS全节点钱包参与到网络的数据维护中，同步了区块链上所有的数据，具有更为安全、验证更快等特点',
 
     tab1_title:'App',
+    tips1:'本钱包由第三方提供服务',
+    tips2:'所有解释权归钱包作者',
+    tab1_title_name0:'AnyBit',
+    tab1_title_author0:'AnyBit 团队',
+    tab1_title_p0:'支持BTC、ETH、NULS等 10+主链，1000+代币，一个钱包，一键管理，告别繁琐切换',
     tab1_title_name:'Token++',
-    tips:'本钱包由第三方提供服务，所有解释权归钱包作者',
     tab1_title_p:'支持多币种，去中心化服务，内置高性能链上交易引擎安全管理，交易方便',
 
     tab2_title:'网页',

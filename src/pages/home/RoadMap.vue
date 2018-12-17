@@ -42,7 +42,7 @@
           </swiper-slide>
           <swiper-slide class="swiper-slide-ice">
             <p class="date cbuld">{{$t('home.road_tab_ice_3.time')}}</p>
-            <div class="triangle active"></div>
+            <div class="triangle actives"></div>
             <p class="cbuld">{{$t('home.road_tab_ice_3.p0')}}</p>
             <p class="cbuld">{{$t('home.road_tab_ice_3.p1')}}</p>
             <p class="cbuld">{{$t('home.road_tab_ice_3.p2')}}</p>
@@ -55,6 +55,7 @@
             <p>{{$t('home.road_tab_ice_4.p1')}}</p>
             <p>{{$t('home.road_tab_ice_4.p2')}}</p>
           </swiper-slide>
+          <div slot="pagination" class="swiper-pagination"/>
         </swiper>
         <swiper v-if="isActive('water')" :options="swiperOptions" :key="`${slidesPerView}-${active}`">
           <swiper-slide>
@@ -114,6 +115,7 @@
             <p>{{$t('home.road_tab_steam_3.p0')}}</p>
             <p>{{$t('home.road_tab_steam_3.p1')}}</p>
           </swiper-slide>
+          <div slot="pagination" class="swiper-pagination"/>
         </swiper>
       </div>
       .
@@ -278,9 +280,9 @@
     margin: 0 0 15px 6px;
   }
 
-  .triangle .active {
-    box-shadow: 4px 4px;
+  .actives {
     color: #3e8900;
+    box-shadow: 4px 4px 0 #3e8900;
   }
 
   .cbuld.date, .cbuld.bold, .cbuld {
@@ -336,7 +338,10 @@
 
   .swiper-pagination {
     bottom: -4px !important;
-    padding-bottom: 15px;
+    //padding-bottom: 15px;
+    .swiper-pagination-bullet-active{
+      background: #56c400;
+    }
   }
 
   .swiper-slide {

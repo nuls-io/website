@@ -35,12 +35,22 @@
         <el-tab-pane :label="$t('newWallet.tab1_title')" name="second">
           <ul class="nw_ul">
             <li class="nw_li fl">
+              <h6 class="h6 tc">{{$t('newWallet.tab1_title_name0')}}</h6>
+              <p class="nw_p tc font-20 color1">{{$t('newWallet.author')}}: <span @click="toUrl('https://www.tokenxx.com/#about_us',1)" class="cursor-p">{{$t('newWallet.tab1_title_author0')}}</span></p>
+              <p class="nw_p font-14 colorRed">{{$t('newWallet.tips1')}}</p>
+              <p class="nw_p font-14 colorRed">{{$t('newWallet.tips2')}}</p>
+              <p class="nw_p font-20 p_info">{{$t('newWallet.tab1_title_p0')}}<span v-show="lang"><br/>&nbsp;</span></p>
+              <p class="nw_p c_green tc cursor-p font-20" @click="toDownload('https://www.anybit.io',1)">{{$t('nav.about1')}} <i class="el-icon-download"></i></p>
+            </li>
+            <li class="nw_li fl">
               <h6 class="h6 tc">{{$t('newWallet.tab1_title_name')}}</h6>
               <p class="nw_p tc font-20 color1">{{$t('newWallet.author')}}: <span @click="toUrl('https://www.tokenxx.com/#about_us',1)" class="cursor-p">Token++</span></p>
-              <p class="nw_p font-10 colorRed">{{$t('newWallet.tips')}}</p>
+              <p class="nw_p font-14 colorRed">{{$t('newWallet.tips1')}}</p>
+              <p class="nw_p font-14 colorRed">{{$t('newWallet.tips2')}}</p>
               <p class="nw_p font-20 p_info">{{$t('newWallet.tab1_title_p')}}</p>
               <p class="nw_p c_green tc cursor-p font-20" @click="toDownload('https://www.tokenxx.com/',1)">{{$t('nav.about1')}} <i class="el-icon-download"></i></p>
             </li>
+            <li class="nw_li fl" v-show="false"></li>
           </ul>
         </el-tab-pane>
 
@@ -73,6 +83,7 @@
       return {
         activeName: 'first',
         downloadList: '',
+        lang: true,
       }
     },
     components: {
@@ -81,6 +92,9 @@
     },
     mounted() {
       this.getDownloadList(1, 10, 1);
+      setInterval(() => {
+        this.lang = sessionStorage.hasOwnProperty('langs') ? sessionStorage.getItem('langs') === 'en' ? true : false : true
+      }, 100);
     },
     methods: {
 
@@ -94,7 +108,7 @@
         let that = this;
         getWalletDownloadList(siteId, pageSize, pageNum)
           .then(function (response) {
-            console.log(response);
+            //console.log(response);
             that.downloadList = response.data.contentList[0];
           })
           .catch(function (error) {
@@ -279,11 +293,12 @@
                 }
                 .color1{
                   color: @bg-color2;
+                  padding: 0 0 10px 0;
                 }
                 .p_info{
                   padding: 20px 20px 10px 20px;
                   line-height: 35px;
-                  min-height:120px;
+                  min-height:135px;
                   @media (max-width: 768px) {
                     padding: 0.5rem 1rem;
                     line-height: 1.5rem;
@@ -299,7 +314,7 @@
                 }
                 .colorRed{
                   color: #f64b3e;
-                  padding: 10px 20px 0 20px;
+                  padding: 0 20px 0 20px;
                   width: 80%;
                   line-height: 18px;
                   text-align: center;
