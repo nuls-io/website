@@ -42,7 +42,7 @@
               <p class="nw_p font-20 p_info">{{$t('newWallet.tab1_title_p0')}}<span v-show="lang"><br/>&nbsp;</span></p>
               <p class="nw_p c_green tc cursor-p font-20" @click="toDownload('https://www.anybit.io',1)">{{$t('nav.about1')}} <i class="el-icon-download"></i></p>
             </li>
-            <li class="nw_li fl">
+            <li class="nw_li fl" v-show="false">
               <h6 class="h6 tc">{{$t('newWallet.tab1_title_name')}}</h6>
               <p class="nw_p tc font-20 color1">{{$t('newWallet.author')}}: <span @click="toUrl('https://www.tokenxx.com/#about_us',1)" class="cursor-p">Token++</span></p>
               <p class="nw_p font-14 colorRed">{{$t('newWallet.tips1')}}</p>
