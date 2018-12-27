@@ -141,7 +141,7 @@
             }
             .h6 {
               color: #0a2140;
-              font-size: 30px;
+              font-size: 24px;
               margin: 120px 0 30px 0;
               @media (max-width: 768px) {
                 margin: 1rem 0 0.5rem 0;

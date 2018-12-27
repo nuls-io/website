@@ -148,10 +148,10 @@ module.exports = {
   developer: {
     title: 'Developer',
     title2: 'Using Testnet',
-    info: 'If you need testnet NULS,please download the testnet wallet and offer your address to apply testnet NULS',
+    info: 'If you need Testnet NULS, please download the Testnet wallet and apply below for Testnet NULS',
     bt1: 'Download Testnet wallet',
     bt2: 'Applying for NULS Test Tokens',
-    title3: 'Become one of CCC,make NULS better',
+    title3: 'Become a member of CCC and get rewarded to make NULS better',
     info1: 'Click for detail',
     info2: 'CCC Handbook Guide (test version)',
     info3: 'Weekly update',
@@ -214,7 +214,7 @@ module.exports = {
     more: 'Task Bounty',
 
     title1: 'Find Out More About the NULS Community',
-    c_name: 'Community Wheat',
+    c_name: 'Community Forum',
     c_name_by: 'By CCC Moshe',
     c_forun: 'Community Forum',
     c_forun_sg: 'By NULS SG',
@@ -261,7 +261,7 @@ module.exports = {
 
   newWallet: {
     //info0:'When selecting the NULS Wallet, please keep these in mind:',
-    info0:'NULS Wallet is developed by the NULS core team, community developers as well as THIRD-PARTY platforms，You are held responsible to carefully choose wallets and keep your own private key safe',
+    info0:'NULS Wallet is developed by the NULS core team, community developers as well as third-party platforms，You are held responsible to carefully choose wallets and keep your own private key safe',
     info1:'1. NULS Wallet is developed by the NULS core team, community developers as well as THIRD-PARTY platforms.',
     info2:'2. You are held responsible to carefully choose wallets and keep your own private key safe.',
     author:'Author',

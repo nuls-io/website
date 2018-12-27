@@ -36,7 +36,7 @@
           <ul class="nw_ul">
             <li class="nw_li fl">
               <h6 class="h6 tc">{{$t('newWallet.tab1_title_name0')}}</h6>
-              <p class="nw_p tc font-20 color1">{{$t('newWallet.author')}}: <span @click="toUrl('https://www.tokenxx.com/#about_us',1)" class="cursor-p">{{$t('newWallet.tab1_title_author0')}}</span></p>
+              <p class="nw_p tc font-20 color1">{{$t('newWallet.author')}}: <span @click="toUrl('https://www.anybit.io',1)" class="cursor-p">{{$t('newWallet.tab1_title_author0')}}</span></p>
               <p class="nw_p font-14 colorRed">{{$t('newWallet.tips1')}}</p>
               <p class="nw_p font-14 colorRed">{{$t('newWallet.tips2')}}</p>
               <p class="nw_p font-20 p_info">{{$t('newWallet.tab1_title_p0')}}<span v-show="lang"><br/>&nbsp;</span></p>
