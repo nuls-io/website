@@ -41,8 +41,8 @@
       </div>
       <div class="c-what cb">
         <div class="centers">
-          <h2 class="h2">{{$t('community.you_title')}}</h2>
-          <p class="font-24">{{$t('community.info')}}</p>
+          <h2 class="h2"><!--{{$t('community.you_title')}}--></h2>
+          <p class="font-24"><span class="fw">{{$t('community.info1')}}</span>{{$t('community.info2')}}</p>
           <label class="c_green cursor-p font-20 cb cursor-p" @click="toUrl('https://nuls.community/t/task-bounty')">{{$t('community.more')}}
             <i class="el-icon-arrow-right"></i></label>
         </div>
@@ -238,6 +238,7 @@
         }
         .centers {
           background: url("./../assets/images/what.png") no-repeat left 40%, 50%;
+          background-size:348px 390px;
           text-align: right;
           @media (max-width: 768px) {
             background: transparent;
@@ -254,12 +255,15 @@
           }
           p {
             width: 680px;
+            height: 310px;
             float: right;
             color: @color_1;
             line-height: 45px;
             text-align: left;
+            padding: 1rem 0;
             @media (max-width: 768px) {
               width: 100%;
+              height:auto;
               line-height: 1.4rem;
               padding: 0 0.5rem;
               text-align: left;

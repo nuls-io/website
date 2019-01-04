@@ -21,6 +21,7 @@ a:focus {outline: none;}
 .hidden {visibility: hidden;}
 .none {display: none;}
 
+.fw{font-weight: bold;}
 /**手指样式**/
 .cursor-p {cursor: pointer;}
 

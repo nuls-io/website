@@ -14,7 +14,7 @@
                                                                     width="38"/></a></li>
         <li><a href="https://www.reddit.com/r/nulsservice/" target="_blank"><img src="../assets/images/reddit.png"
                                                                                  height="34" width="41"/></a></li>
-        <li><a href="https://steemit.com/@nuls" target="_blank"><img src="../assets/images/discord.png" height="28"
+        <li><a href="https://discord.gg/uZ3QcxW" target="_blank"><img src="../assets/images/discord.png" height="28"
                                                                      width="40"/></a></li>
         <li><a href="https://steemit.com/@nuls" target="_blank"><img src="../assets/images/steemit.png" height="40"
                                                                  width="38"/></a></li>

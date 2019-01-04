@@ -28,10 +28,10 @@ module.exports = {
     vedio_title: 'Watch overview',
 
     nuls_do_title: 'Our Mission',
-    nuls_do_info1: 'Provide flexible blockchain technology that supports a wide variety of enterprise applications.',
-    nuls_do_info2: 'Efficient, high performance technology to solve bottlenecks.',
-    nuls_do_info3: 'Promote usage of blockchain technology by reducing the barrier of entry development cost.',
-    nuls_do_info4: 'Provide the most powerful system of trust through a decentralized network.',
+    nuls_do_info1: 'Provide flexible blockchain technology that supports a wide variety of enterprise applications',
+    nuls_do_info2: 'Efficient, high performance technology to solve bottlenecks',
+    nuls_do_info3: 'Promote usage of blockchain technology by reducing the barrier of entry development cost',
+    nuls_do_info4: 'Provide the most powerful system of trust through a decentralized network',
     nuls_do_info5_more: 'Learn more from whitepaper',
 
     architecture_title: 'How It Works',
@@ -54,7 +54,7 @@ module.exports = {
     ecosystem_info2: 'Assets Circulating within all the Chains of NULS Ecosystem',
 
     wallet_title: 'NULS Wallet',
-    wallet_info: 'NULS wallet is developed by NULS core technical team Supported on various platforms',
+    wallet_info: ' NULS Wallets are developed by the NULS core team and Code Craft Council. We also provide third-party wallets. When using a third-party wallet you are responsible for the safety of your private key',
     wallet_list_title: 'Go to wallet page',
     wallet_list_0: 'Windows Download',
     wallet_list_1: 'MacOS Download',
@@ -210,7 +210,9 @@ module.exports = {
 
   community: {
     title: 'Community',
-    info: 'We welcome you to join us and become a part of the NULS Community. Our community is a collection of people who are highly educated about our culture and philosophy. Together to  make progress  towards the ecological development of NULS by sharing our community goals and vision. The NULS community is composed of many members with many talents and roles: the NULS Foundation, board members, contributors, including the open source technology community known as the CODE CRAFT COUNCIL (CCC), and all NULS holders, traders and investors.',
+    info:'Our community is a collection of highly-educated people who continually make progress for the NULS ecology by sharing our community goals and vision. The NULS community is composed of many talented members and roles: the NULS Foundation, Council members, contributors, including the open source technology community known as the CODE CRAFT COUNCIL (CCC), and all NULS holders and investors—and we all invite you to join us.',
+    info1:'Your Contribution to the NULS Community Earns You:',
+    info2: 'New Friends, NULS, Networking, New Opportunities, and Notoriety in the Open-Source Emerging Blockchain Space. Join and become part of the NULS Community Today!',
     more: 'Task Bounty',
 
     title1: 'Find Out More About the NULS Community',
@@ -261,7 +263,7 @@ module.exports = {
 
   newWallet: {
     //info0:'When selecting the NULS Wallet, please keep these in mind:',
-    info0:'NULS Wallet is developed by the NULS core team, community developers as well as third-party platforms，You are held responsible to carefully choose wallets and keep your own private key safe',
+    info0:'NULS Wallets are developed by the NULS core team and Code Craft Council. We also provide third-party wallets. When using a third-party wallet you are responsible for the safety of your private key',
     info1:'1. NULS Wallet is developed by the NULS core team, community developers as well as THIRD-PARTY platforms.',
     info2:'2. You are held responsible to carefully choose wallets and keep your own private key safe.',
     author:'Author',
@@ -284,8 +286,8 @@ module.exports = {
     tab1_title_p:'Support multiple types of coin, Decentralized service Built-in high performance trading engine on blockchain Safe management, convenient transaction',
 
     tab2_title:'Web',
-    tab2_title_name:'Web Wallet',
-    tab2_title_p:'It’s not necessary to synchronize all block data in NULS website wallet and the private key will be encrypted and stored on local devices, which makes it very safe. ',
+    tab2_title_name:'Light Wallet',
+    tab2_title_p:'This version of the light wallet does not require you to download the entire blockchain and safely encrypts key to local device. Because it is a web wallet take caution with browser add-ons. ',
 
     access:'Access',
   },

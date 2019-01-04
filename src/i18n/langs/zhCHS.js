@@ -54,7 +54,7 @@ module.exports = {
     ecosystem_info2: '资产可在NULS生态中的所有链中进行流通',
 
     wallet_title: 'NULS钱包',
-    wallet_info: 'NULS钱包由核心团队开发，支持在多种平台上使用',
+    wallet_info: 'NULS Wallets由NULS核心团队和Code Craft Council开发。此外我们还提供第三方钱包。使用第三方钱包时，您需要负责私钥的安全',
     wallet_list_title: '进入钱包页面',
     wallet_list_0: 'Windows版本下载',
     wallet_list_1: 'MacOS版本下载',
@@ -205,7 +205,9 @@ module.exports = {
 
   community: {
     title: '社区',
-    info: '欢迎加入NULS社区并成为我们的一员，NULS社区是对NULS社区文化和理念高度认可的一群人的合集，本着共同的目标和愿景共同为NULS社区生态发展而努力的组织。NULS社区成员由NULS基金会、理事会成员、贡献者角色、开源技术社区CODE CRAFT COUNCIL（CCC）和其他所有的NULS Holder构成',
+    info:'我们的社区成员是一群经验丰富的专业人士，他们通过分享我们的社区目标和愿景，不断在NULS生态方面取得进步。 NULS社区由许多有才能的成员和角色组成：NULS基金会，理事会成员，贡献者，包括被称为CODE CRAFT COUNCIL（CCC）的开源技术社区，以及所有NULS持有者和投资者 - 我们诚挚邀请你加入我们。',
+    info1:'你为NULS社区所做的贡献会为你带来回报：',
+    info2: '新朋友，NULS，网络，新机遇和在区块链领域的声誉。现在就加入NULS社区成为其中一员吧！',
     more: '任务赏金',
 
     title1: '来NULS社区一起讨论和创造未来',
@@ -255,7 +257,7 @@ module.exports = {
 
   newWallet: {
     //info0:'选择NULS钱包时，请注意以下事项： ',
-    info0:'NULS钱包的作者来自于核心团队，社区开发者和第三方合作平台，您有责任谨慎选择使用的钱包并保存好您的私匙',
+    info0:'NULS Wallets由NULS核心团队和Code Craft Council开发。此外我们还提供第三方钱包。使用第三方钱包时，您需要负责私钥的安全',
     info1:'1 NULS钱包作者来自于核心团队，社区开发者和第三方合作平台',
     info2:'2 您有责任谨慎选择使用的钱包并保存好您的私匙',
     author:'作者',
