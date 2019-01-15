@@ -17,6 +17,7 @@ module.exports = {
     about5: 'What is NULS',
     about6: 'Token Swap',
     about7: 'Community',
+    about8: 'Docs',
   },
 
   publics: {

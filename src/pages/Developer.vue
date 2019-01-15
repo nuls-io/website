@@ -15,7 +15,7 @@
             <!--<p class="font-18 c_green cursor-p" @click="toUrl('https://nuls.community/d/9-invitation-of-community-developers')">{{$t('developer.info1')}} <i class="el-icon-arrow-right"></i></p>-->
             <p class="font-18 c_green cursor-p" @click="languageUrl">{{$t('developer.info1')}} <i class="el-icon-arrow-right"></i></p>
             <p class="font-18 c_green cursor-p" @click="toUrl('https://goo.gl/AhwqhM')">{{$t('developer.info2')}} <i class="el-icon-arrow-right"></i></p>
-            <p class="font-18 c_green cursor-p" @click="toUrl('https://nuls.community/d/173-nuls-dev-community-weekly-summary/2')">{{$t('developer.info3')}} <i class="el-icon-arrow-right"></i></p>
+            <p class="font-18 c_green cursor-p" @click="toUrl('https://nuls.community/t/development')">{{$t('developer.info3')}} <i class="el-icon-arrow-right"></i></p>
           </div>
         </div>
       </div>

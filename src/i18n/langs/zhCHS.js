@@ -17,6 +17,7 @@ module.exports = {
     about5: 'NULS是什么',
     about6: '映射',
     about7: '社区',
+    about8: '文档',
   },
 
   publics: {
