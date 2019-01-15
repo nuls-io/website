@@ -33,9 +33,16 @@
             </li>
             <li class="t_li fl">
               <p class="img shadow"><img style="margin-top: 17px" src="./../assets/images/Tools.png"></p>
-              <p class="c_green cursor-p" @click="toUrl('http://dev.nuls.io/contract/IdeaPlugin.html')">IDEA {{$t('developer.plugin')}}
-                <i class="el-icon-arrow-right"></i></p>
-              <p class="c_green cursor-p" @click="toUrl('http://dev.nuls.io/docs/sdk.html')">SDK <i class="el-icon-arrow-right"></i></p>
+              <p class="c_green cursor-p"
+                 @click="toUrlByLanguage('http://docs.nuls.io/zh/developerTools/smartContractIDEAPlugin.html','http://docs.nuls.io/developerTools/smartContractIDEAPlugin.html')">
+                IDEA {{$t('developer.plugin')}}
+                <i class="el-icon-arrow-right"></i>
+              </p>
+              <p class="c_green cursor-p"
+                 @click="toUrlByLanguage('http://docs.nuls.io/zh/developerTools/sdk.html','http://docs.nuls.io/developerTools/sdk.html')">
+                SDK
+                <i class="el-icon-arrow-right"></i>
+              </p>
             </li>
           </ul>
         </div>
@@ -81,6 +88,11 @@
       languageUrl(){
         let language = sessionStorage.hasOwnProperty('langs') ? sessionStorage.getItem('langs') : 'en';
         this.toUrl(language ==='en' ? 'https://nuls.community/d/9-invitation-of-community-developers' : 'https://nuls.community/d/90-nuls' )
+      },
+
+      toUrlByLanguage(zh_url,en_url){
+        let language = sessionStorage.hasOwnProperty('langs') ? sessionStorage.getItem('langs') : 'en';
+        this.toUrl(language ==='en' ? en_url : zh_url )
       },
 
       /**
