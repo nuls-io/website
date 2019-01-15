@@ -105,7 +105,7 @@
         }else if(key ==='6-7'){
           this.$router.push({
             name: 'downloads',
-          })
+          });
         }else if(key === '7'){
           this.$router.push({
             name: 'commnunity',
