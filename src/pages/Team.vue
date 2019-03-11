@@ -5,7 +5,7 @@
       <h1 class="h1 cb">{{$t('team.title')}}</h1>
       <p class="w_1000 font-20">{{$t('team.info')}}</p>
     </div>
-    <div class="team-info"  v-loading="teamLoading">
+    <div class="team-info" v-loading="teamLoading">
       <ul>
         <li v-for="site in teamList">
           <h2 class="cursor-p" @click="tolink(site.linkedin)"><img :src=site.headUrl height="600" width="660"/></h2>
@@ -29,6 +29,16 @@
           <h4>{{site.positions}}</h4>
         </li>
       </ul>
+
+      <h2 class="h2 cb" v-show="ambList.length > 0">{{$t('team.amb')}}</h2>
+      <ul>
+        <li v-for="site in ambList">
+          <h2 class="cursor-p" @click="tolink(site.linkedin)"><img :src=site.headUrl height="600" width="660"/></h2>
+          <h3>{{site.ename}}</h3>
+          <h4>{{site.positions}}</h4>
+        </li>
+      </ul>
+
       <h2 class="h2 cb" v-show="advisorList.length > 0">{{$t('team.advisors')}}</h2>
       <ul>
         <li v-for="site in advisorList">
@@ -46,7 +56,7 @@
 <script>
   import {getTeamList} from '@/api/httpData';
   import {API_ROOT} from '@/api/https';
-  import {arrItemSort,tolink} from '@/util/util';
+  import {arrItemSort, tolink} from '@/util/util';
   import HeaderList from '@/components/HeaderList';
   import Bottom from '@/components/Bottom';
   import GoTop from '@/components/GoTop';
@@ -54,17 +64,23 @@
   export default {
     data() {
       return {
-        teamLoading:true,
+        teamLoading: true,
+        //核心团队
         teamList: [],
+        //天使投资
         angelList: [],
+        //社区团队
         advisorList: [],
+        //大使
+        ambList: [],
+        //顾问
         communityList: [],
-        language:sessionStorage.hasOwnProperty('langs') ? sessionStorage.getItem('langs') ==='zh' ? 1 : 2 : 2,
+        language: sessionStorage.hasOwnProperty('langs') ? sessionStorage.getItem('langs') === 'zh' ? 1 : 2 : 2,
       }
     },
-    watch:{
-      language(curVal,oldVal){
-        if(curVal.toString() !== oldVal.toString()){
+    watch: {
+      language(curVal, oldVal) {
+        if (curVal.toString() !== oldVal.toString()) {
           this.getTeamList(1, 100, 1)
         }
       },
@@ -76,7 +92,7 @@
     },
     mounted() {
       setInterval(() => {
-        this.language=sessionStorage.hasOwnProperty('langs') ? sessionStorage.getItem('langs') ==='zh' ? 1 : 2 : 2
+        this.language = sessionStorage.hasOwnProperty('langs') ? sessionStorage.getItem('langs') === 'zh' ? 1 : 2 : 2
       }, 100);
       this.getTeamList(1, 100, 1)
     },
@@ -90,10 +106,11 @@
        */
       getTeamList(siteId, pageSize, pageNum) {
         let that = this;
-        that.teamList =[];
-        that.angelList =[];
-        that.advisorList =[];
-        that.communityList =[];
+        that.teamList = [];
+        that.angelList = [];
+        that.advisorList = [];
+        that.ambList = [];
+        that.communityList = [];
         getTeamList(siteId, pageSize, pageNum)
           .then(function (response) {
             //console.log(response);
@@ -106,19 +123,23 @@
                 that.angelList.push(list)
               } else if (list.types === '3') {
                 that.advisorList.push(list)
-              } else {
+              } else if (list.types === '4') {
                 that.communityList.push(list)
+              } else {
+                that.ambList.push(list);
               }
             }
             setTimeout(() => {
-              let teamListSort = arrItemSort(that.teamList,"id",0);
-              let angelListSort = arrItemSort(that.angelList,"id",0);
-              let advisorListSort = arrItemSort(that.advisorList,"id",0);
-              let communityListSort = arrItemSort(that.communityList,"id",0);
-              that.teamList  = teamListSort;
-              that.angelList  = angelListSort;
-              that.advisorList  = advisorListSort;
-              that.communityList  = communityListSort;
+              let teamListSort = arrItemSort(that.teamList, "id", 0);
+              let angelListSort = arrItemSort(that.angelList, "id", 0);
+              let advisorListSort = arrItemSort(that.advisorList, "id", 0);
+              let ambListSort = arrItemSort(that.ambList, "id", 0);
+              let communityListSort = arrItemSort(that.communityList, "id", 0);
+              that.teamList = teamListSort;
+              that.angelList = angelListSort;
+              that.advisorList = advisorListSort;
+              that.ambList = ambListSort;
+              that.communityList = communityListSort;
               that.teamLoading = false;
             }, 100);
 
@@ -132,7 +153,7 @@
        * 打开url
        * @param url
        */
-      tolink(url){
+      tolink(url) {
         tolink(url)
       }
     }
@@ -141,6 +162,7 @@
 
 <style lang="less">
   @import url("../assets/css/style.less");
+
   .team {
     background-color: #FFFFFF;
     .header-bg {
@@ -220,7 +242,7 @@
           }
         }
       }
-      .el-loading-mask{
+      .el-loading-mask {
         margin-top: 25%;
         background-color: transparent;
       }

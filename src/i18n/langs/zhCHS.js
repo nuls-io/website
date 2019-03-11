@@ -166,6 +166,7 @@ module.exports = {
 
     angel:'天使投资人',
     craft:'技术社区核心成员',
+    amb:'NULS 大使',
     advisors:'顾问',
   },
 
@@ -283,6 +284,9 @@ module.exports = {
     tab2_title:'网页',
     tab2_title_name:'轻钱包',
     tab2_title_p:'NULS网页版轻钱包无需同步所有区块数据，且私钥加密存储在本地设备上，具有极高的安全性',
+    tab2_title_name1:'NULS World',
+    core_team1:'Moshe Malawach',
+    tab2_title_p1:'浏览器中的完整客户端轻钱包。通过连接NULS.World API获得余额和未使用的输出，以保证更好的准确性。所有交易都在客户端签名和打包，以确保最大的安全性',
 
     access:'访问',
 

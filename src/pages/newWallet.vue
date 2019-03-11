@@ -59,9 +59,16 @@
             <li class="nw_li fl">
               <h6 class="h6 tc">{{$t('newWallet.tab2_title_name')}}</h6>
               <p class="nw_p tc font-20 color1">{{$t('newWallet.author')}}: <span @click="toUrl('https://nuls.io/team')" class="cursor-p">{{$t('newWallet.core_team')}}</span></p>
-              <p class="nw_p font-20 p_info">{{$t('newWallet.tab2_title_p')}}</p>
+              <p class="nw_p font-20 p_info web_p">{{$t('newWallet.tab2_title_p')}}</p>
               <p class="nw_p c_green tc cursor-p font-20" @click="toDownload('https://wallet.nuls.io',1)">{{$t('newWallet.access')}}</p>
             </li>
+            <li class="nw_li fl">
+              <h6 class="h6 tc">{{$t('newWallet.tab2_title_name1')}}</h6>
+              <p class="nw_p tc font-20 color1">{{$t('newWallet.author')}}: <span @click="toUrl('https://nuls.io/team')" class="cursor-p">{{$t('newWallet.core_team1')}}</span></p>
+              <p class="nw_p font-20 p_info web_p">{{$t('newWallet.tab2_title_p1')}}</p>
+              <p class="nw_p c_green tc cursor-p font-20" @click="toDownload('https://nuls.world/wallet',1)">{{$t('newWallet.access')}}</p>
+            </li>
+            <li class="nw_li fl" v-show="false"></li>
           </ul>
         </el-tab-pane>
       </el-tabs>
@@ -302,6 +309,12 @@
                   @media (max-width: 768px) {
                     padding: 0.5rem 1rem;
                     line-height: 1.5rem;
+                    min-height:2rem;
+                  }
+                }
+                .web_p{
+                  min-height:275px;
+                  @media (max-width: 768px) {
                     min-height:2rem;
                   }
                 }

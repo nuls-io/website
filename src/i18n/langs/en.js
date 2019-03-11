@@ -114,7 +114,7 @@ module.exports = {
       p3: 'Form set of standard technical solutions for use in various industries'
     },
     road_tab_water_4: {
-      p0: 'Main-net',
+      p0: 'Ecosystem',
       p1: 'Complete more functional modules, including PoW module and PoS module',
       p2: 'At least 5 sub-chains join NULS',
       p3: 'At least 15 applications run on NULS',
@@ -168,6 +168,7 @@ module.exports = {
 
     angel: 'Angel Investor',
     craft: 'NULS Code Craft Council',
+    amb:'NULS Ambassador',
     advisors: 'Advisors',
 
   },
@@ -289,6 +290,9 @@ module.exports = {
     tab2_title:'Web',
     tab2_title_name:'Light Wallet',
     tab2_title_p:'This version of the light wallet does not require you to download the entire blockchain and safely encrypts key to local device. Because it is a web wallet take caution with browser add-ons. ',
+    tab2_title_name1:'NULS World',
+    core_team1:'Moshe Malawach',
+    tab2_title_p1:'Full client-side light wallet in your browser. Connected to the NULS.world API to get balances and unspent output for better accuracy. All transactions are signed and packed client-side for maximum safety.',
 
     access:'Access',
   },
