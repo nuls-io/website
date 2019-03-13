@@ -14,8 +14,8 @@
     <el-dialog title="" :visible.sync="dialogFormVisible">
       <p>{{$t('home.w_title')}}</p>
       <ul>
-        <li><a href="https://nuls.io/api/v1/download/files/papers/white/NulsWhitepaper1.1.pdf" target="_blank">English</a></li>
-        <li><a href="https://nuls.io/api/v1/download/files/papers/white/NULS_whitepaper_zh_V1.0.pdf" target="_blank">中文</a></li>
+        <li><a href="https://nuls.io/api/v1/download/files/papers/white/NULS_Whitepaper_2.0.pdf" target="_blank">English</a></li>
+        <li><a href="https://nuls.io/api/v1/download/files/papers/white/NULS_Whitepaper_zh_2.0.pdf" target="_blank">中文</a></li>
         <!--<li><a href="https://nuls.io/api/v1/download/files/papers/white/NulsWhitepaper1.1_Russia.pdf" target="_blank">Россия</a></li>
         <li><a href="https://nuls.io/api/v1/download/files/papers/white/NulsWhitepaper1.1_Korean.pdf" target="_blank">한국</a></li>
         <li><a href="https://nuls.io/api/v1/download/files/papers/white/NulsWhitepaper1.1_JP.pdf" target="_blank">日本語</a></li>
