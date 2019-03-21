@@ -3,7 +3,7 @@
     <div @click="handleSelect(1,['1'])" class="logo fl cursor-p"></div>
     <el-menu class="fl" :default-active="activeMenu" mode="horizontal" @select="handleSelect">
       <el-menu-item index="1">{{$t('nav.home')}}</el-menu-item>
-      <el-menu-item index="8">Prodcuts</el-menu-item>
+      <el-menu-item index="8">{{$t('products.product')}}</el-menu-item>
       <el-menu-item index="2">{{$t('nav.wallet')}}</el-menu-item>
       <el-menu-item index="3">{{$t('nav.developer')}}</el-menu-item>
       <el-menu-item index="7">{{$t('nav.about7')}}</el-menu-item>

@@ -2,71 +2,72 @@
   <div class="prodcuts">
     <div class="header-bg">
       <HeaderList></HeaderList>
-      <h1 class="h1 cb">NULS 2.0 Alpa版本已发布</h1>
+      <h1 class="h1 cb">{{$t('products.product1')}}</h1>
     </div>
 
     <div class="prodcuts-info">
       <div class="list ecology">
-        <h3>生态</h3>
+        <h3>{{$t('products.ecology')}}</h3>
         <ul>
           <li>
-            <img src="./../assets/images/1001.png" />
-            <p class="fw">链工厂<span>-敬请期待</span></p>
-            <p>通过NULS链工厂，企业/个人不再需要深入钻研区块链底层技术。仅需进行简单的配置工作，就能得到一条完全属于自己的区块链</p>
+            <img src="./../assets/images/1001.png"/>
+            <p class="fw">{{$t('products.product2')}}<span>-{{$t('products.build')}}</span></p>
+            <p>{{$t('products.product3')}}</p>
           </li>
           <li>
-            <img src="./../assets/images/1002.png" />
-            <p class="fw">跨链方案<span>-敬请期待</span></p>
-            <p>通过NULS链工厂，企业/个人不再需要深入钻研区块链底层技术。仅需进行简单的配置工作，就能得到一条完全属于自己的区块链</p>
-          </li>
-          <li>
-            <img src="./../assets/images/1001.png" />
-            <p class="fw">模块仓库<span>-敬请期待</span></p>
-            <p>通过NULS链工厂，企业/个人不再需要深入钻研区块链底层技术。仅需进行简单的配置工作，就能得到一条完全属于自己的区块链</p>
+            <img src="./../assets/images/1002.png"/>
+            <p class="fw">{{$t('products.product4')}}<span>-{{$t('products.build')}}</span></p>
+            <p>{{$t('products.product5')}}</p>
           </li>
         </ul>
       </div>
       <div class="cb"></div>
 
       <div class="list ecology">
-        <h3>工具</h3>
+        <h3>{{$t('products.tool')}}</h3>
         <ul>
-          <li>
-            <img src="./../assets/images/1001.png" />
-            <p class="fw">钱包</p>
-            <p>NULS Wallets由NULS核心团队和Code Craft Council开发。此外我们还提供第三方钱包。使用第三方钱包时，您需要负责私钥的安全</p>
+          <li class="cursor-p" @click="toUrl('https://nuls.io/newWallet')">
+            <img src="./../assets/images/2001.png"/>
+            <p class="fw">{{$t('products.product17')}}</p>
+            <p>{{$t('products.product6')}}</p>
           </li>
           <li>
-            <img src="./../assets/images/1001.png" />
-            <p class="fw">浏览器</p>
-            <p>NULS 浏览器由NULS核心团队和Code Craft Council开发</p>
+            <img src="./../assets/images/2001.png"/>
+            <p class="fw">{{$t('products.product7')}}</p>
+            <p>
+              {{$t('products.product8')}}
+              (<u class="cursor-p" @click="toUrl('https://nulscan.io/')">nulscan.io</u>)
+              {{$t('products.product81')}}
+              (<u class="cursor-p" @click="toUrl('https://nuls.world/')">nuls.world</u>)
+              {{$t('products.product82')}}
+            </p>
           </li>
-          <li>
-            <img src="./../assets/images/1001.png" />
-            <p class="fw">测试网</p>
-            <p>NULS测试网是NULS技术团队搭建的，测试网全面模拟了主网的运行情况，便于测试NULS的新特性，也方便社区用户体验NULS各个产品的功能</p>
+          <li class="cursor-p" @click="toUrl('')">
+            <img src="./../assets/images/2002.png"/>
+            <p class="fw">{{$t('products.product9')}}</p>
+            <p>{{$t('products.product10')}}</p>
           </li>
         </ul>
       </div>
       <div class="cb"></div>
 
-      <div class="list ecology">
+      <div class="list ecology" v-show="false">
         <h3>Dapp</h3>
         <ul>
-          <li>
-            <img src="./../assets/images/1001.png" />
-            <p class="fw">竞技<span>-测试网</span></p>
-            <p>竞技DAPP简介</p>
+          <li class="cursor-p">
+            <img src="./../assets/images/1001.png"/>
+            <p class="fw">{{$t('products.product11')}}<span>-{{$t('products.test')}}</span></p>
+            <p>{{$t('products.product12')}}</p>
           </li>
-          <li>
-            <img src="./../assets/images/1001.png" />
+          <li class="cursor-p">
+            <img src="./../assets/images/1001.png"/>
             <p class="fw">NULS Space<span></span></p>
-            <p>NULS Space DAPP简介</p>
+            <p>{{$t('products.product16')}}</p>
           </li>
-          <li>
-            <img src="./../assets/images/1001.png" />
-            <p class="fw">投票<span></span></p>
-            <p>NULS Space DAPP简介</p>
+          <li class="cursor-p">
+            <img src="./../assets/images/1001.png"/>
+            <p class="fw">{{$t('products.product15')}}<span></span></p>
+            <p>{{$t('products.product16')}}</p>
           </li>
         </ul>
       </div>
@@ -99,13 +100,20 @@
     mounted() {
 
     },
-    methods: {}
+    methods: {
+      /**
+       * 连接跳转
+       * @param url
+       */
+      toUrl(url){
+        window.open(url);
+      }
+    }
   }
 </script>
 
 <style lang="less">
   @import url("../assets/css/style.less");
-
   .prodcuts {
     background-color: #FFFFFF;
     .header-bg {
@@ -157,7 +165,7 @@
           li {
             width: 375px;
             float: left;
-            min-height: 390px;
+            min-height: 430px;
             padding: 10px;
             box-shadow: 2px 4px 12px 2px #03143712;
             @media (max-width: 768px) {
@@ -187,6 +195,9 @@
               font-size: 16px;
               line-height: 28px;
               color: @color_1;
+              u{
+                color: #34ce57;
+              }
             }
             .fw {
               font-size: 18px;

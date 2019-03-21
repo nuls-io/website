@@ -11,6 +11,7 @@
           </div>
           <el-menu :default-active="activeMenu" :mode="!showNav ? 'horizontal':'vertical'" @select="handleSelect">
             <el-menu-item index="1">{{$t('nav.home')}}</el-menu-item>
+            <el-menu-item index="8">{{$t('products.product')}}</el-menu-item>
             <el-menu-item index="2">{{$t('nav.wallet')}}</el-menu-item>
             <el-menu-item index="3">{{$t('nav.developer')}}</el-menu-item>
             <el-menu-item index="7">{{$t('nav.about7')}}</el-menu-item>
@@ -126,6 +127,10 @@
         } else if(key === '7'){
           this.$router.push({
             name: 'commnunity',
+          });
+        }else if(key === '8'){
+          this.$router.push({
+            name: 'prodcuts',
           });
         }else {
           this.$router.push({

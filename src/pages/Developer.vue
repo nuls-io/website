@@ -51,7 +51,25 @@
         <div class="w_1280">
           <h2 class="h2">{{$t('developer.title2')}}</h2>
           <p>{{$t('developer.info')}}</p>
-          <div class="d-bts">
+
+          <ul>
+            <li>
+              <p><i class="iconfont icon-wallet_icon1"></i></p>
+              <p class="cursor-p" @click="toUrl('http://testnet.wallet.nuls.io')">Access light Wallet <i class="el-icon-arrow-right"></i></p>
+              <p class="cursor-p" @click="toUrl('https://github.com/nuls-io/nuls/releases')">Dowload client wallet <i class="el-icon-arrow-right"></i></p>
+            </li>
+            <li>
+              <p><i class="iconfont icon-shenqing"></i></p>
+              <p class="cursor-p" @click="toUrl('http://testnet.wallet.nuls.io/#/testNetNULS/testNetNULS')">Apply For Testnet NULS <i class="el-icon-arrow-right"></i></p>
+            </li>
+            <li>
+              <p><i class="iconfont icon-liulanqi"></i></p>
+              <p class="cursor-p" @click="toUrl('http://testnet.nulscan.io')">Access Explorer <i class="el-icon-arrow-right"></i></p>
+            </li>
+          </ul>
+
+
+          <!--<div class="d-bts">
             <el-button type="success" @click="toUrl('https://github.com/nuls-io/nuls/releases')">{{$t('developer.bt1')}}
             </el-button>
           </div>
@@ -59,7 +77,7 @@
             <el-button class="btn-lang" @click="toUrl('http://testnet.wallet.nuls.io/#/testNetNULS/testNetNULS')">
               {{$t('developer.bt2')}}
             </el-button>
-          </div>
+          </div>-->
         </div>
       </div>
     </div>
@@ -106,6 +124,7 @@
 </script>
 
 <style lang="less">
+  @import url("//at.alicdn.com/t/font_690985_8kxng02atd.css");
   @import url("../assets/css/style.less");
 
   .developer {
@@ -241,6 +260,34 @@
         .w_1280 {
           @media (max-width: 768px) {
             max-width: 100%;
+          }
+          ul{
+            li{
+              float: left;
+              width: 33.33%;
+              @media (max-width: 768px) {
+                float: none;
+                width: 80%;
+                margin: 0 auto;
+              }
+              p{
+                margin:  0;
+                padding: 0;
+                font-size: 16px;
+                line-height: 26px;
+                color: @bg-color2;
+                @media (max-width: 768px) {
+                  font-size: 0.8rem;
+                  line-height: 1.2rem;
+                  margin:  0 0 0.2rem 0;
+                }
+                .iconfont{
+                  font-size: 24px;
+                  line-height: 40px;
+                  color: #56c400;
+                }
+              }
+            }
           }
         }
         .h2 {
