@@ -1,10 +1,16 @@
 <template>
   <div class="prodcuts">
-    <div class="header-bg">
+    <div class="medias-top" v-loading="mediasLoading">
       <HeaderList></HeaderList>
-      <h1 class="h1 cb">{{$t('products.product1')}}</h1>
     </div>
 
+    <div class="carousel cb">
+      <el-carousel :interval="5000" arrow="always">
+        <el-carousel-item v-for="item in bannerList" :key="item.name">
+          <a :href="item.link" target="_blank"><img :src="item.url"/></a>
+        </el-carousel-item>
+      </el-carousel>
+    </div>
     <div class="prodcuts-info">
       <div class="list ecology">
         <h3>{{$t('products.ecology')}}</h3>
@@ -42,7 +48,7 @@
               {{$t('products.product82')}}
             </p>
           </li>
-          <li class="cursor-p" @click="toUrl('')">
+          <li class="cursor-p" @click="toUrl('https://nuls.io/developer#test')">
             <img src="./../assets/images/2002.png"/>
             <p class="fw">{{$t('products.product9')}}</p>
             <p>{{$t('products.product10')}}</p>
@@ -80,7 +86,7 @@
 </template>
 
 <script>
-  import {getDownloadsList} from '@/api/httpData'
+  import {getBannerList} from '@/api/httpData'
   import {API_ROOT} from '@/api/https'
   import {arrItemSort, tolink} from '@/util/util';
   import HeaderList from '@/components/HeaderList';
@@ -89,9 +95,19 @@
 
   export default {
     data() {
-      return {}
+      return {
+        language: sessionStorage.hasOwnProperty('langs') ? sessionStorage.getItem('langs') === 'zh' ? 1 : 2 : 2,
+        bannerList: [],
+        mediasLoading: true,
+      }
     },
-    watch: {},
+    watch: {
+      language(curVal, oldVal) {
+        if (curVal.toString() !== oldVal.toString()) {
+          this.getBannerList(this.language);
+        }
+      },
+    },
     components: {
       HeaderList,
       Bottom,
@@ -99,8 +115,34 @@
     },
     mounted() {
 
+      setInterval(() => {
+        this.language = sessionStorage.hasOwnProperty('langs') ? sessionStorage.getItem('langs') === 'zh' ? 1 : 2 : 2
+      }, 100);
+
+      this.getBannerList(this.language);
+
     },
     methods: {
+
+      /**
+       * 获取轮播图片列表
+       * @param siteId
+       **/
+      getBannerList(siteId) {
+        let that = this;
+        getBannerList(siteId)
+          .then(function (response) {
+            for (let list of response.data.contentList) {
+              list.url = API_ROOT + list.url;
+            }
+            that.bannerList = response.data.contentList;
+            that.mediasLoading = false;
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+      },
+
       /**
        * 连接跳转
        * @param url
@@ -116,18 +158,57 @@
   @import url("../assets/css/style.less");
   .prodcuts {
     background-color: #FFFFFF;
-    .header-bg {
-      background: url("./../assets/images/map-bg.jpg") no-repeat;
-      background-size: 100% 100%;
-      max-height: 300px;
+    .medias-top {
+      max-width: 1280px;
+      margin: 0 auto;
       @media (max-width: 768px) {
-        max-height: 150px;
+        background: url("./../assets/images/map-bg.jpg") no-repeat;
+        background-size: 100% 100%;
       }
-      h1 {
-        line-height: 6rem;
-        @media (max-width: 768px) {
-          line-height: 4rem;
-          font-size: 1.5rem;
+      .header {
+        z-index: 9;
+        position: absolute;
+        width: 1280px;
+      }
+
+      .el-loading-mask {
+        margin: 10% 0 0 0;
+      }
+    }
+    .carousel {
+      z-index: 8;
+      .el-carousel {
+        .el-carousel__container {
+          height: 360px;
+          @media (max-width: 768px) {
+            height: 8rem;
+          }
+          .el-carousel__item {
+            text-align: center;
+            background-color: #111a39;
+            a {
+              img {
+                /*width: 100%;
+                height: 100%;*/
+                @media (max-width: 768px) {
+                  width: 100%;
+                  height: 8rem;
+                }
+              }
+            }
+          }
+        }
+        .el-carousel__indicators {
+          .el-carousel__indicator {
+            padding: 12px 15px 40px 15px;
+            @media (max-width: 768px) {
+              padding: 12px 5px 5px 5px;
+            }
+            .el-carousel__button {
+              width: 8px;
+              height: 8px;
+            }
+          }
         }
       }
     }
@@ -139,7 +220,7 @@
         height: auto;
       }
       .list {
-        margin: 100px auto 0;
+        margin: 50px auto 0;
         @media (max-width: 768px) {
           margin: 2rem auto 0;
         }

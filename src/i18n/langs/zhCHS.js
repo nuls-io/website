@@ -158,6 +158,10 @@ module.exports = {
 
     docs: '文档',
     plugin: '插件',
+    developer0: '访问网页钱包',
+    developer1: '下载节点钱包',
+    developer2: '申请测试网NULS',
+    developer3: '访问浏览器',
   },
 
   team:{
@@ -310,7 +314,7 @@ module.exports = {
     product81:'和Code Craft Council',
     product82:'开发',
     product9:'测试网',
-    product10:'NULS测试网是核心团队搭建，全面模拟了主网运行情况，便于测试NULS的新特性并让社区用户体验NULS各个产品的功能。',
+    product10:'NULS测试网是核心团队搭建，全面模拟了主网运行情况，便于测试NULS的新特性并让社区用户体验NULS各个产品的功能',
     product11:'竞技',
     product12:'竞技DAPP简介',
     product13:'NULS Space',

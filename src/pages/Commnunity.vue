@@ -102,7 +102,7 @@
         let that = this;
         getFindUsList(siteId, pageSize, pageNum)
           .then(function (response) {
-            console.log(response);
+            //console.log(response);
             for (let list of response.data.contentList) {
               list.imgUrl = API_ROOT + list.imgUrl.substr(1, list.imgUrl.length);
             }

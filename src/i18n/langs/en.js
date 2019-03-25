@@ -160,6 +160,10 @@ module.exports = {
 
     docs: 'Docs',
     plugin: 'Plugin',
+    developer0: 'Access light Wallet',
+    developer1: 'Dowload client wallet',
+    developer2: 'Apply For Testnet NULS',
+    developer3: 'Access Explorer',
   },
 
   team: {
@@ -315,7 +319,7 @@ module.exports = {
     product81:'and Code Craft Council',
     product82:'',
     product9:'Test network',
-    product10:'NULS Testnet is built by core team, which fully simulates the operation of the Mainnet, facilitates the testing of new features and enables the community users to experience the functions of various NULS products.',
+    product10:'NULS Testnet is built by core team, which fully simulates the operation of the Mainnet, facilitates the testing of new features and enables the community users to experience the functions of various NULS products',
     product11:'Sports',
     product12:'Introduction to Competitive DAPP',
     product13:'NULS Space',

@@ -253,8 +253,6 @@
       /**
        * 获取半月报列表
        * @param siteId
-       * @param pageSize
-       * @param pageNum
        */
       getBimonthlyList(siteId) {
         let that = this;

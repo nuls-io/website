@@ -47,28 +47,26 @@
           </ul>
         </div>
       </div>
-      <div class="d-bottom cb">
+      <div class="d-bottom cb" id="test">
         <div class="w_1280">
           <h2 class="h2">{{$t('developer.title2')}}</h2>
-          <p>{{$t('developer.info')}}</p>
+          <p>{{$t('products.product10')}}</p>
 
           <ul>
             <li>
               <p><i class="iconfont icon-wallet_icon1"></i></p>
-              <p class="cursor-p" @click="toUrl('http://testnet.wallet.nuls.io')">Access light Wallet <i class="el-icon-arrow-right"></i></p>
-              <p class="cursor-p" @click="toUrl('https://github.com/nuls-io/nuls/releases')">Dowload client wallet <i class="el-icon-arrow-right"></i></p>
+              <p class="cursor-p" @click="toUrl('http://testnet.wallet.nuls.io')">{{$t('developer.developer0')}} <i class="el-icon-arrow-right"></i></p>
+              <p class="cursor-p" @click="toUrl('https://github.com/nuls-io/nuls/releases')">{{$t('developer.developer1')}} <i class="el-icon-arrow-right"></i></p>
             </li>
             <li>
               <p><i class="iconfont icon-shenqing"></i></p>
-              <p class="cursor-p" @click="toUrl('http://testnet.wallet.nuls.io/#/testNetNULS/testNetNULS')">Apply For Testnet NULS <i class="el-icon-arrow-right"></i></p>
+              <p class="cursor-p" @click="toUrl('http://testnet.wallet.nuls.io/#/testNetNULS/testNetNULS')">{{$t('developer.developer2')}} <i class="el-icon-arrow-right"></i></p>
             </li>
             <li>
               <p><i class="iconfont icon-liulanqi"></i></p>
-              <p class="cursor-p" @click="toUrl('http://testnet.nulscan.io')">Access Explorer <i class="el-icon-arrow-right"></i></p>
+              <p class="cursor-p" @click="toUrl('http://testnet.nulscan.io')">{{$t('developer.developer3')}} <i class="el-icon-arrow-right"></i></p>
             </li>
           </ul>
-
-
           <!--<div class="d-bts">
             <el-button type="success" @click="toUrl('https://github.com/nuls-io/nuls/releases')">{{$t('developer.bt1')}}
             </el-button>
@@ -251,7 +249,7 @@
         padding: 0;
         height: 640px;
         @media (max-width: 768px) {
-          height: 25rem;
+          height: 28rem;
           max-width: 100%;
           margin: 0 0 4rem;
           background: #e9f4f9 no-repeat left;
@@ -306,7 +304,7 @@
         p {
           color: @color_1;
           padding: 0 0 60px 0;
-          max-width: 600px;
+          max-width: 650px;
           line-height: 40px;
           font-size: 24px;
           margin: 0;
@@ -315,7 +313,7 @@
             width: 100%;
             margin: 0;
             font-size: 1.2rem;
-            padding: 1.5rem 0.5rem;
+            padding: 0.5rem 0.5rem;
             line-height: 1.5rem;
           }
         }
