@@ -13,9 +13,12 @@
           <div class="w_right fl">
             <h6 class="h6 font-30">{{$t('developer.title3')}}</h6>
             <!--<p class="font-18 c_green cursor-p" @click="toUrl('https://nuls.community/d/9-invitation-of-community-developers')">{{$t('developer.info1')}} <i class="el-icon-arrow-right"></i></p>-->
-            <p class="font-18 c_green cursor-p" @click="languageUrl">{{$t('developer.info1')}} <i class="el-icon-arrow-right"></i></p>
-            <p class="font-18 c_green cursor-p" @click="toUrl('https://goo.gl/AhwqhM')">{{$t('developer.info2')}} <i class="el-icon-arrow-right"></i></p>
-            <p class="font-18 c_green cursor-p" @click="toUrl('https://nuls.community/t/development')">{{$t('developer.info3')}} <i class="el-icon-arrow-right"></i></p>
+            <p class="font-18 c_green cursor-p" @click="languageUrl">{{$t('developer.info1')}} <i
+              class="el-icon-arrow-right"></i></p>
+            <p class="font-18 c_green cursor-p" @click="toUrl('https://goo.gl/AhwqhM')">{{$t('developer.info2')}} <i
+              class="el-icon-arrow-right"></i></p>
+            <p class="font-18 c_green cursor-p" @click="toUrl('https://nuls.community/t/development')">
+              {{$t('developer.info3')}} <i class="el-icon-arrow-right"></i></p>
           </div>
         </div>
       </div>
@@ -25,11 +28,13 @@
           <ul class="t_ul">
             <li class="t_li fl">
               <p class="img shadow"><img src="./../assets/images/Github-1.png"></p>
-              <p class="c_green cursor-p" @click="toUrl('https://github.com/nuls-io')">Github <i class="el-icon-arrow-right"></i></p>
+              <p class="c_green cursor-p" @click="toUrl('https://github.com/nuls-io')">Github <i
+                class="el-icon-arrow-right"></i></p>
             </li>
             <li class="t_li fl">
               <p class="img shadow"><img src="./../assets/images/Docs.png"></p>
-              <p class="c_green cursor-p" @click="toUrl('http://dev.nuls.io')">{{$t('developer.docs')}} <i class="el-icon-arrow-right"></i></p>
+              <p class="c_green cursor-p" @click="toUrl('http://dev.nuls.io')">{{$t('developer.docs')}} <i
+                class="el-icon-arrow-right"></i></p>
             </li>
             <li class="t_li fl">
               <p class="img shadow"><img style="margin-top: 17px" src="./../assets/images/Tools.png"></p>
@@ -47,7 +52,7 @@
           </ul>
         </div>
       </div>
-      <div class="d-bottom cb" id="test">
+      <div class="d-bottom cb" id="netTest">
         <div class="w_1280">
           <h2 class="h2">{{$t('developer.title2')}}</h2>
           <p>{{$t('products.product10')}}</p>
@@ -55,16 +60,20 @@
           <ul>
             <li>
               <p><i class="iconfont icon-wallet_icon1"></i></p>
-              <p class="cursor-p" @click="toUrl('http://testnet.wallet.nuls.io')">{{$t('developer.developer0')}} <i class="el-icon-arrow-right"></i></p>
-              <p class="cursor-p" @click="toUrl('https://github.com/nuls-io/nuls/releases')">{{$t('developer.developer1')}} <i class="el-icon-arrow-right"></i></p>
+              <p class="cursor-p" @click="toUrl('http://testnet.wallet.nuls.io')">{{$t('developer.developer0')}} <i
+                class="el-icon-arrow-right"></i></p>
+              <p class="cursor-p" @click="toUrl('https://github.com/nuls-io/nuls/releases')">
+                {{$t('developer.developer1')}} <i class="el-icon-arrow-right"></i></p>
             </li>
             <li>
               <p><i class="iconfont icon-shenqing"></i></p>
-              <p class="cursor-p" @click="toUrl('http://testnet.wallet.nuls.io/#/testNetNULS/testNetNULS')">{{$t('developer.developer2')}} <i class="el-icon-arrow-right"></i></p>
+              <p class="cursor-p" @click="toUrl('http://testnet.wallet.nuls.io/#/testNetNULS/testNetNULS')">
+                {{$t('developer.developer2')}} <i class="el-icon-arrow-right"></i></p>
             </li>
             <li>
               <p><i class="iconfont icon-liulanqi"></i></p>
-              <p class="cursor-p" @click="toUrl('http://testnet.nulscan.io')">{{$t('developer.developer3')}} <i class="el-icon-arrow-right"></i></p>
+              <p class="cursor-p" @click="toUrl('http://testnet.nulscan.io')">{{$t('developer.developer3')}} <i
+                class="el-icon-arrow-right"></i></p>
             </li>
           </ul>
           <!--<div class="d-bts">
@@ -89,27 +98,45 @@
 
   export default {
     data() {
-      return {
-      }
+      return {}
     },
     components: {
       HeaderList,
       Bottom,
     },
+    mounted() {
+      if (this.$route.query.id) {
+        setTimeout(() => {
+          this.scrollToSection();
+        }, 100)
+      }
+    },
     methods: {
+
+      /**
+       * 定位到描点
+       **/
+      scrollToSection() {
+        let section = document.getElementById('netTest');
+        if (section) {
+          section.scrollIntoView()
+        }
+      },
 
       /**
        * 根据语言跳转链接
        **/
-      languageUrl(){
+      languageUrl() {
         let language = sessionStorage.hasOwnProperty('langs') ? sessionStorage.getItem('langs') : 'en';
-        this.toUrl(language ==='en' ? 'https://nuls.community/d/9-invitation-of-community-developers' : 'https://nuls.community/d/90-nuls' )
-      },
+        this.toUrl(language === 'en' ? 'https://nuls.community/d/9-invitation-of-community-developers' : 'https://nuls.community/d/90-nuls')
+      }
+      ,
 
-      toUrlByLanguage(zh_url,en_url){
+      toUrlByLanguage(zh_url, en_url) {
         let language = sessionStorage.hasOwnProperty('langs') ? sessionStorage.getItem('langs') : 'en';
-        this.toUrl(language ==='en' ? en_url : zh_url )
-      },
+        this.toUrl(language === 'en' ? en_url : zh_url)
+      }
+      ,
 
       /**
        *  打开新连接
@@ -259,8 +286,8 @@
           @media (max-width: 768px) {
             max-width: 100%;
           }
-          ul{
-            li{
+          ul {
+            li {
               float: left;
               width: 33.33%;
               @media (max-width: 768px) {
@@ -268,8 +295,8 @@
                 width: 80%;
                 margin: 0 auto;
               }
-              p{
-                margin:  0;
+              p {
+                margin: 0;
                 padding: 0;
                 font-size: 16px;
                 line-height: 26px;
@@ -277,9 +304,9 @@
                 @media (max-width: 768px) {
                   font-size: 0.8rem;
                   line-height: 1.2rem;
-                  margin:  0 0 0.2rem 0;
+                  margin: 0 0 0.2rem 0;
                 }
-                .iconfont{
+                .iconfont {
                   font-size: 24px;
                   line-height: 40px;
                   color: #56c400;
@@ -327,9 +354,9 @@
           .el-button {
             width: 225px;
           }
-          .btn-lang{
+          .btn-lang {
             background: transparent;
-            span{
+            span {
               color: #59a500;
             }
           }

@@ -32,7 +32,8 @@
       <div class="list ecology">
         <h3>{{$t('products.tool')}}</h3>
         <ul>
-          <li class="cursor-p" @click="toUrl('https://nuls.io/newWallet')">
+          <li class="cursor-p" @click="toUrl('wallet')">
+            <!-- <li class="cursor-p" :to="wallet">-->
             <img src="./../assets/images/2001.png"/>
             <p class="fw">{{$t('products.product17')}}</p>
             <p>{{$t('products.product6')}}</p>
@@ -48,7 +49,7 @@
               {{$t('products.product82')}}
             </p>
           </li>
-          <li class="cursor-p" @click="toUrl('https://nuls.io/developer#test')">
+          <li class="cursor-p" @click="toUrl('developer')">
             <img src="./../assets/images/2002.png"/>
             <p class="fw">{{$t('products.product9')}}</p>
             <p>{{$t('products.product10')}}</p>
@@ -147,8 +148,19 @@
        * 连接跳转
        * @param url
        */
-      toUrl(url){
-        window.open(url);
+      toUrl(url) {
+        if(url ==='wallet'){
+          this.$router.push({
+            name: 'wallet',
+          })
+        }else if(url ==='developer'){
+          this.$router.push({
+            name: 'developer',
+            query: {id: 'netTest'}
+          })
+        }else{
+          window.open(url);
+        }
       }
     }
   }
@@ -156,6 +168,7 @@
 
 <style lang="less">
   @import url("../assets/css/style.less");
+
   .prodcuts {
     background-color: #FFFFFF;
     .medias-top {
@@ -276,7 +289,7 @@
               font-size: 16px;
               line-height: 28px;
               color: @color_1;
-              u{
+              u {
                 color: #34ce57;
               }
             }

@@ -6,16 +6,16 @@
       <el-collapse-transition>
         <div class="nav-list" v-show="showNav">
           <div class="nav-list-top">
-            <div class="logo" @click="handleSelect(1,['1'])"></div>
+            <div class="logo" @click="handleSelect(1,['home'])"></div>
             <i class="el-icon-close" @click="showNav = !showNav"></i>
           </div>
           <el-menu :default-active="activeMenu" :mode="!showNav ? 'horizontal':'vertical'" @select="handleSelect">
-            <el-menu-item index="1">{{$t('nav.home')}}</el-menu-item>
-            <el-menu-item index="8">{{$t('products.product')}}</el-menu-item>
-            <el-menu-item index="2">{{$t('nav.wallet')}}</el-menu-item>
-            <el-menu-item index="3">{{$t('nav.developer')}}</el-menu-item>
-            <el-menu-item index="7">{{$t('nav.about7')}}</el-menu-item>
-            <el-menu-item index="5">{{$t('nav.media')}}</el-menu-item>
+            <el-menu-item index="home">{{$t('nav.home')}}</el-menu-item>
+            <el-menu-item index="prodcuts">{{$t('products.product')}}</el-menu-item>
+            <el-menu-item index="wallet">{{$t('nav.wallet')}}</el-menu-item>
+            <el-menu-item index="developer">{{$t('nav.developer')}}</el-menu-item>
+            <el-menu-item index="commnunity">{{$t('nav.about7')}}</el-menu-item>
+            <el-menu-item index="media">{{$t('nav.media')}}</el-menu-item>
             <el-menu-item index="4"><a href="http://docs.nuls.io/" target="_blank">{{$t('nav.about8')}}</a></el-menu-item>
             <el-submenu index="6">
               <template slot="title">{{$t('nav.about')}}</template>
@@ -67,6 +67,21 @@
       const lang = sessionStorage.hasOwnProperty('langs') ? sessionStorage.getItem('langs') : 'en';
       this.changeLanguage(lang);
       this.getLanguagelist();
+      setInterval(() => {
+        this.activeMenu = this.$route.path;
+      }, 300);
+    },
+    watch: {
+      activeMenu: function (val) {
+        if (val === '/newWallet') {
+          this.activeMenu = 'wallet';
+        }else if(val ==='/developer'){
+          this.activeMenu = 'developer';
+        }else{
+
+        }
+        //console.log('new: %s, old: %s', val, oldVal);
+      }
     },
     //离开当前页面后执行
     destroyed() {
@@ -80,15 +95,15 @@
       handleSelect(key, keyPath) {
         sessionStorage.setItem('activeMenu', keyPath[0]);
         //this.activeMenu = keyPath[0];
-        if (key === '1') {
+        if (key === 'home') {
           this.$router.push({
             name: 'home',
           })
-        }else if (key === '2') {
+        }else if (key === 'wallet') {
           this.$router.push({
             name: 'wallet',
           })
-        } else if (key === '3') {
+        } else if (key === 'developer') {
           this.$router.push({
             name: 'developer',
           })
@@ -96,7 +111,7 @@
           this.$router.push({
             name: 'downloads',
           })
-        }*/ else if (key === '5') {
+        }*/ else if (key === 'media') {
           this.$router.push({
             name: 'media',
           })
@@ -124,11 +139,11 @@
           this.$router.push({
             name: 'downloads',
           });
-        } else if(key === '7'){
+        } else if(key === 'commnunity'){
           this.$router.push({
             name: 'commnunity',
           });
-        }else if(key === '8'){
+        }else if(key === 'prodcuts'){
           this.$router.push({
             name: 'prodcuts',
           });
