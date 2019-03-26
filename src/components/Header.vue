@@ -2,7 +2,7 @@
   <div class="header">
     <div @click="handleSelect(1,['home'])" class="logo fl cursor-p"></div>
     <el-menu class="fl" :default-active="activeMenu" mode="horizontal" @select="handleSelect">
-      <el-menu-item index="home">{{$t('nav.home')}}</el-menu-item>
+     <!-- <el-menu-item index="home">{{$t('nav.home')}}</el-menu-item>-->
       <el-menu-item index="prodcuts">{{$t('products.product')}}</el-menu-item>
       <el-menu-item index="wallet">{{$t('nav.wallet')}}</el-menu-item>
       <el-menu-item index="developer">{{$t('nav.developer')}}</el-menu-item>
