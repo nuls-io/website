@@ -199,6 +199,9 @@
           .el-carousel__item {
             text-align: center;
             background-color: #111a39;
+            &:last-child{
+              background: linear-gradient(90deg, #0B034E, #141168);
+            }
             a {
               img {
                 /*width: 100%;
