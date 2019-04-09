@@ -6,7 +6,7 @@
       <ul>
         <li><a href="https://t.me/Nulsio" target="_blank"><img src="../assets/images/telegram.png" height="42"
                                                                width="42"/></a></li>
-        <li><a href="https://twitter.com/nulsservice" target="_blank"><img src="../assets/images/twitter.png"
+        <li><a href="https://twitter.com/nuls" target="_blank"><img src="../assets/images/twitter.png"
                                                                            height="38" width="38"/></a></li>
         <li><a href="https://github.com/nuls-io/" target="_blank"><img src="../assets/images/github.png" height="37"
                                                                        width="38"/></a></li>
@@ -27,14 +27,14 @@
     <div class="bottom-info">
       <div class="bottom-from">
         <el-form :inline="true" :model="emailForm" :rules="emailRules" ref="emailForm">
-          <el-form-item label="" prop="emailAddress">
+          <!--<el-form-item label="" prop="emailAddress">
             <el-input v-model="emailForm.emailAddress"
                       :placeholder="$t('bottom.inputTitle')" ></el-input>
           </el-form-item>
           <el-form-item class="form-bt">
             <el-button type="primary" class="bg-green-btn" @click="submitForm('emailForm')">{{$t('bottom.inputSubmit')}}</el-button>
-          </el-form-item>
-          <div class="font-18">{{$t('bottom.emailInfo')}}</div>
+          </el-form-item>-->
+          <div class="font-18" style="padding-bottom: 20px">{{$t('bottom.emailInfo')}}</div>
         </el-form>
 
       </div>

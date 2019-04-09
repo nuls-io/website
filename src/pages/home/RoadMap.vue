@@ -41,12 +41,12 @@
             <p>{{$t('home.road_tab_ice_2.p4')}}</p>
           </swiper-slide>
           <swiper-slide class="swiper-slide-ice">
-            <p class="date cbuld">{{$t('home.road_tab_ice_3.time')}}</p>
+            <p class="date">{{$t('home.road_tab_ice_3.time')}}</p>
             <div class="triangle actives"></div>
-            <p class="cbuld">{{$t('home.road_tab_ice_3.p0')}}</p>
-            <p class="cbuld">{{$t('home.road_tab_ice_3.p1')}}</p>
-            <p class="cbuld">{{$t('home.road_tab_ice_3.p2')}}</p>
-            <p class="cbuld">{{$t('home.road_tab_ice_3.p3')}}</p>
+            <p class="">{{$t('home.road_tab_ice_3.p0')}}</p>
+            <p class="">{{$t('home.road_tab_ice_3.p1')}}</p>
+            <p class="">{{$t('home.road_tab_ice_3.p2')}}</p>
+            <p class="">{{$t('home.road_tab_ice_3.p3')}}</p>
           </swiper-slide>
           <swiper-slide class="swiper-slide-ice">
             <p class="date">{{$t('home.road_tab_ice_4.time')}}</p>
