@@ -282,15 +282,16 @@ module.exports = {
     tab1_title_name0:'AnyBit',
     tab1_title_author0:'AnyBit 团队',
     tab1_title_p0:'支持BTC、ETH、NULS等 10+主链，1000+代币，一个钱包，一键管理，告别繁琐切换',
-    tab1_title_name:'Token++',
-    tab1_title_p:'支持多币种，去中心化服务，内置高性能链上交易引擎安全管理，交易方便',
+    tab1_title_name:'BitKeep',
+    tab1_title_author:'BitKeep团队',
+    tab1_title_p:'顶级团队斥资千万打造，多链多币种的去中心化轻钱包。独创DESM加密算法，双重验证保障您的数字资产安全',
 
     tab2_title:'网页',
     tab2_title_name:'轻钱包',
     tab2_title_p:'NULS网页版轻钱包无需同步所有区块数据，且私钥加密存储在本地设备上，具有极高的安全性',
-    tab2_title_name1:'NULS World',
-    core_team1:'Moshe Malawach',
-    tab2_title_p1:'浏览器中的完整客户端轻钱包。通过连接NULS.World API获得余额和未使用的输出，以保证更好的准确性。所有交易都在客户端签名和打包，以确保最大的安全性',
+    tab2_title_name1:'Nytro-Wallet',
+    core_team1:'CCC',
+    tab2_title_p1:'使用 NULS.World API的NULS区块链桌面轻钱包',
 
     access:'访问',
 

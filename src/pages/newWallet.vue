@@ -42,13 +42,13 @@
               <p class="nw_p font-20 p_info">{{$t('newWallet.tab1_title_p0')}}<span v-show="lang"><br/>&nbsp;</span></p>
               <p class="nw_p c_green tc cursor-p font-20" @click="toDownload('https://www.anybit.io',1)">{{$t('nav.about1')}} <i class="el-icon-download"></i></p>
             </li>
-            <li class="nw_li fl" v-show="false">
+            <li class="nw_li fl">
               <h6 class="h6 tc">{{$t('newWallet.tab1_title_name')}}</h6>
-              <p class="nw_p tc font-20 color1">{{$t('newWallet.author')}}: <span @click="toUrl('https://www.tokenxx.com/#about_us',1)" class="cursor-p">Token++</span></p>
+              <p class="nw_p tc font-20 color1">{{$t('newWallet.author')}}: <span @click="toUrl('https://bitkeep.com/about',1)" class="cursor-p">{{$t('newWallet.tab1_title_author')}}</span></p>
               <p class="nw_p font-14 colorRed">{{$t('newWallet.tips1')}}</p>
               <p class="nw_p font-14 colorRed">{{$t('newWallet.tips2')}}</p>
               <p class="nw_p font-20 p_info">{{$t('newWallet.tab1_title_p')}}</p>
-              <p class="nw_p c_green tc cursor-p font-20" @click="toDownload('https://www.tokenxx.com/',1)">{{$t('nav.about1')}} <i class="el-icon-download"></i></p>
+              <p class="nw_p c_green tc cursor-p font-20" @click="toDownload('https://bitkeep.com/',1)">{{$t('nav.about1')}} <i class="el-icon-download"></i></p>
             </li>
             <li class="nw_li fl" v-show="false"></li>
           </ul>
@@ -66,7 +66,7 @@
               <h6 class="h6 tc">{{$t('newWallet.tab2_title_name1')}}</h6>
               <p class="nw_p tc font-20 color1">{{$t('newWallet.author')}}: <span @click="toUrl('https://nuls.io/team')" class="cursor-p">{{$t('newWallet.core_team1')}}</span></p>
               <p class="nw_p font-20 p_info web_p">{{$t('newWallet.tab2_title_p1')}}</p>
-              <p class="nw_p c_green tc cursor-p font-20" @click="toDownload('https://nuls.world/wallet',1)">{{$t('newWallet.access')}}</p>
+              <p class="nw_p c_green tc cursor-p font-20" @click="toDownload('https://github.com/CCC-NULS/nytro-wallet/releases',1)">{{$t('nav.about1')}} <i class="el-icon-download"></i></p>
             </li>
             <li class="nw_li fl" v-show="false"></li>
           </ul>
@@ -265,7 +265,7 @@
             .nw_ul {
               .nw_li {
                 width: 355px;
-                height: auto;
+                min-height: 476px;
                 border-top: 1px solid #ebeef5;
                 border-bottom: 4px solid #8fe400;
                 border-radius: 4px;
