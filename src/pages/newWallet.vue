@@ -95,16 +95,17 @@
         </el-tab-pane>
       </el-tabs>
     </div>
-    <div class="reward">
+    <div class="reward" id="reward">
       <div class="w_1280">
         <div class="reward-l fl">
           <h1>{{$t('newWallet.n_wallet0')}}</h1>
           <p>{{$t('newWallet.n_wallet1')}}</p>
           <h5>
-            {{$t('newWallet.n_wallet2')}}
+            <font>{{$t('newWallet.n_wallet2')}}</font>
             <span class="c_green cursor-p" @click="toUrl('http://docs.nuls.io/zh/learn/lightWalletGuide.html')">{{$t('newWallet.n_wallet4')}}<i class="el-icon-arrow-right"></i></span>
           </h5>
-          <h5>{{$t('newWallet.n_wallet2')}}
+          <h5>
+            <font>{{$t('newWallet.n_wallet3')}}</font>
             <span class="c_green cursor-p" @click="toUrl('http://docs.nuls.io/zh/learn/clientWalletGuide.html')">{{$t('newWallet.n_wallet4')}} <i class="el-icon-arrow-right"></i></span>
           </h5>
         </div>
@@ -146,6 +147,12 @@
       setInterval(() => {
         this.lang = sessionStorage.hasOwnProperty('langs') ? sessionStorage.getItem('langs') === 'en' ? true : false : true
       }, 100);
+
+      if (this.$route.query.id) {
+        setTimeout(() => {
+          this.scrollToSection();
+        }, 100)
+      }
     },
     methods: {
 
@@ -188,11 +195,27 @@
         }
       },
 
+      /**
+       * 连接跳转
+       * @param url
+       * @param type
+       */
       toUrl(url, type = 0) {
         if (type = 1) {
           sessionStorage.setItem('activeMenu', '555');
         }
         tolink(url)
+      },
+
+
+      /**
+       * 定位到描点
+       **/
+      scrollToSection() {
+        let section = document.getElementById('reward');
+        if (section) {
+          section.scrollIntoView()
+        }
       },
 
       handleClick(tab, event) {
@@ -391,14 +414,29 @@
       background-color: #F4FBFF;
       height: 570px;
       margin-bottom: 100px;
+      @media (max-width: 768px) {
+        height: auto;
+      }
       .reward-l,.reward-r{
         width: 55%;
+        @media (max-width: 768px) {
+          width: 100%;
+          float: none !important;
+        }
       }
       .reward-l{
         width: 45%;
+        @media (max-width: 768px) {
+          width: 100%;
+          float: none !important;
+        }
         h1{
           color: #0a2140;
           margin:3rem 0;
+          @media (max-width: 768px) {
+            padding: 1rem;
+            margin: 1rem 0;
+          }
         }
         p{
           width: 90%;
@@ -406,13 +444,30 @@
           line-height: 28px;
           margin-bottom: 30px;
           color: #445569;
+          @media (max-width: 768px) {
+            padding: 1rem;
+          }
         }
         h5{
           color: #445569;
           margin: 10px 0 0 0;
           font-size: 14px;
+          @media (max-width: 768px) {
+            padding: 1rem;
+          }
+          font{
+            width: 210px;
+            display: block;
+            float: left;
+            @media (max-width: 768px) {
+              width: 12.5rem;
+            }
+          }
           span{
             margin-left: 50px;
+            @media (max-width: 768px) {
+              margin-left: 0.5rem;
+            }
           }
         }
       }

@@ -21,12 +21,14 @@
       <el-col :xs="24" :sm="12" class="w-left">
         <h2 class="h2">{{$t('home.wallet_title')}}</h2>
         <p>{{$t('home.wallet_info')}}</p>
+        <h4 class="c_green cursor-p reward-url" @click="toName('reward')">{{$t('home.wallet_list_title')}}<i
+          class="el-icon-arrow-right"></i></h4>
         <div class="w-bt">
           <el-button type="success" @click="toName" class="toWallet">
-            {{$t('home.wallet_list_title')}}
+            {{$t('home.wallet_list_title0')}}
           </el-button>
           <div class="btn-box" v-show="false">
-            <el-button @click="tolink('developer')"><span>{{$t('home.wallet_online')}}</span><i
+            <el-button @click="tolink('https://wallet.nuls.io')"><span>{{$t('home.wallet_online')}}</span><i
               class="el-icon-arrow-right"></i></el-button>
           </div>
         </div>
@@ -41,17 +43,23 @@
 <script>
   export default {
     data() {
-      return {
-      }
+      return {}
     },
     mounted() {
     },
     methods: {
-      toName(){
-        sessionStorage.setItem('activeMenu','2');
-        this.$router.push({
-          name: 'wallet',
-        })
+      toName(e) {
+        sessionStorage.setItem('activeMenu', '2');
+        if (e === 'reward') {
+          this.$router.push({
+            name: 'wallet',
+            query: {id: e}
+          })
+        } else {
+          this.$router.push({
+            name: 'wallet',
+          })
+        }
       }
     }
   }
@@ -66,7 +74,7 @@
       height: 52px;
       padding: 0 10px;
       border-bottom: 1px solid #e4e7ed;
-      &:last-child{
+      &:last-child {
         border: 0 solid #445569;
       }
     }
@@ -175,12 +183,12 @@
           max-width: 550px;
           @media (max-width: 768px) {
             max-width: 360px;
-            margin: 4rem 0 0 0;
+            margin: 2rem 0 0 0;
           }
-          .toWallet{
+          .toWallet {
             margin: 50px 0 0 0;
             @media (max-width: 768px) {
-              margin: 2rem 0 0 0;
+              margin: 2rem 0 0 1rem;
             }
           }
 
@@ -207,6 +215,14 @@
                 }
               }
             }
+          }
+        }
+        .reward-url{
+          margin: 20px 0 0;
+          font-weight: 400;
+          font-size: 16px;
+          @media (max-width: 768px) {
+            margin: 1rem 0 0 1rem;
           }
         }
       }

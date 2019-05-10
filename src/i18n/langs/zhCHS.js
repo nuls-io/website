@@ -57,6 +57,7 @@ module.exports = {
     wallet_title: 'NULS钱包',
     wallet_info: '资产管理 | 维护网络，获取NULS奖励',
     wallet_list_title: '共识奖励计算器',
+    wallet_list_title0: '下载钱包',
     wallet_list_0: 'Windows版本下载',
     wallet_list_1: 'MacOS版本下载',
     wallet_list_2: 'Linux版本下载',

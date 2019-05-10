@@ -57,6 +57,7 @@ module.exports = {
     wallet_title: 'NULS Wallet',
     wallet_info: 'Asset management | Maintain the network and earn NULS rewards',
     wallet_list_title: 'Reward calculator',
+    wallet_list_title0: 'Download Wallet',
     wallet_list_0: 'Windows Download',
     wallet_list_1: 'MacOS Download',
     wallet_list_2: 'Linux Download',

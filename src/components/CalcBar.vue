@@ -306,6 +306,10 @@
     border: 1px solid #DFE4EF;
     width: 700px;
     margin: 25px 0;
+    @media (max-width: 768px) {
+      width: 100%;
+      margin: 1rem 0 0;
+    }
     h5 {
       border-bottom: 1px solid #DFE4EF;
       margin: 15px 0 0 0;
@@ -386,7 +390,7 @@
     .el-radio__input.is-checked + .el-radio__label {
       color: #7db46d !important;
     }
-    @media screen and (max-width: 1000px) {
+    @media (max-width: 768px) {
       .result {
         ul {
           li {
