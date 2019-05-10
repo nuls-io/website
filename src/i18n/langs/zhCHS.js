@@ -55,8 +55,8 @@ module.exports = {
     ecosystem_info2: '资产可在NULS生态中的所有链中进行流通',
 
     wallet_title: 'NULS钱包',
-    wallet_info: 'NULS Wallets由NULS核心团队和Code Craft Council开发。此外我们还提供第三方钱包。使用第三方钱包时，您需要负责私钥的安全',
-    wallet_list_title: '进入钱包页面',
+    wallet_info: '资产管理 | 维护网络，获取NULS奖励',
+    wallet_list_title: '共识奖励计算器',
     wallet_list_0: 'Windows版本下载',
     wallet_list_1: 'MacOS版本下载',
     wallet_list_2: 'Linux版本下载',
@@ -292,8 +292,13 @@ module.exports = {
     tab2_title_name1:'Nytro-Wallet',
     core_team1:'CCC',
     tab2_title_p1:'使用 NULS.World API的NULS区块链桌面轻钱包',
-
     access:'访问',
+
+    n_wallet0:'维护网络，获取奖励',
+    n_wallet1:'NULS主网默认采用信用共识机制POC来进行网络维护，每年共奖励维护网络的节点约500万NULS',
+    n_wallet2:'进行委托，获取奖励',
+    n_wallet3:'建立节点，获取奖励',
+    n_wallet4:'查看教程',
 
   },
 
@@ -324,7 +329,38 @@ module.exports = {
     product16:'NULS Space DAPP简介',
     product17:'钱包',
   },
-
+  cale:{
+    cale0:"共识奖励计算器",
+    cale1:"参与委托",
+    cale101: "创建节点",
+    cale102: "委托量",
+    cale103: "佣金比例",
+    cale104: "信用值",
+    cale105: "总委托量",
+    cale106: "保证金",
+    cale3:"日奖励",
+    cale4:"周奖励",
+    cale5:"月奖励",
+    cale6:"年奖励",
+    cale7:"请输入委托量",
+    cale8:"委托量范围为 2000 到 500000",
+    cale9:"委托量必须为数字",
+    cale10:"请输入节点佣金比例",
+    cale11:"佣金比例范围为 10 到 100",
+    cale12:"佣金比例必须为数字",
+    cale13:"请输入节点信用值",
+    cale14:"信用值在 0 到 1",
+    cale15:"信用值必须为数字",
+    cale16:"请输入全网委托量",
+    cale17:"全网委托量范围为 200000 到 100000000",
+    cale18:"全网委托量必须为数字",
+    cale19:"请输入节点保证金",
+    cale20:"保证金范围为 20000 到 200000",
+    cale21:"保证金必须为数字",
+    cale22:"请输入委托量",
+    cale23:"委托量范围为 200000 到 500000",
+    cale24:"委托量必须为数字"
+  },
   bottom: {
     title: '加入NULS社区',
     info: 'NULS想用区块链重塑世界。 如果您想成为我们不断发展的社区的一员并参与这个过程，请通过我们的社交媒体立即加入我们吧',
@@ -334,17 +370,13 @@ module.exports = {
     list2: 'Website design by petravic',
     list3: '白皮书',
     list4: '黄皮书',
-
     list5: 'NULS是什么',
     list6: '支持',
     list7: '问答',
-
     inputTitle: '请留下你的邮箱，我们会把最新消息发送给你',
     inputSubmit: '发送',
-
     error0: '请输入您的电子邮件地址',
     error1: '请输入正确的电子邮件地址',
-
     emailInfo:'当你需要帮助时，可以直接联系我们：support@nuls.io',
   }
 };

@@ -4,30 +4,39 @@
       <HeaderList></HeaderList>
       <h1 class="h1 cb">{{$t('nav.wallet')}}</h1>
       <p class="w_1000 font-20">{{$t('newWallet.info0')}}</p>
-    <!--  <p class="w_1000 font-20">{{$t('newWallet.info1')}}</p>
-      <p class="w_1000 font-20">{{$t('newWallet.info2')}}</p>-->
+      <!--  <p class="w_1000 font-20">{{$t('newWallet.info1')}}</p>
+        <p class="w_1000 font-20">{{$t('newWallet.info2')}}</p>-->
     </div>
     <div class="new_wallet_info w_1280">
       <el-tabs v-model="activeName" @tab-click="handleClick">
         <el-tab-pane :label="$t('newWallet.tab0_title')" name="first">
           <ul class="nw_ul">
-            <li class="nw_li fl" >
+            <li class="nw_li fl">
               <h6 class="h6 tc">{{$t('newWallet.tab0_windows')}}</h6>
-              <p class="nw_p tc font-20 color1">{{$t('newWallet.author')}}: <span @click="toUrl('https://nuls.io/team')" class="cursor-p">{{$t('newWallet.core_team')}}</span></p>
+              <p class="nw_p tc font-20 color1">{{$t('newWallet.author')}}: <span @click="toUrl('https://nuls.io/team')"
+                                                                                  class="cursor-p">{{$t('newWallet.core_team')}}</span>
+              </p>
               <p class="nw_p font-20 p_info">{{$t('newWallet.tab0_windows_p')}}</p>
-              <p class="nw_p tc cursor-p font-20 c_green" @click="toDownload(downloadList.windowslink,0)">{{downloadList.title}} <i class="el-icon-download"></i></p>
+              <p class="nw_p tc cursor-p font-20 c_green" @click="toDownload(downloadList.windowslink,0)">
+                {{downloadList.title}} <i class="el-icon-download"></i></p>
             </li>
             <li class="nw_li fl">
               <h6 class="h6 tc">{{$t('newWallet.tab0_linux')}}</h6>
-              <p class="nw_p tc font-20 color1">{{$t('newWallet.author')}}: <span @click="toUrl('https://nuls.io/team')" class="cursor-p">{{$t('newWallet.core_team')}}</span></p>
+              <p class="nw_p tc font-20 color1">{{$t('newWallet.author')}}: <span @click="toUrl('https://nuls.io/team')"
+                                                                                  class="cursor-p">{{$t('newWallet.core_team')}}</span>
+              </p>
               <p class="nw_p font-20 p_info">{{$t('newWallet.tab0_linux_p')}}</p>
-              <p class="nw_p c_green tc cursor-p font-20" @click="toDownload(downloadList.linuxlink,0)">{{downloadList.title}} <i class="el-icon-download"></i></p>
+              <p class="nw_p c_green tc cursor-p font-20" @click="toDownload(downloadList.linuxlink,0)">
+                {{downloadList.title}} <i class="el-icon-download"></i></p>
             </li>
             <li class="nw_li fl">
               <h6 class="h6 tc">{{$t('newWallet.tab0_mac')}}</h6>
-              <p class="nw_p tc font-20 color1">{{$t('newWallet.author')}}: <span @click="toUrl('https://nuls.io/team')" class="cursor-p">{{$t('newWallet.core_team')}}</span></p>
+              <p class="nw_p tc font-20 color1">{{$t('newWallet.author')}}: <span @click="toUrl('https://nuls.io/team')"
+                                                                                  class="cursor-p">{{$t('newWallet.core_team')}}</span>
+              </p>
               <p class="nw_p font-20 p_info">{{$t('newWallet.tab0_mac_p')}}</p>
-              <p class="nw_p c_green tc cursor-p font-20" @click="toDownload(downloadList.maclink,0)">{{downloadList.title}} <i class="el-icon-download"></i></p>
+              <p class="nw_p c_green tc cursor-p font-20" @click="toDownload(downloadList.maclink,0)">
+                {{downloadList.title}} <i class="el-icon-download"></i></p>
             </li>
           </ul>
         </el-tab-pane>
@@ -36,19 +45,25 @@
           <ul class="nw_ul">
             <li class="nw_li fl">
               <h6 class="h6 tc">{{$t('newWallet.tab1_title_name0')}}</h6>
-              <p class="nw_p tc font-20 color1">{{$t('newWallet.author')}}: <span @click="toUrl('https://www.anybit.io',1)" class="cursor-p">{{$t('newWallet.tab1_title_author0')}}</span></p>
+              <p class="nw_p tc font-20 color1">{{$t('newWallet.author')}}: <span
+                @click="toUrl('https://www.anybit.io',1)" class="cursor-p">{{$t('newWallet.tab1_title_author0')}}</span>
+              </p>
               <p class="nw_p font-14 colorRed">{{$t('newWallet.tips1')}}</p>
               <p class="nw_p font-14 colorRed">{{$t('newWallet.tips2')}}</p>
               <p class="nw_p font-20 p_info">{{$t('newWallet.tab1_title_p0')}}<span v-show="lang"><br/>&nbsp;</span></p>
-              <p class="nw_p c_green tc cursor-p font-20" @click="toDownload('https://www.anybit.io',1)">{{$t('nav.about1')}} <i class="el-icon-download"></i></p>
+              <p class="nw_p c_green tc cursor-p font-20" @click="toDownload('https://www.anybit.io',1)">
+                {{$t('nav.about1')}} <i class="el-icon-download"></i></p>
             </li>
             <li class="nw_li fl">
               <h6 class="h6 tc">{{$t('newWallet.tab1_title_name')}}</h6>
-              <p class="nw_p tc font-20 color1">{{$t('newWallet.author')}}: <span @click="toUrl('https://bitkeep.com/about',1)" class="cursor-p">{{$t('newWallet.tab1_title_author')}}</span></p>
+              <p class="nw_p tc font-20 color1">{{$t('newWallet.author')}}: <span
+                @click="toUrl('https://bitkeep.com/about',1)"
+                class="cursor-p">{{$t('newWallet.tab1_title_author')}}</span></p>
               <p class="nw_p font-14 colorRed">{{$t('newWallet.tips1')}}</p>
               <p class="nw_p font-14 colorRed">{{$t('newWallet.tips2')}}</p>
               <p class="nw_p font-20 p_info">{{$t('newWallet.tab1_title_p')}}</p>
-              <p class="nw_p c_green tc cursor-p font-20" @click="toDownload('https://bitkeep.com/',1)">{{$t('nav.about1')}} <i class="el-icon-download"></i></p>
+              <p class="nw_p c_green tc cursor-p font-20" @click="toDownload('https://bitkeep.com/',1)">
+                {{$t('nav.about1')}} <i class="el-icon-download"></i></p>
             </li>
             <li class="nw_li fl" v-show="false"></li>
           </ul>
@@ -58,27 +73,55 @@
           <ul class="nw_ul">
             <li class="nw_li fl">
               <h6 class="h6 tc">{{$t('newWallet.tab2_title_name')}}</h6>
-              <p class="nw_p tc font-20 color1">{{$t('newWallet.author')}}: <span @click="toUrl('https://nuls.io/team')" class="cursor-p">{{$t('newWallet.core_team')}}</span></p>
+              <p class="nw_p tc font-20 color1">{{$t('newWallet.author')}}: <span @click="toUrl('https://nuls.io/team')"
+                                                                                  class="cursor-p">{{$t('newWallet.core_team')}}</span>
+              </p>
               <p class="nw_p font-20 p_info web_p">{{$t('newWallet.tab2_title_p')}}</p>
-              <p class="nw_p c_green tc cursor-p font-20" @click="toDownload('https://wallet.nuls.io',1)">{{$t('newWallet.access')}}</p>
+              <p class="nw_p c_green tc cursor-p font-20" @click="toDownload('https://wallet.nuls.io',1)">
+                {{$t('newWallet.access')}}</p>
             </li>
             <li class="nw_li fl">
               <h6 class="h6 tc">{{$t('newWallet.tab2_title_name1')}}</h6>
-              <p class="nw_p tc font-20 color1">{{$t('newWallet.author')}}: <span @click="toUrl('https://nuls.io/team')" class="cursor-p">{{$t('newWallet.core_team1')}}</span></p>
+              <p class="nw_p tc font-20 color1">{{$t('newWallet.author')}}: <span @click="toUrl('https://nuls.io/team')"
+                                                                                  class="cursor-p">{{$t('newWallet.core_team1')}}</span>
+              </p>
               <p class="nw_p font-20 p_info web_p">{{$t('newWallet.tab2_title_p1')}}</p>
-              <p class="nw_p c_green tc cursor-p font-20" @click="toDownload('https://github.com/CCC-NULS/nytro-wallet/releases',1)">{{$t('nav.about1')}} <i class="el-icon-download"></i></p>
+              <p class="nw_p c_green tc cursor-p font-20"
+                 @click="toDownload('https://github.com/CCC-NULS/nytro-wallet/releases',1)">{{$t('nav.about1')}} <i
+                class="el-icon-download"></i></p>
             </li>
             <li class="nw_li fl" v-show="false"></li>
           </ul>
         </el-tab-pane>
       </el-tabs>
     </div>
-    <Bottom></Bottom>
+    <div class="reward">
+      <div class="w_1280">
+        <div class="reward-l fl">
+          <h1>{{$t('newWallet.n_wallet0')}}</h1>
+          <p>{{$t('newWallet.n_wallet1')}}</p>
+          <h5>
+            {{$t('newWallet.n_wallet2')}}
+            <span class="c_green cursor-p" @click="toUrl('http://docs.nuls.io/zh/learn/lightWalletGuide.html')">{{$t('newWallet.n_wallet4')}}<i class="el-icon-arrow-right"></i></span>
+          </h5>
+          <h5>{{$t('newWallet.n_wallet2')}}
+            <span class="c_green cursor-p" @click="toUrl('http://docs.nuls.io/zh/learn/clientWalletGuide.html')">{{$t('newWallet.n_wallet4')}} <i class="el-icon-arrow-right"></i></span>
+          </h5>
+        </div>
+        <div class="reward-r fr">
+          <CalcBar>
+          </CalcBar>
+        </div>
+      </div>
+    </div>
+    <Bottom>
+    </Bottom>
   </div>
 </template>
 
 <script>
   import HeaderList from '@/components/HeaderList';
+  import CalcBar from '@/components/CalcBar';
   import Bottom from '@/components/Bottom';
   import {getWalletDownloadList} from '@/api/httpData'
   import {API_ROOT} from '@/api/https';
@@ -95,6 +138,7 @@
     },
     components: {
       HeaderList,
+      CalcBar,
       Bottom,
     },
     mounted() {
@@ -139,14 +183,14 @@
           } catch (e) {
 
           }
-        }else {
+        } else {
           window.open(e);
         }
       },
 
-      toUrl(url,type=0){
-        if(type=1){
-          sessionStorage.setItem('activeMenu','555');
+      toUrl(url, type = 0) {
+        if (type = 1) {
+          sessionStorage.setItem('activeMenu', '555');
         }
         tolink(url)
       },
@@ -160,7 +204,6 @@
 
 <style lang="less">
   @import url("../assets/css/style.less");
-
   .new_wallet {
     background-color: #FFFFFF;
     .header-bg {
@@ -178,7 +221,7 @@
           padding: 1rem 0 2rem 0;
         }
       }
-      .w_1000{
+      .w_1000 {
         //text-align: center;
         color: @color;
         @media (max-width: 768px) {
@@ -186,11 +229,10 @@
         }
       }
     }
-
     .new_wallet_info {
       height: auto;
       @media (max-width: 768px) {
-      height: auto;
+        height: auto;
       }
       .el-tabs {
         min-height: 30rem;
@@ -298,24 +340,24 @@
                     margin: 1rem 0;
                   }
                 }
-                .color1{
+                .color1 {
                   color: @bg-color2;
                   padding: 0 0 10px 0;
                 }
-                .p_info{
+                .p_info {
                   padding: 20px 20px 10px 20px;
                   line-height: 35px;
-                  min-height:135px;
+                  min-height: 135px;
                   @media (max-width: 768px) {
                     padding: 0.5rem 1rem;
                     line-height: 1.5rem;
-                    min-height:2rem;
+                    min-height: 2rem;
                   }
                 }
-                .web_p{
-                  min-height:275px;
+                .web_p {
+                  min-height: 275px;
                   @media (max-width: 768px) {
-                    min-height:2rem;
+                    min-height: 2rem;
                   }
                 }
                 .nw_p {
@@ -325,7 +367,7 @@
 
                   }
                 }
-                .colorRed{
+                .colorRed {
                   color: #f64b3e;
                   padding: 0 20px 0 20px;
                   width: 80%;
@@ -345,7 +387,38 @@
         }
       }
     }
+    .reward {
+      background-color: #F4FBFF;
+      height: 570px;
+      margin-bottom: 100px;
+      .reward-l,.reward-r{
+        width: 55%;
+      }
+      .reward-l{
+        width: 45%;
+        h1{
+          color: #0a2140;
+          margin:3rem 0;
+        }
+        p{
+          width: 90%;
+          font-size: 18px;
+          line-height: 28px;
+          margin-bottom: 30px;
+          color: #445569;
+        }
+        h5{
+          color: #445569;
+          margin: 10px 0 0 0;
+          font-size: 14px;
+          span{
+            margin-left: 50px;
+          }
+        }
+      }
+      .reward-r{
 
+      }
+    }
   }
-
 </style>

@@ -55,8 +55,8 @@ module.exports = {
     ecosystem_info2: 'Assets Circulating within all the Chains of NULS Ecosystem',
 
     wallet_title: 'NULS Wallet',
-    wallet_info: ' NULS Wallets are developed by the NULS core team and Code Craft Council. We also provide third-party wallets. When using a third-party wallet you are responsible for the safety of your private key',
-    wallet_list_title: 'Go to wallet page',
+    wallet_info: 'Asset management | Maintain the network and earn NULS rewards',
+    wallet_list_title: 'Reward calculator',
     wallet_list_0: 'Windows Download',
     wallet_list_1: 'MacOS Download',
     wallet_list_2: 'Linux Download',
@@ -281,7 +281,6 @@ module.exports = {
     tab0_linux_p:'NULS Wallet (Client) participates in data maintenance of the network. It synchronizes all the on-chain data, making it more secure and the verification faster',
     tab0_mac:'Mac',
     tab0_mac_p:'NULS Wallet (Client) participates in data maintenance of the network. It synchronizes all the on-chain data, making it more secure and the verification faster',
-
     tab1_title:'App',
     tips1:'Third-party wallet.',
     tips2:' All rights reserved by service provider',
@@ -291,15 +290,19 @@ module.exports = {
     tab1_title_name:'BitKeep',
     tab1_title_author:'BitKeep Team',
     tab1_title_p:'Spend 10 millions of dollars to Create a best Wallet for all Blockchain.Unique DESM Encryption Algorithm to Protect your Assets Safety',
-
     tab2_title:'Light',
     tab2_title_name:'Light Wallet',
     tab2_title_p:'This version of the light wallet does not require you to download the entire blockchain and safely encrypts key to local device. Because it is a web wallet take caution with browser add-ons. ',
     tab2_title_name1:'Nytro-Wallet',
     core_team1:'CCC',
     tab2_title_p1:'Desktop wallet for the NULS blockchain using the NULS.World API',
-
     access:'Access',
+
+    n_wallet0:'Asset management | Maintain the network and earn NULS rewards',
+    n_wallet1:'NULS Mainnet adopts the credit consensus mechanism POC by default for network maintenance, and about 5 million NULS are awarded for consensus nodes every year',
+    n_wallet2:'Stake and earn reward',
+    n_wallet3:'Create node and earn reward',
+    n_wallet4:'View the tutorial',
   },
 
   products:{
@@ -330,28 +333,55 @@ module.exports = {
     product17:'Wallet',
   },
 
+  cale: {
+    cale0: "Consensus reward calculator",
+    cale1: "stake",
+    cale101: "Register node",
+    cale102: "Stake",
+    cale103: "Commission",
+    cale104: "Credit",
+    cale105: "Total stake",
+    cale106: "Deposit",
+    cale3: "Daily",
+    cale4: "Weekly",
+    cale5: "Monthly",
+    cale6: "Annual",
+    cale7: "Please enter stake amount",
+    cale8: "Stake amount ranges from 2000 to 500,000",
+    cale9: "Stake amount should be number",
+    cale10: "Please enter commission rate",
+    cale11: "Commission rate ranges from 10 to 100",
+    cale12: "Commission rate should be number",
+    cale13: "Please enter credit",
+    cale14: "Credit ranges from 0 to 1",
+    cale15: "Credit should be number",
+    cale16: "Please enter total satke",
+    cale17: "Commission rate ranges from 20,000 to 100,000,000",
+    cale18: "Total stake should be number",
+    cale19: "Please enter deposit",
+    cale20: "Deposit ranges from 20,000 to 200,000",
+    cale21: "Deposit should be number",
+    cale22: "Please enter stake",
+    cale23: "Deposit ranges from 2000 to 500,000",
+    cale24: "Deposit should be number"
+  },
+
   bottom: {
     title: 'Join The NULS Community',
     info: 'NULS wants to reshape the world with blockchain. If you would like to be a part of our growing community and participate in this journey, join our social media channels today',
     team: 'View NULS Team',
-
     list0: 'Copyright',
     list1: 'Proudly built in Singapore',
     list2: 'Website design by petravic',
     list3: 'Whitepaper',
     list4: 'Yellowpaper',
-
     list5: 'What is nuls',
     list6: 'Support',
     list7: 'FAQ',
-
     inputTitle: 'Leave your email and we will send you the latest information',
     inputSubmit: 'Send',
-
     error0: 'Please input your email address.',
     error1: 'Please input the correct email address.',
-
     emailInfo:'You can directly contact us when you need some help: support@nuls.io',
-
   }
 };

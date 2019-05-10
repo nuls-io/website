@@ -26,7 +26,7 @@
             {{$t('home.wallet_list_title')}}
           </el-button>
           <div class="btn-box" v-show="false">
-            <el-button @click="tolink('https://wallet.nuls.io')"><span>{{$t('home.wallet_online')}}</span><i
+            <el-button @click="tolink('developer')"><span>{{$t('home.wallet_online')}}</span><i
               class="el-icon-arrow-right"></i></el-button>
           </div>
         </div>
