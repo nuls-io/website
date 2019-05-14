@@ -6,6 +6,9 @@
         <el-radio :label="1">{{$t('cale.cale1')}}</el-radio>
         <el-radio :label="2" class="mr_50">{{$t('cale.cale101')}}</el-radio>
       </el-radio-group>
+      <div class="fr roi font-14">
+        ROI: {{yearRateData}} %
+      </div>
     </div>
 
     <div class="result">
@@ -28,7 +31,7 @@
         <el-form-item :label="$t('cale.cale104')" prop="credit">
           <el-input v-model="partakeForm.credit"></el-input>
         </el-form-item>
-        <el-form-item :label="$t('cale.105')" prop="allEntrust">
+        <el-form-item :label="$t('cale.cale105')" prop="allEntrust">
           <el-input v-model="partakeForm.allEntrust"></el-input>
         </el-form-item>
       </el-form>
@@ -227,10 +230,12 @@
           newAllEntrust: [{validator: checkNewAllEntrust, trigger: 'change'}],
           newEntrust: [{validator: checkNewEntrust, trigger: 'change'}],
         },
-        consensusTotal:0,
+        consensusTotal: 0,
+        yearRateData:0
       };
     },
     created() {
+      this.getYearRateData();
       this.getNULSNumber();
     },
     watch: {
@@ -248,6 +253,8 @@
         let newInfo = {day: 0, week: 0, month: 0, year: 0};
         let BN = BigNumber.clone();
         BN.config({DECIMAL_PLACES: 4});
+        this.partakeForm.allEntrust = this.consensusTotal;
+        this.newNodeFrom.newAllEntrust = this.consensusTotal;
         if (this.radio.toString() === '2') {
           const newYear = this.newNodeFrom.newCredit * this.newNodeFrom.newEnsure * 5000000 / this.consensusTotal
             + this.newNodeFrom.newCredit * this.newNodeFrom.newEntrust * 5000000 * this.newNodeFrom.newRadio * 0.01 / this.consensusTotal;
@@ -294,7 +301,20 @@
           .catch(function (error) {
             console.log(error);
           });
+      },
 
+      /**
+       * 获取共识年化奖励率
+       */
+      getYearRateData() {
+        const params = {"jsonrpc": "2.0", "method": "getAnnulizedRewardStatistical", "params": [3], "id": 5898};
+        axios.post('https://api.nuls.io/', params)
+          .then((response) => {
+            //console.log(response.data.result);
+            if (response.data.hasOwnProperty("result")) {
+              this.yearRateData = response.data.result[response.data.result.length - 1].value;
+            }
+          })
       },
     }
   }
@@ -321,6 +341,10 @@
       margin: 10px 0 7px;
       .el-radio-group {
         margin: 0 0 0 20px;
+      }
+      .roi{
+        color: #59a500;
+        margin: 0 0.5rem 0 0;
       }
     }
     .result {
