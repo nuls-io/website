@@ -16,11 +16,24 @@
                                                                                  height="34" width="41"/></a></li>
         <li><a href="https://discord.gg/uZ3QcxW" target="_blank"><img src="../assets/images/discord.png" height="28"
                                                                      width="40"/></a></li>
-        <li><a href="https://steemit.com/@nuls" target="_blank"><img src="../assets/images/steemit.png" height="40"
-                                                                 width="38"/></a></li>
-        <li><a
+        <li>
+          <a href="https://steemit.com/@nuls" target="_blank">
+            <img src="../assets/images/steemit.png" height="40" width="38"/>
+          </a>
+        </li>
+        <li>
+          <a
           href="https://nuls.slack.com/join/shared_invite/enQtMjQ4MTM4ODAyNTI4LWJjNGMwYTE0YjRlYmFlZGUwM2JhOGE4MDIwZmE4MzA2MDg1YzUyMmVkN2RhZjkyNWMzZjY5ZDU5ZmViMjZjNGQ"
-          target="_blank"><img src="../assets/images/gitter.png" height="41" width="30"/></a></li>
+          target="_blank">
+            <img src="../assets/images/gitter.png" height="41" width="30"/>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://www.chainnode.com/forum/246" target="_blank">
+            <img src="../assets/images/1588.png" height="35" width="40"/>
+          </a>
+        </li>
       </ul>
     </div>
 
